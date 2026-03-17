@@ -101,7 +101,8 @@ def initialize_brownie_patch() -> BrowniePatchStatus:
     globals()["patch_contract"] = patch_contract
     dank_web3 = setup_dank_w3_from_sync(web3)
     dank_eth = dank_web3.eth
-    __all__ += ["Contract", "patch_contract", "dank_web3", "dank_eth"]
+    _mod_all: list[str] = globals()["__all__"]
+    _mod_all.extend(["Contract", "patch_contract", "dank_web3", "dank_eth"])
     state.initialized = True
     return state.status()
 
