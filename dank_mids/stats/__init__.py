@@ -31,7 +31,7 @@ from typed_envs.registry import _ENVIRONMENT_VARIABLES_SET_BY_USER
 from web3.types import RPCEndpoint
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
-from dank_mids.logging import CLogger, Level
+from dank_mids.logging import CLogger, Level, _ArgsType
 from dank_mids.stats import _nocompile
 
 if TYPE_CHECKING:
@@ -194,7 +194,7 @@ class _StatsLogger(CLogger):
 
     # Internal helpers
 
-    def _log(self, level: Level, msg: str, args: logging._ArgsType = (), **kwargs: Any) -> None:  # type: ignore [override]
+    def _log(self, level: Level, msg: str, args: _ArgsType = (), **kwargs: Any) -> None:  # type: ignore [override]
         """
         Wrapper around the standard logging method to simplify custom log level checks.
 
@@ -210,7 +210,7 @@ class _StatsLogger(CLogger):
         self,
         level: Level,
         msg: str,
-        args: logging._ArgsType = (),
+        args: _ArgsType = (),
         kwargs: dict[str, Any] | None = None,
     ) -> None:
         """
