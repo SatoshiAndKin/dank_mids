@@ -54,7 +54,7 @@ class AttributeDict(Generic[TKey, TValue]):
             return False
 
     def __setattr__(self, attr: str, val: TValue) -> None:
-        if attr in ("__dict__", "__hash"):
+        if attr in ("__dict__", "__hash", "_AttributeDict__hash"):
             super().__setattr__(attr, val)
         else:
             raise TypeError("This data is immutable -- create a copy instead of modifying")
