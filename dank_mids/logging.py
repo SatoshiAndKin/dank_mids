@@ -13,6 +13,11 @@ from typing import Any, Final, cast
 Level = int
 CallerInfo = tuple[str, int, str, str | None]
 
+# These were private aliases in the logging module, removed in newer CPython builds.
+_ArgsType = tuple[object, ...] | Mapping[str, object] | None
+_ExcInfoType = bool | tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | BaseException | None
+_SysExcInfoType = tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None]
+
 CRITICAL: Final = logging.CRITICAL
 FATAL: Final = logging.FATAL
 ERROR: Final = logging.ERROR
@@ -160,7 +165,7 @@ class CLogger(logging.Logger):
         self,
         msg: object,
         *args: Any,
-        exc_info: logging._ExcInfoType = True,
+        exc_info: _ExcInfoType = True,
         **kwargs: Any,
     ) -> None:
         """
@@ -246,7 +251,7 @@ class CLogger(logging.Logger):
         fn: str,
         lno: int,
         msg: object,
-        args: logging._ArgsType,
+        args: _ArgsType,
         exc_info: tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | None,
         func: str | None = None,
         extra: Mapping[str, object] | None = None,
@@ -271,8 +276,8 @@ class CLogger(logging.Logger):
         self,
         level: Level,
         msg: object,
-        args: logging._ArgsType,
-        exc_info: logging._ExcInfoType = None,
+        args: _ArgsType,
+        exc_info: _ExcInfoType = None,
         extra: Mapping[str, object] | None = None,
         stack_info: bool = False,
         stacklevel: int = 1,
