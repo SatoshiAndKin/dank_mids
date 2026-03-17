@@ -52,7 +52,7 @@ def batch_done_callback(t: asyncio.Task[Any]) -> None:
 # Vendored from asyncio:
 
 
-def shield(arg: asyncio.tasks._FutureLike[T]) -> asyncio.Future[T]:
+def shield(arg: Awaitable[T] | asyncio.Future[T]) -> asyncio.Future[T]:
     """Wait for a future, shielding it from cancellation.
 
     The statement
