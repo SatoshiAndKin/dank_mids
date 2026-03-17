@@ -7,7 +7,7 @@ import sys
 import traceback
 from collections.abc import Iterator, Mapping
 from contextlib import contextmanager
-from types import FrameType
+from types import FrameType, TracebackType
 from typing import Any, Final, cast
 
 Level = int
@@ -247,7 +247,7 @@ class CLogger(logging.Logger):
         lno: int,
         msg: object,
         args: logging._ArgsType,
-        exc_info: logging._SysExcInfoType | None,
+        exc_info: tuple[type[BaseException], BaseException, TracebackType | None] | tuple[None, None, None] | None,
         func: str | None = None,
         extra: Mapping[str, object] | None = None,
         sinfo: str | None = None,
@@ -304,7 +304,7 @@ class CLogger(logging.Logger):
             lno,
             msg,
             args,
-            cast(logging._SysExcInfoType | None, exc_info),
+            exc_info,  # type: ignore[arg-type]
             func,
             extra,
             sinfo,
