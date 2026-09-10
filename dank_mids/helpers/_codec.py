@@ -1,5 +1,17 @@
 from collections.abc import Callable, Iterable, Mapping
-from typing import TYPE_CHECKING, Any, AnyStr, Final, Literal, TypeAlias, TypeVar, Union, cast, final, overload
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    AnyStr,
+    Final,
+    Literal,
+    TypeAlias,
+    TypeVar,
+    Union,
+    cast,
+    final,
+    overload,
+)
 
 import faster_hexbytes
 import msgspec
@@ -7,6 +19,7 @@ from eth_typing import ChecksumAddress, HexStr
 from evmspec.data import Address
 from faster_eth_abi import io
 from faster_eth_abi.abi import default_codec
+from mypy_extensions import mypyc_attr
 from msgspec.json import Decoder, Encoder
 
 if TYPE_CHECKING:
@@ -29,7 +42,10 @@ Encodable: TypeAlias = int | StrEncodable | faster_hexbytes.HexBytes | bytes
 RpcThing: TypeAlias = HexStr | list[HexStr] | dict[str, HexStr]
 
 
-MulticallChunk: TypeAlias = tuple[ChecksumAddress, faster_hexbytes.HexBytes] | list[ChecksumAddress | faster_hexbytes.HexBytes]
+MulticallChunk: TypeAlias = (
+    tuple[ChecksumAddress, faster_hexbytes.HexBytes]
+    | list[ChecksumAddress | faster_hexbytes.HexBytes]
+)
 MulticallEncoder: TypeAlias = Callable[[tuple[bool, Iterable[MulticallChunk]]], bytes]
 
 DecodedMulticall: TypeAlias = tuple[int, int, tuple[tuple["Success", bytes], ...]]
@@ -54,6 +70,7 @@ _decode_batch: BatchDecoder | None = None
 
 
 @final
+@mypyc_attr(acyclic=True)
 class RawResponse:
     """
     Wraps a Raw object that we know represents a Response with a `decode` helper method.
@@ -181,7 +198,7 @@ _mcall_encoder: Final = cast(
 
 _mcall_decoder: Final = cast(
     MulticallDecoder,
-    default_codec._registry.get_decoder("(uint256,uint256,(bool,bytes)[])").decode  # type: ignore [union-attr]
+    default_codec._registry.get_decoder("(uint256,uint256,(bool,bytes)[])").decode,  # type: ignore [union-attr]
 )
 
 
