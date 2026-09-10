@@ -128,7 +128,7 @@ PyObject *CPyInit_dank_mids___ENVIRONMENT_VARIABLES(void)
     if (rv < 0) goto fail;
     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
     if (shared_lib_file == NULL) goto fail;
-    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
     if (ext_suffix == NULL) CPyError_OutOfMemory();
     Py_ssize_t is_pkg = 0;
     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___ENVIRONMENT_VARIABLES__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -819,7 +819,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/ENVIRONMENT_VARIABLES.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_ENVIRONMENT_VARIABLES___globals);
         goto CPyL308;
     }
-    cpy_r_r40 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r40 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r41 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._envs' */
     cpy_r_r42 = CPyImport_ImportNative(cpy_r_r41, cpy_r_r32, cpy_r_r33, cpy_r_r34, cpy_r_r39, cpy_r_r40, 0);
     CPy_DECREF(cpy_r_r39);
@@ -878,7 +878,7 @@ CPyL12: ;
         CPy_AddTraceback("dank_mids/ENVIRONMENT_VARIABLES.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_ENVIRONMENT_VARIABLES___globals);
         goto CPyL308;
     }
-    cpy_r_r64 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r64 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r65 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r66 = CPyImport_ImportNative(cpy_r_r65, cpy_r_r56, cpy_r_r57, cpy_r_r58, cpy_r_r63, cpy_r_r64, 0);
     CPy_DECREF(cpy_r_r63);
@@ -3453,7 +3453,7 @@ CPyL356: ;
         if (rv < 0) goto fail;
         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
         if (shared_lib_file == NULL) goto fail;
-        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
         if (ext_suffix == NULL) CPyError_OutOfMemory();
         Py_ssize_t is_pkg = 0;
         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____batch__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -5432,7 +5432,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_batch.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__batch___globals);
         goto CPyL54;
     }
-    cpy_r_r42 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r42 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r43 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._tasks' */
     cpy_r_r44 = CPyImport_ImportNative(cpy_r_r43, cpy_r_r34, cpy_r_r35, cpy_r_r36, cpy_r_r41, cpy_r_r42, 0);
     CPy_DECREF(cpy_r_r41);
@@ -5475,7 +5475,7 @@ CPyL14: ;
         CPy_AddTraceback("dank_mids/_batch.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__batch___globals);
         goto CPyL54;
     }
-    cpy_r_r60 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r60 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r61 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._codec' */
     cpy_r_r62 = CPyImport_ImportNative(cpy_r_r61, cpy_r_r52, cpy_r_r53, cpy_r_r54, cpy_r_r59, cpy_r_r60, 0);
     CPy_DECREF(cpy_r_r59);
@@ -5518,7 +5518,7 @@ CPyL20: ;
         CPy_AddTraceback("dank_mids/_batch.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__batch___globals);
         goto CPyL54;
     }
-    cpy_r_r78 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r78 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r79 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r80 = CPyImport_ImportNative(cpy_r_r79, cpy_r_r70, cpy_r_r71, cpy_r_r72, cpy_r_r77, cpy_r_r78, 0);
     CPy_DECREF(cpy_r_r77);
@@ -5930,7 +5930,7 @@ CPyL60: ;
             if (rv < 0) goto fail;
             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
             if (shared_lib_file == NULL) goto fail;
-            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
             if (ext_suffix == NULL) CPyError_OutOfMemory();
             Py_ssize_t is_pkg = 0;
             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____demo_mode__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -6130,7 +6130,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_demo_mode.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__demo_mode___globals);
         goto CPyL35;
     }
-    cpy_r_r25 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r25 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r26 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r27 = CPyImport_ImportNative(cpy_r_r26, cpy_r_r17, cpy_r_r18, cpy_r_r19, cpy_r_r24, cpy_r_r25, 0);
     CPy_DECREF(cpy_r_r24);
@@ -6178,7 +6178,7 @@ CPyL10: ;
         CPy_AddTraceback("dank_mids/_demo_mode.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__demo_mode___globals);
         goto CPyL35;
     }
-    cpy_r_r45 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r45 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r46 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r47 = CPyImport_ImportNative(cpy_r_r46, cpy_r_r37, cpy_r_r38, cpy_r_r39, cpy_r_r44, cpy_r_r45, 0);
     CPy_DECREF(cpy_r_r44);
@@ -6367,7 +6367,7 @@ CPyL37: ;
                 if (rv < 0) goto fail;
                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                 if (shared_lib_file == NULL) goto fail;
-                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                 Py_ssize_t is_pkg = 0;
                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____envs__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -6802,7 +6802,7 @@ CPyL40: ;
                     if (rv < 0) goto fail;
                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                     if (shared_lib_file == NULL) goto fail;
-                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                     Py_ssize_t is_pkg = 0;
                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____eth_utils__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -10083,7 +10083,7 @@ CPyL11: ;
                         if (rv < 0) goto fail;
                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                         if (shared_lib_file == NULL) goto fail;
-                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                         Py_ssize_t is_pkg = 0;
                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____exceptions__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -11285,7 +11285,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_exceptions.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__exceptions___globals);
         goto CPyL99;
     }
-    cpy_r_r34 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r34 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r35 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r36 = CPyImport_ImportNative(cpy_r_r35, cpy_r_r26, cpy_r_r27, cpy_r_r28, cpy_r_r33, cpy_r_r34, 0);
     CPy_DECREF(cpy_r_r33);
@@ -12615,7 +12615,7 @@ CPyL117: ;
                             if (rv < 0) goto fail;
                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                             if (shared_lib_file == NULL) goto fail;
-                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                             Py_ssize_t is_pkg = 0;
                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____tasks__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -14412,7 +14412,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_tasks.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__tasks___globals);
         goto CPyL45;
     }
-    cpy_r_r49 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r49 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r50 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r51 = CPyImport_ImportNative(cpy_r_r50, cpy_r_r41, cpy_r_r42, cpy_r_r43, cpy_r_r48, cpy_r_r49, 0);
     CPy_DECREF(cpy_r_r48);
@@ -14471,7 +14471,7 @@ CPyL13: ;
         CPy_AddTraceback("dank_mids/_tasks.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__tasks___globals);
         goto CPyL45;
     }
-    cpy_r_r73 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r73 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r74 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r75 = CPyImport_ImportNative(cpy_r_r74, cpy_r_r65, cpy_r_r66, cpy_r_r67, cpy_r_r72, cpy_r_r73, 0);
     CPy_DECREF(cpy_r_r72);
@@ -14984,7 +14984,7 @@ CPyL46: ;
                                 if (rv < 0) goto fail;
                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                 if (shared_lib_file == NULL) goto fail;
-                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                 Py_ssize_t is_pkg = 0;
                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____uid__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -15291,7 +15291,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_uid.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__uid___globals);
         goto CPyL18;
     }
-    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.lock' */
     cpy_r_r22 = CPyImport_ImportNative(cpy_r_r21, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r19, cpy_r_r20, 0);
     CPy_DECREF(cpy_r_r19);
@@ -15435,7 +15435,7 @@ CPyL20: ;
                                     if (rv < 0) goto fail;
                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                     if (shared_lib_file == NULL) goto fail;
-                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                     Py_ssize_t is_pkg = 1;
                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -15559,7 +15559,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_vendor/aiolimiter/src/aiolimiter/__init__.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_aiolimiter___globals);
         goto CPyL17;
     }
-    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket' */
     cpy_r_r22 = CPyImport_ImportNative(cpy_r_r21, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r19, cpy_r_r20, 0);
     CPy_DECREF(cpy_r_r19);
@@ -16720,7 +16720,7 @@ __LL21: ;
                                         if (rv < 0) goto fail;
                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                         if (shared_lib_file == NULL) goto fail;
-                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                         Py_ssize_t is_pkg = 0;
                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -21960,7 +21960,7 @@ __LL65: ;
                                             if (rv < 0) goto fail;
                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                             if (shared_lib_file == NULL) goto fail;
-                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                             Py_ssize_t is_pkg = 0;
                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____web3___abi__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -25301,7 +25301,7 @@ CPyL95: ;
                                                 if (rv < 0) goto fail;
                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                 if (shared_lib_file == NULL) goto fail;
-                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                 Py_ssize_t is_pkg = 0;
                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids____web3___formatters__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -27540,7 +27540,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/_web3/formatters.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_formatters___globals);
         goto CPyL78;
     }
-    cpy_r_r65 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r65 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r66 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._web3.abi' */
     cpy_r_r67 = CPyImport_ImportNative(cpy_r_r66, cpy_r_r57, cpy_r_r58, cpy_r_r59, cpy_r_r64, cpy_r_r65, 0);
     CPy_DECREF(cpy_r_r64);
@@ -28669,7 +28669,7 @@ __LL144: ;
                                                     if (rv < 0) goto fail;
                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                     if (shared_lib_file == NULL) goto fail;
-                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                     Py_ssize_t is_pkg = 1;
                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___brownie_patch__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -29847,7 +29847,7 @@ PyObject *CPyDef_brownie_patch____load_types(void) {
         CPy_AddTraceback("dank_mids/brownie_patch/__init__.py", "_load_types", DIFFCHECK_PLACEHOLDER, CPyStatic_brownie_patch___globals);
         goto CPyL8;
     }
-    cpy_r_r12 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r12 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r13 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.brownie_patch.types' */
     cpy_r_r14 = CPyImport_ImportNative(cpy_r_r13, cpy_r_r4, cpy_r_r5, cpy_r_r6, cpy_r_r11, cpy_r_r12, 0);
     CPy_DECREF(cpy_r_r11);
@@ -30422,7 +30422,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/brownie_patch/__init__.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_brownie_patch___globals);
         goto CPyL64;
     }
-    cpy_r_r28 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r28 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r29 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers' */
     cpy_r_r30 = CPyImport_ImportNative(cpy_r_r29, cpy_r_r20, cpy_r_r21, cpy_r_r22, cpy_r_r27, cpy_r_r28, 1);
     CPy_DECREF(cpy_r_r27);
@@ -31310,7 +31310,7 @@ CPyL73: ;
                                                         if (rv < 0) goto fail;
                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                         if (shared_lib_file == NULL) goto fail;
-                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                         Py_ssize_t is_pkg = 0;
                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___brownie_patch____abi__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -32706,7 +32706,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/brownie_patch/_abi.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__abi___globals);
         goto CPyL52;
     }
-    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r45 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers.hashing' */
     cpy_r_r46 = CPyImport_ImportNative(cpy_r_r45, cpy_r_r36, cpy_r_r37, cpy_r_r38, cpy_r_r43, cpy_r_r44, 0);
     CPy_DECREF(cpy_r_r43);
@@ -34972,7 +34972,7 @@ CPyL59: ;
                                                             if (rv < 0) goto fail;
                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                             if (shared_lib_file == NULL) goto fail;
-                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                             Py_ssize_t is_pkg = 0;
                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___brownie_patch___call__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -49024,7 +49024,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/brownie_patch/call.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_call___globals);
         goto CPyL215;
     }
-    cpy_r_r115 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r115 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r116 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r117 = CPyImport_ImportNative(cpy_r_r116, cpy_r_r107, cpy_r_r108, cpy_r_r109, cpy_r_r114, cpy_r_r115, 0);
     CPy_DECREF(cpy_r_r114);
@@ -49094,7 +49094,7 @@ CPyL28: ;
         CPy_AddTraceback("dank_mids/brownie_patch/call.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_call___globals);
         goto CPyL215;
     }
-    cpy_r_r143 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r143 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r144 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers.lru_cache' */
     cpy_r_r145 = CPyImport_ImportNative(cpy_r_r144, cpy_r_r135, cpy_r_r136, cpy_r_r137, cpy_r_r142, cpy_r_r143, 0);
     CPy_DECREF(cpy_r_r142);
@@ -49137,7 +49137,7 @@ CPyL38: ;
         CPy_AddTraceback("dank_mids/brownie_patch/call.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_call___globals);
         goto CPyL215;
     }
-    cpy_r_r161 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r161 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r162 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r163 = CPyImport_ImportNative(cpy_r_r162, cpy_r_r153, cpy_r_r154, cpy_r_r155, cpy_r_r160, cpy_r_r161, 0);
     CPy_DECREF(cpy_r_r160);
@@ -51398,7 +51398,7 @@ CPyL235: ;
                                                                 if (rv < 0) goto fail;
                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                 Py_ssize_t is_pkg = 0;
                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___brownie_patch___overloaded__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -54077,7 +54077,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/brownie_patch/overloaded.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_overloaded___globals);
         goto CPyL16;
     }
-    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.brownie_patch.call' */
     cpy_r_r38 = CPyImport_ImportNative(cpy_r_r37, cpy_r_r28, cpy_r_r29, cpy_r_r30, cpy_r_r35, cpy_r_r36, 0);
     CPy_DECREF(cpy_r_r35);
@@ -54762,7 +54762,7 @@ CPyL17: ;
                                                                     if (rv < 0) goto fail;
                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                     Py_ssize_t is_pkg = 0;
                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___brownie_patch___types__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -56952,7 +56952,7 @@ CPyL66: ;
                                                                         if (rv < 0) goto fail;
                                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                         if (shared_lib_file == NULL) goto fail;
-                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                         Py_ssize_t is_pkg = 0;
                                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___constants__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -61311,7 +61311,7 @@ __LL256: ;
                                                                             if (rv < 0) goto fail;
                                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                             if (shared_lib_file == NULL) goto fail;
-                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                             Py_ssize_t is_pkg = 0;
                                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___controller__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -77880,7 +77880,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r88 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r88 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r89 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r90 = CPyImport_ImportNative(cpy_r_r89, cpy_r_r80, cpy_r_r81, cpy_r_r82, cpy_r_r87, cpy_r_r88, 0);
     CPy_DECREF(cpy_r_r87);
@@ -77939,7 +77939,7 @@ CPyL24: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r112 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r112 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r113 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._batch' */
     cpy_r_r114 = CPyImport_ImportNative(cpy_r_r113, cpy_r_r104, cpy_r_r105, cpy_r_r106, cpy_r_r111, cpy_r_r112, 0);
     CPy_DECREF(cpy_r_r111);
@@ -77982,7 +77982,7 @@ CPyL33: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r130 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r130 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r131 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._demo_mode' */
     cpy_r_r132 = CPyImport_ImportNative(cpy_r_r131, cpy_r_r122, cpy_r_r123, cpy_r_r124, cpy_r_r129, cpy_r_r130, 0);
     CPy_DECREF(cpy_r_r129);
@@ -78025,7 +78025,7 @@ CPyL39: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r148 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r148 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r149 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._exceptions' */
     cpy_r_r150 = CPyImport_ImportNative(cpy_r_r149, cpy_r_r140, cpy_r_r141, cpy_r_r142, cpy_r_r147, cpy_r_r148, 0);
     CPy_DECREF(cpy_r_r147);
@@ -78079,7 +78079,7 @@ CPyL45: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r170 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r170 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r171 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._tasks' */
     cpy_r_r172 = CPyImport_ImportNative(cpy_r_r171, cpy_r_r162, cpy_r_r163, cpy_r_r164, cpy_r_r169, cpy_r_r170, 0);
     CPy_DECREF(cpy_r_r169);
@@ -78122,7 +78122,7 @@ CPyL52: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r188 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r188 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r189 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._uid' */
     cpy_r_r190 = CPyImport_ImportNative(cpy_r_r189, cpy_r_r180, cpy_r_r181, cpy_r_r182, cpy_r_r187, cpy_r_r188, 0);
     CPy_DECREF(cpy_r_r187);
@@ -78176,7 +78176,7 @@ CPyL58: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r210 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r210 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r211 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._codec' */
     cpy_r_r212 = CPyImport_ImportNative(cpy_r_r211, cpy_r_r202, cpy_r_r203, cpy_r_r204, cpy_r_r209, cpy_r_r210, 0);
     CPy_DECREF(cpy_r_r209);
@@ -78219,7 +78219,7 @@ CPyL65: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r228 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r228 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r229 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._errors' */
     cpy_r_r230 = CPyImport_ImportNative(cpy_r_r229, cpy_r_r220, cpy_r_r221, cpy_r_r222, cpy_r_r227, cpy_r_r228, 0);
     CPy_DECREF(cpy_r_r227);
@@ -78285,7 +78285,7 @@ CPyL71: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r254 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r254 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r255 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._rate_limit' */
     cpy_r_r256 = CPyImport_ImportNative(cpy_r_r255, cpy_r_r246, cpy_r_r247, cpy_r_r248, cpy_r_r253, cpy_r_r254, 0);
     CPy_DECREF(cpy_r_r253);
@@ -78328,7 +78328,7 @@ CPyL79: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r272 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r272 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r273 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._requester' */
     cpy_r_r274 = CPyImport_ImportNative(cpy_r_r273, cpy_r_r264, cpy_r_r265, cpy_r_r266, cpy_r_r271, cpy_r_r272, 0);
     CPy_DECREF(cpy_r_r271);
@@ -78371,7 +78371,7 @@ CPyL85: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r290 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r290 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r291 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.lock' */
     cpy_r_r292 = CPyImport_ImportNative(cpy_r_r291, cpy_r_r282, cpy_r_r283, cpy_r_r284, cpy_r_r289, cpy_r_r290, 0);
     CPy_DECREF(cpy_r_r289);
@@ -78414,7 +78414,7 @@ CPyL91: ;
         CPy_AddTraceback("dank_mids/controller.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL145;
     }
-    cpy_r_r308 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r308 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r309 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r310 = CPyImport_ImportNative(cpy_r_r309, cpy_r_r300, cpy_r_r301, cpy_r_r302, cpy_r_r307, cpy_r_r308, 0);
     CPy_DECREF(cpy_r_r307);
@@ -78960,7 +78960,7 @@ CPyL161: ;
                                                                                 if (rv < 0) goto fail;
                                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                 Py_ssize_t is_pkg = 1;
                                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -80027,7 +80027,7 @@ CPyL23: ;
                                                                                     if (rv < 0) goto fail;
                                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                     Py_ssize_t is_pkg = 0;
                                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____codec__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -83628,7 +83628,7 @@ CPyL148: ;
                                                                                         if (rv < 0) goto fail;
                                                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                         if (shared_lib_file == NULL) goto fail;
-                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                         Py_ssize_t is_pkg = 0;
                                                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____controllers__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -83793,7 +83793,7 @@ CPyL10: ;
         CPy_AddTraceback("dank_mids/helpers/_controllers.py", "get_controller_for_async_w3", DIFFCHECK_PLACEHOLDER, CPyStatic__controllers___globals);
         goto CPyL28;
     }
-    cpy_r_r22 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r22 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r23 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.controller' */
     cpy_r_r24 = CPyImport_ImportNative(cpy_r_r23, cpy_r_r14, cpy_r_r15, cpy_r_r16, cpy_r_r21, cpy_r_r22, 0);
     CPy_DECREF(cpy_r_r21);
@@ -84191,7 +84191,7 @@ CPyL17: ;
                                                                                             if (rv < 0) goto fail;
                                                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                             if (shared_lib_file == NULL) goto fail;
-                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                             Py_ssize_t is_pkg = 0;
                                                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____errors__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -85914,7 +85914,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/_errors.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__errors___globals);
         goto CPyL95;
     }
-    cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r38 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r39 = CPyImport_ImportNative(cpy_r_r38, cpy_r_r29, cpy_r_r30, cpy_r_r31, cpy_r_r36, cpy_r_r37, 0);
     CPy_DECREF(cpy_r_r36);
@@ -85963,7 +85963,7 @@ CPyL13: ;
         CPy_AddTraceback("dank_mids/helpers/_errors.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__errors___globals);
         goto CPyL95;
     }
-    cpy_r_r58 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r58 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r59 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.constants' */
     cpy_r_r60 = CPyImport_ImportNative(cpy_r_r59, cpy_r_r50, cpy_r_r51, cpy_r_r52, cpy_r_r57, cpy_r_r58, 0);
     CPy_DECREF(cpy_r_r57);
@@ -86011,7 +86011,7 @@ CPyL20: ;
         CPy_AddTraceback("dank_mids/helpers/_errors.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__errors___globals);
         goto CPyL95;
     }
-    cpy_r_r78 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r78 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r79 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._exceptions' */
     cpy_r_r80 = CPyImport_ImportNative(cpy_r_r79, cpy_r_r70, cpy_r_r71, cpy_r_r72, cpy_r_r77, cpy_r_r78, 0);
     CPy_DECREF(cpy_r_r77);
@@ -86054,7 +86054,7 @@ CPyL28: ;
         CPy_AddTraceback("dank_mids/helpers/_errors.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__errors___globals);
         goto CPyL95;
     }
-    cpy_r_r96 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r96 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r97 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.constants' */
     cpy_r_r98 = CPyImport_ImportNative(cpy_r_r97, cpy_r_r88, cpy_r_r89, cpy_r_r90, cpy_r_r95, cpy_r_r96, 0);
     CPy_DECREF(cpy_r_r95);
@@ -86097,7 +86097,7 @@ CPyL34: ;
         CPy_AddTraceback("dank_mids/helpers/_errors.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__errors___globals);
         goto CPyL95;
     }
-    cpy_r_r114 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r114 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r115 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r116 = CPyImport_ImportNative(cpy_r_r115, cpy_r_r106, cpy_r_r107, cpy_r_r108, cpy_r_r113, cpy_r_r114, 0);
     CPy_DECREF(cpy_r_r113);
@@ -86994,7 +86994,7 @@ CPyL99: ;
                                                                                                 if (rv < 0) goto fail;
                                                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                 Py_ssize_t is_pkg = 0;
                                                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____gather__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -89745,7 +89745,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/_gather.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__gather___globals);
         goto CPyL33;
     }
-    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r45 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r46 = CPyImport_ImportNative(cpy_r_r45, cpy_r_r36, cpy_r_r37, cpy_r_r38, cpy_r_r43, cpy_r_r44, 0);
     CPy_DECREF(cpy_r_r43);
@@ -91799,7 +91799,7 @@ CPyL34: ;
                                                                                                     if (rv < 0) goto fail;
                                                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                     Py_ssize_t is_pkg = 0;
                                                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____rate_limit__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -99048,7 +99048,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r47 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r47 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r48 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r49 = CPyImport_ImportNative(cpy_r_r48, cpy_r_r39, cpy_r_r40, cpy_r_r41, cpy_r_r46, cpy_r_r47, 0);
     CPy_DECREF(cpy_r_r46);
@@ -99096,7 +99096,7 @@ CPyL12: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r67 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r67 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r68 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._tasks' */
     cpy_r_r69 = CPyImport_ImportNative(cpy_r_r68, cpy_r_r59, cpy_r_r60, cpy_r_r61, cpy_r_r66, cpy_r_r67, 0);
     CPy_DECREF(cpy_r_r66);
@@ -99139,7 +99139,7 @@ CPyL20: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r85 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r85 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r86 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._vendor.aiolimiter.src.aiolimiter' */
     cpy_r_r87 = CPyImport_ImportNative(cpy_r_r86, cpy_r_r77, cpy_r_r78, cpy_r_r79, cpy_r_r84, cpy_r_r85, 1);
     CPy_DECREF(cpy_r_r84);
@@ -99182,7 +99182,7 @@ CPyL26: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r103 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r103 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r104 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._requester' */
     cpy_r_r105 = CPyImport_ImportNative(cpy_r_r104, cpy_r_r95, cpy_r_r96, cpy_r_r97, cpy_r_r102, cpy_r_r103, 0);
     CPy_DECREF(cpy_r_r102);
@@ -99225,7 +99225,7 @@ CPyL32: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r121 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r121 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r122 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.lock' */
     cpy_r_r123 = CPyImport_ImportNative(cpy_r_r122, cpy_r_r113, cpy_r_r114, cpy_r_r115, cpy_r_r120, cpy_r_r121, 0);
     CPy_DECREF(cpy_r_r120);
@@ -99268,7 +99268,7 @@ CPyL38: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL77;
     }
-    cpy_r_r139 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r139 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r140 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r141 = CPyImport_ImportNative(cpy_r_r140, cpy_r_r131, cpy_r_r132, cpy_r_r133, cpy_r_r138, cpy_r_r139, 0);
     CPy_DECREF(cpy_r_r138);
@@ -101982,7 +101982,7 @@ __LL416: ;
                                                                                                         if (rv < 0) goto fail;
                                                                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                         if (shared_lib_file == NULL) goto fail;
-                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                         Py_ssize_t is_pkg = 0;
                                                                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____requester__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -108505,7 +108505,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/_requester.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__requester___globals);
         goto CPyL40;
     }
-    cpy_r_r59 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r59 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r60 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r61 = CPyImport_ImportNative(cpy_r_r60, cpy_r_r51, cpy_r_r52, cpy_r_r53, cpy_r_r58, cpy_r_r59, 0);
     CPy_DECREF(cpy_r_r58);
@@ -109257,7 +109257,7 @@ __LL430: ;
                                                                                                             if (rv < 0) goto fail;
                                                                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                             if (shared_lib_file == NULL) goto fail;
-                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                             Py_ssize_t is_pkg = 0;
                                                                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____retry_mechanics__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -111652,7 +111652,7 @@ CPyL103: ;
                                                                                                                 if (rv < 0) goto fail;
                                                                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                 Py_ssize_t is_pkg = 0;
                                                                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers____weaklist__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -113577,7 +113577,7 @@ CPyL23: ;
                                                                                                                     if (rv < 0) goto fail;
                                                                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                     Py_ssize_t is_pkg = 0;
                                                                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers___batch_size__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -113778,7 +113778,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/batch_size.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_batch_size___globals);
         goto CPyL13;
     }
-    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r22 = CPyImport_ImportNative(cpy_r_r21, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r19, cpy_r_r20, 0);
     CPy_DECREF(cpy_r_r19);
@@ -115700,7 +115700,7 @@ CPyL14: ;
                                                                                                                         if (rv < 0) goto fail;
                                                                                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                         if (shared_lib_file == NULL) goto fail;
-                                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                         Py_ssize_t is_pkg = 0;
                                                                                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers___hashing__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -121219,7 +121219,7 @@ CPyL80: ;
                                                                                                                             if (rv < 0) goto fail;
                                                                                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                             if (shared_lib_file == NULL) goto fail;
-                                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                             Py_ssize_t is_pkg = 0;
                                                                                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers___lru_cache__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -122198,7 +122198,7 @@ CPyL16: ;
                                                                                                                                 if (rv < 0) goto fail;
                                                                                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                 Py_ssize_t is_pkg = 0;
                                                                                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___helpers___method__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -122527,7 +122527,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/helpers/method.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_method___globals);
         goto CPyL20;
     }
-    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers.lru_cache' */
     cpy_r_r22 = CPyImport_ImportNative(cpy_r_r21, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r19, cpy_r_r20, 0);
     CPy_DECREF(cpy_r_r19);
@@ -123897,7 +123897,7 @@ __LL467: ;
                                                                                                                                     if (rv < 0) goto fail;
                                                                                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                     Py_ssize_t is_pkg = 0;
                                                                                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___lock__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -128555,7 +128555,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/lock.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_lock___globals);
         goto CPyL50;
     }
-    cpy_r_r48 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r48 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r49 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r50 = CPyImport_ImportNative(cpy_r_r49, cpy_r_r40, cpy_r_r41, cpy_r_r42, cpy_r_r47, cpy_r_r48, 0);
     CPy_DECREF(cpy_r_r47);
@@ -129605,7 +129605,7 @@ __LL493: ;
                                                                                                                                         if (rv < 0) goto fail;
                                                                                                                                         PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                         if (shared_lib_file == NULL) goto fail;
-                                                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                        PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                         if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                         Py_ssize_t is_pkg = 0;
                                                                                                                                         rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___logging__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -130156,7 +130156,7 @@ CPyL5: ;
     if (likely((Py_TYPE(cpy_r_r18) == CPyType_stats____StatsLogger) || (Py_TYPE(cpy_r_r18) == CPyType_logging___CLogger)))
         cpy_r_r19 = cpy_r_r18;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "get_c_logger", 53, CPyStatic_logging___globals, "dank_mids.logging.CLogger", cpy_r_r18);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "get_c_logger", 61, CPyStatic_logging___globals, "dank_mids.logging.CLogger", cpy_r_r18);
         goto CPyL10;
     }
     cpy_r_r20 = cpy_r_r19;
@@ -130412,7 +130412,7 @@ CPyL3: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r2 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 59, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 67, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL37;
     }
     cpy_r_r3 = PyObject_Str(cpy_r_r2);
@@ -130425,7 +130425,7 @@ CPyL3: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r4 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 59, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 67, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL38;
     }
     cpy_r_r5 = CPyStr_Equal(cpy_r_r3, cpy_r_r4);
@@ -130436,7 +130436,7 @@ CPyL3: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r6 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 60, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 68, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL37;
     }
     cpy_r_r7 = CPyStatic_logging____nameToLevel;
@@ -130468,7 +130468,7 @@ CPyL11: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r14 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 61, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 69, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL37;
     }
     cpy_r_r15 = PyNumber_Remainder(cpy_r_r13, cpy_r_r14);
@@ -130480,7 +130480,7 @@ CPyL11: ;
     if (likely(PyUnicode_Check(cpy_r_r15)))
         cpy_r_r16 = cpy_r_r15;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 61, CPyStatic_logging___globals, "str", cpy_r_r15);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 69, CPyStatic_logging___globals, "str", cpy_r_r15);
         goto CPyL37;
     }
     cpy_r_r17 = CPyModule_builtins;
@@ -130521,7 +130521,7 @@ CPyL23: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r25 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 62, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 70, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL37;
     }
     cpy_r_r26 = CPyDict_GetItem(cpy_r_r23, cpy_r_r25);
@@ -130550,7 +130550,7 @@ CPyL27: ;
     if (likely(PyUnicode_Check(cpy_r_level)))
         cpy_r_r31 = cpy_r_level;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 64, CPyStatic_logging___globals, "str", cpy_r_level);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 72, CPyStatic_logging___globals, "str", cpy_r_level);
         goto CPyL37;
     }
     cpy_r_r32 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '' */
@@ -130566,7 +130566,7 @@ CPyL27: ;
     if (likely(PyUnicode_Check(cpy_r_r36)))
         cpy_r_r37 = cpy_r_r36;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 64, CPyStatic_logging___globals, "str", cpy_r_r36);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_checkLevel", 72, CPyStatic_logging___globals, "str", cpy_r_r36);
         goto CPyL37;
     }
     cpy_r_r38 = PyList_New(2);
@@ -131063,7 +131063,7 @@ char CPyDef_logging___CLogger___isEnabledFor(PyObject *cpy_r_self, CPyTagged cpy
     cpy_r_is_enabled = cpy_r_r0;
     cpy_r_r1 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->_disabled;
     if (unlikely(cpy_r_r1 == 2)) {
-        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "disabled", 102, CPyStatic_logging___globals);
+        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "disabled", 110, CPyStatic_logging___globals);
         goto CPyL51;
     }
 CPyL1: ;
@@ -131073,7 +131073,7 @@ CPyL2: ;
 CPyL3: ;
     cpy_r_r2 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->__cache;
     if (unlikely(cpy_r_r2 == NULL)) {
-        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 106, CPyStatic_logging___globals);
+        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 114, CPyStatic_logging___globals);
         goto CPyL7;
     }
     CPy_INCREF(cpy_r_r2);
@@ -131171,7 +131171,7 @@ CPyL20: ;
     cpy_r_is_enabled = 0;
     cpy_r_r27 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->__cache;
     if (unlikely(cpy_r_r27 == NULL)) {
-        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 111, CPyStatic_logging___globals);
+        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 119, CPyStatic_logging___globals);
         goto CPyL31;
     }
     CPy_INCREF(cpy_r_r27);
@@ -131213,7 +131213,7 @@ CPyL28: ;
     cpy_r_is_enabled = cpy_r_r39;
     cpy_r_r41 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->__cache;
     if (unlikely(cpy_r_r41 == NULL)) {
-        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 113, CPyStatic_logging___globals);
+        CPy_AttributeError("dank_mids/logging.py", "isEnabledFor", "CLogger", "_cache", 121, CPyStatic_logging___globals);
         goto CPyL31;
     }
     CPy_INCREF(cpy_r_r41);
@@ -132571,7 +132571,7 @@ CPyL4: ;
     if (likely(PyTuple_Check(cpy_r_r2)))
         cpy_r_r3 = cpy_r_r2;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 213, CPyStatic_logging___globals, "tuple", cpy_r_r2);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 221, CPyStatic_logging___globals, "tuple", cpy_r_r2);
         goto CPyL53;
     }
     cpy_r_r4.f0 = 6;
@@ -132763,7 +132763,7 @@ CPyL33: ;
     if (likely(cpy_r_sinfo != Py_None))
         cpy_r_r43 = cpy_r_sinfo;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 230, CPyStatic_logging___globals, "str", cpy_r_sinfo);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 238, CPyStatic_logging___globals, "str", cpy_r_sinfo);
         goto CPyL64;
     }
     cpy_r_r44 = CPyStr_AdjustIndex(cpy_r_r43, -1);
@@ -132788,7 +132788,7 @@ CPyL38: ;
     if (likely(cpy_r_sinfo != Py_None))
         cpy_r_r49 = cpy_r_sinfo;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 231, CPyStatic_logging___globals, "str", cpy_r_sinfo);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 239, CPyStatic_logging___globals, "str", cpy_r_sinfo);
         goto CPyL60;
     }
     cpy_r_r50 = CPyStr_GetSlice(cpy_r_r49, 0, -2);
@@ -132800,7 +132800,7 @@ CPyL38: ;
     if (likely(PyUnicode_Check(cpy_r_r50)))
         cpy_r_r51 = cpy_r_r50;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 231, CPyStatic_logging___globals, "str", cpy_r_r50);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 239, CPyStatic_logging___globals, "str", cpy_r_r50);
         goto CPyL60;
     }
     cpy_r_sinfo = cpy_r_r51;
@@ -132814,7 +132814,7 @@ CPyL43: ;
     if (likely(PyUnicode_Check(cpy_r_r53)))
         cpy_r_r54 = cpy_r_r53;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 232, CPyStatic_logging___globals, "str", cpy_r_r53);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 240, CPyStatic_logging___globals, "str", cpy_r_r53);
         goto CPyL64;
     }
     cpy_r_r55 = cpy_r_f;
@@ -132846,7 +132846,7 @@ CPyL43: ;
     if (likely(PyUnicode_Check(cpy_r_r61)))
         cpy_r_r62 = cpy_r_r61;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 232, CPyStatic_logging___globals, "str", cpy_r_r61);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "findCaller", 240, CPyStatic_logging___globals, "str", cpy_r_r61);
         goto CPyL67;
     }
     cpy_r_r63 = cpy_r_sinfo;
@@ -133070,7 +133070,7 @@ CPyL10: ;
     if (likely(PyUnicode_Check(cpy_r_r14)))
         cpy_r_r15 = cpy_r_r14;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "makeRecord", 256, CPyStatic_logging___globals, "str", cpy_r_r14);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "makeRecord", 268, CPyStatic_logging___globals, "str", cpy_r_r14);
         goto CPyL40;
     }
     cpy_r_r16 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'message' */
@@ -133115,7 +133115,7 @@ CPyL19: ;
     if (likely(PyUnicode_Check(cpy_r_r26)))
         cpy_r_r27 = cpy_r_r26;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "makeRecord", 258, CPyStatic_logging___globals, "str", cpy_r_r26);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "makeRecord", 270, CPyStatic_logging___globals, "str", cpy_r_r26);
         goto CPyL31;
     }
     cpy_r_r28 = CPyModule_builtins;
@@ -133538,7 +133538,7 @@ CPyL11: ;
     if (likely(cpy_r_r3 != Py_None))
         cpy_r_r7 = cpy_r_r3;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 277, CPyStatic_logging___globals, "str", cpy_r_r3);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 289, CPyStatic_logging___globals, "str", cpy_r_r3);
         goto CPyL56;
     }
     cpy_r_r8 = CPyStr_IsTrue(cpy_r_r7);
@@ -133554,7 +133554,7 @@ CPyL11: ;
     if (likely(PyTuple_Check(cpy_r_r11)))
         cpy_r_r12 = cpy_r_r11;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 282, CPyStatic_logging___globals, "tuple", cpy_r_r11);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 294, CPyStatic_logging___globals, "tuple", cpy_r_r11);
         goto CPyL57;
     }
     cpy_r_r13.f0 = 6;
@@ -133777,14 +133777,14 @@ __LL527: ;
     cpy_r_r59 = cpy_r_r58;
 __LL528: ;
     if (cpy_r_r59 != NULL) goto __LL526;
-    CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 300, CPyStatic_logging___globals, "union[tuple[object, object, object], tuple[None, None, None]]", cpy_r_r58);
+    CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 310, CPyStatic_logging___globals, "union[tuple[object, object, object], tuple[None, None, None]]", cpy_r_r58);
     goto CPyL67;
 __LL526: ;
     cpy_r_exc_info = cpy_r_r59;
 CPyL45: ;
     cpy_r_r60 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->_name;
     if (unlikely(cpy_r_r60 == NULL)) {
-        CPy_AttributeError("dank_mids/logging.py", "_log", "CLogger", "name", 302, CPyStatic_logging___globals);
+        CPy_AttributeError("dank_mids/logging.py", "_log", "CLogger", "name", 312, CPyStatic_logging___globals);
         goto CPyL64;
     }
     CPy_INCREF(cpy_r_r60);
@@ -133842,7 +133842,7 @@ __LL532: ;
         cpy_r_r61 = NULL;
     }
     if (cpy_r_r61 != NULL) goto __LL529;
-    CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 308, CPyStatic_logging___globals, "union[tuple[object, object, union[object, None]], tuple[None, None, None], None]", cpy_r_exc_info);
+    CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 318, CPyStatic_logging___globals, "union[tuple[object, object, union[object, None]], tuple[None, None, None], None]", cpy_r_exc_info);
     goto CPyL68;
 __LL529: ;
     cpy_r_r62 = CPyDef_logging___CLogger___makeRecord(cpy_r_self, cpy_r_r60, cpy_r_level, cpy_r_fn, cpy_r_lno, cpy_r_msg, cpy_r_args, cpy_r_r61, cpy_r_func, cpy_r_extra, cpy_r_sinfo);
@@ -134186,7 +134186,7 @@ PyObject *CPyDef_logging____py310_logging_caller_source_path(PyObject *cpy_r_fil
     if (likely(PyUnicode_Check(cpy_r_r7)))
         cpy_r_r8 = cpy_r_r7;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 336, CPyStatic_logging___globals, "str", cpy_r_r7);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 346, CPyStatic_logging___globals, "str", cpy_r_r7);
         goto CPyL17;
     }
     cpy_r_r9 = CPyModule_importlib___machinery;
@@ -134199,7 +134199,7 @@ PyObject *CPyDef_logging____py310_logging_caller_source_path(PyObject *cpy_r_fil
     if (likely(PyList_Check(cpy_r_r11)))
         cpy_r_r12 = cpy_r_r11;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 337, CPyStatic_logging___globals, "list", cpy_r_r11);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 347, CPyStatic_logging___globals, "list", cpy_r_r11);
         goto CPyL18;
     }
     cpy_r_r13 = 0;
@@ -134217,7 +134217,7 @@ CPyL7: ;
     if (likely(PyUnicode_Check(cpy_r_r21)))
         cpy_r_r22 = cpy_r_r21;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 337, CPyStatic_logging___globals, "str", cpy_r_r21);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 347, CPyStatic_logging___globals, "str", cpy_r_r21);
         goto CPyL20;
     }
     cpy_r_r23 = CPyStr_Endswith(cpy_r_r8, cpy_r_r22);
@@ -134246,7 +134246,7 @@ CPyL10: ;
     if (likely(PyUnicode_Check(cpy_r_r29)))
         cpy_r_r30 = cpy_r_r29;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 339, CPyStatic_logging___globals, "str", cpy_r_r29);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_logging_caller_source_path", 349, CPyStatic_logging___globals, "str", cpy_r_r29);
         goto CPyL17;
     }
     cpy_r_r31 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.py' */
@@ -134350,7 +134350,7 @@ char CPyDef_logging____is_logging_caller_internal_frame(PyObject *cpy_r_frame) {
     if (likely(PyUnicode_Check(cpy_r_r3)))
         cpy_r_r4 = cpy_r_r3;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_is_logging_caller_internal_frame", 358, CPyStatic_logging___globals, "str", cpy_r_r3);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_is_logging_caller_internal_frame", 368, CPyStatic_logging___globals, "str", cpy_r_r3);
         goto CPyL25;
     }
     cpy_r_r5 = CPyDef_logging____py310_logging_caller_source_path(cpy_r_r4);
@@ -134717,7 +134717,7 @@ PyObject *CPyDef_logging____find_caller_frame_py310(CPyTagged cpy_r_stacklevel) 
     if (likely(PyUnicode_Check(cpy_r_r7)))
         cpy_r_r8 = cpy_r_r7;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_find_caller_frame_py310", 400, CPyStatic_logging___globals, "str", cpy_r_r7);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_find_caller_frame_py310", 412, CPyStatic_logging___globals, "str", cpy_r_r7);
         goto CPyL59;
     }
     cpy_r_r9 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_' */
@@ -135272,7 +135272,7 @@ CPyL8: ;
     if (likely(cpy_r_sinfo != Py_None))
         cpy_r_r13 = cpy_r_sinfo;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 472, CPyStatic_logging___globals, "str", cpy_r_sinfo);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 484, CPyStatic_logging___globals, "str", cpy_r_sinfo);
         goto CPyL31;
     }
     cpy_r_r14 = CPyStr_AdjustIndex(cpy_r_r13, -1);
@@ -135297,7 +135297,7 @@ CPyL13: ;
     if (likely(cpy_r_sinfo != Py_None))
         cpy_r_r19 = cpy_r_sinfo;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 473, CPyStatic_logging___globals, "str", cpy_r_sinfo);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 485, CPyStatic_logging___globals, "str", cpy_r_sinfo);
         goto CPyL27;
     }
     cpy_r_r20 = CPyStr_GetSlice(cpy_r_r19, 0, -2);
@@ -135309,7 +135309,7 @@ CPyL13: ;
     if (likely(PyUnicode_Check(cpy_r_r20)))
         cpy_r_r21 = cpy_r_r20;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 473, CPyStatic_logging___globals, "str", cpy_r_r20);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 485, CPyStatic_logging___globals, "str", cpy_r_r20);
         goto CPyL27;
     }
     cpy_r_sinfo = cpy_r_r21;
@@ -135323,7 +135323,7 @@ CPyL18: ;
     if (likely(PyUnicode_Check(cpy_r_r23)))
         cpy_r_r24 = cpy_r_r23;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 474, CPyStatic_logging___globals, "str", cpy_r_r23);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 486, CPyStatic_logging___globals, "str", cpy_r_r23);
         goto CPyL31;
     }
     cpy_r_r25 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'f_lineno' */
@@ -135352,7 +135352,7 @@ CPyL18: ;
     if (likely(PyUnicode_Check(cpy_r_r29)))
         cpy_r_r30 = cpy_r_r29;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 474, CPyStatic_logging___globals, "str", cpy_r_r29);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "_py310_caller_info_from_frame", 486, CPyStatic_logging___globals, "str", cpy_r_r29);
         goto CPyL34;
     }
     cpy_r_r31 = cpy_r_sinfo;
@@ -136270,7 +136270,7 @@ CPyL3: ;
     if (likely(PyDict_Check(cpy_r_r202)))
         cpy_r_r203 = cpy_r_r202;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 37, CPyStatic_logging___globals, "dict", cpy_r_r202);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 45, CPyStatic_logging___globals, "dict", cpy_r_r202);
         goto CPyL84;
     }
     CPyStatic_logging____nameToLevel = cpy_r_r203;
@@ -136353,7 +136353,7 @@ CPyL3: ;
         cpy_r_r229 = NULL;
     }
     if (cpy_r_r229 != NULL) goto __LL564;
-    CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 40, CPyStatic_logging___globals, "str or None", cpy_r_r228);
+    CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 48, CPyStatic_logging___globals, "str or None", cpy_r_r228);
     goto CPyL84;
 __LL564: ;
     CPyStatic_logging____srcfile = cpy_r_r229;
@@ -136477,7 +136477,7 @@ __LL564: ;
     if (likely(PyUnicode_Check(cpy_r_r275)))
         cpy_r_r276 = cpy_r_r275;
     else {
-        CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 343, CPyStatic_logging___globals, "str", cpy_r_r275);
+        CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 353, CPyStatic_logging___globals, "str", cpy_r_r275);
         goto CPyL84;
     }
     cpy_r_r277 = CPyDef_logging____py310_logging_caller_source_path(cpy_r_r276);
@@ -137146,7 +137146,7 @@ CPyL95: ;
                                                                                                                                             if (rv < 0) goto fail;
                                                                                                                                             PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                             if (shared_lib_file == NULL) goto fail;
-                                                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                            PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                             if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                             Py_ssize_t is_pkg = 0;
                                                                                                                                             rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___middleware__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -138365,7 +138365,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/middleware.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_middleware___globals);
         goto CPyL54;
     }
-    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._controllers' */
     cpy_r_r38 = CPyImport_ImportNative(cpy_r_r37, cpy_r_r28, cpy_r_r29, cpy_r_r30, cpy_r_r35, cpy_r_r36, 0);
     CPy_DECREF(cpy_r_r35);
@@ -138408,7 +138408,7 @@ CPyL14: ;
         CPy_AddTraceback("dank_mids/middleware.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_middleware___globals);
         goto CPyL54;
     }
-    cpy_r_r54 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r54 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r55 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r56 = CPyImport_ImportNative(cpy_r_r55, cpy_r_r46, cpy_r_r47, cpy_r_r48, cpy_r_r53, cpy_r_r54, 0);
     CPy_DECREF(cpy_r_r53);
@@ -140885,7 +140885,7 @@ __LL570: ;
                                                                                                                                                 if (rv < 0) goto fail;
                                                                                                                                                 PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                                 if (shared_lib_file == NULL) goto fail;
-                                                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                                PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                                 if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                                 Py_ssize_t is_pkg = 1;
                                                                                                                                                 rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___stats__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -146788,7 +146788,7 @@ CPyL3: ;
         CPy_AddTraceback("dank_mids/stats/__init__.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_stats___globals);
         goto CPyL111;
     }
-    cpy_r_r81 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r81 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r82 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.ENVIRONMENT_VARIABLES' */
     cpy_r_r83 = CPyImport_ImportNative(cpy_r_r82, cpy_r_r73, cpy_r_r74, cpy_r_r75, cpy_r_r80, cpy_r_r81, 0);
     CPy_DECREF(cpy_r_r80);
@@ -146836,7 +146836,7 @@ CPyL21: ;
         CPy_AddTraceback("dank_mids/stats/__init__.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_stats___globals);
         goto CPyL111;
     }
-    cpy_r_r101 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r101 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r102 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
     cpy_r_r103 = CPyImport_ImportNative(cpy_r_r102, cpy_r_r93, cpy_r_r94, cpy_r_r95, cpy_r_r100, cpy_r_r101, 0);
     CPy_DECREF(cpy_r_r100);
@@ -146879,7 +146879,7 @@ CPyL29: ;
         CPy_AddTraceback("dank_mids/stats/__init__.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic_stats___globals);
         goto CPyL111;
     }
-    cpy_r_r119 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-darwin.so' */
+    cpy_r_r119 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '.cpython-312-x86_64-linux-gnu.so' */
     cpy_r_r120 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.stats._float_moving_average' */
     cpy_r_r121 = CPyImport_ImportNative(cpy_r_r120, cpy_r_r111, cpy_r_r112, cpy_r_r113, cpy_r_r118, cpy_r_r119, 0);
     CPy_DECREF(cpy_r_r118);
@@ -148310,7 +148310,7 @@ CPyL122: ;
                                                                                                                                                     if (rv < 0) goto fail;
                                                                                                                                                     PyObject *shared_lib_file = PyObject_GetAttrString(shared_lib, "__file__");
                                                                                                                                                     if (shared_lib_file == NULL) goto fail;
-                                                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-darwin.so");
+                                                                                                                                                    PyObject *ext_suffix = PyUnicode_FromString(".cpython-312-x86_64-linux-gnu.so");
                                                                                                                                                     if (ext_suffix == NULL) CPyError_OutOfMemory();
                                                                                                                                                     Py_ssize_t is_pkg = 0;
                                                                                                                                                     rv = CPyImport_SetDunderAttrs(CPyModule_dank_mids___stats____float_moving_average__internal, modname, shared_lib_file, ext_suffix, is_pkg);
@@ -151111,9 +151111,9 @@ CPyL17: ;
                                                                                                                                                     const char * const CPyLit_Str[] = {
     "\a\bbuiltins\rStreamHandler\alogging\005Final\006typing\006a_sync\ntyped_envs",
     "\003\"dank_mids/ENVIRONMENT_VARIABLES.py\b<module>\030AsyncProcessPoolExecutor",
-    "\004\020dank_mids__mypyc\b__file__\026.cpython-312-darwin.so\017dank_mids._envs",
-    "\005\005_envs\rOperationMode\017dank_mids._mode\021dank_mids.logging\004INFO",
-    "\004\fget_c_logger\016BlockSemaphore\024dank_mids.semaphores\016dank_mids.envs",
+    "\003\020dank_mids__mypyc\b__file__ .cpython-312-x86_64-linux-gnu.so",
+    "\005\017dank_mids._envs\005_envs\rOperationMode\017dank_mids._mode\021dank_mids.logging",
+    "\005\004INFO\fget_c_logger\016BlockSemaphore\024dank_mids.semaphores\016dank_mids.envs",
     "\005\006logger\bdisabled\vhasHandlers\naddHandler\bsetLevel",
     "\001kFor your information, you can tweak your configuration for optimal performance using any of the envs below:",
     "\005\016OPERATION_MODE\006infura\adefault\averbose\022MAX_MULTICALL_SIZE",
