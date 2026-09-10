@@ -1,5 +1,5 @@
 import re
-from collections.abc import Callable, Coroutine
+from collections.abc import Callable
 from functools import cached_property
 from time import time
 from typing import (
@@ -14,6 +14,7 @@ from typing import (
     TypedDict,
     TypeVar,
     Union,
+    cast,
     overload,
 )
 
@@ -88,10 +89,6 @@ class OverrideParams(TypedDict):
 JsonrpcParams = list[Union[eth_callParams, BlockId, OverrideParams]]
 """A list of parameters for JSON-RPC calls, which should be eth_callParams, BlockId, and OverrideParams, in that order."""
 
-
-# This type alias was introduced in web3 v5.28.0 but we like loose deps here so we recreate instead of import.
-AsyncMiddleware = Callable[[RPCEndpoint, Any], Coroutine[Any, Any, RPCResponse]]
-"""A type alias for asynchronous middleware functions."""
 
 _list_of_stuff = list[Union[str, None, dict, list]]
 """A type alias for a list that can contain strings, None, dictionaries, or lists."""
@@ -284,7 +281,9 @@ def _decode_eth_get_block_by_number_current_behavior(
             except ValidationError as e2:
                 if e2.args[0] != _UNKNOWN_FIELD_BASE_FEE:
                     raise
-                decoded = better_decode(result, type=BaseBlock, dec_hook=_decode_hook, method=method)
+                decoded = better_decode(
+                    result, type=BaseBlock, dec_hook=_decode_hook, method=method
+                )
                 _RETURN_TYPES[method] = BaseBlock  # all blocks on base are BaseBlocks
                 return decoded
 
@@ -348,7 +347,9 @@ class PartialResponse(DictStruct, frozen=True, omit_defaults=True, repr_omit_def
 
     @property
     def payload_too_large(self) -> bool:
-        return any(map(self.error.message.__contains__, constants.TOO_MUCH_DATA_ERRS))
+        return any(
+            map(cast(Error, self.error).message.__contains__, constants.TOO_MUCH_DATA_ERRS)
+        )
 
     def to_dict(self, method: RPCEndpoint | None = None) -> RPCResponse:  # type: ignore [override]
         """Returns a complete dictionary representation of this response ``Struct``."""
