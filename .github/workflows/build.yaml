@@ -8,7 +8,7 @@ name: Build Mypyc
 # 5) Re-apply Ubuntu 3.14 artifacts as the canonical baseline for generated C outputs.
 # 6) If dank_mids Python sources changed in the PR, enforce Windows .pyd ABI deltas for 310/311/312/313/314.
 # 7) Normalize generated C files to reduce line-number/index churn, then commit/push build-file deltas when present.
-# 8) If aiolimiter vendor content changed, commit/push those updates and then update the main-repo submodule pointer.
+# 8) Vendored aiolimiter artifacts are committed with the native group that uses them.
 
 on:
   pull_request:
@@ -19,6 +19,7 @@ on:
       - '.github/actions/setup-python-cache/action.yml'
       - '.github/workflows/build.yaml'
       - 'scripts/run_mypyc_build.py'
+      - 'scripts/check_mypyc_wheel.py'
       - '.gitmodules'
       - 'Makefile'
       - 'pyproject.toml'
@@ -58,9 +59,6 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref }}
 
-      - name: Update aiolimiter submodule
-        run: make update-aiolimiter
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -73,6 +71,12 @@ jobs:
 
       - name: Run Mypyc
         run: python scripts/run_mypyc_build.py
+
+      - name: Verify linked modules in the wheel
+        shell: bash
+        run: |
+          python -m build --wheel
+          python scripts/check_mypyc_wheel.py dist/dank_mids-*.whl
 
       - name: Upload Linux build artifacts
         if: matrix.os == 'ubuntu-latest'
@@ -116,9 +120,6 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref }}
           fetch-depth: 0
-
-      - name: Update aiolimiter submodule
-        run: make update-aiolimiter
 
       - name: Download all build artifacts
         uses: actions/download-artifact@v7
@@ -202,52 +203,4 @@ jobs:
           git pull
           git add .
           git commit -m "chore: compile to C for Linux x64 with mypyc"
-          git push
-
-      - name: Check for changes (aiolimiter)
-        run: |
-          if [[ -n $(git -C dank_mids/_vendor/aiolimiter status --porcelain) ]]; then
-            echo "aiolimiter_changes_detected=true" >> $GITHUB_ENV
-          else
-            echo "aiolimiter_changes_detected=false" >> $GITHUB_ENV
-          fi
-
-      - name: Commit and push aiolimiter changes
-        if: env.aiolimiter_changes_detected == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.AIOLIMITER_TOKEN }}
-        run: |
-          cd dank_mids/_vendor/aiolimiter
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/BobTheBuidler/aiolimiter.git
-          git add .
-          if git diff --cached --quiet; then
-            echo "No aiolimiter changes to commit."
-            exit 0
-          fi
-          git commit -m "chore: add artifacts for dank-mids"
-          git pull --rebase
-          git push origin HEAD:mypyc
-
-  update-submodule-pointer:
-    needs: aggregate-build-files
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-        with:
-          ref: ${{ github.head_ref || github.ref }}
-          fetch-depth: 0
-      - name: Update aiolimiter submodule pointer in main repo
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          make update-aiolimiter
-          git add dank_mids/_vendor/aiolimiter
-          if git diff --cached --quiet; then
-            echo "No aiolimiter submodule pointer changes to commit."
-            exit 0
-          fi
-          git commit -m "chore: update aiolimiter submodule pointer"
           git push

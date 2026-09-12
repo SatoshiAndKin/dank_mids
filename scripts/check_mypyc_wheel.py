@@ -6,6 +6,7 @@ from __future__ import annotations
 import pathlib
 import shlex
 import sys
+import sysconfig
 import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -59,15 +60,15 @@ def load_mypyc_targets() -> list[str]:
 
 def check_wheel(wheel_path: pathlib.Path, targets: list[str]) -> list[str]:
     failures: list[str] = []
+    suffix = sysconfig.get_config_var("EXT_SUFFIX")
     with zipfile.ZipFile(wheel_path) as zf:
         names = set(zf.namelist())
     for py_path in targets:
         ext_prefix = py_path[:-3]  # strip .py
-        has_compiled = any(
-            name.startswith(ext_prefix) and name.endswith((".so", ".pyd")) for name in names
-        )
-        if not has_compiled:
+        if ext_prefix + suffix not in names:
             failures.append(f"{wheel_path.name}: missing compiled artifact for {py_path}")
+    if not any("/" not in name and name.endswith("__mypyc" + suffix) for name in names):
+        failures.append(f"{wheel_path.name}: missing native mypyc group for {suffix}")
     return failures
 
 
