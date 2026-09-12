@@ -155,7 +155,7 @@ class _RequestEvent(a_sync.Event):
 
 class _RequestBase(Generic[_Response]):
     _fut: DebuggableFuture
-    _batch: Optional["_Batch"] = None
+    _batch: Union["_Batch", "DankBatch", None] = None
 
     __slots__ = "controller", "uid", "_fut", "__weakref__"
 
@@ -319,7 +319,7 @@ class RPCRequest(_RequestBase[RPCResponse]):
             # NOTE: We want to force the event loop to make one full _run_once call before we execute.
             await yield_to_loop()
 
-        elif current_batch._awaited is False:
+        elif isinstance(current_batch, _Batch) and current_batch._awaited is False:
             # NOTE: If current_batch is not None, that means we filled a batch. Let's await it now so we can send something to the node.
             await wait((current_batch._task, fut), return_when="FIRST_COMPLETED")
 
@@ -896,7 +896,9 @@ class Multicall(_Batch[RPCResponse, eth_call]):
         self._start_debug_daemon("Multicall debug daemon", "Multicall complete")
         with self._lock:
             for call in self.calls:
-                call._batch = self
+                # Await the enclosing dispatch. Starting this multicall separately
+                # would repeat calls already included in its JSON-RPC batch.
+                call._batch = batch
             if cleanup:
                 controller = self.controller
                 with controller.pools_closed_lock:
