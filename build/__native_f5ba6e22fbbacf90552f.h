@@ -786,12 +786,14 @@ typedef struct {
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__dispatched_batches;
     tuple_T3OOO ___mypyc_temp__41;
+    PyObject *___mypyc_generator_attribute__tasks;
     PyObject *___mypyc_temp__42;
     tuple_T3OOO ___mypyc_temp__43;
-    tuple_T3OOO ___mypyc_temp__44;
-    PyObject *___mypyc_temp__45;
+    PyObject *___mypyc_generator_attribute___;
+    PyObject *___mypyc_generator_attribute__pending;
+    PyObject *___mypyc_temp__44;
+    tuple_T3OOO ___mypyc_temp__45;
     tuple_T3OOO ___mypyc_temp__46;
-    tuple_T3OOO ___mypyc_temp__47;
 } dank_mids___controller___dispatch_pending_rpc_batch_and_wait_DankMiddlewareController_genObject;
 
 typedef struct {
