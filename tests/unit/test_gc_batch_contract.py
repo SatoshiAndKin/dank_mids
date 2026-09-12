@@ -1,9 +1,9 @@
 import asyncio
 import gc
-import importlib.util
-from functools import lru_cache
-from pathlib import Path
-import sys
+import logging
+from collections.abc import Iterator
+from contextlib import contextmanager
+from importlib.machinery import EXTENSION_SUFFIXES
 import weakref
 from unittest.mock import patch
 
@@ -75,6 +75,22 @@ async def _start_future_waiter(future: DebuggableFuture[T]) -> asyncio.Task[T]:
     return waiter
 
 
+@contextmanager
+def _observe_batch_timeout(event: asyncio.Event) -> Iterator[None]:
+    class Handler(logging.Handler):
+        def emit(self, record: logging.LogRecord) -> None:
+            if record.getMessage().startswith("pending jsonrpc batch did not complete within"):
+                event.set()
+
+    logger = logging.getLogger()
+    handler = Handler()
+    logger.addHandler(handler)
+    try:
+        yield
+    finally:
+        logger.removeHandler(handler)
+
+
 class _DummySyncEth:
     chain_id = 1
 
@@ -103,7 +119,8 @@ class _DummyMulticall:
 
 
 def _build_controller_for_early_start() -> DankMiddlewareController:
-    module = _controller_module_for_tests()
+    module = controller_module
+    assert any(module.__file__.endswith(suffix) for suffix in EXTENSION_SUFFIXES)
     with (
         patch.object(module, "_sync_w3_from_async", return_value=_DummySyncW3()),
         patch.object(module, "_get_client_version", return_value="dummy-client"),
@@ -111,23 +128,6 @@ def _build_controller_for_early_start() -> DankMiddlewareController:
         patch.object(module, "_get_multicall3", return_value=None),
     ):
         return module.DankMiddlewareController(_DummyW3())
-
-
-@lru_cache(maxsize=1)
-def _controller_module_for_tests():
-    path = getattr(controller_module, "__file__", "")
-    if not path.endswith(".so"):
-        return controller_module
-
-    source_path = Path(__file__).resolve().parents[2] / "dank_mids" / "controller.py"
-    spec = importlib.util.spec_from_file_location("dank_mids._controller_test_source", source_path)
-    if spec is None or spec.loader is None:
-        raise RuntimeError(f"unable to load controller source module from {source_path}")
-
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[spec.name] = module
-    spec.loader.exec_module(module)
-    return module
 
 
 def test_create_batch_task_finishes_without_live_waiters() -> None:
@@ -422,12 +422,13 @@ def test_multicall_bisect_retry_timeout_does_not_dispatch_duplicate_batch() -> N
             bid="mc-timeout-no-dup",
         )
         release = asyncio.Event()
+        timed_out = asyncio.Event()
         fallback_starts: list[str] = []
         original_dispatch = controller_cls.dispatch_pending_rpc_batch_and_wait
         original_start = JSONRPCBatch.start
 
         async def release_later() -> None:
-            await asyncio.sleep(0.05)
+            await asyncio.wait_for(timed_out.wait(), timeout=1)
             release.set()
 
         async def patched_get_response(self) -> None:
@@ -447,12 +448,14 @@ def test_multicall_bisect_retry_timeout_does_not_dispatch_duplicate_batch() -> N
             patch.object(controller_cls, "dispatch_pending_rpc_batch_and_wait", patched_dispatch),
             patch.object(JSONRPCBatch, "get_response", patched_get_response),
             patch.object(JSONRPCBatch, "start", patched_start),
+            _observe_batch_timeout(timed_out),
         ):
             releaser = asyncio.create_task(release_later())
             await asyncio.wait_for(multicall.bisect_and_retry(RuntimeError("boom")), timeout=1)
             await releaser
 
         assert fallback_starts == []
+        assert timed_out.is_set()
 
     asyncio.run(run())
 
@@ -493,6 +496,110 @@ def test_dispatch_pending_rpc_batch_respects_capacity_gate_for_bisect_retries() 
 
         assert completed is True
         assert started_sizes == [2, 1]
+
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize("after_timeout", [False, True])
+def test_dispatch_cancellation_preserves_in_flight_batch(after_timeout: bool) -> None:
+    async def run() -> None:
+        controller = _build_controller_for_early_start()
+        batch = controller.pending_rpc_calls
+        call = _RPCBatchCall()
+        batch.append(call, skip_check=True)
+        started = asyncio.Event()
+        release = asyncio.Event()
+        timed_out = asyncio.Event()
+        starts = 0
+
+        async def response(self) -> None:
+            nonlocal starts
+            starts += 1
+            started.set()
+            await release.wait()
+            self._done.set()
+
+        with (
+            patch.object(JSONRPCBatch, "get_response", response),
+            _observe_batch_timeout(timed_out),
+        ):
+            caller = asyncio.create_task(
+                controller.dispatch_pending_rpc_batch_and_wait(
+                    (), timeout=0 if after_timeout else 60
+                )
+            )
+            await asyncio.wait_for(started.wait(), timeout=1)
+            if after_timeout:
+                await asyncio.wait_for(timed_out.wait(), timeout=1)
+            caller.cancel()
+            with pytest.raises(asyncio.CancelledError):
+                await caller
+            assert not batch._done.is_set()
+            release.set()
+            await asyncio.wait_for(batch._task, timeout=1)
+
+        assert starts == 1
+        assert batch._done.is_set()
+
+    asyncio.run(run())
+
+
+def test_dispatch_with_no_pending_work_completes_without_a_task() -> None:
+    async def run() -> None:
+        controller = _build_controller_for_early_start()
+        batch = controller.pending_rpc_calls
+        assert await controller.dispatch_pending_rpc_batch_and_wait(()) is True
+        assert not batch._awaited
+
+    asyncio.run(run())
+
+
+def test_dispatch_reports_failure_to_append_calls() -> None:
+    async def run() -> None:
+        controller = _build_controller_for_early_start()
+        batch = controller.pending_rpc_calls
+        batch._awaited = True
+        call = _PendingEthCall()
+        multicall = Multicall(controller, [call], bid="cannot-append")
+        assert await controller.dispatch_pending_rpc_batch_and_wait((multicall,)) is False
+        assert controller.pending_rpc_calls is batch
+
+    asyncio.run(run())
+
+
+@pytest.mark.parametrize("after_timeout", [False, True])
+def test_dispatch_reports_batch_failure(after_timeout: bool) -> None:
+    async def run() -> None:
+        controller = _build_controller_for_early_start()
+        batch = controller.pending_rpc_calls
+        call = _RPCBatchCall()
+        batch.append(call, skip_check=True)
+        started = asyncio.Event()
+        release = asyncio.Event()
+        timed_out = asyncio.Event()
+
+        async def response(self) -> None:
+            started.set()
+            await release.wait()
+            self._done.set()
+            raise RuntimeError("controlled batch failure")
+
+        with (
+            patch.object(JSONRPCBatch, "get_response", response),
+            _observe_batch_timeout(timed_out),
+        ):
+            caller = asyncio.create_task(
+                controller.dispatch_pending_rpc_batch_and_wait(
+                    (), timeout=0 if after_timeout else 60
+                )
+            )
+            await asyncio.wait_for(started.wait(), timeout=1)
+            if after_timeout:
+                await asyncio.wait_for(timed_out.wait(), timeout=1)
+            release.set()
+            assert await asyncio.wait_for(caller, timeout=1) is False
+
+        assert batch._done.is_set()
 
     asyncio.run(run())
 

@@ -1,4 +1,4 @@
-from asyncio import CancelledError, Future, TimeoutError, get_running_loop, wait_for
+from asyncio import CancelledError, Future, get_running_loop, wait
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from functools import lru_cache
@@ -425,10 +425,11 @@ class DankMiddlewareController:
         timeout: float = TIMEOUT_SECONDS_BIG,
     ) -> bool:
         """
-        Append calls to the current pending JSON-RPC batch, dispatch it, and wait with a timeout.
+        Dispatch pending calls and warn if they take longer than the timeout.
 
         Returns:
-            True if the dispatched batch completed before timeout and without errors, otherwise False.
+            True when the dispatched batches complete without errors, otherwise False.
+            The warning timeout does not cancel or duplicate an in-flight batch.
         """
         try:
             dispatched_batches = self._append_calls_and_dispatch_pending_batches(calls)
@@ -439,25 +440,18 @@ class DankMiddlewareController:
         if not dispatched_batches:
             return True
 
+        tasks = self._dispatched_batch_tasks(dispatched_batches)
         try:
-            await wait_for(
-                cgather(*self._dispatched_batch_tasks(dispatched_batches)), timeout=timeout
-            )
+            _, pending = await wait(tasks, timeout=timeout)
+            if pending:
+                logger.warning(
+                    "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
+                    timeout,
+                )
+            await cgather(*tasks)
             return True
         except CancelledError:
             raise
-        except TimeoutError:
-            logger.warning(
-                "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
-                timeout,
-            )
-            try:
-                await cgather(*self._dispatched_batch_tasks(dispatched_batches))
-                return True
-            except CancelledError:
-                raise
-            except Exception:
-                logger.exception("pending jsonrpc batch failed after timeout")
         except Exception:
             logger.exception("pending jsonrpc batch failed")
         return False

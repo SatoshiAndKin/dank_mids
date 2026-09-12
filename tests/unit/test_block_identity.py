@@ -116,13 +116,10 @@ def test_shared_header_lookup_survives_one_cancelled_waiter(monkeypatch):
 
 def test_controller_keeps_hash_identity_for_unbatched_calls(monkeypatch):
     from unittest.mock import AsyncMock
-    from test_gc_batch_contract import (
-        _build_controller_for_early_start,
-        _controller_module_for_tests,
-    )
+    from dank_mids import controller as module
+    from test_gc_batch_contract import _build_controller_for_early_start
 
     async def check():
-        module = _controller_module_for_tests()
         owner = _build_controller_for_early_start()
         target = "0x0000000000000000000000000000000000000002"
         tx = {"to": target, "data": "0x12345678"}
