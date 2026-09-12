@@ -2,7 +2,7 @@ name: PyTest
 
 on:
   pull_request:
-    branch: master
+    branches: [master, good-master]
     paths:
       - '.github/actions/setup-python-cache/action.yml'
       - '**.py'
@@ -10,6 +10,8 @@ on:
       - '**/pytest.ini'
       - '**/pytest.yaml'
       - 'poetry.lock'
+      - 'pyproject.toml'
+      - 'requirements-build.txt'
   workflow_dispatch:
       
 concurrency:
@@ -47,6 +49,22 @@ jobs:
               pyproject.toml
               poetry.lock
 
+      - name: Load native extensions for this source
+        id: native-extensions
+        uses: actions/cache@v5
+        with:
+          path: |
+            dank_mids/**/*.so
+            dank_mids/**/*.pyd
+            *__mypyc*.so
+            *__mypyc*.pyd
+          key: unit-native-${{ runner.os }}-${{ runner.arch }}-${{ matrix.pyversion }}-${{ hashFiles('dank_mids/**/*.py', 'pyproject.toml', 'requirements-build.txt', 'scripts/run_mypyc_build.py') }}
+
+      - name: Build checkout native extensions
+        if: steps.native-extensions.outputs.cache-hit != 'true'
+        run: python scripts/run_mypyc_build.py
+        shell: bash
+
       - name: Load cached Poetry installation
         id: cached-poetry
         uses: actions/cache@v5
@@ -54,22 +72,17 @@ jobs:
           path: ~/.local  # the path depends on the OS
           key: poetry-${{ runner.os }}-${{ matrix.pyversion }}-0  # increment to reset cache
 
-      - name: Install Poetry (Python3.8)
-        if: steps.cached-poetry.outputs.cache-hit != 'true' &&  matrix.pyversion == '3.8'
+      - name: Configure Poetry
         uses: snok/install-poetry@v1
         with:
-          version: "1.8.5"
-
-      - name: Install Poetry
-        if: steps.cached-poetry.outputs.cache-hit != 'true' && matrix.pyversion != '3.8'
-        uses: snok/install-poetry@v1
+          virtualenvs-in-project: true
 
       - name: Load cached venv
         id: cached-poetry-dependencies
         uses: actions/cache@v5
         with:
           path: .venv
-          key: venv-${{ runner.os }}-${{ matrix.pyversion }}-${{ hashFiles('**/poetry.lock') }}-0  # increment to reset cache
+          key: venv-${{ runner.os }}-${{ matrix.pyversion }}-${{ hashFiles('**/poetry.lock') }}-1  # increment to reset cache
 
       - name: Install Dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
