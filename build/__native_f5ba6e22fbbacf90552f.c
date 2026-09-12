@@ -53859,7 +53859,7 @@ controller_____call___3_DankMiddlewareController_gen_traverse(dank_mids___contro
     Py_VISIT(self->___mypyc_temp__23.f0);
     Py_VISIT(self->___mypyc_temp__23.f1);
     Py_VISIT(self->___mypyc_temp__23.f2);
-    Py_VISIT(self->___mypyc_temp__2_1);
+    Py_VISIT(self->___mypyc_temp__2_0);
     return 0;
 }
 
@@ -53917,7 +53917,7 @@ controller_____call___3_DankMiddlewareController_gen_clear(dank_mids___controlle
     Py_CLEAR(self->___mypyc_temp__23.f0);
     Py_CLEAR(self->___mypyc_temp__23.f1);
     Py_CLEAR(self->___mypyc_temp__23.f2);
-    Py_CLEAR(self->___mypyc_temp__2_1);
+    Py_CLEAR(self->___mypyc_temp__2_0);
     return 0;
 }
 
@@ -53981,8 +53981,8 @@ controller_____call___3_DankMiddlewareController_gen_dealloc(dank_mids___control
         Py_CLEAR(self->___mypyc_temp__23.f0);
         Py_CLEAR(self->___mypyc_temp__23.f1);
         Py_CLEAR(self->___mypyc_temp__23.f2);
-        self->___mypyc_temp__2_0 = 2;
-        Py_CLEAR(self->___mypyc_temp__2_1);
+        Py_CLEAR(self->___mypyc_temp__2_0);
+        self->___mypyc_temp__2_1 = 2;
         return;
     }
     CPy_TRASHCAN_BEGIN(self, controller_____call___3_DankMiddlewareController_gen_dealloc)
@@ -54080,7 +54080,7 @@ PyObject *CPyDef_controller_____mypyc___3__call___3_DankMiddlewareController_gen
     self->___mypyc_temp__20 = (tuple_T3OOO) { NULL, NULL, NULL };
     self->___mypyc_temp__21 = (tuple_T3OOO) { NULL, NULL, NULL };
     self->___mypyc_temp__23 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__2_0 = 2;
+    self->___mypyc_temp__2_1 = 2;
     return (PyObject *)self;
 }
 
@@ -58635,10 +58635,10 @@ __LL250: ;
     } else {
         CPy_INCREF(cpy_r_r101);
     }
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r101;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r101;
     cpy_r_r102 = 1;
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
@@ -58649,7 +58649,7 @@ CPyL73: ;
     if (unlikely(cpy_r_r103 == 2)) {
         PyErr_SetString(PyExc_AttributeError, "attribute 'canonical' of '__call___DankMiddlewareController_gen' undefined");
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r103;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r103;
     cpy_r_r104 = 1;
     if (unlikely(cpy_r_r103 == 2)) {
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
@@ -58872,15 +58872,15 @@ CPyL106: ;
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL467;
     }
-    cpy_r_r141 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0;
+    cpy_r_r141 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1;
     if (unlikely(cpy_r_r141 == 2)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_0' of '__call___DankMiddlewareController_gen' undefined");
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_1' of '__call___DankMiddlewareController_gen' undefined");
     }
     cpy_r_r142 = cpy_r_r141 ? Py_True : Py_False;
     cpy_r_r143 = CPyTagged_StealAsObject(cpy_r_r137);
-    cpy_r_r144 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1;
+    cpy_r_r144 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0;
     if (unlikely(cpy_r_r144 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_1' of '__call___DankMiddlewareController_gen' undefined");
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_0' of '__call___DankMiddlewareController_gen' undefined");
     } else {
         CPy_INCREF(cpy_r_r144);
     }
@@ -58894,10 +58894,10 @@ CPyL106: ;
         goto CPyL468;
     }
     cpy_r_r148 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r148;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r148;
     cpy_r_r149 = 1;
     CPy_DECREF(cpy_r_r143);
     if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__block != NULL) {
@@ -60936,27 +60936,27 @@ CPyL453: ;
     goto CPyL381;
 CPyL454: ;
     cpy_r_r472 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r472;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r472;
     cpy_r_r473 = 1;
     goto CPyL381;
 CPyL455: ;
     cpy_r_r474 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r474;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r474;
     cpy_r_r475 = 1;
     CPy_DecRef(cpy_r_r105);
     goto CPyL381;
 CPyL456: ;
     cpy_r_r476 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r476;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r476;
     cpy_r_r477 = 1;
     CPy_DecRef(cpy_r_r105);
     CPy_DecRef(cpy_r_r106);
@@ -60965,10 +60965,10 @@ CPyL457: ;
     goto CPyL84;
 CPyL458: ;
     cpy_r_r478 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r478;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r478;
     cpy_r_r479 = 1;
     CPy_DecRef(cpy_r_r118);
     goto CPyL381;
@@ -60981,10 +60981,10 @@ CPyL460: ;
 CPyL461: ;
     CPy_XDecRef(cpy_r_r5);
     cpy_r_r480 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r480;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r480;
     cpy_r_r481 = 1;
     goto CPyL98;
 CPyL462: ;
@@ -60994,19 +60994,19 @@ CPyL463: ;
     goto CPyL98;
 CPyL464: ;
     cpy_r_r482 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r482;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r482;
     cpy_r_r483 = 1;
     CPy_DecRef(cpy_r_r118);
     goto CPyL98;
 CPyL465: ;
     cpy_r_r484 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r484;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r484;
     cpy_r_r485 = 1;
     CPy_DecRef(cpy_r_arg);
     goto CPyL381;
@@ -61014,19 +61014,19 @@ CPyL466: ;
     goto CPyL103;
 CPyL467: ;
     cpy_r_r486 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r486;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r486;
     cpy_r_r487 = 1;
     CPyTagged_DecRef(cpy_r_r137);
     goto CPyL381;
 CPyL468: ;
     cpy_r_r488 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r488;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r488;
     cpy_r_r489 = 1;
     CPy_DecRef(cpy_r_r143);
     goto CPyL381;
@@ -61324,10 +61324,10 @@ CPyL549: ;
     CPy_XDECREF(cpy_r_r19);
     CPy_XDECREF(cpy_r_r21);
     cpy_r_r490 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r490;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r490;
     cpy_r_r491 = 1;
     goto CPyL1;
 CPyL550: ;
@@ -61343,10 +61343,10 @@ CPyL550: ;
     CPy_XDECREF(cpy_r_r19);
     CPy_XDECREF(cpy_r_r21);
     cpy_r_r492 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r492;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r492;
     cpy_r_r493 = 1;
     goto CPyL14;
 CPyL551: ;
@@ -61367,10 +61367,10 @@ CPyL552: ;
 CPyL553: ;
     CPy_XDECREF(cpy_r_r5);
     cpy_r_r494 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r494;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r494;
     cpy_r_r495 = 1;
     goto CPyL430;
 CPyL554: ;
@@ -111230,7 +111230,7 @@ CPyTagged CPyDef_method___get_len(PyObject *cpy_r_method) {
     if (!cpy_r_r1) goto CPyL2;
     return 10;
 CPyL2: ;
-    cpy_r_r2 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* frozenset({'eth_getCode', 'eth_getTransaction'}) */
+    cpy_r_r2 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* frozenset({'eth_getTransaction', 'eth_getCode'}) */
     cpy_r_r3 = PySet_Contains(cpy_r_r2, cpy_r_method);
     cpy_r_r4 = cpy_r_r3 >= 0;
     if (unlikely(!cpy_r_r4)) {
@@ -134513,7 +134513,7 @@ const char * const CPyLit_Str[] = {
     "\004\r_repr_pretty_\vclassmethod\004keys\023web3.datastructures",
     "\003\034dank_mids/helpers/hashing.py\025tupleize_lists_nested\016datastructures",
     "\005\006object\023lru_cache_lite_wrap\005cache\tParamSpec\003__P",
-    "\003\031eth_getTransactionReceipt\veth_getCode\022eth_getTransaction",
+    "\003\031eth_getTransactionReceipt\022eth_getTransaction\veth_getCode",
     "\005\016eth_getBlockBy\017eth_blockNumber\veth_getLogs\006trace_\006debug_",
     "\005\016BYPASS_METHODS\aget_len\fshould_batch\004Lock\aacquire",
     "\002 wtf\?! %s with name %s is locked!\037cannot release un-acquired lock",
