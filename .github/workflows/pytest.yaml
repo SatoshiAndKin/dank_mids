@@ -76,13 +76,9 @@ jobs:
         run: poetry install --no-interaction
         shell: bash
 
-      - name: Upgrade Setuptools
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry run python -m pip install -U "setuptools<81"
-        shell: bash
-
       - name: Run unit tests
+        working-directory: tests/unit
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
-        run: poetry run pytest tests/unit
+        run: poetry run pytest
         shell: bash

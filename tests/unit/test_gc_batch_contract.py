@@ -17,6 +17,7 @@ from dank_mids._uid import UIDGenerator
 from dank_mids.controller import DankMiddlewareController
 from dank_mids.exceptions import GarbageCollectionError
 from dank_mids.helpers.future import DebuggableFuture
+from dank_mids.types import T
 
 
 class _DummyBatcher:
@@ -60,6 +61,20 @@ class _FutureOwner:
     pass
 
 
+async def _start_future_waiter(future: DebuggableFuture[T]) -> asyncio.Task[T]:
+    started = asyncio.Event()
+
+    async def consume() -> T:
+        started.set()
+        return await future
+
+    # Model the direct await in RPCRequest.get_response. Older wait_for versions
+    # observe a Future with callbacks and never enter its __await__ method.
+    waiter = asyncio.create_task(consume())
+    await asyncio.wait_for(started.wait(), timeout=1)
+    return waiter
+
+
 class _DummySyncEth:
     chain_id = 1
 
@@ -89,10 +104,11 @@ class _DummyMulticall:
 
 def _build_controller_for_early_start() -> DankMiddlewareController:
     module = _controller_module_for_tests()
-    with patch.object(module, "_sync_w3_from_async", return_value=_DummySyncW3()), patch.object(
-        module, "_get_client_version", return_value="dummy-client"
-    ), patch.object(module, "_get_multicall2", return_value=_DummyMulticall()), patch.object(
-        module, "_get_multicall3", return_value=None
+    with (
+        patch.object(module, "_sync_w3_from_async", return_value=_DummySyncW3()),
+        patch.object(module, "_get_client_version", return_value="dummy-client"),
+        patch.object(module, "_get_multicall2", return_value=_DummyMulticall()),
+        patch.object(module, "_get_multicall3", return_value=None),
     ):
         return module.DankMiddlewareController(_DummyW3())
 
@@ -145,14 +161,13 @@ def test_multicall_gc_sets_exception_for_active_waiters() -> None:
         controller = _DummyController()
         call = _PendingEthCall()
         multicall = Multicall(controller, [call], bid="mc-1")
-        waiter = asyncio.create_task(asyncio.wait_for(call._fut, timeout=1))
-        await asyncio.sleep(0)
+        waiter = await _start_future_waiter(call._fut)
         assert call._fut.has_waiters is True
 
         multicall.__del__()
 
         with pytest.raises(GarbageCollectionError):
-            await waiter
+            await asyncio.wait_for(waiter, timeout=1)
 
         assert call._fut.has_waiters is False
         assert waiter.done()
@@ -180,8 +195,7 @@ def test_jsonrpc_batch_gc_logs_waiter_impacting_work() -> None:
         controller = _DummyController()
         call = _PendingEthCall()
         batch = JSONRPCBatch(controller, [call], jid="batch-has-waiter")
-        waiter = asyncio.create_task(asyncio.wait_for(call._fut, timeout=1))
-        await asyncio.sleep(0)
+        waiter = await _start_future_waiter(call._fut)
         assert call._fut.has_waiters is True
 
         with patch("dank_mids._requests.error_logger.error") as log_error:
@@ -190,7 +204,7 @@ def test_jsonrpc_batch_gc_logs_waiter_impacting_work() -> None:
         log_error.assert_called_once_with("%s was garbage collected before finishing", batch)
         waiter.cancel()
         with pytest.raises(asyncio.CancelledError):
-            await waiter
+            await asyncio.wait_for(waiter, timeout=1)
         assert call._fut.has_waiters is False
 
     asyncio.run(run())
@@ -226,14 +240,13 @@ def test_rpc_request_gc_sets_exception_for_waiters() -> None:
     async def run() -> None:
         controller = _build_controller_for_early_start()
         request = RPCRequest(controller, "web3_clientVersion", [])
-        waiter = asyncio.create_task(asyncio.wait_for(request._fut, timeout=1))
-        await asyncio.sleep(0)
+        waiter = await _start_future_waiter(request._fut)
         assert request._fut.has_waiters is True
 
         request.__del__()
 
         with pytest.raises(GarbageCollectionError):
-            await waiter
+            await asyncio.wait_for(waiter, timeout=1)
         assert request._fut.has_waiters is False
 
     asyncio.run(run())
@@ -242,14 +255,13 @@ def test_rpc_request_gc_sets_exception_for_waiters() -> None:
 def test_debuggable_future_waiter_count_updates_on_completion() -> None:
     async def run() -> None:
         future: DebuggableFuture[str] = DebuggableFuture(_FutureOwner(), asyncio.get_running_loop())  # type: ignore[arg-type]
-        waiter = asyncio.create_task(asyncio.wait_for(future, timeout=1))
-        await asyncio.sleep(0)
+        waiter = await _start_future_waiter(future)
 
         assert future.has_waiters is True
         assert future.waiter_count == 1
 
         future.set_result("ok")
-        result = await waiter
+        result = await asyncio.wait_for(waiter, timeout=1)
 
         assert result == "ok"
         assert future.has_waiters is False
@@ -261,15 +273,14 @@ def test_debuggable_future_waiter_count_updates_on_completion() -> None:
 def test_debuggable_future_waiter_count_updates_on_cancellation() -> None:
     async def run() -> None:
         future: DebuggableFuture[str] = DebuggableFuture(_FutureOwner(), asyncio.get_running_loop())  # type: ignore[arg-type]
-        waiter = asyncio.create_task(asyncio.wait_for(future, timeout=1))
-        await asyncio.sleep(0)
+        waiter = await _start_future_waiter(future)
 
         assert future.has_waiters is True
         assert future.waiter_count == 1
 
         waiter.cancel()
         with pytest.raises(asyncio.CancelledError):
-            await waiter
+            await asyncio.wait_for(waiter, timeout=1)
 
         assert future.has_waiters is False
         assert future.waiter_count == 0
@@ -314,8 +325,9 @@ def test_early_start_keeps_multicalls_alive_through_handoff_and_dispatches() -> 
             dispatched.set()
             self._done.set()
 
-        with patch.object(type(batch), "start", patched_start), patch.object(
-            type(batch), "get_response", patched_get_response
+        with (
+            patch.object(type(batch), "start", patched_start),
+            patch.object(type(batch), "get_response", patched_get_response),
         ):
             controller.pending_eth_calls = {"latest": multicall}
             del multicall
@@ -384,8 +396,11 @@ def test_multicall_bisect_retry_does_not_wait_pending_done_directly() -> None:
         async def patched_get_response(self) -> None:
             self._done.set()
 
-        with patch.object(pending_batch._done, "wait", side_effect=AssertionError("should not be called")), patch.object(
-            JSONRPCBatch, "get_response", patched_get_response
+        with (
+            patch.object(
+                pending_batch._done, "wait", side_effect=AssertionError("should not be called")
+            ),
+            patch.object(JSONRPCBatch, "get_response", patched_get_response),
         ):
             await asyncio.wait_for(multicall.bisect_and_retry(RuntimeError("boom")), timeout=1)
 
@@ -428,10 +443,10 @@ def test_multicall_bisect_retry_timeout_does_not_dispatch_duplicate_batch() -> N
                 fallback_starts.append(self.jid)
             return original_start(self, batch=batch, cleanup=cleanup)
 
-        with patch.object(
-            controller_cls, "dispatch_pending_rpc_batch_and_wait", patched_dispatch
-        ), patch.object(JSONRPCBatch, "get_response", patched_get_response), patch.object(
-            JSONRPCBatch, "start", patched_start
+        with (
+            patch.object(controller_cls, "dispatch_pending_rpc_batch_and_wait", patched_dispatch),
+            patch.object(JSONRPCBatch, "get_response", patched_get_response),
+            patch.object(JSONRPCBatch, "start", patched_start),
         ):
             releaser = asyncio.create_task(release_later())
             await asyncio.wait_for(multicall.bisect_and_retry(RuntimeError("boom")), timeout=1)
@@ -467,8 +482,9 @@ def test_dispatch_pending_rpc_batch_respects_capacity_gate_for_bisect_retries() 
             started_sizes.append(len(self.calls.snapshot()))
             return original_start(self, batch=batch, cleanup=cleanup)
 
-        with patch.object(JSONRPCBatch, "get_response", patched_get_response), patch.object(
-            JSONRPCBatch, "start", patched_start
+        with (
+            patch.object(JSONRPCBatch, "get_response", patched_get_response),
+            patch.object(JSONRPCBatch, "start", patched_start),
         ):
             completed = await asyncio.wait_for(
                 controller.dispatch_pending_rpc_batch_and_wait(bisected, timeout=1),
@@ -506,12 +522,11 @@ def test_request_gate_waits_for_one_loop_tick_before_dispatch() -> None:
             nonlocal execute_batch_calls
             execute_batch_calls += 1
             if not request._fut.done():
-                request._fut.set_result(
-                    {"jsonrpc": "2.0", "id": request.uid, "result": "0x1"}
-                )
+                request._fut.set_result({"jsonrpc": "2.0", "id": request.uid, "result": "0x1"})
 
-        with patch.object(requests_module, "yield_to_loop", patched_yield_to_loop), patch.object(
-            type(controller), "execute_batch", patched_execute_batch
+        with (
+            patch.object(requests_module, "yield_to_loop", patched_yield_to_loop),
+            patch.object(type(controller), "execute_batch", patched_execute_batch),
         ):
             response_task = asyncio.create_task(request.get_response())
             await asyncio.wait_for(first_tick.wait(), timeout=1)
