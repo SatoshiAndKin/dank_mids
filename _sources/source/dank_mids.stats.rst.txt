@@ -1,0 +1,21 @@
+dank\_mids.stats package
+========================
+
+Submodules
+----------
+
+dank\_mids.stats.retry module
+-----------------------------
+
+.. automodule:: dank_mids.stats.retry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: dank_mids.stats
+   :members:
+   :undoc-members:
+   :show-inheritance:
