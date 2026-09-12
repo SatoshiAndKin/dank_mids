@@ -83,13 +83,18 @@ class HTTPRequesterThread(threading.Thread):
 
 
 def shutdown_http_requester() -> None:
-    async def close_session_and_stop() -> None:
+    if not _requester.is_alive():
+        return
+
+    async def close_session() -> None:
         if session := _requester._session:
             await session.close()
-        _requester.loop.stop()
 
-    # Block until the ClientSession and loop are both closed
-    asyncio.run_coroutine_threadsafe(close_session_and_stop(), _requester.loop).result()
+    # Keep the loop running until it transfers the coroutine result to the
+    # concurrent future. Stopping inside the coroutine prevents that transfer.
+    asyncio.run_coroutine_threadsafe(close_session(), _requester.loop).result()
+    _requester.loop.call_soon_threadsafe(_requester.loop.stop)
+    _requester.join()
 
 
 _requester = HTTPRequesterThread()
