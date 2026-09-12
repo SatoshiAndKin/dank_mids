@@ -84109,34 +84109,18 @@ _rate_limit___rate_limit_inactive_env_traverse(dank_mids___helpers____rate_limit
     Py_VISIT(self->_arg);
     Py_VISIT(self->___mypyc_generator_attribute__caller_future);
     Py_VISIT(self->___mypyc_generator_attribute__caller_loop);
+    Py_VISIT(self->___mypyc_generator_attribute__finish);
     Py_VISIT(self->___mypyc_generator_attribute__check);
     Py_VISIT(self->___mypyc_generator_attribute__start_check);
     Py_VISIT(self->___mypyc_generator_attribute__limiter);
-    Py_VISIT(self->___mypyc_temp__0);
-    Py_VISIT(self->___mypyc_temp__2);
-    Py_VISIT(self->___mypyc_temp__3.f0);
-    Py_VISIT(self->___mypyc_temp__3.f1);
-    Py_VISIT(self->___mypyc_temp__3.f2);
-    Py_VISIT(self->___mypyc_temp__4);
     Py_VISIT(self->___mypyc_generator_attribute__handle);
-    Py_VISIT(self->___mypyc_temp__10);
-    Py_VISIT(self->___mypyc_temp__11.f0);
-    Py_VISIT(self->___mypyc_temp__11.f1);
-    Py_VISIT(self->___mypyc_temp__11.f2);
-    Py_VISIT(self->___mypyc_temp__12.f0);
-    Py_VISIT(self->___mypyc_temp__12.f1);
-    Py_VISIT(self->___mypyc_temp__12.f2);
-    Py_VISIT(self->___mypyc_temp__13.f0);
-    Py_VISIT(self->___mypyc_temp__13.f1);
-    Py_VISIT(self->___mypyc_temp__13.f2);
-    Py_VISIT(self->___mypyc_temp__14);
-    Py_VISIT(self->___mypyc_temp__15.f0);
-    Py_VISIT(self->___mypyc_temp__15.f1);
-    Py_VISIT(self->___mypyc_temp__15.f2);
-    Py_VISIT(self->___mypyc_temp__16);
-    Py_VISIT(self->___mypyc_temp__17.f0);
-    Py_VISIT(self->___mypyc_temp__17.f1);
-    Py_VISIT(self->___mypyc_temp__17.f2);
+    Py_VISIT(self->___mypyc_temp__3);
+    Py_VISIT(self->___mypyc_temp__4.f0);
+    Py_VISIT(self->___mypyc_temp__4.f1);
+    Py_VISIT(self->___mypyc_temp__4.f2);
+    Py_VISIT(self->___mypyc_temp__5.f0);
+    Py_VISIT(self->___mypyc_temp__5.f1);
+    Py_VISIT(self->___mypyc_temp__5.f2);
     return 0;
 }
 
@@ -84151,34 +84135,18 @@ _rate_limit___rate_limit_inactive_env_clear(dank_mids___helpers____rate_limit___
     Py_CLEAR(self->_arg);
     Py_CLEAR(self->___mypyc_generator_attribute__caller_future);
     Py_CLEAR(self->___mypyc_generator_attribute__caller_loop);
+    Py_CLEAR(self->___mypyc_generator_attribute__finish);
     Py_CLEAR(self->___mypyc_generator_attribute__check);
     Py_CLEAR(self->___mypyc_generator_attribute__start_check);
     Py_CLEAR(self->___mypyc_generator_attribute__limiter);
-    Py_CLEAR(self->___mypyc_temp__0);
-    Py_CLEAR(self->___mypyc_temp__2);
-    Py_CLEAR(self->___mypyc_temp__3.f0);
-    Py_CLEAR(self->___mypyc_temp__3.f1);
-    Py_CLEAR(self->___mypyc_temp__3.f2);
-    Py_CLEAR(self->___mypyc_temp__4);
     Py_CLEAR(self->___mypyc_generator_attribute__handle);
-    Py_CLEAR(self->___mypyc_temp__10);
-    Py_CLEAR(self->___mypyc_temp__11.f0);
-    Py_CLEAR(self->___mypyc_temp__11.f1);
-    Py_CLEAR(self->___mypyc_temp__11.f2);
-    Py_CLEAR(self->___mypyc_temp__12.f0);
-    Py_CLEAR(self->___mypyc_temp__12.f1);
-    Py_CLEAR(self->___mypyc_temp__12.f2);
-    Py_CLEAR(self->___mypyc_temp__13.f0);
-    Py_CLEAR(self->___mypyc_temp__13.f1);
-    Py_CLEAR(self->___mypyc_temp__13.f2);
-    Py_CLEAR(self->___mypyc_temp__14);
-    Py_CLEAR(self->___mypyc_temp__15.f0);
-    Py_CLEAR(self->___mypyc_temp__15.f1);
-    Py_CLEAR(self->___mypyc_temp__15.f2);
-    Py_CLEAR(self->___mypyc_temp__16);
-    Py_CLEAR(self->___mypyc_temp__17.f0);
-    Py_CLEAR(self->___mypyc_temp__17.f1);
-    Py_CLEAR(self->___mypyc_temp__17.f2);
+    Py_CLEAR(self->___mypyc_temp__3);
+    Py_CLEAR(self->___mypyc_temp__4.f0);
+    Py_CLEAR(self->___mypyc_temp__4.f1);
+    Py_CLEAR(self->___mypyc_temp__4.f2);
+    Py_CLEAR(self->___mypyc_temp__5.f0);
+    Py_CLEAR(self->___mypyc_temp__5.f1);
+    Py_CLEAR(self->___mypyc_temp__5.f2);
     return 0;
 }
 
@@ -84198,35 +84166,18 @@ _rate_limit___rate_limit_inactive_env_dealloc(dank_mids___helpers____rate_limit_
         self->___mypyc_next_label__ = -113;
         Py_CLEAR(self->___mypyc_generator_attribute__caller_future);
         Py_CLEAR(self->___mypyc_generator_attribute__caller_loop);
+        Py_CLEAR(self->___mypyc_generator_attribute__finish);
         Py_CLEAR(self->___mypyc_generator_attribute__check);
         Py_CLEAR(self->___mypyc_generator_attribute__start_check);
         Py_CLEAR(self->___mypyc_generator_attribute__limiter);
-        Py_CLEAR(self->___mypyc_temp__0);
-        self->___mypyc_temp__1 = 2;
-        Py_CLEAR(self->___mypyc_temp__2);
-        Py_CLEAR(self->___mypyc_temp__3.f0);
-        Py_CLEAR(self->___mypyc_temp__3.f1);
-        Py_CLEAR(self->___mypyc_temp__3.f2);
-        Py_CLEAR(self->___mypyc_temp__4);
         Py_CLEAR(self->___mypyc_generator_attribute__handle);
-        Py_CLEAR(self->___mypyc_temp__10);
-        Py_CLEAR(self->___mypyc_temp__11.f0);
-        Py_CLEAR(self->___mypyc_temp__11.f1);
-        Py_CLEAR(self->___mypyc_temp__11.f2);
-        Py_CLEAR(self->___mypyc_temp__12.f0);
-        Py_CLEAR(self->___mypyc_temp__12.f1);
-        Py_CLEAR(self->___mypyc_temp__12.f2);
-        Py_CLEAR(self->___mypyc_temp__13.f0);
-        Py_CLEAR(self->___mypyc_temp__13.f1);
-        Py_CLEAR(self->___mypyc_temp__13.f2);
-        Py_CLEAR(self->___mypyc_temp__14);
-        Py_CLEAR(self->___mypyc_temp__15.f0);
-        Py_CLEAR(self->___mypyc_temp__15.f1);
-        Py_CLEAR(self->___mypyc_temp__15.f2);
-        Py_CLEAR(self->___mypyc_temp__16);
-        Py_CLEAR(self->___mypyc_temp__17.f0);
-        Py_CLEAR(self->___mypyc_temp__17.f1);
-        Py_CLEAR(self->___mypyc_temp__17.f2);
+        Py_CLEAR(self->___mypyc_temp__3);
+        Py_CLEAR(self->___mypyc_temp__4.f0);
+        Py_CLEAR(self->___mypyc_temp__4.f1);
+        Py_CLEAR(self->___mypyc_temp__4.f2);
+        Py_CLEAR(self->___mypyc_temp__5.f0);
+        Py_CLEAR(self->___mypyc_temp__5.f1);
+        Py_CLEAR(self->___mypyc_temp__5.f2);
         return;
     }
     CPy_TRASHCAN_BEGIN(self, _rate_limit___rate_limit_inactive_env_dealloc)
@@ -84284,13 +84235,8 @@ PyObject *CPyDef__rate_limit_____mypyc__rate_limit_inactive_env_setup(PyObject *
         return NULL;
     self->vtable = _rate_limit___rate_limit_inactive_env_vtable;
     self->___mypyc_next_label__ = -113;
-    self->___mypyc_temp__1 = 2;
-    self->___mypyc_temp__3 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__11 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__12 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__13 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__15 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__17 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__4 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__5 = (tuple_T3OOO) { NULL, NULL, NULL };
     return (PyObject *)self;
 }
 
@@ -84438,6 +84384,179 @@ PyObject *CPyDef__rate_limit___rate_limit_inactive_gen(void)
 }
 
 
+static PyObject *CPyDunder___get___rate_limit___finish_rate_limit_inactive_obj(PyObject *self, PyObject *instance, PyObject *owner) {
+    instance = instance ? instance : Py_None;
+    return CPyDef__rate_limit___finish_rate_limit_inactive_obj_____get__(self, instance, owner);
+}
+PyObject *CPyDef__rate_limit_____mypyc__finish_rate_limit_inactive_obj_setup(PyObject *cpy_r_type);
+PyObject *CPyDef__rate_limit___finish_rate_limit_inactive_obj(void);
+
+static PyObject *
+_rate_limit___finish_rate_limit_inactive_obj_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
+{
+    if (type != CPyType__rate_limit___finish_rate_limit_inactive_obj) {
+        PyErr_SetString(PyExc_TypeError, "interpreted classes cannot inherit from compiled");
+        return NULL;
+    }
+    PyObject *self = CPyDef__rate_limit_____mypyc__finish_rate_limit_inactive_obj_setup((PyObject*)type);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+static int
+_rate_limit___finish_rate_limit_inactive_obj_traverse(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->___mypyc_env__);
+    PyObject_VisitManagedDict((PyObject *)self, visit, arg);
+    return 0;
+}
+
+static int
+_rate_limit___finish_rate_limit_inactive_obj_clear(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self)
+{
+    Py_CLEAR(self->___mypyc_env__);
+    PyObject_ClearManagedDict((PyObject *)self);
+    return 0;
+}
+
+static void
+_rate_limit___finish_rate_limit_inactive_obj_dealloc(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self)
+{
+    PyObject_GC_UnTrack(self);
+    if (_rate_limit___finish_rate_limit_inactive_obj_free_instance == NULL) {
+        _rate_limit___finish_rate_limit_inactive_obj_free_instance = self;
+        Py_CLEAR(self->___mypyc_env__);
+        return;
+    }
+    CPy_TRASHCAN_BEGIN(self, _rate_limit___finish_rate_limit_inactive_obj_dealloc)
+    _rate_limit___finish_rate_limit_inactive_obj_clear(self);
+    Py_TYPE(self)->tp_free((PyObject *)self);
+    CPy_TRASHCAN_END(self)
+    done: ;
+}
+
+static CPyVTableItem _rate_limit___finish_rate_limit_inactive_obj_vtable[2];
+static bool
+CPyDef__rate_limit___finish_rate_limit_inactive_obj_trait_vtable_setup(void)
+{
+    CPyVTableItem _rate_limit___finish_rate_limit_inactive_obj_vtable_scratch[] = {
+        (CPyVTableItem)CPyDef__rate_limit___finish_rate_limit_inactive_obj_____call__,
+        (CPyVTableItem)CPyDef__rate_limit___finish_rate_limit_inactive_obj_____get__,
+    };
+    memcpy(_rate_limit___finish_rate_limit_inactive_obj_vtable, _rate_limit___finish_rate_limit_inactive_obj_vtable_scratch, sizeof(_rate_limit___finish_rate_limit_inactive_obj_vtable));
+    return 1;
+}
+
+static PyObject *
+_rate_limit___finish_rate_limit_inactive_obj_get___3_mypyc_env__(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self, void *closure);
+static int
+_rate_limit___finish_rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self, PyObject *value, void *closure);
+
+static PyGetSetDef _rate_limit___finish_rate_limit_inactive_obj_getseters[] = {
+    {"__mypyc_env__",
+     (getter)_rate_limit___finish_rate_limit_inactive_obj_get___3_mypyc_env__, (setter)_rate_limit___finish_rate_limit_inactive_obj_set___3_mypyc_env__,
+     NULL, NULL},
+    {"__dict__", PyObject_GenericGetDict, PyObject_GenericSetDict},
+    {NULL}  /* Sentinel */
+};
+
+static PyMethodDef _rate_limit___finish_rate_limit_inactive_obj_methods[] = {
+    {"__internal_mypyc_setup", (PyCFunction)CPyDef__rate_limit_____mypyc__finish_rate_limit_inactive_obj_setup, METH_O, NULL},
+    {"__call__",
+     (PyCFunction)CPyPy__rate_limit___finish_rate_limit_inactive_obj_____call__,
+     METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__call__($error=None)\n--\n\n")},
+    {"__get__",
+     (PyCFunction)CPyPy__rate_limit___finish_rate_limit_inactive_obj_____get__,
+     METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__get__($instance, owner)\n--\n\n")},
+    {"__setstate__", (PyCFunction)CPyPickle_SetState, METH_O, NULL},
+    {"__getstate__", (PyCFunction)CPyPickle_GetState, METH_NOARGS, NULL},
+    {NULL}  /* Sentinel */
+};
+
+static PyTypeObject CPyType__rate_limit___finish_rate_limit_inactive_obj_template_ = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    .tp_name = "finish_rate_limit_inactive_obj",
+    .tp_new = _rate_limit___finish_rate_limit_inactive_obj_new,
+    .tp_dealloc = (destructor)_rate_limit___finish_rate_limit_inactive_obj_dealloc,
+    .tp_traverse = (traverseproc)_rate_limit___finish_rate_limit_inactive_obj_traverse,
+    .tp_clear = (inquiry)_rate_limit___finish_rate_limit_inactive_obj_clear,
+    .tp_getset = _rate_limit___finish_rate_limit_inactive_obj_getseters,
+    .tp_methods = _rate_limit___finish_rate_limit_inactive_obj_methods,
+    .tp_call = PyVectorcall_Call,
+    .tp_descr_get = CPyDunder___get___rate_limit___finish_rate_limit_inactive_obj,
+    .tp_basicsize = sizeof(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject),
+    .tp_vectorcall_offset = offsetof(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject, vectorcall),
+    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HEAPTYPE | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC | _Py_TPFLAGS_HAVE_VECTORCALL | Py_TPFLAGS_MANAGED_DICT,
+    .tp_doc = PyDoc_STR("finish_rate_limit_inactive_obj()\n--\n\n"),
+};
+static PyTypeObject *CPyType__rate_limit___finish_rate_limit_inactive_obj_template = &CPyType__rate_limit___finish_rate_limit_inactive_obj_template_;
+
+PyObject *CPyDef__rate_limit_____mypyc__finish_rate_limit_inactive_obj_setup(PyObject *cpy_r_type)
+{
+    PyTypeObject *type = (PyTypeObject*)cpy_r_type;
+    dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self;
+    if (_rate_limit___finish_rate_limit_inactive_obj_free_instance != NULL) {
+        self = _rate_limit___finish_rate_limit_inactive_obj_free_instance;
+        _rate_limit___finish_rate_limit_inactive_obj_free_instance = NULL;
+        Py_SET_REFCNT(self, 1);
+        PyObject_GC_Track(self);
+        return (PyObject *)self;
+    }
+    self = (dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *)type->tp_alloc(type, 0);
+    if (self == NULL)
+        return NULL;
+    self->vtable = _rate_limit___finish_rate_limit_inactive_obj_vtable;
+    self->vectorcall = CPyPy__rate_limit___finish_rate_limit_inactive_obj_____call__;
+    return (PyObject *)self;
+}
+
+PyObject *CPyDef__rate_limit___finish_rate_limit_inactive_obj(void)
+{
+    PyObject *self = CPyDef__rate_limit_____mypyc__finish_rate_limit_inactive_obj_setup((PyObject *)CPyType__rate_limit___finish_rate_limit_inactive_obj);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+static PyObject *
+_rate_limit___finish_rate_limit_inactive_obj_get___3_mypyc_env__(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self, void *closure)
+{
+    if (unlikely(self->___mypyc_env__ == NULL)) {
+        PyErr_SetString(PyExc_AttributeError,
+            "attribute '__mypyc_env__' of 'finish_rate_limit_inactive_obj' undefined");
+        return NULL;
+    }
+    CPy_INCREF_NO_IMM(self->___mypyc_env__);
+    PyObject *retval = self->___mypyc_env__;
+    return retval;
+}
+
+static int
+_rate_limit___finish_rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *self, PyObject *value, void *closure)
+{
+    if (value == NULL) {
+        PyErr_SetString(PyExc_AttributeError,
+            "'finish_rate_limit_inactive_obj' object attribute '__mypyc_env__' cannot be deleted");
+        return -1;
+    }
+    if (self->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(self->___mypyc_env__);
+    }
+    PyObject *tmp;
+    if (likely(Py_TYPE(value) == CPyType__rate_limit___rate_limit_inactive_env))
+        tmp = value;
+    else {
+        CPy_TypeError("dank_mids.helpers._rate_limit.rate_limit_inactive_env", value); 
+        tmp = NULL;
+    }
+    if (!tmp)
+        return -1;
+    CPy_INCREF_NO_IMM(tmp);
+    self->___mypyc_env__ = tmp;
+    return 0;
+}
+
 PyObject *CPyDef__rate_limit_____mypyc__check_rate_limit_inactive_env_setup(PyObject *cpy_r_type);
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_env(void);
 
@@ -84463,20 +84582,14 @@ _rate_limit___check_rate_limit_inactive_env_traverse(dank_mids___helpers____rate
     Py_VISIT(self->_value);
     Py_VISIT(self->_traceback);
     Py_VISIT(self->_arg);
-    Py_VISIT(self->___mypyc_temp__5);
-    Py_VISIT(self->___mypyc_temp__6.f0);
-    Py_VISIT(self->___mypyc_temp__6.f1);
-    Py_VISIT(self->___mypyc_temp__6.f2);
-    Py_VISIT(self->___mypyc_temp__7.f0);
-    Py_VISIT(self->___mypyc_temp__7.f1);
-    Py_VISIT(self->___mypyc_temp__7.f2);
-    Py_VISIT(self->___mypyc_generator_attribute__e);
-    Py_VISIT(self->___mypyc_temp__8.f0);
-    Py_VISIT(self->___mypyc_temp__8.f1);
-    Py_VISIT(self->___mypyc_temp__8.f2);
-    Py_VISIT(self->___mypyc_temp__9.f0);
-    Py_VISIT(self->___mypyc_temp__9.f1);
-    Py_VISIT(self->___mypyc_temp__9.f2);
+    Py_VISIT(self->___mypyc_temp__0);
+    Py_VISIT(self->___mypyc_temp__1.f0);
+    Py_VISIT(self->___mypyc_temp__1.f1);
+    Py_VISIT(self->___mypyc_temp__1.f2);
+    Py_VISIT(self->___mypyc_temp__2.f0);
+    Py_VISIT(self->___mypyc_temp__2.f1);
+    Py_VISIT(self->___mypyc_temp__2.f2);
+    Py_VISIT(self->___mypyc_generator_attribute__error);
     return 0;
 }
 
@@ -84489,20 +84602,14 @@ _rate_limit___check_rate_limit_inactive_env_clear(dank_mids___helpers____rate_li
     Py_CLEAR(self->_value);
     Py_CLEAR(self->_traceback);
     Py_CLEAR(self->_arg);
-    Py_CLEAR(self->___mypyc_temp__5);
-    Py_CLEAR(self->___mypyc_temp__6.f0);
-    Py_CLEAR(self->___mypyc_temp__6.f1);
-    Py_CLEAR(self->___mypyc_temp__6.f2);
-    Py_CLEAR(self->___mypyc_temp__7.f0);
-    Py_CLEAR(self->___mypyc_temp__7.f1);
-    Py_CLEAR(self->___mypyc_temp__7.f2);
-    Py_CLEAR(self->___mypyc_generator_attribute__e);
-    Py_CLEAR(self->___mypyc_temp__8.f0);
-    Py_CLEAR(self->___mypyc_temp__8.f1);
-    Py_CLEAR(self->___mypyc_temp__8.f2);
-    Py_CLEAR(self->___mypyc_temp__9.f0);
-    Py_CLEAR(self->___mypyc_temp__9.f1);
-    Py_CLEAR(self->___mypyc_temp__9.f2);
+    Py_CLEAR(self->___mypyc_temp__0);
+    Py_CLEAR(self->___mypyc_temp__1.f0);
+    Py_CLEAR(self->___mypyc_temp__1.f1);
+    Py_CLEAR(self->___mypyc_temp__1.f2);
+    Py_CLEAR(self->___mypyc_temp__2.f0);
+    Py_CLEAR(self->___mypyc_temp__2.f1);
+    Py_CLEAR(self->___mypyc_temp__2.f2);
+    Py_CLEAR(self->___mypyc_generator_attribute__error);
     return 0;
 }
 
@@ -84520,20 +84627,14 @@ _rate_limit___check_rate_limit_inactive_env_dealloc(dank_mids___helpers____rate_
         Py_CLEAR(self->_arg);
         self->_stop_iter_ptr = NULL;
         self->___mypyc_next_label__ = -113;
-        Py_CLEAR(self->___mypyc_temp__5);
-        Py_CLEAR(self->___mypyc_temp__6.f0);
-        Py_CLEAR(self->___mypyc_temp__6.f1);
-        Py_CLEAR(self->___mypyc_temp__6.f2);
-        Py_CLEAR(self->___mypyc_temp__7.f0);
-        Py_CLEAR(self->___mypyc_temp__7.f1);
-        Py_CLEAR(self->___mypyc_temp__7.f2);
-        Py_CLEAR(self->___mypyc_generator_attribute__e);
-        Py_CLEAR(self->___mypyc_temp__8.f0);
-        Py_CLEAR(self->___mypyc_temp__8.f1);
-        Py_CLEAR(self->___mypyc_temp__8.f2);
-        Py_CLEAR(self->___mypyc_temp__9.f0);
-        Py_CLEAR(self->___mypyc_temp__9.f1);
-        Py_CLEAR(self->___mypyc_temp__9.f2);
+        Py_CLEAR(self->___mypyc_temp__0);
+        Py_CLEAR(self->___mypyc_temp__1.f0);
+        Py_CLEAR(self->___mypyc_temp__1.f1);
+        Py_CLEAR(self->___mypyc_temp__1.f2);
+        Py_CLEAR(self->___mypyc_temp__2.f0);
+        Py_CLEAR(self->___mypyc_temp__2.f1);
+        Py_CLEAR(self->___mypyc_temp__2.f2);
+        Py_CLEAR(self->___mypyc_generator_attribute__error);
         return;
     }
     CPy_TRASHCAN_BEGIN(self, _rate_limit___check_rate_limit_inactive_env_dealloc)
@@ -84591,10 +84692,8 @@ PyObject *CPyDef__rate_limit_____mypyc__check_rate_limit_inactive_env_setup(PyOb
         return NULL;
     self->vtable = _rate_limit___check_rate_limit_inactive_env_vtable;
     self->___mypyc_next_label__ = -113;
-    self->___mypyc_temp__6 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__7 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__8 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__9 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__1 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__2 = (tuple_T3OOO) { NULL, NULL, NULL };
     return (PyObject *)self;
 }
 
@@ -84780,135 +84879,135 @@ _rate_limit___check_rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids___help
     return 0;
 }
 
-static PyAsyncMethods _rate_limit___check_gen___3_73_as_async = {
-    .am_await = CPyDef__rate_limit___check_gen___3_73_____await__,
+static PyAsyncMethods _rate_limit___check_gen___3_62_as_async = {
+    .am_await = CPyDef__rate_limit___check_gen___3_62_____await__,
 };
-PyObject *CPyDef__rate_limit_____mypyc__check_gen___3_73_setup(PyObject *cpy_r_type);
-PyObject *CPyDef__rate_limit___check_gen___3_73(void);
+PyObject *CPyDef__rate_limit_____mypyc__check_gen___3_62_setup(PyObject *cpy_r_type);
+PyObject *CPyDef__rate_limit___check_gen___3_62(void);
 
 static PyObject *
-_rate_limit___check_gen___3_73_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
+_rate_limit___check_gen___3_62_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 {
-    if (type != CPyType__rate_limit___check_gen___3_73) {
+    if (type != CPyType__rate_limit___check_gen___3_62) {
         PyErr_SetString(PyExc_TypeError, "interpreted classes cannot inherit from compiled");
         return NULL;
     }
-    PyObject *self = CPyDef__rate_limit_____mypyc__check_gen___3_73_setup((PyObject*)type);
+    PyObject *self = CPyDef__rate_limit_____mypyc__check_gen___3_62_setup((PyObject*)type);
     if (self == NULL)
         return NULL;
     return self;
 }
 
 static int
-_rate_limit___check_gen___3_73_traverse(dank_mids___helpers____rate_limit___check_gen___3_73Object *self, visitproc visit, void *arg)
+_rate_limit___check_gen___3_62_traverse(dank_mids___helpers____rate_limit___check_gen___3_62Object *self, visitproc visit, void *arg)
 {
     Py_VISIT(self->___mypyc_env__);
     return 0;
 }
 
 static int
-_rate_limit___check_gen___3_73_clear(dank_mids___helpers____rate_limit___check_gen___3_73Object *self)
+_rate_limit___check_gen___3_62_clear(dank_mids___helpers____rate_limit___check_gen___3_62Object *self)
 {
     Py_CLEAR(self->___mypyc_env__);
     return 0;
 }
 
 static void
-_rate_limit___check_gen___3_73_dealloc(dank_mids___helpers____rate_limit___check_gen___3_73Object *self)
+_rate_limit___check_gen___3_62_dealloc(dank_mids___helpers____rate_limit___check_gen___3_62Object *self)
 {
     PyObject_GC_UnTrack(self);
-    if (_rate_limit___check_gen___3_73_free_instance == NULL) {
-        _rate_limit___check_gen___3_73_free_instance = self;
+    if (_rate_limit___check_gen___3_62_free_instance == NULL) {
+        _rate_limit___check_gen___3_62_free_instance = self;
         Py_CLEAR(self->___mypyc_env__);
         return;
     }
-    CPy_TRASHCAN_BEGIN(self, _rate_limit___check_gen___3_73_dealloc)
-    _rate_limit___check_gen___3_73_clear(self);
+    CPy_TRASHCAN_BEGIN(self, _rate_limit___check_gen___3_62_dealloc)
+    _rate_limit___check_gen___3_62_clear(self);
     Py_TYPE(self)->tp_free((PyObject *)self);
     CPy_TRASHCAN_END(self)
     done: ;
 }
 
-static CPyVTableItem _rate_limit___check_gen___3_73_vtable[7];
+static CPyVTableItem _rate_limit___check_gen___3_62_vtable[7];
 static bool
-CPyDef__rate_limit___check_gen___3_73_trait_vtable_setup(void)
+CPyDef__rate_limit___check_gen___3_62_trait_vtable_setup(void)
 {
-    CPyVTableItem _rate_limit___check_gen___3_73_vtable_scratch[] = {
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73_____next__,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73___send,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73_____iter__,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73___throw,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73___close,
-        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_73_____await__,
+    CPyVTableItem _rate_limit___check_gen___3_62_vtable_scratch[] = {
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62_____next__,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62___send,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62_____iter__,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62___throw,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62___close,
+        (CPyVTableItem)CPyDef__rate_limit___check_gen___3_62_____await__,
     };
-    memcpy(_rate_limit___check_gen___3_73_vtable, _rate_limit___check_gen___3_73_vtable_scratch, sizeof(_rate_limit___check_gen___3_73_vtable));
+    memcpy(_rate_limit___check_gen___3_62_vtable, _rate_limit___check_gen___3_62_vtable_scratch, sizeof(_rate_limit___check_gen___3_62_vtable));
     return 1;
 }
 
-static PyMethodDef _rate_limit___check_gen___3_73_methods[] = {
-    {"__internal_mypyc_setup", (PyCFunction)CPyDef__rate_limit_____mypyc__check_gen___3_73_setup, METH_O, NULL},
+static PyMethodDef _rate_limit___check_gen___3_62_methods[] = {
+    {"__internal_mypyc_setup", (PyCFunction)CPyDef__rate_limit_____mypyc__check_gen___3_62_setup, METH_O, NULL},
     {"__next__",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73_____next__,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62_____next__,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__next__()\n--\n\n")},
     {"send",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73___send,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62___send,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("send($arg)\n--\n\n")},
     {"__iter__",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73_____iter__,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62_____iter__,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__iter__()\n--\n\n")},
     {"throw",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73___throw,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62___throw,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR(NULL)},
     {"close",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73___close,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62___close,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("close()\n--\n\n")},
     {"__await__",
-     (PyCFunction)CPyPy__rate_limit___check_gen___3_73_____await__,
+     (PyCFunction)CPyPy__rate_limit___check_gen___3_62_____await__,
      METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__await__()\n--\n\n")},
     {"__setstate__", (PyCFunction)CPyPickle_SetState, METH_O, NULL},
     {"__getstate__", (PyCFunction)CPyPickle_GetState, METH_NOARGS, NULL},
     {NULL}  /* Sentinel */
 };
 
-static PyTypeObject CPyType__rate_limit___check_gen___3_73_template_ = {
+static PyTypeObject CPyType__rate_limit___check_gen___3_62_template_ = {
     PyVarObject_HEAD_INIT(NULL, 0)
-    .tp_name = "check_gen___73",
-    .tp_new = _rate_limit___check_gen___3_73_new,
-    .tp_dealloc = (destructor)_rate_limit___check_gen___3_73_dealloc,
-    .tp_traverse = (traverseproc)_rate_limit___check_gen___3_73_traverse,
-    .tp_clear = (inquiry)_rate_limit___check_gen___3_73_clear,
-    .tp_methods = _rate_limit___check_gen___3_73_methods,
-    .tp_iter = CPyDef__rate_limit___check_gen___3_73_____iter__,
-    .tp_iternext = CPyDef__rate_limit___check_gen___3_73_____next__,
-    .tp_as_async = &_rate_limit___check_gen___3_73_as_async,
-    .tp_basicsize = sizeof(dank_mids___helpers____rate_limit___check_gen___3_73Object),
+    .tp_name = "check_gen___62",
+    .tp_new = _rate_limit___check_gen___3_62_new,
+    .tp_dealloc = (destructor)_rate_limit___check_gen___3_62_dealloc,
+    .tp_traverse = (traverseproc)_rate_limit___check_gen___3_62_traverse,
+    .tp_clear = (inquiry)_rate_limit___check_gen___3_62_clear,
+    .tp_methods = _rate_limit___check_gen___3_62_methods,
+    .tp_iter = CPyDef__rate_limit___check_gen___3_62_____iter__,
+    .tp_iternext = CPyDef__rate_limit___check_gen___3_62_____next__,
+    .tp_as_async = &_rate_limit___check_gen___3_62_as_async,
+    .tp_basicsize = sizeof(dank_mids___helpers____rate_limit___check_gen___3_62Object),
     .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HEAPTYPE | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC,
-    .tp_doc = PyDoc_STR("check_gen___73()\n--\n\n"),
+    .tp_doc = PyDoc_STR("check_gen___62()\n--\n\n"),
 };
-static PyTypeObject *CPyType__rate_limit___check_gen___3_73_template = &CPyType__rate_limit___check_gen___3_73_template_;
+static PyTypeObject *CPyType__rate_limit___check_gen___3_62_template = &CPyType__rate_limit___check_gen___3_62_template_;
 
-PyObject *CPyDef__rate_limit_____mypyc__check_gen___3_73_setup(PyObject *cpy_r_type)
+PyObject *CPyDef__rate_limit_____mypyc__check_gen___3_62_setup(PyObject *cpy_r_type)
 {
     PyTypeObject *type = (PyTypeObject*)cpy_r_type;
-    dank_mids___helpers____rate_limit___check_gen___3_73Object *self;
-    if (_rate_limit___check_gen___3_73_free_instance != NULL) {
-        self = _rate_limit___check_gen___3_73_free_instance;
-        _rate_limit___check_gen___3_73_free_instance = NULL;
+    dank_mids___helpers____rate_limit___check_gen___3_62Object *self;
+    if (_rate_limit___check_gen___3_62_free_instance != NULL) {
+        self = _rate_limit___check_gen___3_62_free_instance;
+        _rate_limit___check_gen___3_62_free_instance = NULL;
         Py_SET_REFCNT(self, 1);
         PyObject_GC_Track(self);
         return (PyObject *)self;
     }
-    self = (dank_mids___helpers____rate_limit___check_gen___3_73Object *)type->tp_alloc(type, 0);
+    self = (dank_mids___helpers____rate_limit___check_gen___3_62Object *)type->tp_alloc(type, 0);
     if (self == NULL)
         return NULL;
-    self->vtable = _rate_limit___check_gen___3_73_vtable;
+    self->vtable = _rate_limit___check_gen___3_62_vtable;
     return (PyObject *)self;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73(void)
+PyObject *CPyDef__rate_limit___check_gen___3_62(void)
 {
-    PyObject *self = CPyDef__rate_limit_____mypyc__check_gen___3_73_setup((PyObject *)CPyType__rate_limit___check_gen___3_73);
+    PyObject *self = CPyDef__rate_limit_____mypyc__check_gen___3_62_setup((PyObject *)CPyType__rate_limit___check_gen___3_62);
     if (self == NULL)
         return NULL;
     return self;
@@ -85088,6 +85187,151 @@ _rate_limit___start_check_rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids_
     return 0;
 }
 
+PyObject *CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_env_setup(PyObject *cpy_r_type);
+PyObject *CPyDef__rate_limit____rate_limit_inactive_env(void);
+
+static PyObject *
+_rate_limit____rate_limit_inactive_env_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
+{
+    if (type != CPyType__rate_limit____rate_limit_inactive_env) {
+        PyErr_SetString(PyExc_TypeError, "interpreted classes cannot inherit from compiled");
+        return NULL;
+    }
+    PyObject *self = CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_env_setup((PyObject*)type);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+static int
+_rate_limit____rate_limit_inactive_env_traverse(dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->___mypyc_self__);
+    Py_VISIT(self->___mypyc_generator_attribute__endpoint);
+    Py_VISIT(self->_type);
+    Py_VISIT(self->_value);
+    Py_VISIT(self->_traceback);
+    Py_VISIT(self->_arg);
+    Py_VISIT(self->___mypyc_generator_attribute___rate_limit_tasks);
+    Py_VISIT(self->___mypyc_generator_attribute__discard);
+    Py_VISIT(self->___mypyc_generator_attribute__task);
+    Py_VISIT(self->___mypyc_temp__6);
+    Py_VISIT(self->___mypyc_temp__7.f0);
+    Py_VISIT(self->___mypyc_temp__7.f1);
+    Py_VISIT(self->___mypyc_temp__7.f2);
+    return 0;
+}
+
+static int
+_rate_limit____rate_limit_inactive_env_clear(dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *self)
+{
+    Py_CLEAR(self->___mypyc_self__);
+    Py_CLEAR(self->___mypyc_generator_attribute__endpoint);
+    Py_CLEAR(self->_type);
+    Py_CLEAR(self->_value);
+    Py_CLEAR(self->_traceback);
+    Py_CLEAR(self->_arg);
+    Py_CLEAR(self->___mypyc_generator_attribute___rate_limit_tasks);
+    Py_CLEAR(self->___mypyc_generator_attribute__discard);
+    Py_CLEAR(self->___mypyc_generator_attribute__task);
+    Py_CLEAR(self->___mypyc_temp__6);
+    Py_CLEAR(self->___mypyc_temp__7.f0);
+    Py_CLEAR(self->___mypyc_temp__7.f1);
+    Py_CLEAR(self->___mypyc_temp__7.f2);
+    return 0;
+}
+
+static void
+_rate_limit____rate_limit_inactive_env_dealloc(dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *self)
+{
+    PyObject_GC_UnTrack(self);
+    if (_rate_limit____rate_limit_inactive_env_free_instance == NULL) {
+        _rate_limit____rate_limit_inactive_env_free_instance = self;
+        Py_CLEAR(self->___mypyc_self__);
+        Py_CLEAR(self->___mypyc_generator_attribute__endpoint);
+        Py_CLEAR(self->_type);
+        Py_CLEAR(self->_value);
+        Py_CLEAR(self->_traceback);
+        Py_CLEAR(self->_arg);
+        self->_stop_iter_ptr = NULL;
+        self->___mypyc_next_label__ = -113;
+        Py_CLEAR(self->___mypyc_generator_attribute___rate_limit_tasks);
+        Py_CLEAR(self->___mypyc_generator_attribute__discard);
+        Py_CLEAR(self->___mypyc_generator_attribute__task);
+        Py_CLEAR(self->___mypyc_temp__6);
+        Py_CLEAR(self->___mypyc_temp__7.f0);
+        Py_CLEAR(self->___mypyc_temp__7.f1);
+        Py_CLEAR(self->___mypyc_temp__7.f2);
+        return;
+    }
+    CPy_TRASHCAN_BEGIN(self, _rate_limit____rate_limit_inactive_env_dealloc)
+    _rate_limit____rate_limit_inactive_env_clear(self);
+    Py_TYPE(self)->tp_free((PyObject *)self);
+    CPy_TRASHCAN_END(self)
+    done: ;
+}
+
+static CPyVTableItem _rate_limit____rate_limit_inactive_env_vtable[1];
+static bool
+CPyDef__rate_limit____rate_limit_inactive_env_trait_vtable_setup(void)
+{
+    CPyVTableItem _rate_limit____rate_limit_inactive_env_vtable_scratch[] = {
+        NULL
+    };
+    memcpy(_rate_limit____rate_limit_inactive_env_vtable, _rate_limit____rate_limit_inactive_env_vtable_scratch, sizeof(_rate_limit____rate_limit_inactive_env_vtable));
+    return 1;
+}
+
+static PyMethodDef _rate_limit____rate_limit_inactive_env_methods[] = {
+    {"__internal_mypyc_setup", (PyCFunction)CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_env_setup, METH_O, NULL},
+    {"__setstate__", (PyCFunction)CPyPickle_SetState, METH_O, NULL},
+    {"__getstate__", (PyCFunction)CPyPickle_GetState, METH_NOARGS, NULL},
+    {NULL}  /* Sentinel */
+};
+
+static PyTypeObject CPyType__rate_limit____rate_limit_inactive_env_template_ = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    .tp_name = "_rate_limit_inactive_env",
+    .tp_new = _rate_limit____rate_limit_inactive_env_new,
+    .tp_dealloc = (destructor)_rate_limit____rate_limit_inactive_env_dealloc,
+    .tp_traverse = (traverseproc)_rate_limit____rate_limit_inactive_env_traverse,
+    .tp_clear = (inquiry)_rate_limit____rate_limit_inactive_env_clear,
+    .tp_methods = _rate_limit____rate_limit_inactive_env_methods,
+    .tp_basicsize = sizeof(dank_mids___helpers____rate_limit____rate_limit_inactive_envObject),
+    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HEAPTYPE | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC,
+    .tp_doc = PyDoc_STR("_rate_limit_inactive_env()\n--\n\n"),
+};
+static PyTypeObject *CPyType__rate_limit____rate_limit_inactive_env_template = &CPyType__rate_limit____rate_limit_inactive_env_template_;
+
+PyObject *CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_env_setup(PyObject *cpy_r_type)
+{
+    PyTypeObject *type = (PyTypeObject*)cpy_r_type;
+    dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *self;
+    if (_rate_limit____rate_limit_inactive_env_free_instance != NULL) {
+        self = _rate_limit____rate_limit_inactive_env_free_instance;
+        _rate_limit____rate_limit_inactive_env_free_instance = NULL;
+        Py_SET_REFCNT(self, 1);
+        PyObject_GC_Track(self);
+        return (PyObject *)self;
+    }
+    self = (dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)type->tp_alloc(type, 0);
+    if (self == NULL)
+        return NULL;
+    self->vtable = _rate_limit____rate_limit_inactive_env_vtable;
+    self->___mypyc_next_label__ = -113;
+    self->___mypyc_temp__7 = (tuple_T3OOO) { NULL, NULL, NULL };
+    return (PyObject *)self;
+}
+
+PyObject *CPyDef__rate_limit____rate_limit_inactive_env(void)
+{
+    PyObject *self = CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_env_setup((PyObject *)CPyType__rate_limit____rate_limit_inactive_env);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+
 static PyAsyncMethods _rate_limit____rate_limit_inactive_gen_as_async = {
     .am_await = CPyDef__rate_limit____rate_limit_inactive_gen_____await__,
 };
@@ -85110,34 +85354,14 @@ _rate_limit____rate_limit_inactive_gen_new(PyTypeObject *type, PyObject *args, P
 static int
 _rate_limit____rate_limit_inactive_gen_traverse(dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *self, visitproc visit, void *arg)
 {
-    Py_VISIT(self->___mypyc_generator_attribute__endpoint);
-    Py_VISIT(self->___mypyc_generator_attribute__existing);
-    Py_VISIT(self->___mypyc_temp__18);
-    Py_VISIT(self->___mypyc_temp__19.f0);
-    Py_VISIT(self->___mypyc_temp__19.f1);
-    Py_VISIT(self->___mypyc_temp__19.f2);
-    Py_VISIT(self->___mypyc_generator_attribute__task);
-    Py_VISIT(self->___mypyc_temp__20);
-    Py_VISIT(self->___mypyc_temp__21.f0);
-    Py_VISIT(self->___mypyc_temp__21.f1);
-    Py_VISIT(self->___mypyc_temp__21.f2);
+    Py_VISIT(self->___mypyc_env__);
     return 0;
 }
 
 static int
 _rate_limit____rate_limit_inactive_gen_clear(dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *self)
 {
-    Py_CLEAR(self->___mypyc_generator_attribute__endpoint);
-    Py_CLEAR(self->___mypyc_generator_attribute__existing);
-    Py_CLEAR(self->___mypyc_temp__18);
-    Py_CLEAR(self->___mypyc_temp__19.f0);
-    Py_CLEAR(self->___mypyc_temp__19.f1);
-    Py_CLEAR(self->___mypyc_temp__19.f2);
-    Py_CLEAR(self->___mypyc_generator_attribute__task);
-    Py_CLEAR(self->___mypyc_temp__20);
-    Py_CLEAR(self->___mypyc_temp__21.f0);
-    Py_CLEAR(self->___mypyc_temp__21.f1);
-    Py_CLEAR(self->___mypyc_temp__21.f2);
+    Py_CLEAR(self->___mypyc_env__);
     return 0;
 }
 
@@ -85147,18 +85371,7 @@ _rate_limit____rate_limit_inactive_gen_dealloc(dank_mids___helpers____rate_limit
     PyObject_GC_UnTrack(self);
     if (_rate_limit____rate_limit_inactive_gen_free_instance == NULL) {
         _rate_limit____rate_limit_inactive_gen_free_instance = self;
-        Py_CLEAR(self->___mypyc_generator_attribute__endpoint);
-        self->___mypyc_next_label__ = -113;
-        Py_CLEAR(self->___mypyc_generator_attribute__existing);
-        Py_CLEAR(self->___mypyc_temp__18);
-        Py_CLEAR(self->___mypyc_temp__19.f0);
-        Py_CLEAR(self->___mypyc_temp__19.f1);
-        Py_CLEAR(self->___mypyc_temp__19.f2);
-        Py_CLEAR(self->___mypyc_generator_attribute__task);
-        Py_CLEAR(self->___mypyc_temp__20);
-        Py_CLEAR(self->___mypyc_temp__21.f0);
-        Py_CLEAR(self->___mypyc_temp__21.f1);
-        Py_CLEAR(self->___mypyc_temp__21.f2);
+        Py_CLEAR(self->___mypyc_env__);
         return;
     }
     CPy_TRASHCAN_BEGIN(self, _rate_limit____rate_limit_inactive_gen_dealloc)
@@ -85242,9 +85455,6 @@ PyObject *CPyDef__rate_limit_____mypyc___3_rate_limit_inactive_gen_setup(PyObjec
     if (self == NULL)
         return NULL;
     self->vtable = _rate_limit____rate_limit_inactive_gen_vtable;
-    self->___mypyc_next_label__ = -113;
-    self->___mypyc_temp__19 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__21 = (tuple_T3OOO) { NULL, NULL, NULL };
     return (PyObject *)self;
 }
 
@@ -85256,6 +85466,179 @@ PyObject *CPyDef__rate_limit____rate_limit_inactive_gen(void)
     return self;
 }
 
+
+static PyObject *CPyDunder___get___rate_limit___discard__rate_limit_inactive_obj(PyObject *self, PyObject *instance, PyObject *owner) {
+    instance = instance ? instance : Py_None;
+    return CPyDef__rate_limit___discard__rate_limit_inactive_obj_____get__(self, instance, owner);
+}
+PyObject *CPyDef__rate_limit_____mypyc__discard__rate_limit_inactive_obj_setup(PyObject *cpy_r_type);
+PyObject *CPyDef__rate_limit___discard__rate_limit_inactive_obj(void);
+
+static PyObject *
+_rate_limit___discard__rate_limit_inactive_obj_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
+{
+    if (type != CPyType__rate_limit___discard__rate_limit_inactive_obj) {
+        PyErr_SetString(PyExc_TypeError, "interpreted classes cannot inherit from compiled");
+        return NULL;
+    }
+    PyObject *self = CPyDef__rate_limit_____mypyc__discard__rate_limit_inactive_obj_setup((PyObject*)type);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+static int
+_rate_limit___discard__rate_limit_inactive_obj_traverse(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->___mypyc_env__);
+    PyObject_VisitManagedDict((PyObject *)self, visit, arg);
+    return 0;
+}
+
+static int
+_rate_limit___discard__rate_limit_inactive_obj_clear(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self)
+{
+    Py_CLEAR(self->___mypyc_env__);
+    PyObject_ClearManagedDict((PyObject *)self);
+    return 0;
+}
+
+static void
+_rate_limit___discard__rate_limit_inactive_obj_dealloc(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self)
+{
+    PyObject_GC_UnTrack(self);
+    if (_rate_limit___discard__rate_limit_inactive_obj_free_instance == NULL) {
+        _rate_limit___discard__rate_limit_inactive_obj_free_instance = self;
+        Py_CLEAR(self->___mypyc_env__);
+        return;
+    }
+    CPy_TRASHCAN_BEGIN(self, _rate_limit___discard__rate_limit_inactive_obj_dealloc)
+    _rate_limit___discard__rate_limit_inactive_obj_clear(self);
+    Py_TYPE(self)->tp_free((PyObject *)self);
+    CPy_TRASHCAN_END(self)
+    done: ;
+}
+
+static CPyVTableItem _rate_limit___discard__rate_limit_inactive_obj_vtable[2];
+static bool
+CPyDef__rate_limit___discard__rate_limit_inactive_obj_trait_vtable_setup(void)
+{
+    CPyVTableItem _rate_limit___discard__rate_limit_inactive_obj_vtable_scratch[] = {
+        (CPyVTableItem)CPyDef__rate_limit___discard__rate_limit_inactive_obj_____call__,
+        (CPyVTableItem)CPyDef__rate_limit___discard__rate_limit_inactive_obj_____get__,
+    };
+    memcpy(_rate_limit___discard__rate_limit_inactive_obj_vtable, _rate_limit___discard__rate_limit_inactive_obj_vtable_scratch, sizeof(_rate_limit___discard__rate_limit_inactive_obj_vtable));
+    return 1;
+}
+
+static PyObject *
+_rate_limit___discard__rate_limit_inactive_obj_get___3_mypyc_env__(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self, void *closure);
+static int
+_rate_limit___discard__rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self, PyObject *value, void *closure);
+
+static PyGetSetDef _rate_limit___discard__rate_limit_inactive_obj_getseters[] = {
+    {"__mypyc_env__",
+     (getter)_rate_limit___discard__rate_limit_inactive_obj_get___3_mypyc_env__, (setter)_rate_limit___discard__rate_limit_inactive_obj_set___3_mypyc_env__,
+     NULL, NULL},
+    {"__dict__", PyObject_GenericGetDict, PyObject_GenericSetDict},
+    {NULL}  /* Sentinel */
+};
+
+static PyMethodDef _rate_limit___discard__rate_limit_inactive_obj_methods[] = {
+    {"__internal_mypyc_setup", (PyCFunction)CPyDef__rate_limit_____mypyc__discard__rate_limit_inactive_obj_setup, METH_O, NULL},
+    {"__call__",
+     (PyCFunction)CPyPy__rate_limit___discard__rate_limit_inactive_obj_____call__,
+     METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__call__($completed)\n--\n\n")},
+    {"__get__",
+     (PyCFunction)CPyPy__rate_limit___discard__rate_limit_inactive_obj_____get__,
+     METH_FASTCALL | METH_KEYWORDS, PyDoc_STR("__get__($instance, owner)\n--\n\n")},
+    {"__setstate__", (PyCFunction)CPyPickle_SetState, METH_O, NULL},
+    {"__getstate__", (PyCFunction)CPyPickle_GetState, METH_NOARGS, NULL},
+    {NULL}  /* Sentinel */
+};
+
+static PyTypeObject CPyType__rate_limit___discard__rate_limit_inactive_obj_template_ = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    .tp_name = "discard__rate_limit_inactive_obj",
+    .tp_new = _rate_limit___discard__rate_limit_inactive_obj_new,
+    .tp_dealloc = (destructor)_rate_limit___discard__rate_limit_inactive_obj_dealloc,
+    .tp_traverse = (traverseproc)_rate_limit___discard__rate_limit_inactive_obj_traverse,
+    .tp_clear = (inquiry)_rate_limit___discard__rate_limit_inactive_obj_clear,
+    .tp_getset = _rate_limit___discard__rate_limit_inactive_obj_getseters,
+    .tp_methods = _rate_limit___discard__rate_limit_inactive_obj_methods,
+    .tp_call = PyVectorcall_Call,
+    .tp_descr_get = CPyDunder___get___rate_limit___discard__rate_limit_inactive_obj,
+    .tp_basicsize = sizeof(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject),
+    .tp_vectorcall_offset = offsetof(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject, vectorcall),
+    .tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HEAPTYPE | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC | _Py_TPFLAGS_HAVE_VECTORCALL | Py_TPFLAGS_MANAGED_DICT,
+    .tp_doc = PyDoc_STR("discard__rate_limit_inactive_obj()\n--\n\n"),
+};
+static PyTypeObject *CPyType__rate_limit___discard__rate_limit_inactive_obj_template = &CPyType__rate_limit___discard__rate_limit_inactive_obj_template_;
+
+PyObject *CPyDef__rate_limit_____mypyc__discard__rate_limit_inactive_obj_setup(PyObject *cpy_r_type)
+{
+    PyTypeObject *type = (PyTypeObject*)cpy_r_type;
+    dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self;
+    if (_rate_limit___discard__rate_limit_inactive_obj_free_instance != NULL) {
+        self = _rate_limit___discard__rate_limit_inactive_obj_free_instance;
+        _rate_limit___discard__rate_limit_inactive_obj_free_instance = NULL;
+        Py_SET_REFCNT(self, 1);
+        PyObject_GC_Track(self);
+        return (PyObject *)self;
+    }
+    self = (dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *)type->tp_alloc(type, 0);
+    if (self == NULL)
+        return NULL;
+    self->vtable = _rate_limit___discard__rate_limit_inactive_obj_vtable;
+    self->vectorcall = CPyPy__rate_limit___discard__rate_limit_inactive_obj_____call__;
+    return (PyObject *)self;
+}
+
+PyObject *CPyDef__rate_limit___discard__rate_limit_inactive_obj(void)
+{
+    PyObject *self = CPyDef__rate_limit_____mypyc__discard__rate_limit_inactive_obj_setup((PyObject *)CPyType__rate_limit___discard__rate_limit_inactive_obj);
+    if (self == NULL)
+        return NULL;
+    return self;
+}
+
+static PyObject *
+_rate_limit___discard__rate_limit_inactive_obj_get___3_mypyc_env__(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self, void *closure)
+{
+    if (unlikely(self->___mypyc_env__ == NULL)) {
+        PyErr_SetString(PyExc_AttributeError,
+            "attribute '__mypyc_env__' of 'discard__rate_limit_inactive_obj' undefined");
+        return NULL;
+    }
+    CPy_INCREF_NO_IMM(self->___mypyc_env__);
+    PyObject *retval = self->___mypyc_env__;
+    return retval;
+}
+
+static int
+_rate_limit___discard__rate_limit_inactive_obj_set___3_mypyc_env__(dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *self, PyObject *value, void *closure)
+{
+    if (value == NULL) {
+        PyErr_SetString(PyExc_AttributeError,
+            "'discard__rate_limit_inactive_obj' object attribute '__mypyc_env__' cannot be deleted");
+        return -1;
+    }
+    if (self->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(self->___mypyc_env__);
+    }
+    PyObject *tmp;
+    if (likely(Py_TYPE(value) == CPyType__rate_limit____rate_limit_inactive_env))
+        tmp = value;
+    else {
+        CPy_TypeError("dank_mids.helpers._rate_limit._rate_limit_inactive_env", value); 
+        tmp = NULL;
+    }
+    if (!tmp)
+        return -1;
+    CPy_INCREF_NO_IMM(tmp);
+    self->___mypyc_env__ = tmp;
+    return 0;
+}
 
 static PyAsyncMethods _rate_limit_____rate_limit_inactive_gen_as_async = {
     .am_await = CPyDef__rate_limit_____rate_limit_inactive_gen_____await__,
@@ -85287,18 +85670,18 @@ _rate_limit_____rate_limit_inactive_gen_traverse(dank_mids___helpers____rate_lim
     }
     Py_VISIT(self->___mypyc_generator_attribute__last_waiter_tuple.f2);
     Py_VISIT(self->___mypyc_generator_attribute__last_waiter);
-    Py_VISIT(self->___mypyc_temp__22);
-    Py_VISIT(self->___mypyc_temp__23.f0);
-    Py_VISIT(self->___mypyc_temp__23.f1);
-    Py_VISIT(self->___mypyc_temp__23.f2);
-    Py_VISIT(self->___mypyc_temp__24.f0);
-    Py_VISIT(self->___mypyc_temp__24.f1);
-    Py_VISIT(self->___mypyc_temp__24.f2);
+    Py_VISIT(self->___mypyc_temp__8);
+    Py_VISIT(self->___mypyc_temp__9.f0);
+    Py_VISIT(self->___mypyc_temp__9.f1);
+    Py_VISIT(self->___mypyc_temp__9.f2);
+    Py_VISIT(self->___mypyc_temp__10.f0);
+    Py_VISIT(self->___mypyc_temp__10.f1);
+    Py_VISIT(self->___mypyc_temp__10.f2);
     Py_VISIT(self->___mypyc_generator_attribute___);
-    Py_VISIT(self->___mypyc_temp__27);
-    Py_VISIT(self->___mypyc_temp__28.f0);
-    Py_VISIT(self->___mypyc_temp__28.f1);
-    Py_VISIT(self->___mypyc_temp__28.f2);
+    Py_VISIT(self->___mypyc_temp__13);
+    Py_VISIT(self->___mypyc_temp__14.f0);
+    Py_VISIT(self->___mypyc_temp__14.f1);
+    Py_VISIT(self->___mypyc_temp__14.f2);
     return 0;
 }
 
@@ -85315,18 +85698,18 @@ _rate_limit_____rate_limit_inactive_gen_clear(dank_mids___helpers____rate_limit_
     }
     Py_CLEAR(self->___mypyc_generator_attribute__last_waiter_tuple.f2);
     Py_CLEAR(self->___mypyc_generator_attribute__last_waiter);
-    Py_CLEAR(self->___mypyc_temp__22);
-    Py_CLEAR(self->___mypyc_temp__23.f0);
-    Py_CLEAR(self->___mypyc_temp__23.f1);
-    Py_CLEAR(self->___mypyc_temp__23.f2);
-    Py_CLEAR(self->___mypyc_temp__24.f0);
-    Py_CLEAR(self->___mypyc_temp__24.f1);
-    Py_CLEAR(self->___mypyc_temp__24.f2);
+    Py_CLEAR(self->___mypyc_temp__8);
+    Py_CLEAR(self->___mypyc_temp__9.f0);
+    Py_CLEAR(self->___mypyc_temp__9.f1);
+    Py_CLEAR(self->___mypyc_temp__9.f2);
+    Py_CLEAR(self->___mypyc_temp__10.f0);
+    Py_CLEAR(self->___mypyc_temp__10.f1);
+    Py_CLEAR(self->___mypyc_temp__10.f2);
     Py_CLEAR(self->___mypyc_generator_attribute___);
-    Py_CLEAR(self->___mypyc_temp__27);
-    Py_CLEAR(self->___mypyc_temp__28.f0);
-    Py_CLEAR(self->___mypyc_temp__28.f1);
-    Py_CLEAR(self->___mypyc_temp__28.f2);
+    Py_CLEAR(self->___mypyc_temp__13);
+    Py_CLEAR(self->___mypyc_temp__14.f0);
+    Py_CLEAR(self->___mypyc_temp__14.f1);
+    Py_CLEAR(self->___mypyc_temp__14.f2);
     return 0;
 }
 
@@ -85350,20 +85733,20 @@ _rate_limit_____rate_limit_inactive_gen_dealloc(dank_mids___helpers____rate_limi
         }
         Py_CLEAR(self->___mypyc_generator_attribute__last_waiter_tuple.f2);
         Py_CLEAR(self->___mypyc_generator_attribute__last_waiter);
-        Py_CLEAR(self->___mypyc_temp__22);
-        Py_CLEAR(self->___mypyc_temp__23.f0);
-        Py_CLEAR(self->___mypyc_temp__23.f1);
-        Py_CLEAR(self->___mypyc_temp__23.f2);
-        Py_CLEAR(self->___mypyc_temp__24.f0);
-        Py_CLEAR(self->___mypyc_temp__24.f1);
-        Py_CLEAR(self->___mypyc_temp__24.f2);
-        self->___mypyc_temp__25 = CPY_INT_TAG;
-        self->___mypyc_temp__26 = CPY_INT_TAG;
+        Py_CLEAR(self->___mypyc_temp__8);
+        Py_CLEAR(self->___mypyc_temp__9.f0);
+        Py_CLEAR(self->___mypyc_temp__9.f1);
+        Py_CLEAR(self->___mypyc_temp__9.f2);
+        Py_CLEAR(self->___mypyc_temp__10.f0);
+        Py_CLEAR(self->___mypyc_temp__10.f1);
+        Py_CLEAR(self->___mypyc_temp__10.f2);
+        self->___mypyc_temp__11 = CPY_INT_TAG;
+        self->___mypyc_temp__12 = CPY_INT_TAG;
         Py_CLEAR(self->___mypyc_generator_attribute___);
-        Py_CLEAR(self->___mypyc_temp__27);
-        Py_CLEAR(self->___mypyc_temp__28.f0);
-        Py_CLEAR(self->___mypyc_temp__28.f1);
-        Py_CLEAR(self->___mypyc_temp__28.f2);
+        Py_CLEAR(self->___mypyc_temp__13);
+        Py_CLEAR(self->___mypyc_temp__14.f0);
+        Py_CLEAR(self->___mypyc_temp__14.f1);
+        Py_CLEAR(self->___mypyc_temp__14.f2);
         return;
     }
     CPy_TRASHCAN_BEGIN(self, _rate_limit_____rate_limit_inactive_gen_dealloc)
@@ -85449,11 +85832,11 @@ PyObject *CPyDef__rate_limit_____mypyc___3__rate_limit_inactive_gen_setup(PyObje
     self->vtable = _rate_limit_____rate_limit_inactive_gen_vtable;
     self->___mypyc_next_label__ = -113;
     self->___mypyc_generator_attribute__last_waiter_tuple = (tuple_T3FIO) { -113.0, CPY_INT_TAG, NULL };
-    self->___mypyc_temp__23 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__24 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__25 = CPY_INT_TAG;
-    self->___mypyc_temp__26 = CPY_INT_TAG;
-    self->___mypyc_temp__28 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__9 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__10 = (tuple_T3OOO) { NULL, NULL, NULL };
+    self->___mypyc_temp__11 = CPY_INT_TAG;
+    self->___mypyc_temp__12 = CPY_INT_TAG;
+    self->___mypyc_temp__14 = (tuple_T3OOO) { NULL, NULL, NULL };
     return (PyObject *)self;
 }
 
@@ -85491,6 +85874,10 @@ int CPyExec_dank_mids___helpers____rate_limit(PyObject *module)
     if (unlikely(!CPyType__rate_limit___rate_limit_inactive_gen))
         goto fail;
     CPyDef__rate_limit___rate_limit_inactive_gen_trait_vtable_setup();
+    CPyType__rate_limit___finish_rate_limit_inactive_obj = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___finish_rate_limit_inactive_obj_template, NULL, modname);
+    if (unlikely(!CPyType__rate_limit___finish_rate_limit_inactive_obj))
+        goto fail;
+    CPyDef__rate_limit___finish_rate_limit_inactive_obj_trait_vtable_setup();
     CPyType__rate_limit___check_rate_limit_inactive_env = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___check_rate_limit_inactive_env_template, NULL, modname);
     if (unlikely(!CPyType__rate_limit___check_rate_limit_inactive_env))
         goto fail;
@@ -85499,18 +85886,26 @@ int CPyExec_dank_mids___helpers____rate_limit(PyObject *module)
     if (unlikely(!CPyType__rate_limit___check_rate_limit_inactive_obj))
         goto fail;
     CPyDef__rate_limit___check_rate_limit_inactive_obj_trait_vtable_setup();
-    CPyType__rate_limit___check_gen___3_73 = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___check_gen___3_73_template, NULL, modname);
-    if (unlikely(!CPyType__rate_limit___check_gen___3_73))
+    CPyType__rate_limit___check_gen___3_62 = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___check_gen___3_62_template, NULL, modname);
+    if (unlikely(!CPyType__rate_limit___check_gen___3_62))
         goto fail;
-    CPyDef__rate_limit___check_gen___3_73_trait_vtable_setup();
+    CPyDef__rate_limit___check_gen___3_62_trait_vtable_setup();
     CPyType__rate_limit___start_check_rate_limit_inactive_obj = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___start_check_rate_limit_inactive_obj_template, NULL, modname);
     if (unlikely(!CPyType__rate_limit___start_check_rate_limit_inactive_obj))
         goto fail;
     CPyDef__rate_limit___start_check_rate_limit_inactive_obj_trait_vtable_setup();
+    CPyType__rate_limit____rate_limit_inactive_env = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit____rate_limit_inactive_env_template, NULL, modname);
+    if (unlikely(!CPyType__rate_limit____rate_limit_inactive_env))
+        goto fail;
+    CPyDef__rate_limit____rate_limit_inactive_env_trait_vtable_setup();
     CPyType__rate_limit____rate_limit_inactive_gen = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit____rate_limit_inactive_gen_template, NULL, modname);
     if (unlikely(!CPyType__rate_limit____rate_limit_inactive_gen))
         goto fail;
     CPyDef__rate_limit____rate_limit_inactive_gen_trait_vtable_setup();
+    CPyType__rate_limit___discard__rate_limit_inactive_obj = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit___discard__rate_limit_inactive_obj_template, NULL, modname);
+    if (unlikely(!CPyType__rate_limit___discard__rate_limit_inactive_obj))
+        goto fail;
+    CPyDef__rate_limit___discard__rate_limit_inactive_obj_trait_vtable_setup();
     CPyType__rate_limit_____rate_limit_inactive_gen = (PyTypeObject *)CPyType_FromTemplate((PyObject *)CPyType__rate_limit_____rate_limit_inactive_gen_template, NULL, modname);
     if (unlikely(!CPyType__rate_limit_____rate_limit_inactive_gen))
         goto fail;
@@ -85531,34 +85926,29 @@ int CPyExec_dank_mids___helpers____rate_limit(PyObject *module)
     CPyStatic__rate_limit___logger = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___CancelledError);
     CPyStatic__rate_limit___CancelledError = NULL;
-    CPy_XDECREF(CPyStatic__rate_limit___InvalidStateError);
-    CPyStatic__rate_limit___InvalidStateError = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___create_task);
     CPyStatic__rate_limit___create_task = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___get_running_loop);
     CPyStatic__rate_limit___get_running_loop = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___nlargest);
     CPyStatic__rate_limit___nlargest = NULL;
-    CPy_XDECREF(CPyStatic__rate_limit___Event);
-    CPyStatic__rate_limit___Event = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___sleep0);
     CPyStatic__rate_limit___sleep0 = NULL;
     CPy_XDECREF(CPyStatic__rate_limit___limiters);
     CPyStatic__rate_limit___limiters = NULL;
-    CPy_XDECREF(CPyStatic__rate_limit___locks);
-    CPyStatic__rate_limit___locks = NULL;
-    CPy_XDECREF(CPyStatic__rate_limit____rate_limit_waiters);
-    CPyStatic__rate_limit____rate_limit_waiters = NULL;
     CPy_XDECREF(CPyStatic__rate_limit____rate_limit_tasks);
     CPyStatic__rate_limit____rate_limit_tasks = NULL;
     Py_CLEAR(CPyType__rate_limit_____mypyc_lambda__0_obj);
     Py_CLEAR(CPyType__rate_limit___rate_limit_inactive_env);
     Py_CLEAR(CPyType__rate_limit___rate_limit_inactive_gen);
+    Py_CLEAR(CPyType__rate_limit___finish_rate_limit_inactive_obj);
     Py_CLEAR(CPyType__rate_limit___check_rate_limit_inactive_env);
     Py_CLEAR(CPyType__rate_limit___check_rate_limit_inactive_obj);
-    Py_CLEAR(CPyType__rate_limit___check_gen___3_73);
+    Py_CLEAR(CPyType__rate_limit___check_gen___3_62);
     Py_CLEAR(CPyType__rate_limit___start_check_rate_limit_inactive_obj);
+    Py_CLEAR(CPyType__rate_limit____rate_limit_inactive_env);
     Py_CLEAR(CPyType__rate_limit____rate_limit_inactive_gen);
+    Py_CLEAR(CPyType__rate_limit___discard__rate_limit_inactive_obj);
     Py_CLEAR(CPyType__rate_limit_____rate_limit_inactive_gen);
     return -1;
 }
@@ -85705,6 +86095,243 @@ fail: ;
     return NULL;
 }
 
+PyObject *CPyDef__rate_limit___finish_rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner) {
+    PyObject *cpy_r_r0;
+    char cpy_r_r1;
+    PyObject *cpy_r_r2;
+    PyObject *cpy_r_r3;
+    cpy_r_r0 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r1 = cpy_r_instance == cpy_r_r0;
+    if (!cpy_r_r1) goto CPyL2;
+    CPy_INCREF(cpy_r___mypyc_self__);
+    return cpy_r___mypyc_self__;
+CPyL2: ;
+    cpy_r_r2 = PyMethod_New(cpy_r___mypyc_self__, cpy_r_instance);
+    if (cpy_r_r2 == NULL) goto CPyL4;
+    return cpy_r_r2;
+CPyL4: ;
+    cpy_r_r3 = NULL;
+    return cpy_r_r3;
+}
+
+PyObject *CPyPy__rate_limit___finish_rate_limit_inactive_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+    PyObject *obj___mypyc_self__ = self;
+    static const char * const kwlist[] = {"instance", "owner", 0};
+    static CPyArg_Parser parser = {"OO:__get__", kwlist, 0};
+    PyObject *obj_instance;
+    PyObject *obj_owner;
+    if (!CPyArg_ParseStackAndKeywordsSimple(args, nargs, kwnames, &parser, &obj_instance, &obj_owner)) {
+        return NULL;
+    }
+    PyObject *arg___mypyc_self__ = obj___mypyc_self__;
+    PyObject *arg_instance = obj_instance;
+    PyObject *arg_owner = obj_owner;
+    PyObject *retval = CPyDef__rate_limit___finish_rate_limit_inactive_obj_____get__(arg___mypyc_self__, arg_instance, arg_owner);
+    return retval;
+fail: ;
+    CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__get__", -1, CPyStatic__rate_limit___globals);
+    return NULL;
+}
+
+char CPyDef__rate_limit___finish_rate_limit_inactive_obj_____call__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_error) {
+    PyObject *cpy_r_r0;
+    PyObject *cpy_r_r1;
+    PyObject *cpy_r_r2;
+    PyObject *cpy_r_r3;
+    PyObject **cpy_r_r5;
+    PyObject *cpy_r_r6;
+    char cpy_r_r7;
+    PyObject *cpy_r_r8;
+    char cpy_r_r9;
+    PyObject *cpy_r_r10;
+    PyObject *cpy_r_r11;
+    PyObject *cpy_r_r12;
+    PyObject **cpy_r_r14;
+    PyObject *cpy_r_r15;
+    PyObject *cpy_r_r16;
+    PyObject *cpy_r_r17;
+    PyObject **cpy_r_r19;
+    PyObject *cpy_r_r20;
+    char cpy_r_r21;
+    cpy_r_r0 = ((dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *)cpy_r___mypyc_self__)->___mypyc_env__;
+    if (unlikely(cpy_r_r0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "finish", "finish_rate_limit_inactive_obj", "__mypyc_env__", 53, CPyStatic__rate_limit___globals);
+        goto CPyL16;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r0);
+CPyL1: ;
+    if (cpy_r_error != NULL) goto CPyL17;
+    cpy_r_r1 = Py_None;
+    cpy_r_error = cpy_r_r1;
+CPyL3: ;
+    cpy_r_r2 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__caller_future;
+    if (unlikely(cpy_r_r2 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "finish", "rate_limit_inactive_env", "caller_future", 55, CPyStatic__rate_limit___globals);
+        goto CPyL18;
+    }
+    CPy_INCREF(cpy_r_r2);
+CPyL4: ;
+    cpy_r_r3 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'done' */
+    PyObject *cpy_r_r4[1] = {cpy_r_r2};
+    cpy_r_r5 = (PyObject **)&cpy_r_r4;
+    cpy_r_r6 = PyObject_VectorcallMethod(cpy_r_r3, cpy_r_r5, 9223372036854775809ULL, 0);
+    if (unlikely(cpy_r_r6 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL19;
+    }
+    CPy_DECREF(cpy_r_r2);
+    if (unlikely(!PyBool_Check(cpy_r_r6))) {
+        CPy_TypeError("bool", cpy_r_r6); cpy_r_r7 = 2;
+    } else
+        cpy_r_r7 = cpy_r_r6 == Py_True;
+    CPy_DECREF(cpy_r_r6);
+    if (unlikely(cpy_r_r7 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL18;
+    }
+    if (cpy_r_r7) {
+        goto CPyL20;
+    } else
+        goto CPyL8;
+CPyL7: ;
+    return 1;
+CPyL8: ;
+    cpy_r_r8 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r9 = cpy_r_error == cpy_r_r8;
+    if (cpy_r_r9) {
+        goto CPyL21;
+    } else
+        goto CPyL12;
+CPyL9: ;
+    cpy_r_r10 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__caller_future;
+    if (unlikely(cpy_r_r10 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute 'caller_future' of 'rate_limit_inactive_env' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r10);
+    }
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    if (unlikely(cpy_r_r10 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL16;
+    }
+CPyL10: ;
+    cpy_r_r11 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set_result' */
+    cpy_r_r12 = Py_None;
+    PyObject *cpy_r_r13[2] = {cpy_r_r10, cpy_r_r12};
+    cpy_r_r14 = (PyObject **)&cpy_r_r13;
+    cpy_r_r15 = PyObject_VectorcallMethod(cpy_r_r11, cpy_r_r14, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r15 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL22;
+    } else
+        goto CPyL23;
+CPyL11: ;
+    CPy_DECREF(cpy_r_r10);
+    goto CPyL15;
+CPyL12: ;
+    cpy_r_r16 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__caller_future;
+    if (unlikely(cpy_r_r16 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute 'caller_future' of 'rate_limit_inactive_env' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r16);
+    }
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    if (unlikely(cpy_r_r16 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL24;
+    }
+CPyL13: ;
+    cpy_r_r17 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set_exception' */
+    PyObject *cpy_r_r18[2] = {cpy_r_r16, cpy_r_error};
+    cpy_r_r19 = (PyObject **)&cpy_r_r18;
+    cpy_r_r20 = PyObject_VectorcallMethod(cpy_r_r17, cpy_r_r19, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r20 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL25;
+    } else
+        goto CPyL26;
+CPyL14: ;
+    CPy_DECREF(cpy_r_r16);
+    CPy_DECREF(cpy_r_error);
+CPyL15: ;
+    return 1;
+CPyL16: ;
+    cpy_r_r21 = 2;
+    return cpy_r_r21;
+CPyL17: ;
+    CPy_INCREF(cpy_r_error);
+    goto CPyL3;
+CPyL18: ;
+    CPy_DecRef(cpy_r_error);
+    CPy_DecRef(cpy_r_r0);
+    goto CPyL16;
+CPyL19: ;
+    CPy_DecRef(cpy_r_error);
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL16;
+CPyL20: ;
+    CPy_DECREF(cpy_r_error);
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    goto CPyL7;
+CPyL21: ;
+    CPy_DECREF(cpy_r_error);
+    goto CPyL9;
+CPyL22: ;
+    CPy_DecRef(cpy_r_r10);
+    goto CPyL16;
+CPyL23: ;
+    CPy_DECREF(cpy_r_r15);
+    goto CPyL11;
+CPyL24: ;
+    CPy_DecRef(cpy_r_error);
+    goto CPyL16;
+CPyL25: ;
+    CPy_DecRef(cpy_r_error);
+    CPy_DecRef(cpy_r_r16);
+    goto CPyL16;
+CPyL26: ;
+    CPy_DECREF(cpy_r_r20);
+    goto CPyL14;
+}
+
+PyObject *CPyPy__rate_limit___finish_rate_limit_inactive_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+    PyObject *obj___mypyc_self__ = self;
+    static const char * const kwlist[] = {"error", 0};
+    static CPyArg_Parser parser = {"|O:__call__", kwlist, 0};
+    PyObject *obj_error = NULL;
+    if (!CPyArg_ParseStackAndKeywordsSimple(args, PyVectorcall_NARGS(nargs), kwnames, &parser, &obj_error)) {
+        return NULL;
+    }
+    PyObject *arg___mypyc_self__ = obj___mypyc_self__;
+    PyObject *arg_error;
+    if (obj_error == NULL) {
+        arg_error = NULL;
+        goto __LL354;
+    }
+    arg_error = obj_error;
+    if (arg_error != NULL) goto __LL354;
+    if (obj_error == Py_None)
+        arg_error = obj_error;
+    else {
+        arg_error = NULL;
+    }
+    if (arg_error != NULL) goto __LL354;
+    CPy_TypeError("object or None", obj_error); 
+    goto fail;
+__LL354: ;
+    char retval = CPyDef__rate_limit___finish_rate_limit_inactive_obj_____call__(arg___mypyc_self__, arg_error);
+    if (retval == 2) {
+        return NULL;
+    }
+    PyObject *retbox = Py_None;
+    CPy_INCREF(retbox);
+    return retbox;
+fail: ;
+    CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "finish", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+    return NULL;
+}
+
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner) {
     PyObject *cpy_r_r0;
     char cpy_r_r1;
@@ -85743,7 +86370,7 @@ fail: ;
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr) {
+PyObject *CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
@@ -85795,86 +86422,46 @@ PyObject *CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(PyO
     PyObject *cpy_r_r48;
     PyObject *cpy_r_r49;
     PyObject *cpy_r_r50;
-    PyObject *cpy_r_r51;
-    PyObject *cpy_r_r52;
-    PyObject **cpy_r_r54;
-    PyObject *cpy_r_r55;
-    tuple_T3OOO cpy_r_r56;
-    char cpy_r_r57;
+    PyObject **cpy_r_r52;
+    PyObject *cpy_r_r53;
+    tuple_T3OOO cpy_r_r54;
+    tuple_T3OOO cpy_r_r55;
+    char cpy_r_r56;
+    PyObject *cpy_r_r57;
     PyObject *cpy_r_r58;
-    char cpy_r_r59;
-    char cpy_r_r60;
-    PyObject *cpy_r_r61;
-    char cpy_r_r62;
+    PyObject *cpy_r_r59;
+    PyObject **cpy_r_r61;
+    PyObject *cpy_r_r62;
     PyObject *cpy_r_r63;
-    PyObject *cpy_r_r64;
-    PyObject *cpy_r_r65;
-    PyObject *cpy_r_r66;
+    char cpy_r_r64;
+    char cpy_r_r65;
+    char cpy_r_r66;
     char cpy_r_r67;
     PyObject *cpy_r_r68;
-    tuple_T3OOO cpy_r_r69;
-    tuple_T3OOO cpy_r_r70;
-    char cpy_r_r71;
-    tuple_T3OOO cpy_r_r72;
-    char cpy_r_r73;
-    tuple_T3OOO cpy_r_r74;
-    tuple_T3OOO cpy_r_r75;
-    char cpy_r_r76;
-    PyObject *cpy_r_r77;
-    PyObject *cpy_r_r78;
-    PyObject *cpy_r_r79;
-    PyObject *cpy_r_r80;
-    PyObject *cpy_r_r81;
-    PyObject *cpy_r_r82;
-    PyObject **cpy_r_r84;
-    PyObject *cpy_r_r85;
-    tuple_T3OOO cpy_r_r86;
-    char cpy_r_r87;
-    PyObject *cpy_r_r88;
-    char cpy_r_r89;
-    char cpy_r_r90;
-    PyObject *cpy_r_r91;
-    char cpy_r_r92;
-    PyObject *cpy_r_r93;
-    PyObject *cpy_r_r94;
-    PyObject *cpy_r_r95;
-    PyObject *cpy_r_r96;
-    char cpy_r_r97;
-    PyObject *cpy_r_r98;
-    tuple_T3OOO cpy_r_r99;
-    char cpy_r_r100;
-    tuple_T3OOO cpy_r_r101;
-    char cpy_r_r102;
-    PyObject *cpy_r_r103;
-    char cpy_r_r104;
-    char cpy_r_r105;
-    char cpy_r_r106;
-    char cpy_r_r107;
-    PyObject *cpy_r_r108;
     cpy_r_r0 = NULL;
     cpy_r_r1 = cpy_r_r0;
     CPy_XDECREF(cpy_r_r1);
     cpy_r_r2 = NULL;
     cpy_r_r3 = cpy_r_r2;
-    cpy_r_r4 = ((dank_mids___helpers____rate_limit___check_gen___3_73Object *)cpy_r___mypyc_self__)->___mypyc_env__;
+    cpy_r_r4 = ((dank_mids___helpers____rate_limit___check_gen___3_62Object *)cpy_r___mypyc_self__)->___mypyc_env__;
     if (unlikely(cpy_r_r4 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_gen___73", "__mypyc_env__", 73, CPyStatic__rate_limit___globals);
-        goto CPyL112;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_gen___62", "__mypyc_env__", 62, CPyStatic__rate_limit___globals);
+        goto CPyL67;
     }
     CPy_INCREF_NO_IMM(cpy_r_r4);
 CPyL1: ;
     cpy_r_r5 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_next_label__;
     cpy_r_r6 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_env__;
     if (unlikely(cpy_r_r6 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_env__", 73, CPyStatic__rate_limit___globals);
-        goto CPyL113;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_env__", 62, CPyStatic__rate_limit___globals);
+        goto CPyL68;
     }
     CPy_INCREF_NO_IMM(cpy_r_r6);
 CPyL2: ;
     cpy_r_r7 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_env__;
     if (unlikely(cpy_r_r7 == NULL)) {
         CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_env__", -1, CPyStatic__rate_limit___globals);
-        goto CPyL114;
+        goto CPyL69;
     }
     CPy_INCREF_NO_IMM(cpy_r_r7);
 CPyL3: ;
@@ -85887,29 +86474,29 @@ CPyL3: ;
     CPy_DECREF_NO_IMM(cpy_r_r7);
     if (unlikely(cpy_r_r8 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL114;
+        goto CPyL69;
     }
 CPyL4: ;
     CPy_DECREF(cpy_r_r8);
-    goto CPyL107;
+    goto CPyL62;
 CPyL5: ;
     cpy_r_r9 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r10 = cpy_r_type != cpy_r_r9;
     if (cpy_r_r10) {
-        goto CPyL115;
+        goto CPyL70;
     } else
         goto CPyL8;
 CPyL6: ;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL111;
+        goto CPyL66;
     }
     CPy_Unreachable();
 CPyL8: ;
     cpy_r_r11 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__endpoint;
     if (unlikely(cpy_r_r11 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "endpoint", 75, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "endpoint", 67, CPyStatic__rate_limit___globals);
         goto CPyL37;
     }
     CPy_INCREF(cpy_r_r11);
@@ -85920,18 +86507,18 @@ CPyL9: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL37;
     }
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0 != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0);
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5 = cpy_r_r12;
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0 = cpy_r_r12;
     cpy_r_r13 = 1;
     if (unlikely(!cpy_r_r13)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
         goto CPyL37;
     }
-    cpy_r_r14 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5;
+    cpy_r_r14 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0;
     if (unlikely(cpy_r_r14 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__5", -1, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__0", -1, CPyStatic__rate_limit___globals);
         goto CPyL37;
     }
     CPy_INCREF_NO_IMM(cpy_r_r14);
@@ -85942,25 +86529,25 @@ CPyL12: ;
     cpy_r_r17 = (PyObject **)&cpy_r_r1;
     cpy_r_r18 = CPyDef__rate_limit____rate_limit_inactive_gen_____mypyc_generator_helper__(cpy_r_r14, cpy_r_r15, cpy_r_r15, cpy_r_r15, cpy_r_r15, cpy_r_r17);
     CPy_DECREF_NO_IMM(cpy_r_r14);
-    if (cpy_r_r18 != NULL) goto CPyL116;
+    if (cpy_r_r18 != NULL) goto CPyL71;
     cpy_r_r19 = cpy_r_r1 != 0;
     if (unlikely(!cpy_r_r19)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL117;
+        goto CPyL72;
     }
     cpy_r_r20 = cpy_r_r1;
     CPy_DECREF(cpy_r_r20);
     cpy_r_r21 = NULL;
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0 != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0);
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5 = cpy_r_r21;
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0 = cpy_r_r21;
     cpy_r_r22 = 1;
     if (unlikely(!cpy_r_r22)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL37;
     } else
-        goto CPyL76;
+        goto CPyL53;
 CPyL15: ;
     cpy_r_r23 = cpy_r_r18;
 CPyL16: ;
@@ -85970,13 +86557,13 @@ CPyL16: ;
 CPyL17: ;
     cpy_r_r25 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r26 = cpy_r_type != cpy_r_r25;
-    if (!cpy_r_r26) goto CPyL118;
+    if (!cpy_r_r26) goto CPyL73;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL21;
     } else
-        goto CPyL119;
+        goto CPyL74;
 CPyL19: ;
     CPy_Unreachable();
 CPyL20: ;
@@ -85984,22 +86571,22 @@ CPyL20: ;
     goto CPyL32;
 CPyL21: ;
     cpy_r_r27 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6.f2);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1.f2);
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6 = cpy_r_r27;
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1 = cpy_r_r27;
     cpy_r_r28 = 1;
     if (unlikely(!cpy_r_r28)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL120;
+        goto CPyL75;
     }
     cpy_r_r29 = (PyObject **)&cpy_r_r3;
-    cpy_r_r30 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5;
+    cpy_r_r30 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0;
     if (unlikely(cpy_r_r30 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__5", -1, CPyStatic__rate_limit___globals);
-        goto CPyL120;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__0", -1, CPyStatic__rate_limit___globals);
+        goto CPyL75;
     }
     CPy_INCREF_NO_IMM(cpy_r_r30);
 CPyL23: ;
@@ -86007,19 +86594,19 @@ CPyL23: ;
     CPy_DecRef(cpy_r_r30);
     if (unlikely(cpy_r_r31 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL120;
+        goto CPyL75;
     }
     if (cpy_r_r31) goto CPyL27;
     cpy_r_r23 = cpy_r_r3;
-    cpy_r_r32 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6;
+    cpy_r_r32 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1;
     if (unlikely(cpy_r_r32.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
-        goto CPyL121;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__1", -1, CPyStatic__rate_limit___globals);
+        goto CPyL76;
     }
     CPy_INCREF(cpy_r_r32.f0);
     CPy_INCREF(cpy_r_r32.f1);
     CPy_INCREF(cpy_r_r32.f2);
-    goto CPyL122;
+    goto CPyL77;
 CPyL26: ;
     CPy_RestoreExcInfo(cpy_r_r32);
     CPy_DecRef(cpy_r_r32.f0);
@@ -86029,9 +86616,9 @@ CPyL26: ;
 CPyL27: ;
     cpy_r_r20 = cpy_r_r3;
     CPy_DecRef(cpy_r_r20);
-    cpy_r_r33 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6;
+    cpy_r_r33 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1;
     if (unlikely(cpy_r_r33.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__1", -1, CPyStatic__rate_limit___globals);
         goto CPyL29;
     }
     CPy_INCREF(cpy_r_r33.f0);
@@ -86042,11 +86629,11 @@ CPyL28: ;
     CPy_DecRef(cpy_r_r33.f0);
     CPy_DecRef(cpy_r_r33.f1);
     CPy_DecRef(cpy_r_r33.f2);
-    goto CPyL76;
+    goto CPyL53;
 CPyL29: ;
-    cpy_r_r34 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__6;
+    cpy_r_r34 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__1;
     if (unlikely(cpy_r_r34.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__1", -1, CPyStatic__rate_limit___globals);
         goto CPyL37;
     }
     CPy_INCREF(cpy_r_r34.f0);
@@ -86061,14 +86648,14 @@ CPyL30: ;
     if (!cpy_r_r35) {
         goto CPyL37;
     } else
-        goto CPyL123;
+        goto CPyL78;
 CPyL31: ;
     CPy_Unreachable();
 CPyL32: ;
-    cpy_r_r36 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__5;
+    cpy_r_r36 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__0;
     if (unlikely(cpy_r_r36 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__5", -1, CPyStatic__rate_limit___globals);
-        goto CPyL124;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__0", -1, CPyStatic__rate_limit___globals);
+        goto CPyL79;
     }
     CPy_INCREF_NO_IMM(cpy_r_r36);
 CPyL33: ;
@@ -86078,7 +86665,7 @@ CPyL33: ;
     if (cpy_r_r37 == NULL) {
         goto CPyL35;
     } else
-        goto CPyL125;
+        goto CPyL80;
 CPyL34: ;
     cpy_r_r23 = cpy_r_r37;
     goto CPyL16;
@@ -86090,565 +86677,296 @@ CPyL35: ;
     }
     cpy_r_r20 = cpy_r_r38;
     CPy_DECREF(cpy_r_r20);
-    goto CPyL76;
+    goto CPyL53;
 CPyL37: ;
     cpy_r_r39 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7.f2);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2.f2);
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7 = cpy_r_r39;
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2 = cpy_r_r39;
     cpy_r_r40 = 1;
     if (unlikely(!cpy_r_r40)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL126;
+        goto CPyL81;
     }
     cpy_r_r41 = CPyModule_builtins;
     cpy_r_r42 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'Exception' */
     cpy_r_r43 = CPyObject_GetAttr(cpy_r_r41, cpy_r_r42);
     if (unlikely(cpy_r_r43 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL126;
+        goto CPyL81;
     }
     cpy_r_r44 = CPy_ExceptionMatches(cpy_r_r43);
     CPy_DecRef(cpy_r_r43);
-    if (!cpy_r_r44) goto CPyL127;
+    if (!cpy_r_r44) goto CPyL82;
     cpy_r_r45 = CPy_GetExcValue();
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__e != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__e);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__error != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__error);
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__e = cpy_r_r45;
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__error = cpy_r_r45;
     cpy_r_r46 = 1;
     if (unlikely(!cpy_r_r46)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL126;
+        goto CPyL81;
     }
     cpy_r_r47 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__caller_loop;
     if (unlikely(cpy_r_r47 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "caller_loop", 78, CPyStatic__rate_limit___globals);
-        goto CPyL128;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "caller_loop", 69, CPyStatic__rate_limit___globals);
+        goto CPyL81;
     }
     CPy_INCREF(cpy_r_r47);
 CPyL42: ;
-    cpy_r_r48 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__caller_future;
+    cpy_r_r48 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__finish;
     if (unlikely(cpy_r_r48 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute 'caller_future' of 'rate_limit_inactive_env' undefined");
+        PyErr_SetString(PyExc_AttributeError, "attribute 'finish' of 'rate_limit_inactive_env' undefined");
     } else {
         CPy_INCREF(cpy_r_r48);
     }
     CPy_DecRef(cpy_r_r6);
     if (unlikely(cpy_r_r48 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL129;
+        goto CPyL83;
     }
 CPyL43: ;
-    cpy_r_r49 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set_exception' */
-    cpy_r_r50 = CPyObject_GetAttr(cpy_r_r48, cpy_r_r49);
-    CPy_DecRef(cpy_r_r48);
-    if (unlikely(cpy_r_r50 == NULL)) {
+    cpy_r_r49 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__error;
+    if (unlikely(cpy_r_r49 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "error", 69, CPyStatic__rate_limit___globals);
+        goto CPyL84;
+    }
+    CPy_INCREF(cpy_r_r49);
+CPyL44: ;
+    cpy_r_r50 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
+    PyObject *cpy_r_r51[3] = {cpy_r_r47, cpy_r_r48, cpy_r_r49};
+    cpy_r_r52 = (PyObject **)&cpy_r_r51;
+    cpy_r_r53 = PyObject_VectorcallMethod(cpy_r_r50, cpy_r_r52, 9223372036854775811ULL, 0);
+    if (unlikely(cpy_r_r53 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL129;
-    }
-    cpy_r_r51 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_generator_attribute__e;
-    if (unlikely(cpy_r_r51 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "e", 78, CPyStatic__rate_limit___globals);
-        goto CPyL130;
-    }
-    CPy_INCREF(cpy_r_r51);
+        goto CPyL85;
+    } else
+        goto CPyL86;
 CPyL45: ;
-    cpy_r_r52 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
-    PyObject *cpy_r_r53[3] = {cpy_r_r47, cpy_r_r50, cpy_r_r51};
-    cpy_r_r54 = (PyObject **)&cpy_r_r53;
-    cpy_r_r55 = PyObject_VectorcallMethod(cpy_r_r52, cpy_r_r54, 9223372036854775811ULL, 0);
-    if (unlikely(cpy_r_r55 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL131;
-    } else
-        goto CPyL132;
-CPyL46: ;
     CPy_DecRef(cpy_r_r47);
-    CPy_DecRef(cpy_r_r50);
-    CPy_DecRef(cpy_r_r51);
-    goto CPyL71;
+    CPy_DecRef(cpy_r_r48);
+    CPy_DecRef(cpy_r_r49);
+    goto CPyL48;
+CPyL46: ;
+    CPy_Reraise();
+    if (!0) {
+        goto CPyL50;
+    } else
+        goto CPyL87;
 CPyL47: ;
-    cpy_r_r56 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8.f2);
+    CPy_Unreachable();
+CPyL48: ;
+    cpy_r_r54 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2;
+    if (unlikely(cpy_r_r54.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__2", -1, CPyStatic__rate_limit___globals);
+        goto CPyL88;
     }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8 = cpy_r_r56;
-    cpy_r_r57 = 1;
-    if (unlikely(!cpy_r_r57)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    }
-    cpy_r_r58 = CPyStatic__rate_limit___InvalidStateError;
-    if (likely(cpy_r_r58 != NULL)) goto CPyL51;
-    PyErr_SetString(PyExc_NameError, "value for final name \"InvalidStateError\" was not set");
-    cpy_r_r59 = 0;
-    if (unlikely(!cpy_r_r59)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    } else
-        goto CPyL133;
+    CPy_INCREF(cpy_r_r54.f0);
+    CPy_INCREF(cpy_r_r54.f1);
+    CPy_INCREF(cpy_r_r54.f2);
+CPyL49: ;
+    CPy_RestoreExcInfo(cpy_r_r54);
+    CPy_DecRef(cpy_r_r54.f0);
+    CPy_DecRef(cpy_r_r54.f1);
+    CPy_DecRef(cpy_r_r54.f2);
+    goto CPyL57;
 CPyL50: ;
-    CPy_Unreachable();
-CPyL51: ;
-    cpy_r_r60 = CPy_ExceptionMatches(cpy_r_r58);
-    if (!cpy_r_r60) goto CPyL64;
-    cpy_r_r61 = CPyStatic__rate_limit___logger;
-    if (likely(cpy_r_r61 != NULL)) goto CPyL55;
-    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
-    cpy_r_r62 = 0;
-    if (unlikely(!cpy_r_r62)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    } else
-        goto CPyL134;
-CPyL54: ;
-    CPy_Unreachable();
-CPyL55: ;
-    cpy_r_r63 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'InvalidStateError in rate_limit_inactive' */
-    cpy_r_r64 = CPyTuple_LoadEmptyTupleConstant();
-    cpy_r_r65 = NULL;
-    cpy_r_r66 = PyDict_New();
-    if (unlikely(cpy_r_r66 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL135;
-    }
-    cpy_r_r67 = CPyDef_logging___CLogger___exception(cpy_r_r61, cpy_r_r63, cpy_r_r64, cpy_r_r65, cpy_r_r66);
-    CPy_DecRef(cpy_r_r64);
-    CPy_DecRef(cpy_r_r66);
-    if (unlikely(cpy_r_r67 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    }
-    cpy_r_r68 = Py_None;
-    cpy_r_r69 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8;
-    if (unlikely(cpy_r_r69.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__8", -1, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    }
-    CPy_INCREF(cpy_r_r69.f0);
-    CPy_INCREF(cpy_r_r69.f1);
-    CPy_INCREF(cpy_r_r69.f2);
-CPyL58: ;
-    CPy_RestoreExcInfo(cpy_r_r69);
-    CPy_DecRef(cpy_r_r69.f0);
-    CPy_DecRef(cpy_r_r69.f1);
-    CPy_DecRef(cpy_r_r69.f2);
-    cpy_r_r70 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7;
-    if (unlikely(cpy_r_r70.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__7", -1, CPyStatic__rate_limit___globals);
-        goto CPyL66;
-    }
-    CPy_INCREF(cpy_r_r70.f0);
-    CPy_INCREF(cpy_r_r70.f1);
-    CPy_INCREF(cpy_r_r70.f2);
-CPyL59: ;
-    CPy_RestoreExcInfo(cpy_r_r70);
-    CPy_DecRef(cpy_r_r70.f0);
-    CPy_DecRef(cpy_r_r70.f1);
-    CPy_DecRef(cpy_r_r70.f2);
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_next_label__ = -1;
-    CPy_DecRef(cpy_r_r4);
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL63;
-    CPyGen_SetStopIterationValue(cpy_r_r68);
-    if (!0) goto CPyL111;
-    CPy_Unreachable();
-CPyL63: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r68;
-    return 0;
-CPyL64: ;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL66;
-    } else
-        goto CPyL136;
-CPyL65: ;
-    CPy_Unreachable();
-CPyL66: ;
-    cpy_r_r72 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__8;
-    if (unlikely(cpy_r_r72.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__8", -1, CPyStatic__rate_limit___globals);
-        goto CPyL73;
-    }
-    CPy_INCREF(cpy_r_r72.f0);
-    CPy_INCREF(cpy_r_r72.f1);
-    CPy_INCREF(cpy_r_r72.f2);
-CPyL67: ;
-    CPy_RestoreExcInfo(cpy_r_r72);
-    CPy_DecRef(cpy_r_r72.f0);
-    CPy_DecRef(cpy_r_r72.f1);
-    CPy_DecRef(cpy_r_r72.f2);
-    cpy_r_r73 = CPy_KeepPropagating();
-    if (!cpy_r_r73) {
-        goto CPyL73;
-    } else
-        goto CPyL137;
-CPyL68: ;
-    CPy_Unreachable();
-CPyL69: ;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL73;
-    } else
-        goto CPyL138;
-CPyL70: ;
-    CPy_Unreachable();
-CPyL71: ;
-    cpy_r_r74 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7;
-    if (unlikely(cpy_r_r74.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__7", -1, CPyStatic__rate_limit___globals);
-        goto CPyL139;
-    }
-    CPy_INCREF(cpy_r_r74.f0);
-    CPy_INCREF(cpy_r_r74.f1);
-    CPy_INCREF(cpy_r_r74.f2);
-CPyL72: ;
-    CPy_RestoreExcInfo(cpy_r_r74);
-    CPy_DecRef(cpy_r_r74.f0);
-    CPy_DecRef(cpy_r_r74.f1);
-    CPy_DecRef(cpy_r_r74.f2);
-    goto CPyL102;
-CPyL73: ;
-    cpy_r_r75 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__7;
-    if (unlikely(cpy_r_r75.f0 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__7' of 'check_rate_limit_inactive_env' undefined");
+    cpy_r_r55 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__2;
+    if (unlikely(cpy_r_r55.f0 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2' of 'check_rate_limit_inactive_env' undefined");
     } else {
-        CPy_INCREF(cpy_r_r75.f0);
-        CPy_INCREF(cpy_r_r75.f1);
-        CPy_INCREF(cpy_r_r75.f2);
+        CPy_INCREF(cpy_r_r55.f0);
+        CPy_INCREF(cpy_r_r55.f1);
+        CPy_INCREF(cpy_r_r55.f2);
     }
     CPy_DecRef(cpy_r_r4);
-    if (unlikely(cpy_r_r75.f0 == NULL)) {
+    if (unlikely(cpy_r_r55.f0 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL111;
+        goto CPyL66;
     }
-CPyL74: ;
-    CPy_RestoreExcInfo(cpy_r_r75);
-    CPy_DecRef(cpy_r_r75.f0);
-    CPy_DecRef(cpy_r_r75.f1);
-    CPy_DecRef(cpy_r_r75.f2);
-    cpy_r_r76 = CPy_KeepPropagating();
-    if (!cpy_r_r76) goto CPyL111;
+CPyL51: ;
+    CPy_RestoreExcInfo(cpy_r_r55);
+    CPy_DecRef(cpy_r_r55.f0);
+    CPy_DecRef(cpy_r_r55.f1);
+    CPy_DecRef(cpy_r_r55.f2);
+    cpy_r_r56 = CPy_KeepPropagating();
+    if (!cpy_r_r56) goto CPyL66;
     CPy_Unreachable();
-CPyL76: ;
-    cpy_r_r77 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__caller_loop;
-    if (unlikely(cpy_r_r77 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "caller_loop", 85, CPyStatic__rate_limit___globals);
-        goto CPyL140;
+CPyL53: ;
+    cpy_r_r57 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__caller_loop;
+    if (unlikely(cpy_r_r57 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "rate_limit_inactive_env", "caller_loop", 71, CPyStatic__rate_limit___globals);
+        goto CPyL89;
     }
-    CPy_INCREF(cpy_r_r77);
-CPyL77: ;
-    cpy_r_r78 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__caller_future;
-    if (unlikely(cpy_r_r78 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute 'caller_future' of 'rate_limit_inactive_env' undefined");
+    CPy_INCREF(cpy_r_r57);
+CPyL54: ;
+    cpy_r_r58 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r6)->___mypyc_generator_attribute__finish;
+    if (unlikely(cpy_r_r58 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute 'finish' of 'rate_limit_inactive_env' undefined");
     } else {
-        CPy_INCREF(cpy_r_r78);
+        CPy_INCREF(cpy_r_r58);
     }
     CPy_DECREF_NO_IMM(cpy_r_r6);
-    if (unlikely(cpy_r_r78 == NULL)) {
+    if (unlikely(cpy_r_r58 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL90;
     }
-CPyL78: ;
-    cpy_r_r79 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set_result' */
-    cpy_r_r80 = CPyObject_GetAttr(cpy_r_r78, cpy_r_r79);
-    CPy_DECREF(cpy_r_r78);
-    if (unlikely(cpy_r_r80 == NULL)) {
+CPyL55: ;
+    cpy_r_r59 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
+    PyObject *cpy_r_r60[2] = {cpy_r_r57, cpy_r_r58};
+    cpy_r_r61 = (PyObject **)&cpy_r_r60;
+    cpy_r_r62 = PyObject_VectorcallMethod(cpy_r_r59, cpy_r_r61, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r62 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r81 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
-    cpy_r_r82 = Py_None;
-    PyObject *cpy_r_r83[3] = {cpy_r_r77, cpy_r_r80, cpy_r_r82};
-    cpy_r_r84 = (PyObject **)&cpy_r_r83;
-    cpy_r_r85 = PyObject_VectorcallMethod(cpy_r_r81, cpy_r_r84, 9223372036854775811ULL, 0);
-    if (unlikely(cpy_r_r85 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL142;
+        goto CPyL91;
     } else
-        goto CPyL143;
-CPyL80: ;
-    CPy_DECREF(cpy_r_r77);
-    CPy_DECREF(cpy_r_r80);
-    goto CPyL102;
-CPyL81: ;
-    cpy_r_r86 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9.f2);
-    }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9 = cpy_r_r86;
-    cpy_r_r87 = 1;
-    if (unlikely(!cpy_r_r87)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL99;
-    }
-    cpy_r_r88 = CPyStatic__rate_limit___InvalidStateError;
-    if (likely(cpy_r_r88 != NULL)) goto CPyL85;
-    PyErr_SetString(PyExc_NameError, "value for final name \"InvalidStateError\" was not set");
-    cpy_r_r89 = 0;
-    if (unlikely(!cpy_r_r89)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL99;
-    } else
-        goto CPyL144;
-CPyL84: ;
-    CPy_Unreachable();
-CPyL85: ;
-    cpy_r_r90 = CPy_ExceptionMatches(cpy_r_r88);
-    if (!cpy_r_r90) goto CPyL97;
-    cpy_r_r91 = CPyStatic__rate_limit___logger;
-    if (likely(cpy_r_r91 != NULL)) goto CPyL89;
-    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
-    cpy_r_r92 = 0;
-    if (unlikely(!cpy_r_r92)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL99;
-    } else
-        goto CPyL145;
-CPyL88: ;
-    CPy_Unreachable();
-CPyL89: ;
-    cpy_r_r93 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'InvalidStateError in rate_limit_inactive' */
-    cpy_r_r94 = CPyTuple_LoadEmptyTupleConstant();
-    cpy_r_r95 = NULL;
-    cpy_r_r96 = PyDict_New();
-    if (unlikely(cpy_r_r96 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL146;
-    }
-    cpy_r_r97 = CPyDef_logging___CLogger___exception(cpy_r_r91, cpy_r_r93, cpy_r_r94, cpy_r_r95, cpy_r_r96);
-    CPy_DecRef(cpy_r_r94);
-    CPy_DecRef(cpy_r_r96);
-    if (unlikely(cpy_r_r97 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL99;
-    }
-    cpy_r_r98 = Py_None;
-    cpy_r_r99 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9;
-    if (unlikely(cpy_r_r99.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_env", "__mypyc_temp__9", -1, CPyStatic__rate_limit___globals);
-        goto CPyL99;
-    }
-    CPy_INCREF(cpy_r_r99.f0);
-    CPy_INCREF(cpy_r_r99.f1);
-    CPy_INCREF(cpy_r_r99.f2);
-CPyL92: ;
-    CPy_RestoreExcInfo(cpy_r_r99);
-    CPy_DecRef(cpy_r_r99.f0);
-    CPy_DecRef(cpy_r_r99.f1);
-    CPy_DecRef(cpy_r_r99.f2);
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_next_label__ = -1;
-    CPy_DecRef(cpy_r_r4);
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL96;
-    CPyGen_SetStopIterationValue(cpy_r_r98);
-    if (!0) goto CPyL111;
-    CPy_Unreachable();
-CPyL96: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r98;
-    return 0;
-CPyL97: ;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL99;
-    } else
-        goto CPyL147;
-CPyL98: ;
-    CPy_Unreachable();
-CPyL99: ;
-    cpy_r_r101 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_temp__9;
-    if (unlikely(cpy_r_r101.f0 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__9' of 'check_rate_limit_inactive_env' undefined");
-    } else {
-        CPy_INCREF(cpy_r_r101.f0);
-        CPy_INCREF(cpy_r_r101.f1);
-        CPy_INCREF(cpy_r_r101.f2);
-    }
-    CPy_DecRef(cpy_r_r4);
-    if (unlikely(cpy_r_r101.f0 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", -1, CPyStatic__rate_limit___globals);
-        goto CPyL111;
-    }
-CPyL100: ;
-    CPy_RestoreExcInfo(cpy_r_r101);
-    CPy_DecRef(cpy_r_r101.f0);
-    CPy_DecRef(cpy_r_r101.f1);
-    CPy_DecRef(cpy_r_r101.f2);
-    cpy_r_r102 = CPy_KeepPropagating();
-    if (!cpy_r_r102) goto CPyL111;
-    CPy_Unreachable();
-CPyL102: ;
-    cpy_r_r103 = Py_None;
+        goto CPyL92;
+CPyL56: ;
+    CPy_DECREF(cpy_r_r57);
+    CPy_DECREF(cpy_r_r58);
+CPyL57: ;
+    cpy_r_r63 = Py_None;
     ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *)cpy_r_r4)->___mypyc_next_label__ = -1;
     CPy_DECREF_NO_IMM(cpy_r_r4);
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL106;
-    CPyGen_SetStopIterationValue(cpy_r_r103);
-    if (!0) goto CPyL111;
+    if (cpy_r_stop_iter_ptr != NULL) goto CPyL61;
+    CPyGen_SetStopIterationValue(cpy_r_r63);
+    if (!0) goto CPyL66;
     CPy_Unreachable();
-CPyL106: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r103;
+CPyL61: ;
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r63;
     return 0;
-CPyL107: ;
-    cpy_r_r105 = cpy_r_r5 == 0;
-    if (cpy_r_r105) goto CPyL148;
-    cpy_r_r106 = cpy_r_r5 == 1;
-    if (cpy_r_r106) {
+CPyL62: ;
+    cpy_r_r65 = cpy_r_r5 == 0;
+    if (cpy_r_r65) goto CPyL93;
+    cpy_r_r66 = cpy_r_r5 == 1;
+    if (cpy_r_r66) {
         goto CPyL17;
     } else
-        goto CPyL149;
-CPyL109: ;
+        goto CPyL94;
+CPyL64: ;
     PyErr_SetNone(PyExc_StopIteration);
-    cpy_r_r107 = 0;
-    if (unlikely(!cpy_r_r107)) {
+    cpy_r_r67 = 0;
+    if (unlikely(!cpy_r_r67)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL111;
+        goto CPyL66;
     }
     CPy_Unreachable();
-CPyL111: ;
-    cpy_r_r108 = NULL;
-    return cpy_r_r108;
-CPyL112: ;
+CPyL66: ;
+    cpy_r_r68 = NULL;
+    return cpy_r_r68;
+CPyL67: ;
     CPy_XDecRef(cpy_r_r3);
-    goto CPyL111;
-CPyL113: ;
+    goto CPyL66;
+CPyL68: ;
     CPy_XDecRef(cpy_r_r3);
     CPy_DecRef(cpy_r_r4);
-    goto CPyL111;
-CPyL114: ;
+    goto CPyL66;
+CPyL69: ;
     CPy_XDecRef(cpy_r_r3);
     CPy_DecRef(cpy_r_r4);
     CPy_DecRef(cpy_r_r6);
-    goto CPyL111;
-CPyL115: ;
+    goto CPyL66;
+CPyL70: ;
     CPy_DECREF_NO_IMM(cpy_r_r4);
     CPy_DECREF_NO_IMM(cpy_r_r6);
     goto CPyL6;
-CPyL116: ;
+CPyL71: ;
     CPy_XDECREF(cpy_r_r1);
     CPy_DECREF_NO_IMM(cpy_r_r6);
     goto CPyL15;
-CPyL117: ;
+CPyL72: ;
     CPy_XDecRef(cpy_r_r1);
     goto CPyL37;
-CPyL118: ;
+CPyL73: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL20;
-CPyL119: ;
+CPyL74: ;
     CPy_XDECREF(cpy_r_r3);
     CPy_DECREF_NO_IMM(cpy_r_r4);
     CPy_DECREF_NO_IMM(cpy_r_r6);
     goto CPyL19;
-CPyL120: ;
+CPyL75: ;
     CPy_XDecRef(cpy_r_r3);
     goto CPyL29;
-CPyL121: ;
+CPyL76: ;
     CPy_DecRef(cpy_r_r23);
     goto CPyL29;
-CPyL122: ;
+CPyL77: ;
     CPy_DecRef(cpy_r_r6);
     goto CPyL26;
-CPyL123: ;
+CPyL78: ;
     CPy_DecRef(cpy_r_r4);
     CPy_DecRef(cpy_r_r6);
     goto CPyL31;
-CPyL124: ;
+CPyL79: ;
     CPy_DecRef(cpy_r_arg);
     goto CPyL37;
-CPyL125: ;
+CPyL80: ;
     CPy_DECREF_NO_IMM(cpy_r_r6);
     goto CPyL34;
-CPyL126: ;
+CPyL81: ;
     CPy_DecRef(cpy_r_r6);
-    goto CPyL73;
-CPyL127: ;
-    CPy_DecRef(cpy_r_r6);
-    goto CPyL69;
-CPyL128: ;
-    CPy_DecRef(cpy_r_r6);
-    goto CPyL47;
-CPyL129: ;
-    CPy_DecRef(cpy_r_r47);
-    goto CPyL47;
-CPyL130: ;
-    CPy_DecRef(cpy_r_r47);
-    CPy_DecRef(cpy_r_r50);
-    goto CPyL47;
-CPyL131: ;
-    CPy_DecRef(cpy_r_r47);
-    CPy_DecRef(cpy_r_r50);
-    CPy_DecRef(cpy_r_r51);
-    goto CPyL47;
-CPyL132: ;
-    CPy_DecRef(cpy_r_r55);
-    goto CPyL46;
-CPyL133: ;
-    CPy_DecRef(cpy_r_r4);
     goto CPyL50;
-CPyL134: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL54;
-CPyL135: ;
-    CPy_DecRef(cpy_r_r64);
-    goto CPyL66;
-CPyL136: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL65;
-CPyL137: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL68;
-CPyL138: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL70;
-CPyL139: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL111;
-CPyL140: ;
+CPyL82: ;
     CPy_DecRef(cpy_r_r6);
-    goto CPyL81;
-CPyL141: ;
-    CPy_DecRef(cpy_r_r77);
-    goto CPyL81;
-CPyL142: ;
-    CPy_DecRef(cpy_r_r77);
-    CPy_DecRef(cpy_r_r80);
-    goto CPyL81;
-CPyL143: ;
-    CPy_DECREF(cpy_r_r85);
-    goto CPyL80;
-CPyL144: ;
+    goto CPyL46;
+CPyL83: ;
+    CPy_DecRef(cpy_r_r47);
+    goto CPyL50;
+CPyL84: ;
+    CPy_DecRef(cpy_r_r47);
+    CPy_DecRef(cpy_r_r48);
+    goto CPyL50;
+CPyL85: ;
+    CPy_DecRef(cpy_r_r47);
+    CPy_DecRef(cpy_r_r48);
+    CPy_DecRef(cpy_r_r49);
+    goto CPyL50;
+CPyL86: ;
+    CPy_DecRef(cpy_r_r53);
+    goto CPyL45;
+CPyL87: ;
     CPy_DecRef(cpy_r_r4);
-    goto CPyL84;
-CPyL145: ;
+    goto CPyL47;
+CPyL88: ;
     CPy_DecRef(cpy_r_r4);
-    goto CPyL88;
-CPyL146: ;
-    CPy_DecRef(cpy_r_r94);
-    goto CPyL99;
-CPyL147: ;
+    goto CPyL66;
+CPyL89: ;
     CPy_DecRef(cpy_r_r4);
-    goto CPyL98;
-CPyL148: ;
+    CPy_DecRef(cpy_r_r6);
+    goto CPyL66;
+CPyL90: ;
+    CPy_DecRef(cpy_r_r4);
+    CPy_DecRef(cpy_r_r57);
+    goto CPyL66;
+CPyL91: ;
+    CPy_DecRef(cpy_r_r4);
+    CPy_DecRef(cpy_r_r57);
+    CPy_DecRef(cpy_r_r58);
+    goto CPyL66;
+CPyL92: ;
+    CPy_DECREF(cpy_r_r62);
+    goto CPyL56;
+CPyL93: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL5;
-CPyL149: ;
+CPyL94: ;
     CPy_XDECREF(cpy_r_r3);
     CPy_DECREF_NO_IMM(cpy_r_r4);
     CPy_DECREF_NO_IMM(cpy_r_r6);
-    goto CPyL109;
+    goto CPyL64;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73_____next__(PyObject *cpy_r___mypyc_self__) {
+PyObject *CPyDef__rate_limit___check_gen___3_62_____next__(PyObject *cpy_r___mypyc_self__) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
     cpy_r_r0 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_r0, cpy_r_r0, cpy_r_r0, cpy_r_r0, 0);
+    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_r0, cpy_r_r0, cpy_r_r0, cpy_r_r0, 0);
     if (cpy_r_r1 == NULL) goto CPyL2;
     return cpy_r_r1;
 CPyL2: ;
@@ -86656,7 +86974,7 @@ CPyL2: ;
     return cpy_r_r2;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73_____next__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62_____next__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {0};
     static CPyArg_Parser parser = {":__next__", kwlist, 0};
@@ -86664,25 +86982,25 @@ PyObject *CPyPy__rate_limit___check_gen___3_73_____next__(PyObject *self, PyObje
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73_____next__(arg___mypyc_self__);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62_____next__(arg___mypyc_self__);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__next__", -1, CPyStatic__rate_limit___globals);
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73___send(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_arg) {
+PyObject *CPyDef__rate_limit___check_gen___3_62___send(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_arg) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
     cpy_r_r0 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_r0, cpy_r_r0, cpy_r_r0, cpy_r_arg, 0);
+    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_r0, cpy_r_r0, cpy_r_r0, cpy_r_arg, 0);
     if (cpy_r_r1 == NULL) goto CPyL2;
     return cpy_r_r1;
 CPyL2: ;
@@ -86690,7 +87008,7 @@ CPyL2: ;
     return cpy_r_r2;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73___send(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62___send(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {"arg", 0};
     static CPyArg_Parser parser = {"O:send", kwlist, 0};
@@ -86699,26 +87017,26 @@ PyObject *CPyPy__rate_limit___check_gen___3_73___send(PyObject *self, PyObject *
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
     PyObject *arg_arg = obj_arg;
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73___send(arg___mypyc_self__, arg_arg);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62___send(arg___mypyc_self__, arg_arg);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "send", -1, CPyStatic__rate_limit___globals);
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73_____iter__(PyObject *cpy_r___mypyc_self__) {
+PyObject *CPyDef__rate_limit___check_gen___3_62_____iter__(PyObject *cpy_r___mypyc_self__) {
     CPy_INCREF_NO_IMM(cpy_r___mypyc_self__);
     return cpy_r___mypyc_self__;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73_____iter__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62_____iter__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {0};
     static CPyArg_Parser parser = {":__iter__", kwlist, 0};
@@ -86726,20 +87044,20 @@ PyObject *CPyPy__rate_limit___check_gen___3_73_____iter__(PyObject *self, PyObje
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73_____iter__(arg___mypyc_self__);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62_____iter__(arg___mypyc_self__);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__iter__", -1, CPyStatic__rate_limit___globals);
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73___throw(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback) {
+PyObject *CPyDef__rate_limit___check_gen___3_62___throw(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
@@ -86752,7 +87070,7 @@ CPyL2: ;
     CPy_INCREF(cpy_r_r0);
     cpy_r_traceback = cpy_r_r0;
 CPyL4: ;
-    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_type, cpy_r_value, cpy_r_traceback, cpy_r_r0, 0);
+    cpy_r_r1 = CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__(cpy_r___mypyc_self__, cpy_r_type, cpy_r_value, cpy_r_traceback, cpy_r_r0, 0);
     CPy_DECREF(cpy_r_value);
     CPy_DECREF(cpy_r_traceback);
     if (cpy_r_r1 == NULL) goto CPyL6;
@@ -86768,7 +87086,7 @@ CPyL8: ;
     goto CPyL4;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73___throw(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62___throw(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {"type", "value", "traceback", 0};
     static CPyArg_Parser parser = {"O|OO:throw", kwlist, 0};
@@ -86779,10 +87097,10 @@ PyObject *CPyPy__rate_limit___check_gen___3_73___throw(PyObject *self, PyObject 
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
     PyObject *arg_type = obj_type;
@@ -86798,14 +87116,14 @@ PyObject *CPyPy__rate_limit___check_gen___3_73___throw(PyObject *self, PyObject 
     } else {
         arg_traceback = obj_traceback; 
     }
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73___throw(arg___mypyc_self__, arg_type, arg_value, arg_traceback);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62___throw(arg___mypyc_self__, arg_type, arg_value, arg_traceback);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "throw", -1, CPyStatic__rate_limit___globals);
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73___close(PyObject *cpy_r___mypyc_self__) {
+PyObject *CPyDef__rate_limit___check_gen___3_62___close(PyObject *cpy_r___mypyc_self__) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
@@ -86828,7 +87146,7 @@ PyObject *CPyDef__rate_limit___check_gen___3_73___close(PyObject *cpy_r___mypyc_
     if (cpy_r_r2 == NULL) goto CPyL3;
     cpy_r_r3 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r4 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r5 = CPyDef__rate_limit___check_gen___3_73___throw(cpy_r___mypyc_self__, cpy_r_r2, cpy_r_r3, cpy_r_r4);
+    cpy_r_r5 = CPyDef__rate_limit___check_gen___3_62___throw(cpy_r___mypyc_self__, cpy_r_r2, cpy_r_r3, cpy_r_r4);
     if (cpy_r_r5 != NULL) goto CPyL11;
 CPyL3: ;
     cpy_r_r6 = CPy_CatchError();
@@ -86841,10 +87159,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp354 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp354);
-    PyObject *__tmp355 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp355);
+    PyObject *__tmp355 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp355);
+    PyObject *__tmp356 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp356);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -86884,7 +87202,7 @@ CPyL13: ;
     goto CPyL6;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73___close(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62___close(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {0};
     static CPyArg_Parser parser = {":close", kwlist, 0};
@@ -86892,25 +87210,25 @@ PyObject *CPyPy__rate_limit___check_gen___3_73___close(PyObject *self, PyObject 
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73___close(arg___mypyc_self__);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62___close(arg___mypyc_self__);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "close", -1, CPyStatic__rate_limit___globals);
     return NULL;
 }
 
-PyObject *CPyDef__rate_limit___check_gen___3_73_____await__(PyObject *cpy_r___mypyc_self__) {
+PyObject *CPyDef__rate_limit___check_gen___3_62_____await__(PyObject *cpy_r___mypyc_self__) {
     CPy_INCREF_NO_IMM(cpy_r___mypyc_self__);
     return cpy_r___mypyc_self__;
 }
 
-PyObject *CPyPy__rate_limit___check_gen___3_73_____await__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+PyObject *CPyPy__rate_limit___check_gen___3_62_____await__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
     PyObject *obj___mypyc_self__ = self;
     static const char * const kwlist[] = {0};
     static CPyArg_Parser parser = {":__await__", kwlist, 0};
@@ -86918,13 +87236,13 @@ PyObject *CPyPy__rate_limit___check_gen___3_73_____await__(PyObject *self, PyObj
         return NULL;
     }
     PyObject *arg___mypyc_self__;
-    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_73))
+    if (likely(Py_TYPE(obj___mypyc_self__) == CPyType__rate_limit___check_gen___3_62))
         arg___mypyc_self__ = obj___mypyc_self__;
     else {
-        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___73", obj___mypyc_self__); 
+        CPy_TypeError("dank_mids.helpers._rate_limit.check_gen___62", obj___mypyc_self__); 
         goto fail;
     }
-    PyObject *retval = CPyDef__rate_limit___check_gen___3_73_____await__(arg___mypyc_self__);
+    PyObject *retval = CPyDef__rate_limit___check_gen___3_62_____await__(arg___mypyc_self__);
     return retval;
 fail: ;
     CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__await__", -1, CPyStatic__rate_limit___globals);
@@ -86941,7 +87259,7 @@ PyObject *CPyDef__rate_limit___check_rate_limit_inactive_obj_____call__(PyObject
     PyObject *cpy_r_r6;
     cpy_r_r0 = ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r___mypyc_self__)->___mypyc_env__;
     if (unlikely(cpy_r_r0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_obj", "__mypyc_env__", 73, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "check", "check_rate_limit_inactive_obj", "__mypyc_env__", 62, CPyStatic__rate_limit___globals);
         goto CPyL6;
     }
     CPy_INCREF_NO_IMM(cpy_r_r0);
@@ -86960,16 +87278,16 @@ CPyL1: ;
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL8;
     }
-    cpy_r_r3 = CPyDef__rate_limit___check_gen___3_73();
+    cpy_r_r3 = CPyDef__rate_limit___check_gen___3_62();
     if (unlikely(cpy_r_r3 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
         goto CPyL8;
     }
     CPy_INCREF_NO_IMM(cpy_r_r1);
-    if (((dank_mids___helpers____rate_limit___check_gen___3_73Object *)cpy_r_r3)->___mypyc_env__ != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_gen___3_73Object *)cpy_r_r3)->___mypyc_env__);
+    if (((dank_mids___helpers____rate_limit___check_gen___3_62Object *)cpy_r_r3)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_gen___3_62Object *)cpy_r_r3)->___mypyc_env__);
     }
-    ((dank_mids___helpers____rate_limit___check_gen___3_73Object *)cpy_r_r3)->___mypyc_env__ = cpy_r_r1;
+    ((dank_mids___helpers____rate_limit___check_gen___3_62Object *)cpy_r_r3)->___mypyc_env__ = cpy_r_r1;
     cpy_r_r4 = 1;
     if (unlikely(!cpy_r_r4)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "check", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
@@ -87066,7 +87384,7 @@ char CPyDef__rate_limit___start_check_rate_limit_inactive_obj_____call__(PyObjec
     char cpy_r_r18;
     cpy_r_r0 = ((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r___mypyc_self__)->___mypyc_env__;
     if (unlikely(cpy_r_r0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "start_check", "start_check_rate_limit_inactive_obj", "__mypyc_env__", 91, CPyStatic__rate_limit___globals);
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "start_check", "start_check_rate_limit_inactive_obj", "__mypyc_env__", 73, CPyStatic__rate_limit___globals);
         goto CPyL14;
     }
     CPy_INCREF_NO_IMM(cpy_r_r0);
@@ -87204,1967 +87522,879 @@ PyObject *CPyDef__rate_limit___rate_limit_inactive_gen_____mypyc_generator_helpe
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
-    PyObject *cpy_r_r3;
+    int32_t cpy_r_r3;
     PyObject *cpy_r_r4;
-    PyObject *cpy_r_r5;
+    char cpy_r_r5;
     PyObject *cpy_r_r6;
-    PyObject *cpy_r_r7;
+    char cpy_r_r7;
     PyObject *cpy_r_r8;
     PyObject *cpy_r_r9;
     PyObject *cpy_r_r10;
-    PyObject *cpy_r_r11;
+    char cpy_r_r11;
     PyObject *cpy_r_r12;
     PyObject *cpy_r_r13;
-    tuple_T3OOO cpy_r_r14;
-    tuple_T3OOO cpy_r_r15;
-    PyObject *cpy_r_r16;
-    int32_t cpy_r_r17;
+    CPyPtr cpy_r_r14;
+    int64_t cpy_r_r15;
+    CPyTagged cpy_r_r16;
+    char cpy_r_r17;
     PyObject *cpy_r_r18;
     char cpy_r_r19;
     PyObject *cpy_r_r20;
-    char cpy_r_r21;
+    PyObject *cpy_r_r21;
     PyObject *cpy_r_r22;
     PyObject *cpy_r_r23;
     PyObject *cpy_r_r24;
-    char cpy_r_r25;
-    PyObject *cpy_r_r26;
+    PyObject **cpy_r_r26;
     PyObject *cpy_r_r27;
-    CPyPtr cpy_r_r28;
-    int64_t cpy_r_r29;
-    CPyTagged cpy_r_r30;
-    char cpy_r_r31;
+    char cpy_r_r28;
+    PyObject *cpy_r_r29;
+    PyObject *cpy_r_r30;
+    PyObject *cpy_r_r31;
     PyObject *cpy_r_r32;
-    char cpy_r_r33;
+    PyObject *cpy_r_r33;
     PyObject *cpy_r_r34;
-    char cpy_r_r35;
+    PyObject *cpy_r_r35;
     PyObject *cpy_r_r36;
     PyObject *cpy_r_r37;
     PyObject *cpy_r_r38;
     PyObject *cpy_r_r39;
-    char cpy_r_r40;
-    char cpy_r_r41;
-    char cpy_r_r42;
-    PyObject *cpy_r_r43;
+    PyObject *cpy_r_r40;
+    PyObject *cpy_r_r41;
+    PyObject **cpy_r_r43;
     PyObject *cpy_r_r44;
     PyObject *cpy_r_r45;
-    PyObject **cpy_r_r46;
+    char cpy_r_r46;
     PyObject *cpy_r_r47;
     char cpy_r_r48;
     PyObject *cpy_r_r49;
     PyObject *cpy_r_r50;
-    char cpy_r_r51;
-    PyObject *cpy_r_r52;
-    char cpy_r_r53;
-    PyObject *cpy_r_r54;
-    char cpy_r_r55;
-    tuple_T3OOO cpy_r_r56;
+    PyObject **cpy_r_r52;
+    PyObject *cpy_r_r53;
+    char cpy_r_r54;
+    PyObject *cpy_r_r55;
+    char cpy_r_r56;
     char cpy_r_r57;
-    PyObject **cpy_r_r58;
-    PyObject *cpy_r_r59;
+    PyObject *cpy_r_r58;
+    char cpy_r_r59;
     char cpy_r_r60;
-    tuple_T3OOO cpy_r_r61;
-    tuple_T3OOO cpy_r_r62;
-    tuple_T3OOO cpy_r_r63;
-    char cpy_r_r64;
+    PyObject *cpy_r_r61;
+    char cpy_r_r62;
+    char cpy_r_r63;
+    PyObject *cpy_r_r64;
     PyObject *cpy_r_r65;
     PyObject *cpy_r_r66;
     PyObject *cpy_r_r67;
     PyObject *cpy_r_r68;
     PyObject *cpy_r_r69;
-    CPyPtr cpy_r_r70;
-    int64_t cpy_r_r71;
-    CPyTagged cpy_r_r72;
-    char cpy_r_r73;
-    PyObject *cpy_r_r74;
-    char cpy_r_r75;
+    PyObject *cpy_r_r70;
+    PyObject **cpy_r_r72;
+    PyObject *cpy_r_r73;
+    char cpy_r_r74;
+    PyObject *cpy_r_r75;
     PyObject *cpy_r_r76;
-    PyObject *cpy_r_r77;
+    char cpy_r_r77;
     PyObject *cpy_r_r78;
     PyObject *cpy_r_r79;
     PyObject *cpy_r_r80;
-    PyObject **cpy_r_r82;
-    PyObject *cpy_r_r83;
-    char cpy_r_r84;
-    PyObject *cpy_r_r85;
+    PyObject *cpy_r_r81;
+    PyObject *cpy_r_r82;
+    char cpy_r_r83;
+    PyObject *cpy_r_r84;
+    char cpy_r_r85;
     PyObject *cpy_r_r86;
-    PyObject *cpy_r_r87;
-    PyObject *cpy_r_r88;
-    PyObject *cpy_r_r89;
-    PyObject *cpy_r_r90;
+    char cpy_r_r87;
+    tuple_T3OOO cpy_r_r88;
+    char cpy_r_r89;
+    PyObject **cpy_r_r90;
     PyObject *cpy_r_r91;
-    PyObject *cpy_r_r92;
-    PyObject *cpy_r_r93;
-    PyObject *cpy_r_r94;
-    PyObject *cpy_r_r95;
-    PyObject *cpy_r_r96;
+    char cpy_r_r92;
+    tuple_T3OOO cpy_r_r93;
+    tuple_T3OOO cpy_r_r94;
+    tuple_T3OOO cpy_r_r95;
+    char cpy_r_r96;
     PyObject *cpy_r_r97;
-    PyObject **cpy_r_r99;
-    PyObject *cpy_r_r100;
-    PyObject *cpy_r_r101;
-    char cpy_r_r102;
-    PyObject *cpy_r_r103;
+    PyObject *cpy_r_r98;
+    PyObject *cpy_r_r99;
+    tuple_T3OOO cpy_r_r100;
+    char cpy_r_r101;
+    PyObject *cpy_r_r102;
+    char cpy_r_r103;
     char cpy_r_r104;
     PyObject *cpy_r_r105;
     PyObject *cpy_r_r106;
     PyObject **cpy_r_r108;
     PyObject *cpy_r_r109;
-    char cpy_r_r110;
-    PyObject *cpy_r_r111;
-    char cpy_r_r112;
+    tuple_T3OOO cpy_r_r110;
+    char cpy_r_r111;
+    PyObject *cpy_r_r112;
     char cpy_r_r113;
-    PyObject *cpy_r_r114;
+    char cpy_r_r114;
     char cpy_r_r115;
     char cpy_r_r116;
     PyObject *cpy_r_r117;
-    PyObject *cpy_r_r118;
-    PyObject *cpy_r_r119;
-    PyObject *cpy_r_r120;
-    PyObject *cpy_r_r121;
-    PyObject *cpy_r_r122;
-    PyObject *cpy_r_r123;
-    PyObject **cpy_r_r125;
-    PyObject *cpy_r_r126;
-    char cpy_r_r127;
-    PyObject *cpy_r_r128;
-    PyObject *cpy_r_r129;
-    char cpy_r_r130;
-    PyObject *cpy_r_r131;
-    PyObject *cpy_r_r132;
-    PyObject *cpy_r_r133;
-    PyObject *cpy_r_r134;
-    PyObject *cpy_r_r135;
-    char cpy_r_r136;
-    PyObject *cpy_r_r137;
-    char cpy_r_r138;
-    PyObject *cpy_r_r139;
-    char cpy_r_r140;
-    tuple_T3OOO cpy_r_r141;
-    char cpy_r_r142;
-    PyObject **cpy_r_r143;
-    PyObject *cpy_r_r144;
-    char cpy_r_r145;
-    tuple_T3OOO cpy_r_r146;
-    tuple_T3OOO cpy_r_r147;
-    tuple_T3OOO cpy_r_r148;
-    char cpy_r_r149;
-    PyObject *cpy_r_r150;
-    PyObject *cpy_r_r151;
-    PyObject *cpy_r_r152;
-    tuple_T3OOO cpy_r_r153;
-    char cpy_r_r154;
-    PyObject *cpy_r_r155;
-    char cpy_r_r156;
-    char cpy_r_r157;
-    PyObject *cpy_r_r158;
-    PyObject *cpy_r_r159;
-    PyObject **cpy_r_r161;
-    PyObject *cpy_r_r162;
-    tuple_T3OOO cpy_r_r163;
-    char cpy_r_r164;
-    tuple_T3OOO cpy_r_r165;
-    char cpy_r_r166;
-    char cpy_r_r167;
-    tuple_T3OOO cpy_r_r168;
-    PyObject *cpy_r_r169;
-    PyObject *cpy_r_r170;
-    PyObject *cpy_r_r171;
-    PyObject *cpy_r_r172;
-    PyObject *cpy_r_r173;
-    char cpy_r_r174;
-    PyObject *cpy_r_r175;
-    PyObject *cpy_r_r176;
-    PyObject *cpy_r_r177;
-    PyObject **cpy_r_r178;
-    PyObject *cpy_r_r179;
-    char cpy_r_r180;
-    PyObject *cpy_r_r181;
-    PyObject *cpy_r_r182;
-    char cpy_r_r183;
-    PyObject *cpy_r_r184;
-    char cpy_r_r185;
-    PyObject *cpy_r_r186;
-    char cpy_r_r187;
-    tuple_T3OOO cpy_r_r188;
-    char cpy_r_r189;
-    PyObject **cpy_r_r190;
-    PyObject *cpy_r_r191;
-    char cpy_r_r192;
-    tuple_T3OOO cpy_r_r193;
-    tuple_T3OOO cpy_r_r194;
-    tuple_T3OOO cpy_r_r195;
-    char cpy_r_r196;
-    PyObject *cpy_r_r197;
-    PyObject *cpy_r_r198;
-    PyObject *cpy_r_r199;
-    int32_t cpy_r_r200;
-    char cpy_r_r201;
-    char cpy_r_r202;
-    tuple_T3OOO cpy_r_r203;
-    tuple_T3OOO cpy_r_r204;
-    char cpy_r_r205;
-    PyObject *cpy_r_r206;
-    char cpy_r_r207;
-    tuple_T3OOO cpy_r_r208;
-    PyObject *cpy_r_r209;
-    char cpy_r_r210;
-    tuple_T3OOO cpy_r_r211;
-    char cpy_r_r212;
-    PyObject *cpy_r_r213;
-    PyObject *cpy_r_r214;
-    PyObject *cpy_r_r215;
-    char cpy_r_r216;
-    PyObject *cpy_r_r217;
-    PyObject *cpy_r_r218;
-    PyObject *cpy_r_r219;
-    PyObject **cpy_r_r220;
-    PyObject *cpy_r_r221;
-    char cpy_r_r222;
-    PyObject *cpy_r_r223;
-    PyObject *cpy_r_r224;
-    char cpy_r_r225;
-    PyObject *cpy_r_r226;
-    char cpy_r_r227;
-    PyObject *cpy_r_r228;
-    char cpy_r_r229;
-    tuple_T3OOO cpy_r_r230;
-    char cpy_r_r231;
-    PyObject **cpy_r_r232;
-    PyObject *cpy_r_r233;
-    char cpy_r_r234;
-    tuple_T3OOO cpy_r_r235;
-    tuple_T3OOO cpy_r_r236;
-    tuple_T3OOO cpy_r_r237;
-    char cpy_r_r238;
-    PyObject *cpy_r_r239;
-    PyObject *cpy_r_r240;
-    PyObject *cpy_r_r241;
-    PyObject *cpy_r_r242;
-    char cpy_r_r243;
-    char cpy_r_r244;
-    PyObject *cpy_r_r245;
-    char cpy_r_r246;
-    char cpy_r_r247;
-    char cpy_r_r248;
-    char cpy_r_r249;
-    char cpy_r_r250;
-    char cpy_r_r251;
-    char cpy_r_r252;
-    PyObject *cpy_r_r253;
     cpy_r_r0 = NULL;
     cpy_r_r1 = cpy_r_r0;
-    CPy_XDECREF(cpy_r_r1);
-    cpy_r_r2 = NULL;
-    cpy_r_r3 = cpy_r_r2;
-    cpy_r_r4 = NULL;
-    cpy_r_r5 = cpy_r_r4;
-    cpy_r_r6 = NULL;
-    cpy_r_r7 = cpy_r_r6;
-    CPy_XDECREF(cpy_r_r7);
-    cpy_r_r8 = NULL;
-    cpy_r_r9 = cpy_r_r8;
-    cpy_r_r10 = NULL;
-    cpy_r_r11 = cpy_r_r10;
-    CPy_XDECREF(cpy_r_r11);
-    cpy_r_r12 = NULL;
-    cpy_r_r13 = cpy_r_r12;
-    tuple_T3OOO __tmp356 = { NULL, NULL, NULL };
-    cpy_r_r14 = __tmp356;
-    cpy_r_r15 = cpy_r_r14;
-    cpy_r_r16 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_env__;
-    if (unlikely(cpy_r_r16 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_gen", "__mypyc_env__", 43, CPyStatic__rate_limit___globals);
-        goto CPyL237;
+    cpy_r_r2 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_env__;
+    if (unlikely(cpy_r_r2 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_gen", "__mypyc_env__", 36, CPyStatic__rate_limit___globals);
+        goto CPyL110;
     }
-    CPy_INCREF_NO_IMM(cpy_r_r16);
+    CPy_INCREF_NO_IMM(cpy_r_r2);
 CPyL1: ;
-    cpy_r_r17 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__;
-    goto CPyL229;
+    cpy_r_r3 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__;
+    goto CPyL105;
 CPyL2: ;
-    cpy_r_r18 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r19 = cpy_r_type != cpy_r_r18;
-    if (cpy_r_r19) {
-        goto CPyL238;
+    cpy_r_r4 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r5 = cpy_r_type != cpy_r_r4;
+    if (cpy_r_r5) {
+        goto CPyL111;
     } else
         goto CPyL5;
 CPyL3: ;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL236;
+        goto CPyL109;
     }
     CPy_Unreachable();
 CPyL5: ;
-    cpy_r_r20 = CPyStatic__rate_limit___limiters;
-    if (unlikely(cpy_r_r20 == NULL)) {
-        goto CPyL239;
+    cpy_r_r6 = CPyStatic__rate_limit___limiters;
+    if (unlikely(cpy_r_r6 == NULL)) {
+        goto CPyL112;
     } else
         goto CPyL8;
 CPyL6: ;
     PyErr_SetString(PyExc_NameError, "value for final name \"limiters\" was not set");
-    cpy_r_r21 = 0;
-    if (unlikely(!cpy_r_r21)) {
+    cpy_r_r7 = 0;
+    if (unlikely(!cpy_r_r7)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL236;
+        goto CPyL109;
     }
     CPy_Unreachable();
 CPyL8: ;
-    cpy_r_r22 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r22 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "endpoint", 56, CPyStatic__rate_limit___globals);
-        goto CPyL240;
+    cpy_r_r8 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r8 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "endpoint", 41, CPyStatic__rate_limit___globals);
+        goto CPyL113;
     }
-    CPy_INCREF(cpy_r_r22);
+    CPy_INCREF(cpy_r_r8);
 CPyL9: ;
-    cpy_r_r23 = CPyDict_GetItem(cpy_r_r20, cpy_r_r22);
-    CPy_DECREF(cpy_r_r22);
-    if (unlikely(cpy_r_r23 == NULL)) {
+    cpy_r_r9 = CPyDict_GetItem(cpy_r_r6, cpy_r_r8);
+    CPy_DECREF(cpy_r_r8);
+    if (unlikely(cpy_r_r9 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL240;
+        goto CPyL113;
     }
-    if (likely(Py_TYPE(cpy_r_r23) == CPyType_leakybucket___AsyncLimiter))
-        cpy_r_r24 = cpy_r_r23;
+    if (likely(Py_TYPE(cpy_r_r9) == CPyType_leakybucket___AsyncLimiter))
+        cpy_r_r10 = cpy_r_r9;
     else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 56, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r23);
-        goto CPyL240;
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 41, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r9);
+        goto CPyL113;
     }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__limiter != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__limiter);
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__limiter != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__limiter);
     }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__limiter = cpy_r_r24;
-    cpy_r_r25 = 1;
-    if (unlikely(!cpy_r_r25)) {
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__limiter = cpy_r_r10;
+    cpy_r_r11 = 1;
+    if (unlikely(!cpy_r_r11)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL240;
+        goto CPyL113;
     }
-    cpy_r_r26 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__limiter;
-    if (unlikely(cpy_r_r26 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "limiter", 59, CPyStatic__rate_limit___globals);
-        goto CPyL240;
+    cpy_r_r12 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__limiter;
+    if (unlikely(cpy_r_r12 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "limiter", 44, CPyStatic__rate_limit___globals);
+        goto CPyL113;
     }
-    CPy_INCREF_NO_IMM(cpy_r_r26);
+    CPy_INCREF_NO_IMM(cpy_r_r12);
 CPyL13: ;
-    cpy_r_r27 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r26)->__waiters;
-    CPy_INCREF_NO_IMM(cpy_r_r27);
-    CPy_DECREF_NO_IMM(cpy_r_r26);
-    cpy_r_r28 = (CPyPtr)&((PyVarObject *)cpy_r_r27)->ob_size;
-    cpy_r_r29 = *(int64_t *)cpy_r_r28;
-    CPy_DECREF_NO_IMM(cpy_r_r27);
-    cpy_r_r30 = cpy_r_r29 << 1;
-    cpy_r_r31 = cpy_r_r30 != 0;
-    if (cpy_r_r31) goto CPyL19;
-    cpy_r_r32 = Py_None;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = -1;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
+    cpy_r_r13 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r12)->__waiters;
+    CPy_INCREF_NO_IMM(cpy_r_r13);
+    CPy_DECREF_NO_IMM(cpy_r_r12);
+    cpy_r_r14 = (CPyPtr)&((PyVarObject *)cpy_r_r13)->ob_size;
+    cpy_r_r15 = *(int64_t *)cpy_r_r14;
+    CPy_DECREF_NO_IMM(cpy_r_r13);
+    cpy_r_r16 = cpy_r_r15 << 1;
+    cpy_r_r17 = cpy_r_r16 != 0;
+    if (cpy_r_r17) goto CPyL19;
+    cpy_r_r18 = Py_None;
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = -1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
     if (cpy_r_stop_iter_ptr != NULL) goto CPyL18;
-    CPyGen_SetStopIterationValue(cpy_r_r32);
-    if (!0) goto CPyL236;
+    CPyGen_SetStopIterationValue(cpy_r_r18);
+    if (!0) goto CPyL109;
     CPy_Unreachable();
 CPyL18: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r32;
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r18;
     return 0;
 CPyL19: ;
-    cpy_r_r34 = CPyStatic__rate_limit___locks;
-    if (unlikely(cpy_r_r34 == NULL)) {
-        goto CPyL241;
-    } else
-        goto CPyL22;
-CPyL20: ;
-    PyErr_SetString(PyExc_NameError, "value for final name \"locks\" was not set");
-    cpy_r_r35 = 0;
-    if (unlikely(!cpy_r_r35)) {
+    cpy_r_r20 = CPyStatic__rate_limit___globals;
+    cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
+    cpy_r_r22 = CPyDict_GetItem(cpy_r_r20, cpy_r_r21);
+    if (unlikely(cpy_r_r22 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL236;
+        goto CPyL113;
+    }
+    if (likely(Py_TYPE(cpy_r_r22) == CPyType__requester___HTTPRequesterThread))
+        cpy_r_r23 = cpy_r_r22;
+    else {
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 47, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r22);
+        goto CPyL113;
+    }
+    cpy_r_r24 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'is_alive' */
+    PyObject *cpy_r_r25[1] = {cpy_r_r23};
+    cpy_r_r26 = (PyObject **)&cpy_r_r25;
+    cpy_r_r27 = PyObject_VectorcallMethod(cpy_r_r24, cpy_r_r26, 9223372036854775809ULL, 0);
+    if (unlikely(cpy_r_r27 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL114;
+    }
+    CPy_DECREF_NO_IMM(cpy_r_r23);
+    if (unlikely(!PyBool_Check(cpy_r_r27))) {
+        CPy_TypeError("bool", cpy_r_r27); cpy_r_r28 = 2;
+    } else
+        cpy_r_r28 = cpy_r_r27 == Py_True;
+    CPy_DECREF(cpy_r_r27);
+    if (unlikely(cpy_r_r28 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    if (cpy_r_r28) {
+        goto CPyL34;
+    } else
+        goto CPyL115;
+CPyL24: ;
+    cpy_r_r29 = CPyStatic__rate_limit___globals;
+    cpy_r_r30 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
+    cpy_r_r31 = CPyDict_GetItem(cpy_r_r29, cpy_r_r30);
+    if (unlikely(cpy_r_r31 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL109;
+    }
+    if (likely(Py_TYPE(cpy_r_r31) == CPyType__requester___HTTPRequesterThread))
+        cpy_r_r32 = cpy_r_r31;
+    else {
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 48, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r31);
+        goto CPyL116;
+    }
+    cpy_r_r33 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r32)->__exc;
+    if (unlikely(cpy_r_r33 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "_exc", 48, CPyStatic__rate_limit___globals);
+        goto CPyL116;
+    }
+    CPy_INCREF(cpy_r_r33);
+CPyL27: ;
+    CPy_DECREF(cpy_r_r31);
+    cpy_r_r34 = CPyStatic__rate_limit___globals;
+    cpy_r_r35 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
+    cpy_r_r36 = CPyDict_GetItem(cpy_r_r34, cpy_r_r35);
+    if (unlikely(cpy_r_r36 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL117;
+    }
+    if (likely(Py_TYPE(cpy_r_r36) == CPyType__requester___HTTPRequesterThread))
+        cpy_r_r37 = cpy_r_r36;
+    else {
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 48, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r36);
+        goto CPyL118;
+    }
+    cpy_r_r38 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r37)->__exc;
+    if (unlikely(cpy_r_r38 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "_exc", 48, CPyStatic__rate_limit___globals);
+        goto CPyL118;
+    }
+    CPy_INCREF(cpy_r_r38);
+CPyL30: ;
+    CPy_DECREF(cpy_r_r36);
+    cpy_r_r39 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '__traceback__' */
+    cpy_r_r40 = CPyObject_GetAttr(cpy_r_r38, cpy_r_r39);
+    CPy_DECREF(cpy_r_r38);
+    if (unlikely(cpy_r_r40 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL117;
+    }
+    cpy_r_r41 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'with_traceback' */
+    PyObject *cpy_r_r42[2] = {cpy_r_r33, cpy_r_r40};
+    cpy_r_r43 = (PyObject **)&cpy_r_r42;
+    cpy_r_r44 = PyObject_VectorcallMethod(cpy_r_r41, cpy_r_r43, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r44 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL119;
+    }
+    CPy_DECREF(cpy_r_r33);
+    CPy_DECREF(cpy_r_r40);
+    CPy_Raise(cpy_r_r44);
+    CPy_DECREF(cpy_r_r44);
+    if (unlikely(!0)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL109;
     }
     CPy_Unreachable();
-CPyL22: ;
-    cpy_r_r36 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r36 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "endpoint", 62, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    CPy_INCREF(cpy_r_r36);
-CPyL23: ;
-    cpy_r_r37 = CPyDict_GetItem(cpy_r_r34, cpy_r_r36);
-    CPy_DECREF(cpy_r_r36);
-    if (unlikely(cpy_r_r37 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    if (likely(Py_TYPE(cpy_r_r37) == CPyType_lock___Lock))
-        cpy_r_r38 = cpy_r_r37;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 62, CPyStatic__rate_limit___globals, "dank_mids.lock.Lock", cpy_r_r37);
-        goto CPyL240;
-    }
-    cpy_r_r39 = CPyDef_lock___Lock_____aenter__(cpy_r_r38);
-    if (unlikely(cpy_r_r39 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL242;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__0 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__0);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__0 = cpy_r_r38;
-    cpy_r_r40 = 1;
-    if (unlikely(!cpy_r_r40)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL243;
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__1 = 1;
-    cpy_r_r41 = 1;
-    if (unlikely(!cpy_r_r41)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL243;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2 = cpy_r_r39;
-    cpy_r_r42 = 1;
-    if (unlikely(!cpy_r_r42)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    cpy_r_r43 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2;
-    if (unlikely(cpy_r_r43 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__2", -1, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r43);
-CPyL30: ;
-    cpy_r_r44 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r45 = NULL;
-    cpy_r_r1 = cpy_r_r45;
-    cpy_r_r46 = (PyObject **)&cpy_r_r1;
-    cpy_r_r47 = CPyDef_lock_____aenter___3_Lock_gen_____mypyc_generator_helper__(cpy_r_r43, cpy_r_r44, cpy_r_r44, cpy_r_r44, cpy_r_r44, cpy_r_r46);
-    CPy_DECREF_NO_IMM(cpy_r_r43);
-    if (cpy_r_r47 != NULL) goto CPyL244;
-    cpy_r_r48 = cpy_r_r1 != 0;
-    if (unlikely(!cpy_r_r48)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL245;
-    }
-    cpy_r_r49 = cpy_r_r1;
-    CPy_DECREF(cpy_r_r49);
-    cpy_r_r50 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2 = cpy_r_r50;
-    cpy_r_r51 = 1;
-    if (unlikely(!cpy_r_r51)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    } else
-        goto CPyL55;
-CPyL33: ;
-    cpy_r_r52 = cpy_r_r47;
 CPyL34: ;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = 1;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    return cpy_r_r52;
+    cpy_r_r45 = CPyStatic__rate_limit___get_running_loop;
+    if (unlikely(cpy_r_r45 == NULL)) {
+        goto CPyL120;
+    } else
+        goto CPyL37;
 CPyL35: ;
-    cpy_r_r54 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r55 = cpy_r_type != cpy_r_r54;
-    if (!cpy_r_r55) goto CPyL246;
+    PyErr_SetString(PyExc_NameError, "value for final name \"get_running_loop\" was not set");
+    cpy_r_r46 = 0;
+    if (unlikely(!cpy_r_r46)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL109;
+    }
+    CPy_Unreachable();
+CPyL37: ;
+    cpy_r_r47 = PyObject_Vectorcall(cpy_r_r45, 0, 0, 0);
+    if (unlikely(cpy_r_r47 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_loop != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_loop);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_loop = cpy_r_r47;
+    cpy_r_r48 = 1;
+    if (unlikely(!cpy_r_r48)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r49 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_loop;
+    if (unlikely(cpy_r_r49 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "caller_loop", 51, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    CPy_INCREF(cpy_r_r49);
+CPyL40: ;
+    cpy_r_r50 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_future' */
+    PyObject *cpy_r_r51[1] = {cpy_r_r49};
+    cpy_r_r52 = (PyObject **)&cpy_r_r51;
+    cpy_r_r53 = PyObject_VectorcallMethod(cpy_r_r50, cpy_r_r52, 9223372036854775809ULL, 0);
+    if (unlikely(cpy_r_r53 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL121;
+    }
+    CPy_DECREF(cpy_r_r49);
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_future != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_future);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_future = cpy_r_r53;
+    cpy_r_r54 = 1;
+    if (unlikely(!cpy_r_r54)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r55 = CPyDef__rate_limit___finish_rate_limit_inactive_obj();
+    if (unlikely(cpy_r_r55 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r2);
+    if (((dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *)cpy_r_r55)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *)cpy_r_r55)->___mypyc_env__);
+    }
+    ((dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *)cpy_r_r55)->___mypyc_env__ = cpy_r_r2;
+    cpy_r_r56 = 1;
+    if (unlikely(!cpy_r_r56)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL122;
+    }
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__finish != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__finish);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__finish = cpy_r_r55;
+    cpy_r_r57 = 1;
+    if (unlikely(!cpy_r_r57)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r58 = CPyDef__rate_limit___check_rate_limit_inactive_obj();
+    if (unlikely(cpy_r_r58 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r2);
+    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r58)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r58)->___mypyc_env__);
+    }
+    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r58)->___mypyc_env__ = cpy_r_r2;
+    cpy_r_r59 = 1;
+    if (unlikely(!cpy_r_r59)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL123;
+    }
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__check != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__check);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__check = cpy_r_r58;
+    cpy_r_r60 = 1;
+    if (unlikely(!cpy_r_r60)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r61 = CPyDef__rate_limit___start_check_rate_limit_inactive_obj();
+    if (unlikely(cpy_r_r61 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r2);
+    if (((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r61)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r61)->___mypyc_env__);
+    }
+    ((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r61)->___mypyc_env__ = cpy_r_r2;
+    cpy_r_r62 = 1;
+    if (unlikely(!cpy_r_r62)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL124;
+    }
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__start_check != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__start_check);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__start_check = cpy_r_r61;
+    cpy_r_r63 = 1;
+    if (unlikely(!cpy_r_r63)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r64 = CPyStatic__rate_limit___globals;
+    cpy_r_r65 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
+    cpy_r_r66 = CPyDict_GetItem(cpy_r_r64, cpy_r_r65);
+    if (unlikely(cpy_r_r66 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    if (likely(Py_TYPE(cpy_r_r66) == CPyType__requester___HTTPRequesterThread))
+        cpy_r_r67 = cpy_r_r66;
+    else {
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 79, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r66);
+        goto CPyL125;
+    }
+    cpy_r_r68 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r67)->_loop;
+    if (unlikely(cpy_r_r68 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "loop", 79, CPyStatic__rate_limit___globals);
+        goto CPyL125;
+    }
+    CPy_INCREF(cpy_r_r68);
+CPyL54: ;
+    CPy_DECREF(cpy_r_r66);
+    cpy_r_r69 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__start_check;
+    if (unlikely(cpy_r_r69 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "start_check", 79, CPyStatic__rate_limit___globals);
+        goto CPyL126;
+    }
+    CPy_INCREF(cpy_r_r69);
+CPyL55: ;
+    cpy_r_r70 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
+    PyObject *cpy_r_r71[2] = {cpy_r_r68, cpy_r_r69};
+    cpy_r_r72 = (PyObject **)&cpy_r_r71;
+    cpy_r_r73 = PyObject_VectorcallMethod(cpy_r_r70, cpy_r_r72, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r73 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL127;
+    }
+    CPy_DECREF(cpy_r_r68);
+    CPy_DECREF(cpy_r_r69);
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__handle != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__handle);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__handle = cpy_r_r73;
+    cpy_r_r74 = 1;
+    if (unlikely(!cpy_r_r74)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL113;
+    }
+    cpy_r_r75 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__caller_future;
+    if (unlikely(cpy_r_r75 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "caller_future", 81, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    CPy_INCREF(cpy_r_r75);
+CPyL58: ;
+    cpy_r_r76 = CPy_GetCoro(cpy_r_r75);
+    CPy_DECREF(cpy_r_r75);
+    if (unlikely(cpy_r_r76 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3 = cpy_r_r76;
+    cpy_r_r77 = 1;
+    if (unlikely(!cpy_r_r77)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    cpy_r_r78 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3;
+    if (unlikely(cpy_r_r78 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__3", -1, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    CPy_INCREF(cpy_r_r78);
+CPyL61: ;
+    cpy_r_r79 = CPyIter_Next(cpy_r_r78);
+    CPy_DECREF(cpy_r_r78);
+    if (cpy_r_r79 != NULL) goto CPyL64;
+    cpy_r_r80 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r80 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    cpy_r_r81 = cpy_r_r80;
+    CPy_DECREF(cpy_r_r81);
+    cpy_r_r82 = NULL;
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3);
+    }
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3 = cpy_r_r82;
+    cpy_r_r83 = 1;
+    if (unlikely(!cpy_r_r83)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    } else
+        goto CPyL100;
+CPyL64: ;
+    cpy_r_r84 = cpy_r_r79;
+CPyL65: ;
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = 1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    return cpy_r_r84;
+CPyL66: ;
+    cpy_r_r86 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r87 = cpy_r_type != cpy_r_r86;
+    if (!cpy_r_r87) goto CPyL128;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL39;
+        goto CPyL70;
     } else
-        goto CPyL247;
-CPyL37: ;
+        goto CPyL129;
+CPyL68: ;
     CPy_Unreachable();
-CPyL38: ;
-    CPy_INCREF(cpy_r_arg);
-    goto CPyL50;
-CPyL39: ;
-    cpy_r_r56 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3 = cpy_r_r56;
-    cpy_r_r57 = 1;
-    if (unlikely(!cpy_r_r57)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL248;
-    }
-    cpy_r_r58 = (PyObject **)&cpy_r_r3;
-    cpy_r_r59 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2;
-    if (unlikely(cpy_r_r59 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__2", -1, CPyStatic__rate_limit___globals);
-        goto CPyL248;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r59);
-CPyL41: ;
-    cpy_r_r60 = CPy_YieldFromErrorHandle(cpy_r_r59, cpy_r_r58);
-    CPy_DecRef(cpy_r_r59);
-    if (unlikely(cpy_r_r60 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL248;
-    }
-    if (cpy_r_r60) goto CPyL45;
-    cpy_r_r52 = cpy_r_r3;
-    cpy_r_r61 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3;
-    if (unlikely(cpy_r_r61.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__3", -1, CPyStatic__rate_limit___globals);
-        goto CPyL249;
-    }
-    CPy_INCREF(cpy_r_r61.f0);
-    CPy_INCREF(cpy_r_r61.f1);
-    CPy_INCREF(cpy_r_r61.f2);
-CPyL44: ;
-    CPy_RestoreExcInfo(cpy_r_r61);
-    CPy_DecRef(cpy_r_r61.f0);
-    CPy_DecRef(cpy_r_r61.f1);
-    CPy_DecRef(cpy_r_r61.f2);
-    goto CPyL34;
-CPyL45: ;
-    cpy_r_r49 = cpy_r_r3;
-    CPy_DecRef(cpy_r_r49);
-    cpy_r_r62 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3;
-    if (unlikely(cpy_r_r62.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__3", -1, CPyStatic__rate_limit___globals);
-        goto CPyL47;
-    }
-    CPy_INCREF(cpy_r_r62.f0);
-    CPy_INCREF(cpy_r_r62.f1);
-    CPy_INCREF(cpy_r_r62.f2);
-CPyL46: ;
-    CPy_RestoreExcInfo(cpy_r_r62);
-    CPy_DecRef(cpy_r_r62.f0);
-    CPy_DecRef(cpy_r_r62.f1);
-    CPy_DecRef(cpy_r_r62.f2);
-    goto CPyL55;
-CPyL47: ;
-    cpy_r_r63 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__3;
-    if (unlikely(cpy_r_r63.f0 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__3' of 'rate_limit_inactive_env' undefined");
-    } else {
-        CPy_INCREF(cpy_r_r63.f0);
-        CPy_INCREF(cpy_r_r63.f1);
-        CPy_INCREF(cpy_r_r63.f2);
-    }
-    CPy_DecRef(cpy_r_r16);
-    if (unlikely(cpy_r_r63.f0 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL236;
-    }
-CPyL48: ;
-    CPy_RestoreExcInfo(cpy_r_r63);
-    CPy_DecRef(cpy_r_r63.f0);
-    CPy_DecRef(cpy_r_r63.f1);
-    CPy_DecRef(cpy_r_r63.f2);
-    cpy_r_r64 = CPy_KeepPropagating();
-    if (!cpy_r_r64) goto CPyL236;
-    CPy_Unreachable();
-CPyL50: ;
-    cpy_r_r65 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__2;
-    if (unlikely(cpy_r_r65 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__2", -1, CPyStatic__rate_limit___globals);
-        goto CPyL250;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r65);
-CPyL51: ;
-    cpy_r_r66 = CPyIter_Send(cpy_r_r65, cpy_r_arg);
-    CPy_DECREF_NO_IMM(cpy_r_r65);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r66 == NULL) goto CPyL53;
-    cpy_r_r52 = cpy_r_r66;
-    goto CPyL34;
-CPyL53: ;
-    cpy_r_r67 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r67 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    cpy_r_r49 = cpy_r_r67;
-    CPy_DECREF(cpy_r_r49);
-CPyL55: ;
-    cpy_r_r68 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__limiter;
-    if (unlikely(cpy_r_r68 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "limiter", 64, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r68);
-CPyL56: ;
-    cpy_r_r69 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r68)->__waiters;
-    CPy_INCREF_NO_IMM(cpy_r_r69);
-    CPy_DECREF_NO_IMM(cpy_r_r68);
-    cpy_r_r70 = (CPyPtr)&((PyVarObject *)cpy_r_r69)->ob_size;
-    cpy_r_r71 = *(int64_t *)cpy_r_r70;
-    CPy_DECREF_NO_IMM(cpy_r_r69);
-    cpy_r_r72 = cpy_r_r71 << 1;
-    cpy_r_r73 = cpy_r_r72 != 0;
-    if (cpy_r_r73) goto CPyL58;
-    cpy_r_r74 = Py_None;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 = cpy_r_r74;
-    cpy_r_r75 = 1;
-    if (unlikely(!cpy_r_r75)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    } else
-        goto CPyL177;
-CPyL58: ;
-    cpy_r_r76 = CPyStatic__rate_limit___globals;
-    cpy_r_r77 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
-    cpy_r_r78 = CPyDict_GetItem(cpy_r_r76, cpy_r_r77);
-    if (unlikely(cpy_r_r78 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    if (likely(Py_TYPE(cpy_r_r78) == CPyType__requester___HTTPRequesterThread))
-        cpy_r_r79 = cpy_r_r78;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 67, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r78);
-        goto CPyL136;
-    }
-    cpy_r_r80 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'is_alive' */
-    PyObject *cpy_r_r81[1] = {cpy_r_r79};
-    cpy_r_r82 = (PyObject **)&cpy_r_r81;
-    cpy_r_r83 = PyObject_VectorcallMethod(cpy_r_r80, cpy_r_r82, 9223372036854775809ULL, 0);
-    if (unlikely(cpy_r_r83 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL251;
-    }
-    CPy_DECREF_NO_IMM(cpy_r_r79);
-    if (unlikely(!PyBool_Check(cpy_r_r83))) {
-        CPy_TypeError("bool", cpy_r_r83); cpy_r_r84 = 2;
-    } else
-        cpy_r_r84 = cpy_r_r83 == Py_True;
-    CPy_DECREF(cpy_r_r83);
-    if (unlikely(cpy_r_r84 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    if (cpy_r_r84) goto CPyL73;
-    cpy_r_r85 = CPyStatic__rate_limit___globals;
-    cpy_r_r86 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
-    cpy_r_r87 = CPyDict_GetItem(cpy_r_r85, cpy_r_r86);
-    if (unlikely(cpy_r_r87 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    if (likely(Py_TYPE(cpy_r_r87) == CPyType__requester___HTTPRequesterThread))
-        cpy_r_r88 = cpy_r_r87;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 68, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r87);
-        goto CPyL252;
-    }
-    cpy_r_r89 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r88)->__exc;
-    if (unlikely(cpy_r_r89 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "_exc", 68, CPyStatic__rate_limit___globals);
-        goto CPyL252;
-    }
-    CPy_INCREF(cpy_r_r89);
-CPyL66: ;
-    CPy_DECREF(cpy_r_r87);
-    cpy_r_r90 = CPyStatic__rate_limit___globals;
-    cpy_r_r91 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
-    cpy_r_r92 = CPyDict_GetItem(cpy_r_r90, cpy_r_r91);
-    if (unlikely(cpy_r_r92 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL253;
-    }
-    if (likely(Py_TYPE(cpy_r_r92) == CPyType__requester___HTTPRequesterThread))
-        cpy_r_r93 = cpy_r_r92;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 68, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r92);
-        goto CPyL254;
-    }
-    cpy_r_r94 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r93)->__exc;
-    if (unlikely(cpy_r_r94 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "_exc", 68, CPyStatic__rate_limit___globals);
-        goto CPyL254;
-    }
-    CPy_INCREF(cpy_r_r94);
 CPyL69: ;
-    CPy_DECREF(cpy_r_r92);
-    cpy_r_r95 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '__traceback__' */
-    cpy_r_r96 = CPyObject_GetAttr(cpy_r_r94, cpy_r_r95);
-    CPy_DECREF(cpy_r_r94);
-    if (unlikely(cpy_r_r96 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL253;
+    CPy_INCREF(cpy_r_arg);
+    goto CPyL81;
+CPyL70: ;
+    cpy_r_r88 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4.f2);
     }
-    cpy_r_r97 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'with_traceback' */
-    PyObject *cpy_r_r98[2] = {cpy_r_r89, cpy_r_r96};
-    cpy_r_r99 = (PyObject **)&cpy_r_r98;
-    cpy_r_r100 = PyObject_VectorcallMethod(cpy_r_r97, cpy_r_r99, 9223372036854775810ULL, 0);
-    if (unlikely(cpy_r_r100 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL255;
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4 = cpy_r_r88;
+    cpy_r_r89 = 1;
+    if (unlikely(!cpy_r_r89)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL130;
     }
-    CPy_DECREF(cpy_r_r89);
-    CPy_DECREF(cpy_r_r96);
-    CPy_Raise(cpy_r_r100);
-    CPy_DECREF(cpy_r_r100);
-    if (unlikely(!0)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    } else
-        goto CPyL256;
+    cpy_r_r90 = (PyObject **)&cpy_r_r1;
+    cpy_r_r91 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3;
+    if (unlikely(cpy_r_r91 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__3", -1, CPyStatic__rate_limit___globals);
+        goto CPyL130;
+    }
+    CPy_INCREF(cpy_r_r91);
 CPyL72: ;
-    CPy_Unreachable();
-CPyL73: ;
-    cpy_r_r101 = CPyStatic__rate_limit___get_running_loop;
-    if (likely(cpy_r_r101 != NULL)) goto CPyL76;
-    PyErr_SetString(PyExc_NameError, "value for final name \"get_running_loop\" was not set");
-    cpy_r_r102 = 0;
-    if (unlikely(!cpy_r_r102)) {
+    cpy_r_r92 = CPy_YieldFromErrorHandle(cpy_r_r91, cpy_r_r90);
+    CPy_DecRef(cpy_r_r91);
+    if (unlikely(cpy_r_r92 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    } else
-        goto CPyL257;
+        goto CPyL130;
+    }
+    if (cpy_r_r92) goto CPyL76;
+    cpy_r_r84 = cpy_r_r1;
+    cpy_r_r93 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4;
+    if (unlikely(cpy_r_r93.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__4", -1, CPyStatic__rate_limit___globals);
+        goto CPyL131;
+    }
+    CPy_INCREF(cpy_r_r93.f0);
+    CPy_INCREF(cpy_r_r93.f1);
+    CPy_INCREF(cpy_r_r93.f2);
 CPyL75: ;
-    CPy_Unreachable();
+    CPy_RestoreExcInfo(cpy_r_r93);
+    CPy_DecRef(cpy_r_r93.f0);
+    CPy_DecRef(cpy_r_r93.f1);
+    CPy_DecRef(cpy_r_r93.f2);
+    goto CPyL65;
 CPyL76: ;
-    cpy_r_r103 = PyObject_Vectorcall(cpy_r_r101, 0, 0, 0);
-    if (unlikely(cpy_r_r103 == NULL)) {
+    cpy_r_r81 = cpy_r_r1;
+    CPy_DecRef(cpy_r_r81);
+    cpy_r_r94 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4;
+    if (unlikely(cpy_r_r94.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__4", -1, CPyStatic__rate_limit___globals);
+        goto CPyL78;
+    }
+    CPy_INCREF(cpy_r_r94.f0);
+    CPy_INCREF(cpy_r_r94.f1);
+    CPy_INCREF(cpy_r_r94.f2);
+CPyL77: ;
+    CPy_RestoreExcInfo(cpy_r_r94);
+    CPy_DecRef(cpy_r_r94.f0);
+    CPy_DecRef(cpy_r_r94.f1);
+    CPy_DecRef(cpy_r_r94.f2);
+    goto CPyL100;
+CPyL78: ;
+    cpy_r_r95 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__4;
+    if (unlikely(cpy_r_r95.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__4", -1, CPyStatic__rate_limit___globals);
+        goto CPyL86;
+    }
+    CPy_INCREF(cpy_r_r95.f0);
+    CPy_INCREF(cpy_r_r95.f1);
+    CPy_INCREF(cpy_r_r95.f2);
+CPyL79: ;
+    CPy_RestoreExcInfo(cpy_r_r95);
+    CPy_DecRef(cpy_r_r95.f0);
+    CPy_DecRef(cpy_r_r95.f1);
+    CPy_DecRef(cpy_r_r95.f2);
+    cpy_r_r96 = CPy_KeepPropagating();
+    if (!cpy_r_r96) {
+        goto CPyL86;
+    } else
+        goto CPyL132;
+CPyL80: ;
+    CPy_Unreachable();
+CPyL81: ;
+    cpy_r_r97 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__3;
+    if (unlikely(cpy_r_r97 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__3", -1, CPyStatic__rate_limit___globals);
+        goto CPyL133;
+    }
+    CPy_INCREF(cpy_r_r97);
+CPyL82: ;
+    cpy_r_r98 = CPyIter_Send(cpy_r_r97, cpy_r_arg);
+    CPy_DECREF(cpy_r_r97);
+    CPy_DECREF(cpy_r_arg);
+    if (cpy_r_r98 == NULL) goto CPyL84;
+    cpy_r_r84 = cpy_r_r98;
+    goto CPyL65;
+CPyL84: ;
+    cpy_r_r99 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r99 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
+        goto CPyL86;
     }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_loop != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_loop);
+    cpy_r_r81 = cpy_r_r99;
+    CPy_DECREF(cpy_r_r81);
+    goto CPyL100;
+CPyL86: ;
+    cpy_r_r100 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5.f2);
     }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_loop = cpy_r_r103;
-    cpy_r_r104 = 1;
-    if (unlikely(!cpy_r_r104)) {
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5 = cpy_r_r100;
+    cpy_r_r101 = 1;
+    if (unlikely(!cpy_r_r101)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL97;
+    }
+    cpy_r_r102 = CPyStatic__rate_limit___CancelledError;
+    if (likely(cpy_r_r102 != NULL)) goto CPyL90;
+    PyErr_SetString(PyExc_NameError, "value for final name \"CancelledError\" was not set");
+    cpy_r_r103 = 0;
+    if (unlikely(!cpy_r_r103)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    cpy_r_r105 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_loop;
+        goto CPyL97;
+    } else
+        goto CPyL134;
+CPyL89: ;
+    CPy_Unreachable();
+CPyL90: ;
+    cpy_r_r104 = CPy_ExceptionMatches(cpy_r_r102);
+    if (!cpy_r_r104) goto CPyL95;
+    cpy_r_r105 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__handle;
     if (unlikely(cpy_r_r105 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "caller_loop", 71, CPyStatic__rate_limit___globals);
-        goto CPyL136;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "handle", 83, CPyStatic__rate_limit___globals);
+        goto CPyL97;
     }
     CPy_INCREF(cpy_r_r105);
-CPyL79: ;
-    cpy_r_r106 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_future' */
+CPyL92: ;
+    cpy_r_r106 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'cancel' */
     PyObject *cpy_r_r107[1] = {cpy_r_r105};
     cpy_r_r108 = (PyObject **)&cpy_r_r107;
     cpy_r_r109 = PyObject_VectorcallMethod(cpy_r_r106, cpy_r_r108, 9223372036854775809ULL, 0);
     if (unlikely(cpy_r_r109 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL258;
-    }
-    CPy_DECREF(cpy_r_r105);
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_future != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_future);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_future = cpy_r_r109;
-    cpy_r_r110 = 1;
-    if (unlikely(!cpy_r_r110)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL135;
+    } else
         goto CPyL136;
+CPyL93: ;
+    CPy_DecRef(cpy_r_r105);
+    CPy_Reraise();
+    if (!0) {
+        goto CPyL97;
+    } else
+        goto CPyL137;
+CPyL94: ;
+    CPy_Unreachable();
+CPyL95: ;
+    CPy_Reraise();
+    if (!0) {
+        goto CPyL97;
+    } else
+        goto CPyL138;
+CPyL96: ;
+    CPy_Unreachable();
+CPyL97: ;
+    cpy_r_r110 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__5;
+    if (unlikely(cpy_r_r110.f0 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__5' of 'rate_limit_inactive_env' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r110.f0);
+        CPy_INCREF(cpy_r_r110.f1);
+        CPy_INCREF(cpy_r_r110.f2);
     }
-    cpy_r_r111 = CPyDef__rate_limit___check_rate_limit_inactive_obj();
-    if (unlikely(cpy_r_r111 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
+    CPy_DecRef(cpy_r_r2);
+    if (unlikely(cpy_r_r110.f0 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL109;
     }
-    CPy_INCREF_NO_IMM(cpy_r_r16);
-    if (((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r111)->___mypyc_env__ != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r111)->___mypyc_env__);
-    }
-    ((dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *)cpy_r_r111)->___mypyc_env__ = cpy_r_r16;
-    cpy_r_r112 = 1;
-    if (unlikely(!cpy_r_r112)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL259;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__check != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__check);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__check = cpy_r_r111;
-    cpy_r_r113 = 1;
-    if (unlikely(!cpy_r_r113)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    cpy_r_r114 = CPyDef__rate_limit___start_check_rate_limit_inactive_obj();
-    if (unlikely(cpy_r_r114 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r16);
-    if (((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r114)->___mypyc_env__ != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r114)->___mypyc_env__);
-    }
-    ((dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *)cpy_r_r114)->___mypyc_env__ = cpy_r_r16;
-    cpy_r_r115 = 1;
-    if (unlikely(!cpy_r_r115)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL260;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__start_check != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__start_check);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__start_check = cpy_r_r114;
-    cpy_r_r116 = 1;
+CPyL98: ;
+    CPy_RestoreExcInfo(cpy_r_r110);
+    CPy_DecRef(cpy_r_r110.f0);
+    CPy_DecRef(cpy_r_r110.f1);
+    CPy_DecRef(cpy_r_r110.f2);
+    cpy_r_r111 = CPy_KeepPropagating();
+    if (!cpy_r_r111) goto CPyL109;
+    CPy_Unreachable();
+CPyL100: ;
+    cpy_r_r112 = Py_None;
+    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = -1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    if (cpy_r_stop_iter_ptr != NULL) goto CPyL104;
+    CPyGen_SetStopIterationValue(cpy_r_r112);
+    if (!0) goto CPyL109;
+    CPy_Unreachable();
+CPyL104: ;
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r112;
+    return 0;
+CPyL105: ;
+    cpy_r_r114 = cpy_r_r3 == 0;
+    if (cpy_r_r114) goto CPyL139;
+    cpy_r_r115 = cpy_r_r3 == 1;
+    if (cpy_r_r115) {
+        goto CPyL66;
+    } else
+        goto CPyL140;
+CPyL107: ;
+    PyErr_SetNone(PyExc_StopIteration);
+    cpy_r_r116 = 0;
     if (unlikely(!cpy_r_r116)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    cpy_r_r117 = CPyStatic__rate_limit___globals;
-    cpy_r_r118 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_requester' */
-    cpy_r_r119 = CPyDict_GetItem(cpy_r_r117, cpy_r_r118);
-    if (unlikely(cpy_r_r119 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    if (likely(Py_TYPE(cpy_r_r119) == CPyType__requester___HTTPRequesterThread))
-        cpy_r_r120 = cpy_r_r119;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", 97, CPyStatic__rate_limit___globals, "dank_mids.helpers._requester.HTTPRequesterThread", cpy_r_r119);
-        goto CPyL261;
-    }
-    cpy_r_r121 = ((dank_mids___helpers____requester___HTTPRequesterThreadObject *)cpy_r_r120)->_loop;
-    if (unlikely(cpy_r_r121 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "HTTPRequesterThread", "loop", 97, CPyStatic__rate_limit___globals);
-        goto CPyL261;
-    }
-    CPy_INCREF(cpy_r_r121);
-CPyL90: ;
-    CPy_DECREF(cpy_r_r119);
-    cpy_r_r122 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__start_check;
-    if (unlikely(cpy_r_r122 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "start_check", 97, CPyStatic__rate_limit___globals);
-        goto CPyL262;
-    }
-    CPy_INCREF(cpy_r_r122);
-CPyL91: ;
-    cpy_r_r123 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'call_soon_threadsafe' */
-    PyObject *cpy_r_r124[2] = {cpy_r_r121, cpy_r_r122};
-    cpy_r_r125 = (PyObject **)&cpy_r_r124;
-    cpy_r_r126 = PyObject_VectorcallMethod(cpy_r_r123, cpy_r_r125, 9223372036854775810ULL, 0);
-    if (unlikely(cpy_r_r126 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL263;
-    }
-    CPy_DECREF(cpy_r_r121);
-    CPy_DECREF(cpy_r_r122);
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__handle != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__handle);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__handle = cpy_r_r126;
-    cpy_r_r127 = 1;
-    if (unlikely(!cpy_r_r127)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    cpy_r_r128 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__caller_future;
-    if (unlikely(cpy_r_r128 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "caller_future", 99, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    CPy_INCREF(cpy_r_r128);
-CPyL94: ;
-    cpy_r_r129 = CPy_GetCoro(cpy_r_r128);
-    CPy_DECREF(cpy_r_r128);
-    if (unlikely(cpy_r_r129 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10 = cpy_r_r129;
-    cpy_r_r130 = 1;
-    if (unlikely(!cpy_r_r130)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    cpy_r_r131 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10;
-    if (unlikely(cpy_r_r131 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__10", -1, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    CPy_INCREF(cpy_r_r131);
-CPyL97: ;
-    cpy_r_r132 = CPyIter_Next(cpy_r_r131);
-    CPy_DECREF(cpy_r_r131);
-    if (cpy_r_r132 != NULL) goto CPyL100;
-    cpy_r_r133 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r133 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    cpy_r_r134 = cpy_r_r133;
-    CPy_DECREF(cpy_r_r134);
-    cpy_r_r135 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10 = cpy_r_r135;
-    cpy_r_r136 = 1;
-    if (unlikely(!cpy_r_r136)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    } else
-        goto CPyL176;
-CPyL100: ;
-    cpy_r_r137 = cpy_r_r132;
-CPyL101: ;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = 2;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    return cpy_r_r137;
-CPyL102: ;
-    cpy_r_r139 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r140 = cpy_r_type != cpy_r_r139;
-    if (!cpy_r_r140) goto CPyL264;
-    CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
-    if (unlikely(!0)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL106;
-    } else
-        goto CPyL265;
-CPyL104: ;
-    CPy_Unreachable();
-CPyL105: ;
-    CPy_INCREF(cpy_r_arg);
-    goto CPyL117;
-CPyL106: ;
-    cpy_r_r141 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11 = cpy_r_r141;
-    cpy_r_r142 = 1;
-    if (unlikely(!cpy_r_r142)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL266;
-    }
-    cpy_r_r143 = (PyObject **)&cpy_r_r5;
-    cpy_r_r144 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10;
-    if (unlikely(cpy_r_r144 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__10", -1, CPyStatic__rate_limit___globals);
-        goto CPyL266;
-    }
-    CPy_INCREF(cpy_r_r144);
-CPyL108: ;
-    cpy_r_r145 = CPy_YieldFromErrorHandle(cpy_r_r144, cpy_r_r143);
-    CPy_DecRef(cpy_r_r144);
-    if (unlikely(cpy_r_r145 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL266;
-    }
-    if (cpy_r_r145) goto CPyL112;
-    cpy_r_r137 = cpy_r_r5;
-    cpy_r_r146 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11;
-    if (unlikely(cpy_r_r146.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__11", -1, CPyStatic__rate_limit___globals);
-        goto CPyL267;
-    }
-    CPy_INCREF(cpy_r_r146.f0);
-    CPy_INCREF(cpy_r_r146.f1);
-    CPy_INCREF(cpy_r_r146.f2);
-CPyL111: ;
-    CPy_RestoreExcInfo(cpy_r_r146);
-    CPy_DecRef(cpy_r_r146.f0);
-    CPy_DecRef(cpy_r_r146.f1);
-    CPy_DecRef(cpy_r_r146.f2);
-    goto CPyL101;
-CPyL112: ;
-    cpy_r_r134 = cpy_r_r5;
-    CPy_DecRef(cpy_r_r134);
-    cpy_r_r147 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11;
-    if (unlikely(cpy_r_r147.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__11", -1, CPyStatic__rate_limit___globals);
-        goto CPyL114;
-    }
-    CPy_INCREF(cpy_r_r147.f0);
-    CPy_INCREF(cpy_r_r147.f1);
-    CPy_INCREF(cpy_r_r147.f2);
-CPyL113: ;
-    CPy_RestoreExcInfo(cpy_r_r147);
-    CPy_DecRef(cpy_r_r147.f0);
-    CPy_DecRef(cpy_r_r147.f1);
-    CPy_DecRef(cpy_r_r147.f2);
-    goto CPyL176;
-CPyL114: ;
-    cpy_r_r148 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__11;
-    if (unlikely(cpy_r_r148.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__11", -1, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    CPy_INCREF(cpy_r_r148.f0);
-    CPy_INCREF(cpy_r_r148.f1);
-    CPy_INCREF(cpy_r_r148.f2);
-CPyL115: ;
-    CPy_RestoreExcInfo(cpy_r_r148);
-    CPy_DecRef(cpy_r_r148.f0);
-    CPy_DecRef(cpy_r_r148.f1);
-    CPy_DecRef(cpy_r_r148.f2);
-    cpy_r_r149 = CPy_KeepPropagating();
-    if (!cpy_r_r149) {
-        goto CPyL122;
-    } else
-        goto CPyL268;
-CPyL116: ;
-    CPy_Unreachable();
-CPyL117: ;
-    cpy_r_r150 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__10;
-    if (unlikely(cpy_r_r150 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__10", -1, CPyStatic__rate_limit___globals);
-        goto CPyL269;
-    }
-    CPy_INCREF(cpy_r_r150);
-CPyL118: ;
-    cpy_r_r151 = CPyIter_Send(cpy_r_r150, cpy_r_arg);
-    CPy_DECREF(cpy_r_r150);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r151 == NULL) goto CPyL120;
-    cpy_r_r137 = cpy_r_r151;
-    goto CPyL101;
-CPyL120: ;
-    cpy_r_r152 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r152 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL122;
-    }
-    cpy_r_r134 = cpy_r_r152;
-    CPy_DECREF(cpy_r_r134);
-    goto CPyL176;
-CPyL122: ;
-    cpy_r_r153 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12 = cpy_r_r153;
-    cpy_r_r154 = 1;
-    if (unlikely(!cpy_r_r154)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL133;
-    }
-    cpy_r_r155 = CPyStatic__rate_limit___CancelledError;
-    if (likely(cpy_r_r155 != NULL)) goto CPyL126;
-    PyErr_SetString(PyExc_NameError, "value for final name \"CancelledError\" was not set");
-    cpy_r_r156 = 0;
-    if (unlikely(!cpy_r_r156)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL133;
-    } else
-        goto CPyL270;
-CPyL125: ;
-    CPy_Unreachable();
-CPyL126: ;
-    cpy_r_r157 = CPy_ExceptionMatches(cpy_r_r155);
-    if (!cpy_r_r157) goto CPyL131;
-    cpy_r_r158 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_generator_attribute__handle;
-    if (unlikely(cpy_r_r158 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "handle", 101, CPyStatic__rate_limit___globals);
-        goto CPyL133;
-    }
-    CPy_INCREF(cpy_r_r158);
-CPyL128: ;
-    cpy_r_r159 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'cancel' */
-    PyObject *cpy_r_r160[1] = {cpy_r_r158};
-    cpy_r_r161 = (PyObject **)&cpy_r_r160;
-    cpy_r_r162 = PyObject_VectorcallMethod(cpy_r_r159, cpy_r_r161, 9223372036854775809ULL, 0);
-    if (unlikely(cpy_r_r162 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL271;
-    } else
-        goto CPyL272;
-CPyL129: ;
-    CPy_DecRef(cpy_r_r158);
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL133;
-    } else
-        goto CPyL273;
-CPyL130: ;
-    CPy_Unreachable();
-CPyL131: ;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL133;
-    } else
-        goto CPyL274;
-CPyL132: ;
-    CPy_Unreachable();
-CPyL133: ;
-    cpy_r_r163 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__12;
-    if (unlikely(cpy_r_r163.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__12", -1, CPyStatic__rate_limit___globals);
-        goto CPyL136;
-    }
-    CPy_INCREF(cpy_r_r163.f0);
-    CPy_INCREF(cpy_r_r163.f1);
-    CPy_INCREF(cpy_r_r163.f2);
-CPyL134: ;
-    CPy_RestoreExcInfo(cpy_r_r163);
-    CPy_DecRef(cpy_r_r163.f0);
-    CPy_DecRef(cpy_r_r163.f1);
-    CPy_DecRef(cpy_r_r163.f2);
-    cpy_r_r164 = CPy_KeepPropagating();
-    if (!cpy_r_r164) {
-        goto CPyL136;
-    } else
-        goto CPyL275;
-CPyL135: ;
-    CPy_Unreachable();
-CPyL136: ;
-    cpy_r_r165 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13 = cpy_r_r165;
-    cpy_r_r166 = 1;
-    if (unlikely(!cpy_r_r166)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__1 = 0;
-    cpy_r_r167 = 1;
-    if (unlikely(!cpy_r_r167)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    cpy_r_r168 = CPy_GetExcInfo();
-    cpy_r_r169 = cpy_r_r168.f0;
-    CPy_INCREF(cpy_r_r169);
-    cpy_r_r170 = cpy_r_r168.f1;
-    CPy_INCREF(cpy_r_r170);
-    cpy_r_r171 = cpy_r_r168.f2;
-    CPy_INCREF(cpy_r_r171);
-    CPy_DecRef(cpy_r_r168.f0);
-    CPy_DecRef(cpy_r_r168.f1);
-    CPy_DecRef(cpy_r_r168.f2);
-    cpy_r_r172 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__0;
-    if (unlikely(cpy_r_r172 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__0", -1, CPyStatic__rate_limit___globals);
-        goto CPyL276;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r172);
-CPyL139: ;
-    cpy_r_r173 = CPyDef_lock___Lock_____aexit__(cpy_r_r172, cpy_r_r169, cpy_r_r170, cpy_r_r171);
-    CPy_DecRef(cpy_r_r169);
-    CPy_DecRef(cpy_r_r170);
-    CPy_DecRef(cpy_r_r171);
-    CPy_DecRef(cpy_r_r172);
-    if (unlikely(cpy_r_r173 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14 = cpy_r_r173;
-    cpy_r_r174 = 1;
-    if (unlikely(!cpy_r_r174)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    cpy_r_r175 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14;
-    if (unlikely(cpy_r_r175 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r175);
-CPyL142: ;
-    cpy_r_r176 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r177 = NULL;
-    cpy_r_r7 = cpy_r_r177;
-    cpy_r_r178 = (PyObject **)&cpy_r_r7;
-    cpy_r_r179 = CPyDef_lock_____aexit___3_Lock_gen_____mypyc_generator_helper__(cpy_r_r175, cpy_r_r176, cpy_r_r176, cpy_r_r176, cpy_r_r176, cpy_r_r178);
-    CPy_DecRef(cpy_r_r175);
-    if (cpy_r_r179 != NULL) goto CPyL277;
-    cpy_r_r180 = cpy_r_r7 != 0;
-    if (unlikely(!cpy_r_r180)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL278;
-    }
-    cpy_r_r181 = cpy_r_r7;
-    cpy_r_r182 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14 = cpy_r_r182;
-    cpy_r_r183 = 1;
-    if (unlikely(!cpy_r_r183)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL279;
-    } else
-        goto CPyL167;
-CPyL145: ;
-    cpy_r_r184 = cpy_r_r179;
-CPyL146: ;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = 3;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    return cpy_r_r184;
-CPyL147: ;
-    cpy_r_r186 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r187 = cpy_r_type != cpy_r_r186;
-    if (!cpy_r_r187) goto CPyL280;
-    CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
-    if (unlikely(!0)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL151;
-    } else
-        goto CPyL281;
-CPyL149: ;
-    CPy_Unreachable();
-CPyL150: ;
-    CPy_INCREF(cpy_r_arg);
-    goto CPyL162;
-CPyL151: ;
-    cpy_r_r188 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15 = cpy_r_r188;
-    cpy_r_r189 = 1;
-    if (unlikely(!cpy_r_r189)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL282;
-    }
-    cpy_r_r190 = (PyObject **)&cpy_r_r9;
-    cpy_r_r191 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14;
-    if (unlikely(cpy_r_r191 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
-        goto CPyL282;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r191);
-CPyL153: ;
-    cpy_r_r192 = CPy_YieldFromErrorHandle(cpy_r_r191, cpy_r_r190);
-    CPy_DecRef(cpy_r_r191);
-    if (unlikely(cpy_r_r192 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL282;
-    }
-    if (cpy_r_r192) goto CPyL157;
-    cpy_r_r184 = cpy_r_r9;
-    cpy_r_r193 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15;
-    if (unlikely(cpy_r_r193.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__15", -1, CPyStatic__rate_limit___globals);
-        goto CPyL283;
-    }
-    CPy_INCREF(cpy_r_r193.f0);
-    CPy_INCREF(cpy_r_r193.f1);
-    CPy_INCREF(cpy_r_r193.f2);
-CPyL156: ;
-    CPy_RestoreExcInfo(cpy_r_r193);
-    CPy_DecRef(cpy_r_r193.f0);
-    CPy_DecRef(cpy_r_r193.f1);
-    CPy_DecRef(cpy_r_r193.f2);
-    goto CPyL146;
-CPyL157: ;
-    cpy_r_r181 = cpy_r_r9;
-    cpy_r_r194 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15;
-    if (unlikely(cpy_r_r194.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__15", -1, CPyStatic__rate_limit___globals);
-        goto CPyL284;
-    }
-    CPy_INCREF(cpy_r_r194.f0);
-    CPy_INCREF(cpy_r_r194.f1);
-    CPy_INCREF(cpy_r_r194.f2);
-CPyL158: ;
-    CPy_RestoreExcInfo(cpy_r_r194);
-    CPy_DecRef(cpy_r_r194.f0);
-    CPy_DecRef(cpy_r_r194.f1);
-    CPy_DecRef(cpy_r_r194.f2);
-    goto CPyL167;
-CPyL159: ;
-    cpy_r_r195 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__15;
-    if (unlikely(cpy_r_r195.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__15", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    CPy_INCREF(cpy_r_r195.f0);
-    CPy_INCREF(cpy_r_r195.f1);
-    CPy_INCREF(cpy_r_r195.f2);
-CPyL160: ;
-    CPy_RestoreExcInfo(cpy_r_r195);
-    CPy_DecRef(cpy_r_r195.f0);
-    CPy_DecRef(cpy_r_r195.f1);
-    CPy_DecRef(cpy_r_r195.f2);
-    cpy_r_r196 = CPy_KeepPropagating();
-    if (!cpy_r_r196) {
-        goto CPyL173;
-    } else
-        goto CPyL285;
-CPyL161: ;
-    CPy_Unreachable();
-CPyL162: ;
-    cpy_r_r197 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__14;
-    if (unlikely(cpy_r_r197 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
-        goto CPyL286;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r197);
-CPyL163: ;
-    cpy_r_r198 = CPyIter_Send(cpy_r_r197, cpy_r_arg);
-    CPy_DECREF_NO_IMM(cpy_r_r197);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r198 == NULL) goto CPyL165;
-    cpy_r_r184 = cpy_r_r198;
-    goto CPyL146;
-CPyL165: ;
-    cpy_r_r199 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r199 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    cpy_r_r181 = cpy_r_r199;
-CPyL167: ;
-    cpy_r_r200 = PyObject_IsTrue(cpy_r_r181);
-    CPy_DECREF(cpy_r_r181);
-    cpy_r_r201 = cpy_r_r200 >= 0;
-    if (unlikely(!cpy_r_r201)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    cpy_r_r202 = cpy_r_r200;
-    if (cpy_r_r202) goto CPyL171;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL173;
-    } else
-        goto CPyL287;
-CPyL170: ;
-    CPy_Unreachable();
-CPyL171: ;
-    cpy_r_r203 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13;
-    if (unlikely(cpy_r_r203.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__13", -1, CPyStatic__rate_limit___globals);
-        goto CPyL178;
-    }
-    CPy_INCREF(cpy_r_r203.f0);
-    CPy_INCREF(cpy_r_r203.f1);
-    CPy_INCREF(cpy_r_r203.f2);
-CPyL172: ;
-    CPy_RestoreExcInfo(cpy_r_r203);
-    CPy_DECREF(cpy_r_r203.f0);
-    CPy_DECREF(cpy_r_r203.f1);
-    CPy_DECREF(cpy_r_r203.f2);
-    goto CPyL176;
-CPyL173: ;
-    cpy_r_r204 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__13;
-    if (unlikely(cpy_r_r204.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__13", -1, CPyStatic__rate_limit___globals);
-        goto CPyL178;
-    }
-    CPy_INCREF(cpy_r_r204.f0);
-    CPy_INCREF(cpy_r_r204.f1);
-    CPy_INCREF(cpy_r_r204.f2);
-CPyL174: ;
-    CPy_RestoreExcInfo(cpy_r_r204);
-    CPy_DECREF(cpy_r_r204.f0);
-    CPy_DECREF(cpy_r_r204.f1);
-    CPy_DECREF(cpy_r_r204.f2);
-    cpy_r_r205 = CPy_KeepPropagating();
-    if (!cpy_r_r205) {
-        goto CPyL178;
-    } else
-        goto CPyL288;
-CPyL175: ;
-    CPy_Unreachable();
-CPyL176: ;
-    cpy_r_r206 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 = cpy_r_r206;
-    cpy_r_r207 = 1;
-    if (unlikely(!cpy_r_r207)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-CPyL177: ;
-    tuple_T3OOO __tmp357 = { NULL, NULL, NULL };
-    cpy_r_r208 = __tmp357;
-    cpy_r_r15 = cpy_r_r208;
-    goto CPyL180;
-CPyL178: ;
-    cpy_r_r209 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4 = cpy_r_r209;
-    cpy_r_r210 = 1;
-    if (unlikely(!cpy_r_r210)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL240;
-    }
-    cpy_r_r211 = CPy_CatchError();
-    cpy_r_r15 = cpy_r_r211;
-CPyL180: ;
-    cpy_r_r212 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__1;
-    if (unlikely(cpy_r_r212 == 2)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__1", -1, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-CPyL181: ;
-    if (!cpy_r_r212) goto CPyL211;
-CPyL182: ;
-    cpy_r_r213 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r214 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__0;
-    if (unlikely(cpy_r_r214 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__0", -1, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r214);
-CPyL183: ;
-    cpy_r_r215 = CPyDef_lock___Lock_____aexit__(cpy_r_r214, cpy_r_r213, cpy_r_r213, cpy_r_r213);
-    CPy_DECREF_NO_IMM(cpy_r_r214);
-    if (unlikely(cpy_r_r215 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16 = cpy_r_r215;
-    cpy_r_r216 = 1;
-    if (unlikely(!cpy_r_r216)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-    cpy_r_r217 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16;
-    if (unlikely(cpy_r_r217 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__16", -1, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r217);
-CPyL186: ;
-    cpy_r_r218 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r219 = NULL;
-    cpy_r_r11 = cpy_r_r219;
-    cpy_r_r220 = (PyObject **)&cpy_r_r11;
-    cpy_r_r221 = CPyDef_lock_____aexit___3_Lock_gen_____mypyc_generator_helper__(cpy_r_r217, cpy_r_r218, cpy_r_r218, cpy_r_r218, cpy_r_r218, cpy_r_r220);
-    CPy_DECREF_NO_IMM(cpy_r_r217);
-    if (cpy_r_r221 != NULL) goto CPyL290;
-    cpy_r_r222 = cpy_r_r11 != 0;
-    if (unlikely(!cpy_r_r222)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL291;
-    }
-    cpy_r_r223 = cpy_r_r11;
-    CPy_DECREF(cpy_r_r223);
-    cpy_r_r224 = NULL;
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16 != NULL) {
-        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16 = cpy_r_r224;
-    cpy_r_r225 = 1;
-    if (unlikely(!cpy_r_r225)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    } else
-        goto CPyL211;
-CPyL189: ;
-    cpy_r_r226 = cpy_r_r221;
-CPyL190: ;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = 4;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    return cpy_r_r226;
-CPyL191: ;
-    cpy_r_r228 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r229 = cpy_r_type != cpy_r_r228;
-    if (!cpy_r_r229) goto CPyL292;
-    CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
-    if (unlikely(!0)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL195;
-    } else
-        goto CPyL293;
-CPyL193: ;
-    CPy_Unreachable();
-CPyL194: ;
-    CPy_INCREF(cpy_r_arg);
-    goto CPyL206;
-CPyL195: ;
-    cpy_r_r230 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17.f2);
-    }
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17 = cpy_r_r230;
-    cpy_r_r231 = 1;
-    if (unlikely(!cpy_r_r231)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL294;
-    }
-    cpy_r_r232 = (PyObject **)&cpy_r_r13;
-    cpy_r_r233 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16;
-    if (unlikely(cpy_r_r233 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__16", -1, CPyStatic__rate_limit___globals);
-        goto CPyL294;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r233);
-CPyL197: ;
-    cpy_r_r234 = CPy_YieldFromErrorHandle(cpy_r_r233, cpy_r_r232);
-    CPy_DecRef(cpy_r_r233);
-    if (unlikely(cpy_r_r234 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL294;
-    }
-    if (cpy_r_r234) goto CPyL201;
-    cpy_r_r226 = cpy_r_r13;
-    cpy_r_r235 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17;
-    if (unlikely(cpy_r_r235.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__17", -1, CPyStatic__rate_limit___globals);
-        goto CPyL295;
-    }
-    CPy_INCREF(cpy_r_r235.f0);
-    CPy_INCREF(cpy_r_r235.f1);
-    CPy_INCREF(cpy_r_r235.f2);
-    goto CPyL296;
-CPyL200: ;
-    CPy_RestoreExcInfo(cpy_r_r235);
-    CPy_DecRef(cpy_r_r235.f0);
-    CPy_DecRef(cpy_r_r235.f1);
-    CPy_DecRef(cpy_r_r235.f2);
-    goto CPyL190;
-CPyL201: ;
-    cpy_r_r223 = cpy_r_r13;
-    CPy_DecRef(cpy_r_r223);
-    cpy_r_r236 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17;
-    if (unlikely(cpy_r_r236.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__17", -1, CPyStatic__rate_limit___globals);
-        goto CPyL203;
-    }
-    CPy_INCREF(cpy_r_r236.f0);
-    CPy_INCREF(cpy_r_r236.f1);
-    CPy_INCREF(cpy_r_r236.f2);
-CPyL202: ;
-    CPy_RestoreExcInfo(cpy_r_r236);
-    CPy_DecRef(cpy_r_r236.f0);
-    CPy_DecRef(cpy_r_r236.f1);
-    CPy_DecRef(cpy_r_r236.f2);
-    goto CPyL211;
-CPyL203: ;
-    cpy_r_r237 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__17;
-    if (unlikely(cpy_r_r237.f0 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__17' of 'rate_limit_inactive_env' undefined");
-    } else {
-        CPy_INCREF(cpy_r_r237.f0);
-        CPy_INCREF(cpy_r_r237.f1);
-        CPy_INCREF(cpy_r_r237.f2);
-    }
-    CPy_DecRef(cpy_r_r16);
-    if (unlikely(cpy_r_r237.f0 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL220;
-    }
-CPyL204: ;
-    CPy_RestoreExcInfo(cpy_r_r237);
-    CPy_DecRef(cpy_r_r237.f0);
-    CPy_DecRef(cpy_r_r237.f1);
-    CPy_DecRef(cpy_r_r237.f2);
-    cpy_r_r238 = CPy_KeepPropagating();
-    if (!cpy_r_r238) {
-        goto CPyL220;
-    } else
-        goto CPyL297;
-CPyL205: ;
-    CPy_Unreachable();
-CPyL206: ;
-    cpy_r_r239 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__16;
-    if (unlikely(cpy_r_r239 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", "rate_limit_inactive_env", "__mypyc_temp__16", -1, CPyStatic__rate_limit___globals);
-        goto CPyL298;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r239);
-CPyL207: ;
-    cpy_r_r240 = CPyIter_Send(cpy_r_r239, cpy_r_arg);
-    CPy_DECREF_NO_IMM(cpy_r_r239);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r240 == NULL) {
-        goto CPyL209;
-    } else
-        goto CPyL299;
-CPyL208: ;
-    cpy_r_r226 = cpy_r_r240;
-    goto CPyL190;
-CPyL209: ;
-    cpy_r_r241 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r241 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL289;
-    }
-    cpy_r_r223 = cpy_r_r241;
-    CPy_DECREF(cpy_r_r223);
-CPyL211: ;
-    if (cpy_r_r15.f0 == NULL) {
-        goto CPyL214;
-    } else
-        goto CPyL300;
-CPyL212: ;
-    CPy_Reraise();
-    if (!0) {
-        goto CPyL220;
-    } else
-        goto CPyL301;
-CPyL213: ;
-    CPy_Unreachable();
-CPyL214: ;
-    cpy_r_r242 = ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_temp__4;
-    if (cpy_r_r242 != NULL) {
-        CPy_INCREF(cpy_r_r242);
-    }
-    if (cpy_r_r242 == NULL) goto CPyL224;
-CPyL215: ;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = -1;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL219;
-    CPyGen_SetStopIterationValue(cpy_r_r242);
-    CPy_DECREF(cpy_r_r242);
-    if (!0) goto CPyL236;
-    CPy_Unreachable();
-CPyL219: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r242;
-    return 0;
-CPyL220: ;
-    if (cpy_r_r15.f0 == NULL) goto CPyL222;
-    CPy_RestoreExcInfo(cpy_r_r15);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-CPyL222: ;
-    cpy_r_r244 = CPy_KeepPropagating();
-    if (!cpy_r_r244) goto CPyL236;
-    CPy_Unreachable();
-CPyL224: ;
-    cpy_r_r245 = Py_None;
-    ((dank_mids___helpers____rate_limit___rate_limit_inactive_envObject *)cpy_r_r16)->___mypyc_next_label__ = -1;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL228;
-    CPyGen_SetStopIterationValue(cpy_r_r245);
-    if (!0) goto CPyL236;
-    CPy_Unreachable();
-CPyL228: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r245;
-    return 0;
-CPyL229: ;
-    cpy_r_r247 = cpy_r_r17 == 0;
-    if (cpy_r_r247) goto CPyL302;
-    cpy_r_r248 = cpy_r_r17 == 1;
-    if (cpy_r_r248) {
-        goto CPyL303;
-    } else
-        goto CPyL304;
-CPyL231: ;
-    cpy_r_r249 = cpy_r_r17 == 2;
-    if (cpy_r_r249) {
-        goto CPyL305;
-    } else
-        goto CPyL306;
-CPyL232: ;
-    cpy_r_r250 = cpy_r_r17 == 3;
-    if (cpy_r_r250) {
-        goto CPyL307;
-    } else
-        goto CPyL308;
-CPyL233: ;
-    cpy_r_r251 = cpy_r_r17 == 4;
-    if (cpy_r_r251) {
-        goto CPyL191;
-    } else
-        goto CPyL309;
-CPyL234: ;
-    PyErr_SetNone(PyExc_StopIteration);
-    cpy_r_r252 = 0;
-    if (unlikely(!cpy_r_r252)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL236;
+        goto CPyL109;
     }
     CPy_Unreachable();
-CPyL236: ;
-    cpy_r_r253 = NULL;
-    return cpy_r_r253;
-CPyL237: ;
-    CPy_XDecRef(cpy_r_r3);
-    CPy_XDecRef(cpy_r_r5);
-    CPy_XDecRef(cpy_r_r9);
-    CPy_XDecRef(cpy_r_r13);
-    CPy_XDecRef(cpy_r_r15.f0);
-    CPy_XDecRef(cpy_r_r15.f1);
-    CPy_XDecRef(cpy_r_r15.f2);
-    goto CPyL236;
-CPyL238: ;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL3;
-CPyL239: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL6;
-CPyL240: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL236;
-CPyL241: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL20;
-CPyL242: ;
-    CPy_DecRef(cpy_r_r16);
-    CPy_DecRef(cpy_r_r38);
-    goto CPyL236;
-CPyL243: ;
-    CPy_DecRef(cpy_r_r16);
-    CPy_DecRef(cpy_r_r39);
-    goto CPyL236;
-CPyL244: ;
-    CPy_XDECREF(cpy_r_r1);
-    goto CPyL33;
-CPyL245: ;
+CPyL109: ;
+    cpy_r_r117 = NULL;
+    return cpy_r_r117;
+CPyL110: ;
     CPy_XDecRef(cpy_r_r1);
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL236;
-CPyL246: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL38;
-CPyL247: ;
-    CPy_XDECREF(cpy_r_r3);
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL37;
-CPyL248: ;
-    CPy_XDecRef(cpy_r_r3);
-    goto CPyL47;
-CPyL249: ;
-    CPy_DecRef(cpy_r_r52);
-    goto CPyL47;
-CPyL250: ;
-    CPy_DecRef(cpy_r_r16);
-    CPy_DecRef(cpy_r_arg);
-    goto CPyL236;
-CPyL251: ;
-    CPy_DecRef(cpy_r_r79);
-    goto CPyL136;
-CPyL252: ;
-    CPy_DecRef(cpy_r_r87);
-    goto CPyL136;
-CPyL253: ;
-    CPy_DecRef(cpy_r_r89);
-    goto CPyL136;
-CPyL254: ;
-    CPy_DecRef(cpy_r_r89);
-    CPy_DecRef(cpy_r_r92);
-    goto CPyL136;
-CPyL255: ;
-    CPy_DecRef(cpy_r_r89);
-    CPy_DecRef(cpy_r_r96);
-    goto CPyL136;
-CPyL256: ;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL72;
-CPyL257: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL75;
-CPyL258: ;
-    CPy_DecRef(cpy_r_r105);
-    goto CPyL136;
-CPyL259: ;
-    CPy_DecRef(cpy_r_r111);
-    goto CPyL136;
-CPyL260: ;
-    CPy_DecRef(cpy_r_r114);
-    goto CPyL136;
-CPyL261: ;
-    CPy_DecRef(cpy_r_r119);
-    goto CPyL136;
-CPyL262: ;
-    CPy_DecRef(cpy_r_r121);
-    goto CPyL136;
-CPyL263: ;
-    CPy_DecRef(cpy_r_r121);
-    CPy_DecRef(cpy_r_r122);
-    goto CPyL136;
-CPyL264: ;
-    CPy_XDECREF(cpy_r_r5);
-    goto CPyL105;
-CPyL265: ;
-    CPy_XDECREF(cpy_r_r5);
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL104;
-CPyL266: ;
-    CPy_XDecRef(cpy_r_r5);
-    goto CPyL114;
-CPyL267: ;
-    CPy_DecRef(cpy_r_r137);
-    goto CPyL114;
-CPyL268: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL116;
-CPyL269: ;
-    CPy_DecRef(cpy_r_arg);
-    goto CPyL122;
-CPyL270: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL125;
-CPyL271: ;
-    CPy_DecRef(cpy_r_r158);
-    goto CPyL133;
-CPyL272: ;
-    CPy_DecRef(cpy_r_r162);
-    goto CPyL129;
-CPyL273: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL130;
-CPyL274: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL132;
-CPyL275: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL135;
-CPyL276: ;
-    CPy_DecRef(cpy_r_r169);
-    CPy_DecRef(cpy_r_r170);
-    CPy_DecRef(cpy_r_r171);
-    goto CPyL173;
-CPyL277: ;
-    CPy_XDecRef(cpy_r_r7);
-    goto CPyL145;
-CPyL278: ;
-    CPy_XDecRef(cpy_r_r7);
-    goto CPyL173;
-CPyL279: ;
-    CPy_DecRef(cpy_r_r181);
-    goto CPyL173;
-CPyL280: ;
-    CPy_XDECREF(cpy_r_r9);
-    goto CPyL150;
-CPyL281: ;
-    CPy_XDECREF(cpy_r_r9);
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL149;
-CPyL282: ;
-    CPy_XDecRef(cpy_r_r9);
-    goto CPyL159;
-CPyL283: ;
-    CPy_DecRef(cpy_r_r184);
-    goto CPyL159;
-CPyL284: ;
-    CPy_DecRef(cpy_r_r181);
-    goto CPyL159;
-CPyL285: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL161;
-CPyL286: ;
-    CPy_DecRef(cpy_r_arg);
-    goto CPyL173;
-CPyL287: ;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL170;
-CPyL288: ;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL175;
-CPyL289: ;
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL220;
-CPyL290: ;
-    CPy_XDECREF(cpy_r_r11);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL189;
-CPyL291: ;
-    CPy_XDecRef(cpy_r_r11);
-    CPy_DecRef(cpy_r_r16);
-    goto CPyL220;
-CPyL292: ;
-    CPy_XDECREF(cpy_r_r13);
-    goto CPyL194;
-CPyL293: ;
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL193;
-CPyL294: ;
-    CPy_XDecRef(cpy_r_r13);
-    goto CPyL203;
-CPyL295: ;
-    CPy_DecRef(cpy_r_r226);
-    goto CPyL203;
-CPyL296: ;
-    CPy_XDecRef(cpy_r_r15.f0);
-    CPy_XDecRef(cpy_r_r15.f1);
-    CPy_XDecRef(cpy_r_r15.f2);
-    goto CPyL200;
-CPyL297: ;
-    CPy_XDecRef(cpy_r_r15.f0);
-    CPy_XDecRef(cpy_r_r15.f1);
-    CPy_XDecRef(cpy_r_r15.f2);
-    goto CPyL205;
-CPyL298: ;
-    CPy_DecRef(cpy_r_r16);
-    CPy_DecRef(cpy_r_arg);
-    goto CPyL220;
-CPyL299: ;
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL208;
-CPyL300: ;
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL212;
-CPyL301: ;
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL213;
-CPyL302: ;
-    CPy_XDECREF(cpy_r_r3);
-    CPy_XDECREF(cpy_r_r5);
-    CPy_XDECREF(cpy_r_r9);
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL2;
-CPyL303: ;
-    CPy_XDECREF(cpy_r_r5);
-    CPy_XDECREF(cpy_r_r9);
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
+    goto CPyL109;
+CPyL111: ;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL3;
+CPyL112: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL6;
+CPyL113: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL109;
+CPyL114: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r23);
+    goto CPyL109;
+CPyL115: ;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL24;
+CPyL116: ;
+    CPy_DecRef(cpy_r_r31);
+    goto CPyL109;
+CPyL117: ;
+    CPy_DecRef(cpy_r_r33);
+    goto CPyL109;
+CPyL118: ;
+    CPy_DecRef(cpy_r_r33);
+    CPy_DecRef(cpy_r_r36);
+    goto CPyL109;
+CPyL119: ;
+    CPy_DecRef(cpy_r_r33);
+    CPy_DecRef(cpy_r_r40);
+    goto CPyL109;
+CPyL120: ;
+    CPy_DecRef(cpy_r_r2);
     goto CPyL35;
-CPyL304: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL231;
-CPyL305: ;
-    CPy_XDECREF(cpy_r_r9);
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL102;
-CPyL306: ;
-    CPy_XDECREF(cpy_r_r5);
-    goto CPyL232;
-CPyL307: ;
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    goto CPyL147;
-CPyL308: ;
-    CPy_XDECREF(cpy_r_r9);
-    goto CPyL233;
-CPyL309: ;
-    CPy_XDECREF(cpy_r_r13);
-    CPy_XDECREF(cpy_r_r15.f0);
-    CPy_XDECREF(cpy_r_r15.f1);
-    CPy_XDECREF(cpy_r_r15.f2);
-    CPy_DECREF_NO_IMM(cpy_r_r16);
-    goto CPyL234;
+CPyL121: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r49);
+    goto CPyL109;
+CPyL122: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r55);
+    goto CPyL109;
+CPyL123: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r58);
+    goto CPyL109;
+CPyL124: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r61);
+    goto CPyL109;
+CPyL125: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r66);
+    goto CPyL109;
+CPyL126: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r68);
+    goto CPyL109;
+CPyL127: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r68);
+    CPy_DecRef(cpy_r_r69);
+    goto CPyL109;
+CPyL128: ;
+    CPy_XDECREF(cpy_r_r1);
+    goto CPyL69;
+CPyL129: ;
+    CPy_XDECREF(cpy_r_r1);
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL68;
+CPyL130: ;
+    CPy_XDecRef(cpy_r_r1);
+    goto CPyL78;
+CPyL131: ;
+    CPy_DecRef(cpy_r_r84);
+    goto CPyL78;
+CPyL132: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL80;
+CPyL133: ;
+    CPy_DecRef(cpy_r_arg);
+    goto CPyL86;
+CPyL134: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL89;
+CPyL135: ;
+    CPy_DecRef(cpy_r_r105);
+    goto CPyL97;
+CPyL136: ;
+    CPy_DecRef(cpy_r_r109);
+    goto CPyL93;
+CPyL137: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL94;
+CPyL138: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL96;
+CPyL139: ;
+    CPy_XDECREF(cpy_r_r1);
+    goto CPyL2;
+CPyL140: ;
+    CPy_XDECREF(cpy_r_r1);
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL107;
 }
 
 PyObject *CPyDef__rate_limit___rate_limit_inactive_gen_____next__(PyObject *cpy_r___mypyc_self__) {
@@ -89365,10 +88595,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp358 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp358);
-    PyObject *__tmp359 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp359);
+    PyObject *__tmp357 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp357);
+    PyObject *__tmp358 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp358);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -89528,959 +88758,876 @@ fail: ;
     return NULL;
 }
 
+PyObject *CPyDef__rate_limit___discard__rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner) {
+    PyObject *cpy_r_r0;
+    char cpy_r_r1;
+    PyObject *cpy_r_r2;
+    PyObject *cpy_r_r3;
+    cpy_r_r0 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r1 = cpy_r_instance == cpy_r_r0;
+    if (!cpy_r_r1) goto CPyL2;
+    CPy_INCREF(cpy_r___mypyc_self__);
+    return cpy_r___mypyc_self__;
+CPyL2: ;
+    cpy_r_r2 = PyMethod_New(cpy_r___mypyc_self__, cpy_r_instance);
+    if (cpy_r_r2 == NULL) goto CPyL4;
+    return cpy_r_r2;
+CPyL4: ;
+    cpy_r_r3 = NULL;
+    return cpy_r_r3;
+}
+
+PyObject *CPyPy__rate_limit___discard__rate_limit_inactive_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+    PyObject *obj___mypyc_self__ = self;
+    static const char * const kwlist[] = {"instance", "owner", 0};
+    static CPyArg_Parser parser = {"OO:__get__", kwlist, 0};
+    PyObject *obj_instance;
+    PyObject *obj_owner;
+    if (!CPyArg_ParseStackAndKeywordsSimple(args, nargs, kwnames, &parser, &obj_instance, &obj_owner)) {
+        return NULL;
+    }
+    PyObject *arg___mypyc_self__ = obj___mypyc_self__;
+    PyObject *arg_instance = obj_instance;
+    PyObject *arg_owner = obj_owner;
+    PyObject *retval = CPyDef__rate_limit___discard__rate_limit_inactive_obj_____get__(arg___mypyc_self__, arg_instance, arg_owner);
+    return retval;
+fail: ;
+    CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__get__", -1, CPyStatic__rate_limit___globals);
+    return NULL;
+}
+
+char CPyDef__rate_limit___discard__rate_limit_inactive_obj_____call__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_completed) {
+    PyObject *cpy_r_r0;
+    PyObject *cpy_r_r1;
+    char cpy_r_r2;
+    PyObject *cpy_r_r3;
+    PyObject *cpy_r_r4;
+    char cpy_r_r5;
+    PyObject *cpy_r_r6;
+    char cpy_r_r7;
+    PyObject *cpy_r_r8;
+    int32_t cpy_r_r9;
+    char cpy_r_r10;
+    char cpy_r_r11;
+    cpy_r_r0 = ((dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *)cpy_r___mypyc_self__)->___mypyc_env__;
+    if (unlikely(cpy_r_r0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "discard", "discard__rate_limit_inactive_obj", "__mypyc_env__", 101, CPyStatic__rate_limit___globals);
+        goto CPyL13;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r0);
+CPyL1: ;
+    cpy_r_r1 = CPyStatic__rate_limit____rate_limit_tasks;
+    if (unlikely(cpy_r_r1 == NULL)) {
+        goto CPyL14;
+    } else
+        goto CPyL4;
+CPyL2: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
+    cpy_r_r2 = 0;
+    if (unlikely(!cpy_r_r2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL13;
+    }
+    CPy_Unreachable();
+CPyL4: ;
+    cpy_r_r3 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r3 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "discard", "_rate_limit_inactive_env", "endpoint", 102, CPyStatic__rate_limit___globals);
+        goto CPyL15;
+    }
+    CPy_INCREF(cpy_r_r3);
+CPyL5: ;
+    cpy_r_r4 = CPyDict_GetWithNone(cpy_r_r1, cpy_r_r3);
+    CPy_DECREF(cpy_r_r3);
+    if (unlikely(cpy_r_r4 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL15;
+    }
+    cpy_r_r5 = cpy_r_r4 == cpy_r_completed;
+    CPy_DECREF(cpy_r_r4);
+    if (!cpy_r_r5) goto CPyL16;
+    cpy_r_r6 = CPyStatic__rate_limit____rate_limit_tasks;
+    if (unlikely(cpy_r_r6 == NULL)) {
+        goto CPyL17;
+    } else
+        goto CPyL10;
+CPyL8: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
+    cpy_r_r7 = 0;
+    if (unlikely(!cpy_r_r7)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL13;
+    }
+    CPy_Unreachable();
+CPyL10: ;
+    cpy_r_r8 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r8 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute 'endpoint' of '_rate_limit_inactive_env' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r8);
+    }
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    if (unlikely(cpy_r_r8 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL13;
+    }
+CPyL11: ;
+    cpy_r_r9 = PyObject_DelItem(cpy_r_r6, cpy_r_r8);
+    CPy_DECREF(cpy_r_r8);
+    cpy_r_r10 = cpy_r_r9 >= 0;
+    if (unlikely(!cpy_r_r10)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL13;
+    }
+CPyL12: ;
+    return 1;
+CPyL13: ;
+    cpy_r_r11 = 2;
+    return cpy_r_r11;
+CPyL14: ;
+    CPy_DecRef(cpy_r_r0);
+    goto CPyL2;
+CPyL15: ;
+    CPy_DecRef(cpy_r_r0);
+    goto CPyL13;
+CPyL16: ;
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    goto CPyL12;
+CPyL17: ;
+    CPy_DecRef(cpy_r_r0);
+    goto CPyL8;
+}
+
+PyObject *CPyPy__rate_limit___discard__rate_limit_inactive_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
+    PyObject *obj___mypyc_self__ = self;
+    static const char * const kwlist[] = {"completed", 0};
+    static CPyArg_Parser parser = {"O:__call__", kwlist, 0};
+    PyObject *obj_completed;
+    if (!CPyArg_ParseStackAndKeywordsOneArg(args, PyVectorcall_NARGS(nargs), kwnames, &parser, &obj_completed)) {
+        return NULL;
+    }
+    PyObject *arg___mypyc_self__ = obj___mypyc_self__;
+    PyObject *arg_completed = obj_completed;
+    char retval = CPyDef__rate_limit___discard__rate_limit_inactive_obj_____call__(arg___mypyc_self__, arg_completed);
+    if (retval == 2) {
+        return NULL;
+    }
+    PyObject *retbox = Py_None;
+    CPy_INCREF(retbox);
+    return retbox;
+fail: ;
+    CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "discard", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+    return NULL;
+}
+
 PyObject *CPyDef__rate_limit____rate_limit_inactive_gen_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr) {
     PyObject *cpy_r_r0;
     PyObject *cpy_r_r1;
     PyObject *cpy_r_r2;
-    PyObject *cpy_r_r3;
-    int32_t cpy_r_r4;
-    PyObject *cpy_r_r5;
-    char cpy_r_r6;
-    PyObject *cpy_r_r7;
-    char cpy_r_r8;
+    int32_t cpy_r_r3;
+    PyObject *cpy_r_r4;
+    char cpy_r_r5;
+    PyObject *cpy_r_r6;
+    char cpy_r_r7;
+    PyObject *cpy_r_r8;
     PyObject *cpy_r_r9;
     PyObject *cpy_r_r10;
     PyObject *cpy_r_r11;
-    PyObject *cpy_r_r12;
-    CPyPtr cpy_r_r13;
-    int64_t cpy_r_r14;
-    CPyTagged cpy_r_r15;
-    char cpy_r_r16;
-    PyObject *cpy_r_r17;
-    char cpy_r_r18;
-    PyObject *cpy_r_r19;
-    char cpy_r_r20;
+    CPyPtr cpy_r_r12;
+    int64_t cpy_r_r13;
+    CPyTagged cpy_r_r14;
+    char cpy_r_r15;
+    PyObject *cpy_r_r16;
+    char cpy_r_r17;
+    PyObject *cpy_r_r18;
+    char cpy_r_r19;
+    PyObject *cpy_r_r20;
     PyObject *cpy_r_r21;
-    PyObject *cpy_r_r22;
-    char cpy_r_r23;
-    int32_t cpy_r_r24;
+    char cpy_r_r22;
+    PyObject *cpy_r_r23;
+    PyObject *cpy_r_r24;
     char cpy_r_r25;
-    char cpy_r_r26;
+    PyObject *cpy_r_r26;
     PyObject *cpy_r_r27;
     PyObject *cpy_r_r28;
-    PyObject *cpy_r_r29;
+    char cpy_r_r29;
     PyObject **cpy_r_r31;
     PyObject *cpy_r_r32;
-    PyObject *cpy_r_r33;
-    char cpy_r_r34;
+    char cpy_r_r33;
+    PyObject *cpy_r_r34;
     PyObject *cpy_r_r35;
-    PyObject *cpy_r_r36;
+    char cpy_r_r36;
     PyObject *cpy_r_r37;
-    PyObject *cpy_r_r38;
-    PyObject *cpy_r_r39;
-    char cpy_r_r40;
-    PyObject *cpy_r_r41;
+    int32_t cpy_r_r38;
+    char cpy_r_r39;
+    PyObject *cpy_r_r40;
+    char cpy_r_r41;
     char cpy_r_r42;
     PyObject *cpy_r_r43;
-    char cpy_r_r44;
-    tuple_T3OOO cpy_r_r45;
-    char cpy_r_r46;
-    PyObject **cpy_r_r47;
-    PyObject *cpy_r_r48;
-    char cpy_r_r49;
-    tuple_T3OOO cpy_r_r50;
-    tuple_T3OOO cpy_r_r51;
-    tuple_T3OOO cpy_r_r52;
-    char cpy_r_r53;
+    PyObject *cpy_r_r44;
+    PyObject *cpy_r_r45;
+    PyObject *cpy_r_r46;
+    PyObject **cpy_r_r48;
+    PyObject *cpy_r_r49;
+    char cpy_r_r50;
+    PyObject *cpy_r_r51;
+    char cpy_r_r52;
+    PyObject *cpy_r_r53;
     PyObject *cpy_r_r54;
     PyObject *cpy_r_r55;
-    PyObject *cpy_r_r56;
+    char cpy_r_r56;
     PyObject *cpy_r_r57;
-    char cpy_r_r58;
+    PyObject *cpy_r_r58;
     PyObject *cpy_r_r59;
     char cpy_r_r60;
     PyObject *cpy_r_r61;
     PyObject *cpy_r_r62;
-    char cpy_r_r63;
+    PyObject *cpy_r_r63;
     PyObject *cpy_r_r64;
     PyObject *cpy_r_r65;
     char cpy_r_r66;
     PyObject *cpy_r_r67;
-    PyObject *cpy_r_r68;
-    char cpy_r_r69;
-    PyObject *cpy_r_r70;
-    PyObject **cpy_r_r72;
-    PyObject *cpy_r_r73;
+    char cpy_r_r68;
+    PyObject *cpy_r_r69;
+    char cpy_r_r70;
+    tuple_T3OOO cpy_r_r71;
+    char cpy_r_r72;
+    PyObject **cpy_r_r73;
     PyObject *cpy_r_r74;
     char cpy_r_r75;
-    PyObject *cpy_r_r76;
-    int32_t cpy_r_r77;
-    char cpy_r_r78;
-    PyObject *cpy_r_r79;
+    tuple_T3OOO cpy_r_r76;
+    tuple_T3OOO cpy_r_r77;
+    tuple_T3OOO cpy_r_r78;
+    char cpy_r_r79;
     PyObject *cpy_r_r80;
     PyObject *cpy_r_r81;
-    char cpy_r_r82;
-    PyObject **cpy_r_r84;
+    PyObject *cpy_r_r82;
+    PyObject *cpy_r_r83;
+    char cpy_r_r84;
     PyObject *cpy_r_r85;
-    char cpy_r_r86;
+    PyObject *cpy_r_r86;
     PyObject *cpy_r_r87;
-    PyObject *cpy_r_r88;
-    char cpy_r_r89;
-    PyObject *cpy_r_r90;
-    int32_t cpy_r_r91;
+    char cpy_r_r88;
+    PyObject *cpy_r_r89;
+    char cpy_r_r90;
+    char cpy_r_r91;
     char cpy_r_r92;
-    PyObject *cpy_r_r93;
-    char cpy_r_r94;
-    PyObject *cpy_r_r95;
-    PyObject *cpy_r_r96;
-    PyObject *cpy_r_r97;
-    char cpy_r_r98;
-    PyObject *cpy_r_r99;
-    PyObject *cpy_r_r100;
-    PyObject *cpy_r_r101;
-    char cpy_r_r102;
-    PyObject *cpy_r_r103;
-    PyObject *cpy_r_r104;
-    PyObject *cpy_r_r105;
-    PyObject *cpy_r_r106;
-    PyObject *cpy_r_r107;
-    char cpy_r_r108;
-    PyObject *cpy_r_r109;
-    char cpy_r_r110;
-    PyObject *cpy_r_r111;
-    char cpy_r_r112;
-    tuple_T3OOO cpy_r_r113;
-    char cpy_r_r114;
-    PyObject **cpy_r_r115;
-    PyObject *cpy_r_r116;
-    char cpy_r_r117;
-    tuple_T3OOO cpy_r_r118;
-    tuple_T3OOO cpy_r_r119;
-    tuple_T3OOO cpy_r_r120;
-    char cpy_r_r121;
-    PyObject *cpy_r_r122;
-    PyObject *cpy_r_r123;
-    PyObject *cpy_r_r124;
-    PyObject *cpy_r_r125;
-    char cpy_r_r126;
-    PyObject *cpy_r_r127;
-    PyObject *cpy_r_r128;
-    PyObject *cpy_r_r129;
-    char cpy_r_r130;
-    PyObject *cpy_r_r131;
-    char cpy_r_r132;
-    char cpy_r_r133;
-    char cpy_r_r134;
-    char cpy_r_r135;
-    char cpy_r_r136;
-    PyObject *cpy_r_r137;
+    char cpy_r_r93;
+    PyObject *cpy_r_r94;
     cpy_r_r0 = NULL;
     cpy_r_r1 = cpy_r_r0;
-    cpy_r_r2 = NULL;
-    cpy_r_r3 = cpy_r_r2;
-    cpy_r_r4 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__;
-    goto CPyL136;
+    cpy_r_r2 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_env__;
+    if (unlikely(cpy_r_r2 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_env__", 87, CPyStatic__rate_limit___globals);
+        goto CPyL96;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r2);
 CPyL1: ;
-    cpy_r_r5 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r6 = cpy_r_type != cpy_r_r5;
-    if (!cpy_r_r6) goto CPyL4;
+    cpy_r_r3 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__;
+    goto CPyL91;
+CPyL2: ;
+    cpy_r_r4 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r5 = cpy_r_type != cpy_r_r4;
+    if (cpy_r_r5) {
+        goto CPyL97;
+    } else
+        goto CPyL5;
+CPyL3: ;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL95;
     }
     CPy_Unreachable();
-CPyL4: ;
-    cpy_r_r7 = CPyStatic__rate_limit___limiters;
-    if (likely(cpy_r_r7 != NULL)) goto CPyL7;
+CPyL5: ;
+    cpy_r_r6 = CPyStatic__rate_limit___limiters;
+    if (unlikely(cpy_r_r6 == NULL)) {
+        goto CPyL98;
+    } else
+        goto CPyL8;
+CPyL6: ;
     PyErr_SetString(PyExc_NameError, "value for final name \"limiters\" was not set");
-    cpy_r_r8 = 0;
-    if (unlikely(!cpy_r_r8)) {
+    cpy_r_r7 = 0;
+    if (unlikely(!cpy_r_r7)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL95;
     }
     CPy_Unreachable();
-CPyL7: ;
-    cpy_r_r9 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r9 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 112, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r9);
 CPyL8: ;
-    cpy_r_r10 = CPyDict_GetItem(cpy_r_r7, cpy_r_r9);
-    CPy_DECREF(cpy_r_r9);
-    if (unlikely(cpy_r_r10 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+    cpy_r_r8 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r8 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "endpoint", 93, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     }
-    if (likely(Py_TYPE(cpy_r_r10) == CPyType_leakybucket___AsyncLimiter))
-        cpy_r_r11 = cpy_r_r10;
+    CPy_INCREF(cpy_r_r8);
+CPyL9: ;
+    cpy_r_r9 = CPyDict_GetItem(cpy_r_r6, cpy_r_r8);
+    CPy_DECREF(cpy_r_r8);
+    if (unlikely(cpy_r_r9 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    if (likely(Py_TYPE(cpy_r_r9) == CPyType_leakybucket___AsyncLimiter))
+        cpy_r_r10 = cpy_r_r9;
     else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", 112, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r10);
-        goto CPyL141;
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", 93, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r9);
+        goto CPyL99;
     }
-    cpy_r_r12 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r11)->__waiters;
-    CPy_INCREF_NO_IMM(cpy_r_r12);
+    cpy_r_r11 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r10)->__waiters;
+    CPy_INCREF_NO_IMM(cpy_r_r11);
+    CPy_DECREF_NO_IMM(cpy_r_r10);
+    cpy_r_r12 = (CPyPtr)&((PyVarObject *)cpy_r_r11)->ob_size;
+    cpy_r_r13 = *(int64_t *)cpy_r_r12;
     CPy_DECREF_NO_IMM(cpy_r_r11);
-    cpy_r_r13 = (CPyPtr)&((PyVarObject *)cpy_r_r12)->ob_size;
-    cpy_r_r14 = *(int64_t *)cpy_r_r13;
-    CPy_DECREF_NO_IMM(cpy_r_r12);
-    cpy_r_r15 = cpy_r_r14 << 1;
-    cpy_r_r16 = cpy_r_r15 != 0;
-    if (cpy_r_r16) goto CPyL16;
-    cpy_r_r17 = Py_None;
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = -1;
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL15;
-    CPyGen_SetStopIterationValue(cpy_r_r17);
-    if (!0) goto CPyL141;
+    cpy_r_r14 = cpy_r_r13 << 1;
+    cpy_r_r15 = cpy_r_r14 != 0;
+    if (cpy_r_r15) goto CPyL17;
+    cpy_r_r16 = Py_None;
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = -1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    if (cpy_r_stop_iter_ptr != NULL) goto CPyL16;
+    CPyGen_SetStopIterationValue(cpy_r_r16);
+    if (!0) goto CPyL95;
     CPy_Unreachable();
-CPyL15: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r17;
-    return 0;
 CPyL16: ;
-    cpy_r_r19 = CPyStatic__rate_limit____rate_limit_waiters;
-    if (likely(cpy_r_r19 != NULL)) goto CPyL19;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_waiters\" was not set");
-    cpy_r_r20 = 0;
-    if (unlikely(!cpy_r_r20)) {
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r16;
+    return 0;
+CPyL17: ;
+    cpy_r_r18 = CPyStatic__rate_limit____rate_limit_tasks;
+    if (unlikely(cpy_r_r18 == NULL)) {
+        goto CPyL100;
+    } else
+        goto CPyL20;
+CPyL18: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
+    cpy_r_r19 = 0;
+    if (unlikely(!cpy_r_r19)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL95;
     }
     CPy_Unreachable();
-CPyL19: ;
-    cpy_r_r21 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r21 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 116, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r21);
 CPyL20: ;
-    cpy_r_r22 = CPyDict_GetWithNone(cpy_r_r19, cpy_r_r21);
-    CPy_DECREF(cpy_r_r21);
-    if (unlikely(cpy_r_r22 == NULL)) {
+    cpy_r_r20 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r20 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "endpoint", 96, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    CPy_INCREF(cpy_r_r20);
+CPyL21: ;
+    cpy_r_r21 = CPyDict_GetWithNone(cpy_r_r18, cpy_r_r20);
+    CPy_DECREF(cpy_r_r20);
+    if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL99;
     }
-    CPy_INCREF(cpy_r_r22);
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__existing != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__existing);
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task);
     }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__existing = cpy_r_r22;
-    cpy_r_r23 = 1;
-    if (unlikely(!cpy_r_r23)) {
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task = cpy_r_r21;
+    cpy_r_r22 = 1;
+    if (unlikely(!cpy_r_r22)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL142;
+        goto CPyL99;
     }
-    cpy_r_r24 = PyObject_IsTrue(cpy_r_r22);
-    CPy_DECREF(cpy_r_r22);
-    cpy_r_r25 = cpy_r_r24 >= 0;
-    if (unlikely(!cpy_r_r25)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+    cpy_r_r23 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task;
+    if (unlikely(cpy_r_r23 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "task", 97, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     }
-    cpy_r_r26 = cpy_r_r24;
-    if (!cpy_r_r26) goto CPyL60;
-    cpy_r_r27 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__existing;
+    CPy_INCREF(cpy_r_r23);
+CPyL24: ;
+    cpy_r_r24 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r25 = cpy_r_r23 == cpy_r_r24;
+    CPy_DECREF(cpy_r_r23);
+    if (!cpy_r_r25) goto CPyL46;
+    cpy_r_r26 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r26 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "endpoint", 98, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    CPy_INCREF(cpy_r_r26);
+CPyL26: ;
+    cpy_r_r27 = CPyDef__rate_limit_____rate_limit_inactive(cpy_r_r26);
+    CPy_DECREF(cpy_r_r26);
     if (unlikely(cpy_r_r27 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "existing", 117, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     }
-    CPy_INCREF(cpy_r_r27);
-CPyL25: ;
-    cpy_r_r28 = cpy_r_r27;
-    cpy_r_r29 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'wait' */
-    PyObject *cpy_r_r30[1] = {cpy_r_r28};
+    cpy_r_r28 = CPyStatic__rate_limit___create_task;
+    if (unlikely(cpy_r_r28 == NULL)) {
+        goto CPyL101;
+    } else
+        goto CPyL30;
+CPyL28: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"create_task\" was not set");
+    cpy_r_r29 = 0;
+    if (unlikely(!cpy_r_r29)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL95;
+    }
+    CPy_Unreachable();
+CPyL30: ;
+    PyObject *cpy_r_r30[1] = {cpy_r_r27};
     cpy_r_r31 = (PyObject **)&cpy_r_r30;
-    cpy_r_r32 = PyObject_VectorcallMethod(cpy_r_r29, cpy_r_r31, 9223372036854775809ULL, 0);
+    cpy_r_r32 = PyObject_Vectorcall(cpy_r_r28, cpy_r_r31, 1, 0);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL143;
+        goto CPyL102;
     }
-    CPy_DECREF(cpy_r_r28);
-    cpy_r_r33 = CPy_GetCoro(cpy_r_r32);
-    CPy_DECREF(cpy_r_r32);
-    if (unlikely(cpy_r_r33 == NULL)) {
+    CPy_DECREF_NO_IMM(cpy_r_r27);
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task);
+    }
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task = cpy_r_r32;
+    cpy_r_r33 = 1;
+    if (unlikely(!cpy_r_r33)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL99;
     }
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18);
+    cpy_r_r34 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task;
+    if (unlikely(cpy_r_r34 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "task", 99, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18 = cpy_r_r33;
-    cpy_r_r34 = 1;
-    if (unlikely(!cpy_r_r34)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r35 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18;
-    if (unlikely(cpy_r_r35 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__18", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r35);
-CPyL30: ;
-    cpy_r_r36 = CPyIter_Next(cpy_r_r35);
-    CPy_DECREF(cpy_r_r35);
-    if (cpy_r_r36 != NULL) goto CPyL33;
-    cpy_r_r37 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r37 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r38 = cpy_r_r37;
-    CPy_DECREF(cpy_r_r38);
-    cpy_r_r39 = NULL;
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18 = cpy_r_r39;
-    cpy_r_r40 = 1;
-    if (unlikely(!cpy_r_r40)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    } else
-        goto CPyL55;
+    CPy_INCREF(cpy_r_r34);
 CPyL33: ;
-    cpy_r_r41 = cpy_r_r36;
-CPyL34: ;
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = 1;
-    return cpy_r_r41;
-CPyL35: ;
-    cpy_r_r43 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r44 = cpy_r_type != cpy_r_r43;
-    if (!cpy_r_r44) goto CPyL144;
-    CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
-    if (unlikely(!0)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL39;
+    cpy_r_r35 = CPyStatic__rate_limit____rate_limit_tasks;
+    if (unlikely(cpy_r_r35 == NULL)) {
+        goto CPyL103;
     } else
-        goto CPyL145;
-CPyL37: ;
-    CPy_Unreachable();
-CPyL38: ;
-    CPy_INCREF(cpy_r_arg);
-    goto CPyL50;
-CPyL39: ;
-    cpy_r_r45 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19.f2);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19 = cpy_r_r45;
-    cpy_r_r46 = 1;
-    if (unlikely(!cpy_r_r46)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL146;
-    }
-    cpy_r_r47 = (PyObject **)&cpy_r_r1;
-    cpy_r_r48 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18;
-    if (unlikely(cpy_r_r48 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__18", -1, CPyStatic__rate_limit___globals);
-        goto CPyL146;
-    }
-    CPy_INCREF(cpy_r_r48);
-CPyL41: ;
-    cpy_r_r49 = CPy_YieldFromErrorHandle(cpy_r_r48, cpy_r_r47);
-    CPy_DecRef(cpy_r_r48);
-    if (unlikely(cpy_r_r49 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL146;
-    }
-    if (cpy_r_r49) goto CPyL45;
-    cpy_r_r41 = cpy_r_r1;
-    cpy_r_r50 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19;
-    if (unlikely(cpy_r_r50.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__19", -1, CPyStatic__rate_limit___globals);
-        goto CPyL147;
-    }
-    CPy_INCREF(cpy_r_r50.f0);
-    CPy_INCREF(cpy_r_r50.f1);
-    CPy_INCREF(cpy_r_r50.f2);
-CPyL44: ;
-    CPy_RestoreExcInfo(cpy_r_r50);
-    CPy_DecRef(cpy_r_r50.f0);
-    CPy_DecRef(cpy_r_r50.f1);
-    CPy_DecRef(cpy_r_r50.f2);
-    goto CPyL34;
-CPyL45: ;
-    cpy_r_r38 = cpy_r_r1;
-    CPy_DecRef(cpy_r_r38);
-    cpy_r_r51 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19;
-    if (unlikely(cpy_r_r51.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__19", -1, CPyStatic__rate_limit___globals);
-        goto CPyL47;
-    }
-    CPy_INCREF(cpy_r_r51.f0);
-    CPy_INCREF(cpy_r_r51.f1);
-    CPy_INCREF(cpy_r_r51.f2);
-CPyL46: ;
-    CPy_RestoreExcInfo(cpy_r_r51);
-    CPy_DecRef(cpy_r_r51.f0);
-    CPy_DecRef(cpy_r_r51.f1);
-    CPy_DecRef(cpy_r_r51.f2);
-    goto CPyL55;
-CPyL47: ;
-    cpy_r_r52 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__19;
-    if (unlikely(cpy_r_r52.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__19", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r52.f0);
-    CPy_INCREF(cpy_r_r52.f1);
-    CPy_INCREF(cpy_r_r52.f2);
-CPyL48: ;
-    CPy_RestoreExcInfo(cpy_r_r52);
-    CPy_DecRef(cpy_r_r52.f0);
-    CPy_DecRef(cpy_r_r52.f1);
-    CPy_DecRef(cpy_r_r52.f2);
-    cpy_r_r53 = CPy_KeepPropagating();
-    if (!cpy_r_r53) goto CPyL141;
-    CPy_Unreachable();
-CPyL50: ;
-    cpy_r_r54 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__18;
-    if (unlikely(cpy_r_r54 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__18", -1, CPyStatic__rate_limit___globals);
-        goto CPyL148;
-    }
-    CPy_INCREF(cpy_r_r54);
-CPyL51: ;
-    cpy_r_r55 = CPyIter_Send(cpy_r_r54, cpy_r_arg);
-    CPy_DECREF(cpy_r_r54);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r55 == NULL) goto CPyL53;
-    cpy_r_r41 = cpy_r_r55;
-    goto CPyL34;
-CPyL53: ;
-    cpy_r_r56 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r56 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r38 = cpy_r_r56;
-    CPy_DECREF(cpy_r_r38);
-CPyL55: ;
-    cpy_r_r57 = Py_None;
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = -1;
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL59;
-    CPyGen_SetStopIterationValue(cpy_r_r57);
-    if (!0) goto CPyL141;
-    CPy_Unreachable();
-CPyL59: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r57;
-    return 0;
-CPyL60: ;
-    cpy_r_r59 = CPyStatic__rate_limit____rate_limit_tasks;
-    if (likely(cpy_r_r59 != NULL)) goto CPyL63;
+        goto CPyL36;
+CPyL34: ;
     PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
-    cpy_r_r60 = 0;
-    if (unlikely(!cpy_r_r60)) {
+    cpy_r_r36 = 0;
+    if (unlikely(!cpy_r_r36)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL95;
     }
     CPy_Unreachable();
-CPyL63: ;
-    cpy_r_r61 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
+CPyL36: ;
+    cpy_r_r37 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__endpoint;
+    if (unlikely(cpy_r_r37 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "endpoint", 99, CPyStatic__rate_limit___globals);
+        goto CPyL104;
+    }
+    CPy_INCREF(cpy_r_r37);
+CPyL37: ;
+    cpy_r_r38 = CPyDict_SetItem(cpy_r_r35, cpy_r_r37, cpy_r_r34);
+    CPy_DECREF(cpy_r_r37);
+    CPy_DECREF(cpy_r_r34);
+    cpy_r_r39 = cpy_r_r38 >= 0;
+    if (unlikely(!cpy_r_r39)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r40 = CPyDef__rate_limit___discard__rate_limit_inactive_obj();
+    if (unlikely(cpy_r_r40 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r2);
+    if (((dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *)cpy_r_r40)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *)cpy_r_r40)->___mypyc_env__);
+    }
+    ((dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *)cpy_r_r40)->___mypyc_env__ = cpy_r_r2;
+    cpy_r_r41 = 1;
+    if (unlikely(!cpy_r_r41)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL105;
+    }
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__discard != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__discard);
+    }
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__discard = cpy_r_r40;
+    cpy_r_r42 = 1;
+    if (unlikely(!cpy_r_r42)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r43 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task;
+    if (unlikely(cpy_r_r43 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "task", 105, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    CPy_INCREF(cpy_r_r43);
+CPyL42: ;
+    cpy_r_r44 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__discard;
+    if (unlikely(cpy_r_r44 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "discard", 105, CPyStatic__rate_limit___globals);
+        goto CPyL106;
+    }
+    CPy_INCREF(cpy_r_r44);
+CPyL43: ;
+    cpy_r_r45 = cpy_r_r43;
+    cpy_r_r46 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'add_done_callback' */
+    PyObject *cpy_r_r47[2] = {cpy_r_r45, cpy_r_r44};
+    cpy_r_r48 = (PyObject **)&cpy_r_r47;
+    cpy_r_r49 = PyObject_VectorcallMethod(cpy_r_r46, cpy_r_r48, 9223372036854775810ULL, 0);
+    if (unlikely(cpy_r_r49 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL107;
+    }
+    CPy_DECREF(cpy_r_r45);
+    CPy_DECREF(cpy_r_r44);
+    if (unlikely(cpy_r_r49 != Py_None)) {
+        CPy_TypeError("None", cpy_r_r49); cpy_r_r50 = 2;
+    } else
+        cpy_r_r50 = 1;
+    CPy_DECREF(cpy_r_r49);
+    if (unlikely(cpy_r_r50 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+CPyL46: ;
+    cpy_r_r51 = CPyStatic__rate_limit___logger;
+    if (unlikely(cpy_r_r51 == NULL)) {
+        goto CPyL108;
+    } else
+        goto CPyL49;
+CPyL47: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
+    cpy_r_r52 = 0;
+    if (unlikely(!cpy_r_r52)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL95;
+    }
+    CPy_Unreachable();
+CPyL49: ;
+    cpy_r_r53 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'rate limit is activated, waiting...' */
+    cpy_r_r54 = CPyTuple_LoadEmptyTupleConstant();
+    cpy_r_r55 = PyDict_New();
+    if (unlikely(cpy_r_r55 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL109;
+    }
+    cpy_r_r56 = CPyDef_logging___CLogger___debug(cpy_r_r51, cpy_r_r53, cpy_r_r54, cpy_r_r55);
+    CPy_DECREF(cpy_r_r54);
+    CPy_DECREF(cpy_r_r55);
+    if (unlikely(cpy_r_r56 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r57 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_generator_attribute__task;
+    if (unlikely(cpy_r_r57 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "task", 107, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    CPy_INCREF(cpy_r_r57);
+CPyL52: ;
+    cpy_r_r58 = CPyDef__tasks___shield(cpy_r_r57);
+    CPy_DECREF(cpy_r_r57);
+    if (unlikely(cpy_r_r58 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r59 = CPy_GetCoro(cpy_r_r58);
+    CPy_DECREF(cpy_r_r58);
+    if (unlikely(cpy_r_r59 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6);
+    }
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6 = cpy_r_r59;
+    cpy_r_r60 = 1;
+    if (unlikely(!cpy_r_r60)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r61 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6;
     if (unlikely(cpy_r_r61 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 121, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     }
     CPy_INCREF(cpy_r_r61);
-CPyL64: ;
-    cpy_r_r62 = CPyDict_GetWithNone(cpy_r_r59, cpy_r_r61);
+CPyL56: ;
+    cpy_r_r62 = CPyIter_Next(cpy_r_r61);
     CPy_DECREF(cpy_r_r61);
-    if (unlikely(cpy_r_r62 == NULL)) {
+    if (cpy_r_r62 != NULL) goto CPyL59;
+    cpy_r_r63 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r63 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+        goto CPyL99;
     }
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task = cpy_r_r62;
-    cpy_r_r63 = 1;
-    if (unlikely(!cpy_r_r63)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r64 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task;
-    if (unlikely(cpy_r_r64 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "task", 122, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r64);
-CPyL67: ;
-    cpy_r_r65 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r66 = cpy_r_r64 == cpy_r_r65;
+    cpy_r_r64 = cpy_r_r63;
     CPy_DECREF(cpy_r_r64);
-    if (!cpy_r_r66) goto CPyL91;
-    cpy_r_r67 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r67 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 123, CPyStatic__rate_limit___globals);
-        goto CPyL141;
+    cpy_r_r65 = NULL;
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6);
     }
-    CPy_INCREF(cpy_r_r67);
-CPyL69: ;
-    cpy_r_r68 = CPyStatic__rate_limit___Event;
-    if (unlikely(cpy_r_r68 == NULL)) {
-        goto CPyL149;
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6 = cpy_r_r65;
+    cpy_r_r66 = 1;
+    if (unlikely(!cpy_r_r66)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
     } else
-        goto CPyL72;
-CPyL70: ;
-    PyErr_SetString(PyExc_NameError, "value for final name \"Event\" was not set");
-    cpy_r_r69 = 0;
-    if (unlikely(!cpy_r_r69)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL72: ;
-    cpy_r_r70 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 10 */
-    PyObject *cpy_r_r71[2] = {cpy_r_r67, cpy_r_r70};
-    cpy_r_r72 = (PyObject **)&cpy_r_r71;
-    cpy_r_r73 = PyObject_Vectorcall(cpy_r_r68, cpy_r_r72, 2, 0);
-    if (unlikely(cpy_r_r73 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL150;
-    }
-    CPy_DECREF(cpy_r_r67);
-    cpy_r_r74 = CPyStatic__rate_limit____rate_limit_waiters;
-    if (unlikely(cpy_r_r74 == NULL)) {
-        goto CPyL151;
-    } else
-        goto CPyL76;
-CPyL74: ;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_waiters\" was not set");
-    cpy_r_r75 = 0;
-    if (unlikely(!cpy_r_r75)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL76: ;
-    cpy_r_r76 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r76 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 123, CPyStatic__rate_limit___globals);
-        goto CPyL152;
-    }
-    CPy_INCREF(cpy_r_r76);
-CPyL77: ;
-    cpy_r_r77 = CPyDict_SetItem(cpy_r_r74, cpy_r_r76, cpy_r_r73);
-    CPy_DECREF(cpy_r_r76);
-    CPy_DECREF(cpy_r_r73);
-    cpy_r_r78 = cpy_r_r77 >= 0;
-    if (unlikely(!cpy_r_r78)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r79 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r79 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 124, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r79);
-CPyL79: ;
-    cpy_r_r80 = CPyDef__rate_limit_____rate_limit_inactive(cpy_r_r79);
-    CPy_DECREF(cpy_r_r79);
-    if (unlikely(cpy_r_r80 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r81 = CPyStatic__rate_limit___create_task;
-    if (unlikely(cpy_r_r81 == NULL)) {
-        goto CPyL153;
-    } else
-        goto CPyL83;
-CPyL81: ;
-    PyErr_SetString(PyExc_NameError, "value for final name \"create_task\" was not set");
-    cpy_r_r82 = 0;
-    if (unlikely(!cpy_r_r82)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL83: ;
-    PyObject *cpy_r_r83[1] = {cpy_r_r80};
-    cpy_r_r84 = (PyObject **)&cpy_r_r83;
-    cpy_r_r85 = PyObject_Vectorcall(cpy_r_r81, cpy_r_r84, 1, 0);
-    if (unlikely(cpy_r_r85 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL154;
-    }
-    CPy_DECREF_NO_IMM(cpy_r_r80);
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task = cpy_r_r85;
-    cpy_r_r86 = 1;
-    if (unlikely(!cpy_r_r86)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r87 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task;
-    if (unlikely(cpy_r_r87 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "task", 125, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r87);
-CPyL86: ;
-    cpy_r_r88 = CPyStatic__rate_limit____rate_limit_tasks;
-    if (unlikely(cpy_r_r88 == NULL)) {
-        goto CPyL155;
-    } else
-        goto CPyL89;
-CPyL87: ;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
-    cpy_r_r89 = 0;
-    if (unlikely(!cpy_r_r89)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL89: ;
-    cpy_r_r90 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r90 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "endpoint", 125, CPyStatic__rate_limit___globals);
-        goto CPyL156;
-    }
-    CPy_INCREF(cpy_r_r90);
-CPyL90: ;
-    cpy_r_r91 = CPyDict_SetItem(cpy_r_r88, cpy_r_r90, cpy_r_r87);
-    CPy_DECREF(cpy_r_r90);
-    CPy_DECREF(cpy_r_r87);
-    cpy_r_r92 = cpy_r_r91 >= 0;
-    if (unlikely(!cpy_r_r92)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-CPyL91: ;
-    cpy_r_r93 = CPyStatic__rate_limit___logger;
-    if (likely(cpy_r_r93 != NULL)) goto CPyL94;
-    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
-    cpy_r_r94 = 0;
-    if (unlikely(!cpy_r_r94)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL94: ;
-    cpy_r_r95 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'rate limit is activated, waiting...' */
-    cpy_r_r96 = CPyTuple_LoadEmptyTupleConstant();
-    cpy_r_r97 = PyDict_New();
-    if (unlikely(cpy_r_r97 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL157;
-    }
-    cpy_r_r98 = CPyDef_logging___CLogger___debug(cpy_r_r93, cpy_r_r95, cpy_r_r96, cpy_r_r97);
-    CPy_DECREF(cpy_r_r96);
-    CPy_DECREF(cpy_r_r97);
-    if (unlikely(cpy_r_r98 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r99 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__task;
-    if (unlikely(cpy_r_r99 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "task", 127, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r99);
-CPyL97: ;
-    cpy_r_r100 = CPyDef__tasks___shield(cpy_r_r99);
-    CPy_DECREF(cpy_r_r99);
-    if (unlikely(cpy_r_r100 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r101 = CPy_GetCoro(cpy_r_r100);
-    CPy_DECREF(cpy_r_r100);
-    if (unlikely(cpy_r_r101 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20 = cpy_r_r101;
-    cpy_r_r102 = 1;
-    if (unlikely(!cpy_r_r102)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r103 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20;
-    if (unlikely(cpy_r_r103 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__20", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r103);
-CPyL101: ;
-    cpy_r_r104 = CPyIter_Next(cpy_r_r103);
-    CPy_DECREF(cpy_r_r103);
-    if (cpy_r_r104 != NULL) goto CPyL104;
-    cpy_r_r105 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r105 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r106 = cpy_r_r105;
-    CPy_DECREF(cpy_r_r106);
-    cpy_r_r107 = NULL;
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20);
-    }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20 = cpy_r_r107;
-    cpy_r_r108 = 1;
-    if (unlikely(!cpy_r_r108)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    } else
-        goto CPyL126;
-CPyL104: ;
-    cpy_r_r109 = cpy_r_r104;
-CPyL105: ;
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = 2;
-    return cpy_r_r109;
-CPyL106: ;
-    cpy_r_r111 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r112 = cpy_r_type != cpy_r_r111;
-    if (!cpy_r_r112) goto CPyL158;
+        goto CPyL81;
+CPyL59: ;
+    cpy_r_r67 = cpy_r_r62;
+CPyL60: ;
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = 1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    return cpy_r_r67;
+CPyL61: ;
+    cpy_r_r69 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r70 = cpy_r_type != cpy_r_r69;
+    if (!cpy_r_r70) goto CPyL110;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL110;
+        goto CPyL65;
     } else
-        goto CPyL159;
-CPyL108: ;
+        goto CPyL111;
+CPyL63: ;
     CPy_Unreachable();
-CPyL109: ;
+CPyL64: ;
     CPy_INCREF(cpy_r_arg);
-    goto CPyL121;
-CPyL110: ;
-    cpy_r_r113 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21.f2);
+    goto CPyL76;
+CPyL65: ;
+    cpy_r_r71 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7.f2);
     }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21 = cpy_r_r113;
-    cpy_r_r114 = 1;
-    if (unlikely(!cpy_r_r114)) {
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7 = cpy_r_r71;
+    cpy_r_r72 = 1;
+    if (unlikely(!cpy_r_r72)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL160;
+        goto CPyL112;
     }
-    cpy_r_r115 = (PyObject **)&cpy_r_r3;
-    cpy_r_r116 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20;
-    if (unlikely(cpy_r_r116 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__20", -1, CPyStatic__rate_limit___globals);
-        goto CPyL160;
+    cpy_r_r73 = (PyObject **)&cpy_r_r1;
+    cpy_r_r74 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6;
+    if (unlikely(cpy_r_r74 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
+        goto CPyL112;
     }
-    CPy_INCREF(cpy_r_r116);
-CPyL112: ;
-    cpy_r_r117 = CPy_YieldFromErrorHandle(cpy_r_r116, cpy_r_r115);
-    CPy_DecRef(cpy_r_r116);
-    if (unlikely(cpy_r_r117 == 2)) {
+    CPy_INCREF(cpy_r_r74);
+CPyL67: ;
+    cpy_r_r75 = CPy_YieldFromErrorHandle(cpy_r_r74, cpy_r_r73);
+    CPy_DecRef(cpy_r_r74);
+    if (unlikely(cpy_r_r75 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL160;
+        goto CPyL112;
     }
-    if (cpy_r_r117) goto CPyL116;
-    cpy_r_r109 = cpy_r_r3;
-    cpy_r_r118 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21;
-    if (unlikely(cpy_r_r118.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__21", -1, CPyStatic__rate_limit___globals);
-        goto CPyL161;
+    if (cpy_r_r75) goto CPyL71;
+    cpy_r_r67 = cpy_r_r1;
+    cpy_r_r76 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7;
+    if (unlikely(cpy_r_r76.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "__mypyc_temp__7", -1, CPyStatic__rate_limit___globals);
+        goto CPyL113;
     }
-    CPy_INCREF(cpy_r_r118.f0);
-    CPy_INCREF(cpy_r_r118.f1);
-    CPy_INCREF(cpy_r_r118.f2);
-CPyL115: ;
-    CPy_RestoreExcInfo(cpy_r_r118);
-    CPy_DecRef(cpy_r_r118.f0);
-    CPy_DecRef(cpy_r_r118.f1);
-    CPy_DecRef(cpy_r_r118.f2);
-    goto CPyL105;
-CPyL116: ;
-    cpy_r_r106 = cpy_r_r3;
-    CPy_DecRef(cpy_r_r106);
-    cpy_r_r119 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21;
-    if (unlikely(cpy_r_r119.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__21", -1, CPyStatic__rate_limit___globals);
-        goto CPyL118;
+    CPy_INCREF(cpy_r_r76.f0);
+    CPy_INCREF(cpy_r_r76.f1);
+    CPy_INCREF(cpy_r_r76.f2);
+CPyL70: ;
+    CPy_RestoreExcInfo(cpy_r_r76);
+    CPy_DecRef(cpy_r_r76.f0);
+    CPy_DecRef(cpy_r_r76.f1);
+    CPy_DecRef(cpy_r_r76.f2);
+    goto CPyL60;
+CPyL71: ;
+    cpy_r_r64 = cpy_r_r1;
+    CPy_DecRef(cpy_r_r64);
+    cpy_r_r77 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7;
+    if (unlikely(cpy_r_r77.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "__mypyc_temp__7", -1, CPyStatic__rate_limit___globals);
+        goto CPyL73;
     }
-    CPy_INCREF(cpy_r_r119.f0);
-    CPy_INCREF(cpy_r_r119.f1);
-    CPy_INCREF(cpy_r_r119.f2);
-CPyL117: ;
-    CPy_RestoreExcInfo(cpy_r_r119);
-    CPy_DecRef(cpy_r_r119.f0);
-    CPy_DecRef(cpy_r_r119.f1);
-    CPy_DecRef(cpy_r_r119.f2);
-    goto CPyL126;
-CPyL118: ;
-    cpy_r_r120 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__21;
-    if (unlikely(cpy_r_r120.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__21", -1, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_INCREF(cpy_r_r120.f0);
-    CPy_INCREF(cpy_r_r120.f1);
-    CPy_INCREF(cpy_r_r120.f2);
-CPyL119: ;
-    CPy_RestoreExcInfo(cpy_r_r120);
-    CPy_DecRef(cpy_r_r120.f0);
-    CPy_DecRef(cpy_r_r120.f1);
-    CPy_DecRef(cpy_r_r120.f2);
-    cpy_r_r121 = CPy_KeepPropagating();
-    if (!cpy_r_r121) goto CPyL141;
-    CPy_Unreachable();
-CPyL121: ;
-    cpy_r_r122 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__20;
-    if (unlikely(cpy_r_r122 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_gen", "__mypyc_temp__20", -1, CPyStatic__rate_limit___globals);
-        goto CPyL162;
-    }
-    CPy_INCREF(cpy_r_r122);
-CPyL122: ;
-    cpy_r_r123 = CPyIter_Send(cpy_r_r122, cpy_r_arg);
-    CPy_DECREF(cpy_r_r122);
-    CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r123 == NULL) goto CPyL124;
-    cpy_r_r109 = cpy_r_r123;
-    goto CPyL105;
-CPyL124: ;
-    cpy_r_r124 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r124 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r106 = cpy_r_r124;
-    CPy_DECREF(cpy_r_r106);
-CPyL126: ;
-    cpy_r_r125 = CPyStatic__rate_limit___logger;
-    if (likely(cpy_r_r125 != NULL)) goto CPyL129;
-    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
-    cpy_r_r126 = 0;
-    if (unlikely(!cpy_r_r126)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL129: ;
-    cpy_r_r127 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'rate limit inactives, proceeding with more calls' */
-    cpy_r_r128 = CPyTuple_LoadEmptyTupleConstant();
-    cpy_r_r129 = PyDict_New();
-    if (unlikely(cpy_r_r129 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL163;
-    }
-    cpy_r_r130 = CPyDef_logging___CLogger___debug(cpy_r_r125, cpy_r_r127, cpy_r_r128, cpy_r_r129);
-    CPy_DECREF(cpy_r_r128);
-    CPy_DECREF(cpy_r_r129);
-    if (unlikely(cpy_r_r130 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    cpy_r_r131 = Py_None;
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = -1;
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL135;
-    CPyGen_SetStopIterationValue(cpy_r_r131);
-    if (!0) goto CPyL141;
-    CPy_Unreachable();
-CPyL135: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r131;
-    return 0;
-CPyL136: ;
-    cpy_r_r133 = cpy_r_r4 == 0;
-    if (cpy_r_r133) goto CPyL164;
-    cpy_r_r134 = cpy_r_r4 == 1;
-    if (cpy_r_r134) {
-        goto CPyL165;
-    } else
-        goto CPyL166;
-CPyL138: ;
-    cpy_r_r135 = cpy_r_r4 == 2;
-    if (cpy_r_r135) {
-        goto CPyL106;
-    } else
-        goto CPyL167;
-CPyL139: ;
-    PyErr_SetNone(PyExc_StopIteration);
-    cpy_r_r136 = 0;
-    if (unlikely(!cpy_r_r136)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL141;
-    }
-    CPy_Unreachable();
-CPyL141: ;
-    cpy_r_r137 = NULL;
-    return cpy_r_r137;
-CPyL142: ;
-    CPy_DecRef(cpy_r_r22);
-    goto CPyL141;
-CPyL143: ;
-    CPy_DecRef(cpy_r_r28);
-    goto CPyL141;
-CPyL144: ;
-    CPy_XDECREF(cpy_r_r1);
-    goto CPyL38;
-CPyL145: ;
-    CPy_XDECREF(cpy_r_r1);
-    goto CPyL37;
-CPyL146: ;
-    CPy_XDecRef(cpy_r_r1);
-    goto CPyL47;
-CPyL147: ;
-    CPy_DecRef(cpy_r_r41);
-    goto CPyL47;
-CPyL148: ;
-    CPy_DecRef(cpy_r_arg);
-    goto CPyL141;
-CPyL149: ;
-    CPy_DecRef(cpy_r_r67);
-    goto CPyL70;
-CPyL150: ;
-    CPy_DecRef(cpy_r_r67);
-    goto CPyL141;
-CPyL151: ;
-    CPy_DecRef(cpy_r_r73);
-    goto CPyL74;
-CPyL152: ;
-    CPy_DecRef(cpy_r_r73);
-    goto CPyL141;
-CPyL153: ;
-    CPy_DecRef(cpy_r_r80);
+    CPy_INCREF(cpy_r_r77.f0);
+    CPy_INCREF(cpy_r_r77.f1);
+    CPy_INCREF(cpy_r_r77.f2);
+CPyL72: ;
+    CPy_RestoreExcInfo(cpy_r_r77);
+    CPy_DecRef(cpy_r_r77.f0);
+    CPy_DecRef(cpy_r_r77.f1);
+    CPy_DecRef(cpy_r_r77.f2);
     goto CPyL81;
-CPyL154: ;
-    CPy_DecRef(cpy_r_r80);
-    goto CPyL141;
-CPyL155: ;
-    CPy_DecRef(cpy_r_r87);
-    goto CPyL87;
-CPyL156: ;
-    CPy_DecRef(cpy_r_r87);
-    goto CPyL141;
-CPyL157: ;
-    CPy_DecRef(cpy_r_r96);
-    goto CPyL141;
-CPyL158: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL109;
-CPyL159: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL108;
-CPyL160: ;
-    CPy_XDecRef(cpy_r_r3);
-    goto CPyL118;
-CPyL161: ;
-    CPy_DecRef(cpy_r_r109);
-    goto CPyL118;
-CPyL162: ;
+CPyL73: ;
+    cpy_r_r78 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__7;
+    if (unlikely(cpy_r_r78.f0 == NULL)) {
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__7' of '_rate_limit_inactive_env' undefined");
+    } else {
+        CPy_INCREF(cpy_r_r78.f0);
+        CPy_INCREF(cpy_r_r78.f1);
+        CPy_INCREF(cpy_r_r78.f2);
+    }
+    CPy_DecRef(cpy_r_r2);
+    if (unlikely(cpy_r_r78.f0 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL95;
+    }
+CPyL74: ;
+    CPy_RestoreExcInfo(cpy_r_r78);
+    CPy_DecRef(cpy_r_r78.f0);
+    CPy_DecRef(cpy_r_r78.f1);
+    CPy_DecRef(cpy_r_r78.f2);
+    cpy_r_r79 = CPy_KeepPropagating();
+    if (!cpy_r_r79) goto CPyL95;
+    CPy_Unreachable();
+CPyL76: ;
+    cpy_r_r80 = ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_temp__6;
+    if (unlikely(cpy_r_r80 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", "_rate_limit_inactive_env", "__mypyc_temp__6", -1, CPyStatic__rate_limit___globals);
+        goto CPyL114;
+    }
+    CPy_INCREF(cpy_r_r80);
+CPyL77: ;
+    cpy_r_r81 = CPyIter_Send(cpy_r_r80, cpy_r_arg);
+    CPy_DECREF(cpy_r_r80);
+    CPy_DECREF(cpy_r_arg);
+    if (cpy_r_r81 == NULL) goto CPyL79;
+    cpy_r_r67 = cpy_r_r81;
+    goto CPyL60;
+CPyL79: ;
+    cpy_r_r82 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r82 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r64 = cpy_r_r82;
+    CPy_DECREF(cpy_r_r64);
+CPyL81: ;
+    cpy_r_r83 = CPyStatic__rate_limit___logger;
+    if (unlikely(cpy_r_r83 == NULL)) {
+        goto CPyL115;
+    } else
+        goto CPyL84;
+CPyL82: ;
+    PyErr_SetString(PyExc_NameError, "value for final name \"logger\" was not set");
+    cpy_r_r84 = 0;
+    if (unlikely(!cpy_r_r84)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL95;
+    }
+    CPy_Unreachable();
+CPyL84: ;
+    cpy_r_r85 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'rate limit inactives, proceeding with more calls' */
+    cpy_r_r86 = CPyTuple_LoadEmptyTupleConstant();
+    cpy_r_r87 = PyDict_New();
+    if (unlikely(cpy_r_r87 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL116;
+    }
+    cpy_r_r88 = CPyDef_logging___CLogger___debug(cpy_r_r83, cpy_r_r85, cpy_r_r86, cpy_r_r87);
+    CPy_DECREF(cpy_r_r86);
+    CPy_DECREF(cpy_r_r87);
+    if (unlikely(cpy_r_r88 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL99;
+    }
+    cpy_r_r89 = Py_None;
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r2)->___mypyc_next_label__ = -1;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    if (cpy_r_stop_iter_ptr != NULL) goto CPyL90;
+    CPyGen_SetStopIterationValue(cpy_r_r89);
+    if (!0) goto CPyL95;
+    CPy_Unreachable();
+CPyL90: ;
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r89;
+    return 0;
+CPyL91: ;
+    cpy_r_r91 = cpy_r_r3 == 0;
+    if (cpy_r_r91) goto CPyL117;
+    cpy_r_r92 = cpy_r_r3 == 1;
+    if (cpy_r_r92) {
+        goto CPyL61;
+    } else
+        goto CPyL118;
+CPyL93: ;
+    PyErr_SetNone(PyExc_StopIteration);
+    cpy_r_r93 = 0;
+    if (unlikely(!cpy_r_r93)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL95;
+    }
+    CPy_Unreachable();
+CPyL95: ;
+    cpy_r_r94 = NULL;
+    return cpy_r_r94;
+CPyL96: ;
+    CPy_XDecRef(cpy_r_r1);
+    goto CPyL95;
+CPyL97: ;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL3;
+CPyL98: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL6;
+CPyL99: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL95;
+CPyL100: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL18;
+CPyL101: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r27);
+    goto CPyL28;
+CPyL102: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r27);
+    goto CPyL95;
+CPyL103: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r34);
+    goto CPyL34;
+CPyL104: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r34);
+    goto CPyL95;
+CPyL105: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r40);
+    goto CPyL95;
+CPyL106: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r43);
+    goto CPyL95;
+CPyL107: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r44);
+    CPy_DecRef(cpy_r_r45);
+    goto CPyL95;
+CPyL108: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL47;
+CPyL109: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r54);
+    goto CPyL95;
+CPyL110: ;
+    CPy_XDECREF(cpy_r_r1);
+    goto CPyL64;
+CPyL111: ;
+    CPy_XDECREF(cpy_r_r1);
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL63;
+CPyL112: ;
+    CPy_XDecRef(cpy_r_r1);
+    goto CPyL73;
+CPyL113: ;
+    CPy_DecRef(cpy_r_r67);
+    goto CPyL73;
+CPyL114: ;
+    CPy_DecRef(cpy_r_r2);
     CPy_DecRef(cpy_r_arg);
-    goto CPyL141;
-CPyL163: ;
-    CPy_DecRef(cpy_r_r128);
-    goto CPyL141;
-CPyL164: ;
+    goto CPyL95;
+CPyL115: ;
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL82;
+CPyL116: ;
+    CPy_DecRef(cpy_r_r2);
+    CPy_DecRef(cpy_r_r86);
+    goto CPyL95;
+CPyL117: ;
     CPy_XDECREF(cpy_r_r1);
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL1;
-CPyL165: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL35;
-CPyL166: ;
+    goto CPyL2;
+CPyL118: ;
     CPy_XDECREF(cpy_r_r1);
-    goto CPyL138;
-CPyL167: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL139;
+    CPy_DECREF_NO_IMM(cpy_r_r2);
+    goto CPyL93;
 }
 
 PyObject *CPyDef__rate_limit____rate_limit_inactive_gen_____next__(PyObject *cpy_r___mypyc_self__) {
@@ -90681,10 +89828,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp360 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp360);
-    PyObject *__tmp361 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp361);
+    PyObject *__tmp359 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp359);
+    PyObject *__tmp360 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp360);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -90774,31 +89921,53 @@ fail: ;
 PyObject *CPyDef__rate_limit____rate_limit_inactive(PyObject *cpy_r_endpoint) {
     PyObject *cpy_r_r0;
     char cpy_r_r1;
-    char cpy_r_r2;
-    PyObject *cpy_r_r3;
-    cpy_r_r0 = CPyDef__rate_limit____rate_limit_inactive_gen();
+    PyObject *cpy_r_r2;
+    char cpy_r_r3;
+    char cpy_r_r4;
+    PyObject *cpy_r_r5;
+    cpy_r_r0 = CPyDef__rate_limit____rate_limit_inactive_env();
     if (unlikely(cpy_r_r0 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL3;
+        goto CPyL5;
     }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r0)->___mypyc_next_label__ = 0;
     CPy_INCREF(cpy_r_endpoint);
-    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint);
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint);
     }
-    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint = cpy_r_endpoint;
-    cpy_r_r2 = 1;
-    if (unlikely(!cpy_r_r2)) {
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_generator_attribute__endpoint = cpy_r_endpoint;
+    cpy_r_r1 = 1;
+    if (unlikely(!cpy_r_r1)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL4;
+        goto CPyL6;
     }
-    return cpy_r_r0;
-CPyL3: ;
-    cpy_r_r3 = NULL;
-    return cpy_r_r3;
-CPyL4: ;
+    cpy_r_r2 = CPyDef__rate_limit____rate_limit_inactive_gen();
+    if (unlikely(cpy_r_r2 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL6;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r0);
+    if (((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r2)->___mypyc_env__ != NULL) {
+        CPy_DECREF_NO_IMM(((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r2)->___mypyc_env__);
+    }
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *)cpy_r_r2)->___mypyc_env__ = cpy_r_r0;
+    cpy_r_r3 = 1;
+    if (unlikely(!cpy_r_r3)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "_rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL7;
+    }
+    ((dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *)cpy_r_r0)->___mypyc_next_label__ = 0;
+    CPy_DECREF_NO_IMM(cpy_r_r0);
+    return cpy_r_r2;
+CPyL5: ;
+    cpy_r_r5 = NULL;
+    return cpy_r_r5;
+CPyL6: ;
     CPy_DecRef(cpy_r_r0);
-    goto CPyL3;
+    goto CPyL5;
+CPyL7: ;
+    CPy_DecRef(cpy_r_r0);
+    CPy_DecRef(cpy_r_r2);
+    goto CPyL5;
 }
 
 PyObject *CPyPy__rate_limit____rate_limit_inactive(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames) {
@@ -90874,131 +90043,101 @@ PyObject *CPyDef__rate_limit_____rate_limit_inactive_gen_____mypyc_generator_hel
     PyObject *cpy_r_r51;
     char cpy_r_r52;
     PyObject *cpy_r_r53;
-    char cpy_r_r54;
+    PyObject *cpy_r_r54;
     PyObject *cpy_r_r55;
     PyObject *cpy_r_r56;
     PyObject **cpy_r_r58;
     PyObject *cpy_r_r59;
     PyObject *cpy_r_r60;
-    PyObject **cpy_r_r62;
+    PyObject *cpy_r_r61;
+    char cpy_r_r62;
     PyObject *cpy_r_r63;
     PyObject *cpy_r_r64;
-    char cpy_r_r65;
+    PyObject *cpy_r_r65;
     PyObject *cpy_r_r66;
     PyObject *cpy_r_r67;
-    PyObject **cpy_r_r69;
-    PyObject *cpy_r_r70;
+    char cpy_r_r68;
+    PyObject *cpy_r_r69;
+    char cpy_r_r70;
     PyObject *cpy_r_r71;
-    PyObject *cpy_r_r72;
-    PyObject *cpy_r_r73;
-    PyObject *cpy_r_r74;
-    PyObject **cpy_r_r76;
-    PyObject *cpy_r_r77;
-    PyObject *cpy_r_r78;
-    PyObject *cpy_r_r79;
-    char cpy_r_r80;
-    PyObject *cpy_r_r81;
+    char cpy_r_r72;
+    tuple_T3OOO cpy_r_r73;
+    char cpy_r_r74;
+    PyObject **cpy_r_r75;
+    PyObject *cpy_r_r76;
+    char cpy_r_r77;
+    tuple_T3OOO cpy_r_r78;
+    tuple_T3OOO cpy_r_r79;
+    tuple_T3OOO cpy_r_r80;
+    char cpy_r_r81;
     PyObject *cpy_r_r82;
     PyObject *cpy_r_r83;
     PyObject *cpy_r_r84;
-    PyObject *cpy_r_r85;
+    tuple_T3OOO cpy_r_r85;
     char cpy_r_r86;
     PyObject *cpy_r_r87;
     char cpy_r_r88;
-    PyObject *cpy_r_r89;
-    char cpy_r_r90;
+    char cpy_r_r89;
+    tuple_T3OOO cpy_r_r90;
     tuple_T3OOO cpy_r_r91;
     char cpy_r_r92;
-    PyObject **cpy_r_r93;
-    PyObject *cpy_r_r94;
-    char cpy_r_r95;
-    tuple_T3OOO cpy_r_r96;
-    tuple_T3OOO cpy_r_r97;
-    tuple_T3OOO cpy_r_r98;
-    char cpy_r_r99;
-    PyObject *cpy_r_r100;
+    char cpy_r_r93;
+    char cpy_r_r94;
+    CPyTagged cpy_r_r95;
+    PyObject *cpy_r_r96;
+    char cpy_r_r97;
+    CPyTagged cpy_r_r98;
+    CPyTagged cpy_r_r99;
+    char cpy_r_r100;
     PyObject *cpy_r_r101;
-    PyObject *cpy_r_r102;
-    tuple_T3OOO cpy_r_r103;
-    char cpy_r_r104;
-    PyObject *cpy_r_r105;
-    char cpy_r_r106;
-    char cpy_r_r107;
-    tuple_T3OOO cpy_r_r108;
-    tuple_T3OOO cpy_r_r109;
-    char cpy_r_r110;
-    char cpy_r_r111;
-    char cpy_r_r112;
-    CPyTagged cpy_r_r113;
+    CPyPtr cpy_r_r102;
+    int64_t cpy_r_r103;
+    CPyTagged cpy_r_r104;
+    char cpy_r_r105;
+    PyObject *cpy_r_r106;
+    PyObject *cpy_r_r107;
+    PyObject *cpy_r_r108;
+    char cpy_r_r109;
+    PyObject *cpy_r_r110;
+    PyObject *cpy_r_r111;
+    PyObject *cpy_r_r112;
+    PyObject *cpy_r_r113;
     PyObject *cpy_r_r114;
     char cpy_r_r115;
-    CPyTagged cpy_r_r116;
-    CPyTagged cpy_r_r117;
-    char cpy_r_r118;
-    PyObject *cpy_r_r119;
-    CPyPtr cpy_r_r120;
-    int64_t cpy_r_r121;
-    CPyTagged cpy_r_r122;
-    char cpy_r_r123;
-    PyObject *cpy_r_r124;
-    PyObject *cpy_r_r125;
-    PyObject *cpy_r_r126;
-    char cpy_r_r127;
-    PyObject *cpy_r_r128;
+    PyObject *cpy_r_r116;
+    char cpy_r_r117;
+    PyObject *cpy_r_r118;
+    char cpy_r_r119;
+    tuple_T3OOO cpy_r_r120;
+    char cpy_r_r121;
+    PyObject **cpy_r_r122;
+    PyObject *cpy_r_r123;
+    char cpy_r_r124;
+    tuple_T3OOO cpy_r_r125;
+    tuple_T3OOO cpy_r_r126;
+    tuple_T3OOO cpy_r_r127;
+    char cpy_r_r128;
     PyObject *cpy_r_r129;
     PyObject *cpy_r_r130;
     PyObject *cpy_r_r131;
-    PyObject *cpy_r_r132;
-    char cpy_r_r133;
-    PyObject *cpy_r_r134;
-    char cpy_r_r135;
-    PyObject *cpy_r_r136;
-    char cpy_r_r137;
-    tuple_T3OOO cpy_r_r138;
+    CPyTagged cpy_r_r132;
+    CPyTagged cpy_r_r133;
+    char cpy_r_r134;
+    PyObject *cpy_r_r135;
+    char cpy_r_r136;
+    PyObject *cpy_r_r137;
+    char cpy_r_r138;
     char cpy_r_r139;
-    PyObject **cpy_r_r140;
-    PyObject *cpy_r_r141;
+    char cpy_r_r140;
+    char cpy_r_r141;
     char cpy_r_r142;
-    tuple_T3OOO cpy_r_r143;
-    tuple_T3OOO cpy_r_r144;
-    tuple_T3OOO cpy_r_r145;
-    char cpy_r_r146;
-    PyObject *cpy_r_r147;
-    PyObject *cpy_r_r148;
-    PyObject *cpy_r_r149;
-    CPyTagged cpy_r_r150;
-    CPyTagged cpy_r_r151;
-    char cpy_r_r152;
-    PyObject *cpy_r_r153;
-    char cpy_r_r154;
-    PyObject *cpy_r_r155;
-    char cpy_r_r156;
-    PyObject *cpy_r_r157;
-    PyObject *cpy_r_r158;
-    PyObject **cpy_r_r160;
-    PyObject *cpy_r_r161;
-    PyObject *cpy_r_r162;
-    PyObject **cpy_r_r164;
-    PyObject *cpy_r_r165;
-    PyObject *cpy_r_r166;
-    char cpy_r_r167;
-    PyObject *cpy_r_r168;
-    PyObject *cpy_r_r169;
-    PyObject **cpy_r_r171;
-    PyObject *cpy_r_r172;
-    PyObject *cpy_r_r173;
-    char cpy_r_r174;
-    char cpy_r_r175;
-    char cpy_r_r176;
-    char cpy_r_r177;
-    char cpy_r_r178;
-    PyObject *cpy_r_r179;
+    PyObject *cpy_r_r143;
     cpy_r_r0 = NULL;
     cpy_r_r1 = cpy_r_r0;
     cpy_r_r2 = NULL;
     cpy_r_r3 = cpy_r_r2;
     cpy_r_r4 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__;
-    goto CPyL153;
+    goto CPyL131;
 CPyL1: ;
     cpy_r_r5 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r6 = cpy_r_type != cpy_r_r5;
@@ -91006,7 +90145,7 @@ CPyL1: ;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
 CPyL4: ;
@@ -91016,7 +90155,7 @@ CPyL4: ;
     cpy_r_r8 = 0;
     if (unlikely(!cpy_r_r8)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
 CPyL7: ;
@@ -91028,7 +90167,7 @@ CPyL7: ;
     cpy_r_r9 = 1;
     if (unlikely(!cpy_r_r9)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     cpy_r_r10 = CPyStatic__rate_limit___limiters;
     if (likely(cpy_r_r10 != NULL)) goto CPyL11;
@@ -91036,14 +90175,14 @@ CPyL7: ;
     cpy_r_r11 = 0;
     if (unlikely(!cpy_r_r11)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
 CPyL11: ;
     cpy_r_r12 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
     if (unlikely(cpy_r_r12 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 138, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 118, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF(cpy_r_r12);
 CPyL12: ;
@@ -91051,13 +90190,13 @@ CPyL12: ;
     CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     if (likely(Py_TYPE(cpy_r_r13) == CPyType_leakybucket___AsyncLimiter))
         cpy_r_r14 = cpy_r_r13;
     else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", 138, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r13);
-        goto CPyL158;
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", 118, CPyStatic__rate_limit___globals, "dank_mids._vendor.aiolimiter.src.aiolimiter.leakybucket.AsyncLimiter", cpy_r_r13);
+        goto CPyL136;
     }
     cpy_r_r15 = ((dank_mids____vendor___aiolimiter___src___aiolimiter___leakybucket___AsyncLimiterObject *)cpy_r_r14)->__waiters;
     CPy_INCREF_NO_IMM(cpy_r_r15);
@@ -91069,13 +90208,13 @@ CPyL12: ;
     cpy_r_r16 = 1;
     if (unlikely(!cpy_r_r16)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
 CPyL15: ;
     cpy_r_r17 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__waiters;
     if (unlikely(cpy_r_r17 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 141, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 121, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF_NO_IMM(cpy_r_r17);
 CPyL16: ;
@@ -91084,17 +90223,17 @@ CPyL16: ;
     CPy_DECREF_NO_IMM(cpy_r_r17);
     cpy_r_r20 = cpy_r_r19 << 1;
     cpy_r_r21 = cpy_r_r20 != 0;
-    if (!cpy_r_r21) goto CPyL137;
+    if (!cpy_r_r21) goto CPyL126;
     cpy_r_r22 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__waiters;
     if (unlikely(cpy_r_r22 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 143, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 123, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF_NO_IMM(cpy_r_r22);
 CPyL18: ;
     cpy_r_r23 = CPyStatic__rate_limit___nlargest;
     if (unlikely(cpy_r_r23 == NULL)) {
-        goto CPyL159;
+        goto CPyL137;
     } else
         goto CPyL21;
 CPyL19: ;
@@ -91102,7 +90241,7 @@ CPyL19: ;
     cpy_r_r24 = 0;
     if (unlikely(!cpy_r_r24)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
 CPyL21: ;
@@ -91112,69 +90251,69 @@ CPyL21: ;
     cpy_r_r28 = PyObject_Vectorcall(cpy_r_r23, cpy_r_r27, 2, 0);
     if (unlikely(cpy_r_r28 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL160;
+        goto CPyL138;
     }
     CPy_DECREF_NO_IMM(cpy_r_r22);
     if (likely(PyList_Check(cpy_r_r28)))
         cpy_r_r29 = cpy_r_r28;
     else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", 143, CPyStatic__rate_limit___globals, "list", cpy_r_r28);
-        goto CPyL161;
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", 123, CPyStatic__rate_limit___globals, "list", cpy_r_r28);
+        goto CPyL139;
     }
     cpy_r_r30 = CPyList_GetItemShort(cpy_r_r29, 0);
     if (unlikely(cpy_r_r30 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL161;
+        goto CPyL139;
     }
-    PyObject *__tmp362;
+    PyObject *__tmp361;
     if (unlikely(!(PyTuple_Check(cpy_r_r30) && PyTuple_GET_SIZE(cpy_r_r30) == 3))) {
-        __tmp362 = NULL;
-        goto __LL363;
+        __tmp361 = NULL;
+        goto __LL362;
     }
     if (likely(CPyFloat_Check(PyTuple_GET_ITEM(cpy_r_r30, 0))))
-        __tmp362 = PyTuple_GET_ITEM(cpy_r_r30, 0);
+        __tmp361 = PyTuple_GET_ITEM(cpy_r_r30, 0);
     else {
-        __tmp362 = NULL;
+        __tmp361 = NULL;
     }
-    if (__tmp362 == NULL) goto __LL363;
+    if (__tmp361 == NULL) goto __LL362;
     if (likely(PyLong_Check(PyTuple_GET_ITEM(cpy_r_r30, 1))))
-        __tmp362 = PyTuple_GET_ITEM(cpy_r_r30, 1);
+        __tmp361 = PyTuple_GET_ITEM(cpy_r_r30, 1);
     else {
-        __tmp362 = NULL;
+        __tmp361 = NULL;
     }
-    if (__tmp362 == NULL) goto __LL363;
-    __tmp362 = PyTuple_GET_ITEM(cpy_r_r30, 2);
-    if (__tmp362 == NULL) goto __LL363;
-    __tmp362 = cpy_r_r30;
-__LL363: ;
-    if (unlikely(__tmp362 == NULL)) {
+    if (__tmp361 == NULL) goto __LL362;
+    __tmp361 = PyTuple_GET_ITEM(cpy_r_r30, 2);
+    if (__tmp361 == NULL) goto __LL362;
+    __tmp361 = cpy_r_r30;
+__LL362: ;
+    if (unlikely(__tmp361 == NULL)) {
         CPy_TypeError("tuple[float, int, object]", cpy_r_r30); cpy_r_r31 = (tuple_T3FIO) { -113.0, CPY_INT_TAG, NULL };
     } else {
-        PyObject *__tmp364 = PyTuple_GET_ITEM(cpy_r_r30, 0);
-        double __tmp365;
-        __tmp365 = PyFloat_AsDouble(__tmp364);
-        if (__tmp365 == -1.0 && PyErr_Occurred()) {
-            CPy_TypeError("float", __tmp364); __tmp365 = -113.0;
+        PyObject *__tmp363 = PyTuple_GET_ITEM(cpy_r_r30, 0);
+        double __tmp364;
+        __tmp364 = PyFloat_AsDouble(__tmp363);
+        if (__tmp364 == -1.0 && PyErr_Occurred()) {
+            CPy_TypeError("float", __tmp363); __tmp364 = -113.0;
         }
-        cpy_r_r31.f0 = __tmp365;
-        PyObject *__tmp366 = PyTuple_GET_ITEM(cpy_r_r30, 1);
-        CPyTagged __tmp367;
-        if (likely(PyLong_Check(__tmp366)))
-            __tmp367 = CPyTagged_FromObject(__tmp366);
+        cpy_r_r31.f0 = __tmp364;
+        PyObject *__tmp365 = PyTuple_GET_ITEM(cpy_r_r30, 1);
+        CPyTagged __tmp366;
+        if (likely(PyLong_Check(__tmp365)))
+            __tmp366 = CPyTagged_FromObject(__tmp365);
         else {
-            CPy_TypeError("int", __tmp366); __tmp367 = CPY_INT_TAG;
+            CPy_TypeError("int", __tmp365); __tmp366 = CPY_INT_TAG;
         }
-        cpy_r_r31.f1 = __tmp367;
-        PyObject *__tmp368 = PyTuple_GET_ITEM(cpy_r_r30, 2);
-        CPy_INCREF(__tmp368);
-        PyObject *__tmp369;
-        __tmp369 = __tmp368;
-        cpy_r_r31.f2 = __tmp369;
+        cpy_r_r31.f1 = __tmp366;
+        PyObject *__tmp367 = PyTuple_GET_ITEM(cpy_r_r30, 2);
+        CPy_INCREF(__tmp367);
+        PyObject *__tmp368;
+        __tmp368 = __tmp367;
+        cpy_r_r31.f2 = __tmp368;
     }
     CPy_DECREF(cpy_r_r30);
     if (unlikely(cpy_r_r31.f1 == CPY_INT_TAG)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL161;
+        goto CPyL139;
     }
     CPy_DECREF(cpy_r_r28);
     if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter_tuple.f1 != CPY_INT_TAG) {
@@ -91185,12 +90324,12 @@ __LL363: ;
     cpy_r_r32 = 1;
     if (unlikely(!cpy_r_r32)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     cpy_r_r33 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter_tuple;
     if (unlikely(cpy_r_r33.f1 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter_tuple", 144, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter_tuple", 124, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPyTagged_INCREF(cpy_r_r33.f1);
     CPy_INCREF(cpy_r_r33.f2);
@@ -91206,12 +90345,12 @@ CPyL27: ;
     cpy_r_r35 = 1;
     if (unlikely(!cpy_r_r35)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     cpy_r_r36 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter;
     if (unlikely(cpy_r_r36 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 146, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 126, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF(cpy_r_r36);
 CPyL29: ;
@@ -91221,7 +90360,7 @@ CPyL29: ;
     cpy_r_r40 = PyObject_VectorcallMethod(cpy_r_r37, cpy_r_r39, 9223372036854775809ULL, 0);
     if (unlikely(cpy_r_r40 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL162;
+        goto CPyL140;
     }
     CPy_DECREF(cpy_r_r36);
     if (unlikely(!PyBool_Check(cpy_r_r40))) {
@@ -91231,20 +90370,20 @@ CPyL29: ;
     CPy_DECREF(cpy_r_r40);
     if (unlikely(cpy_r_r41 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     if (!cpy_r_r41) goto CPyL35;
     cpy_r_r42 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__waiters;
     if (unlikely(cpy_r_r42 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 147, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 127, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF_NO_IMM(cpy_r_r42);
 CPyL33: ;
     cpy_r_r43 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter_tuple;
     if (unlikely(cpy_r_r43.f1 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter_tuple", 147, CPyStatic__rate_limit___globals);
-        goto CPyL163;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter_tuple", 127, CPyStatic__rate_limit___globals);
+        goto CPyL141;
     }
     CPyTagged_INCREF(cpy_r_r43.f1);
     CPy_INCREF(cpy_r_r43.f2);
@@ -91252,26 +90391,26 @@ CPyL34: ;
     cpy_r_r44 = PyTuple_New(3);
     if (unlikely(cpy_r_r44 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp370 = PyFloat_FromDouble(cpy_r_r43.f0);
-    PyTuple_SET_ITEM(cpy_r_r44, 0, __tmp370);
-    PyObject *__tmp371 = CPyTagged_StealAsObject(cpy_r_r43.f1);
-    PyTuple_SET_ITEM(cpy_r_r44, 1, __tmp371);
-    PyObject *__tmp372 = cpy_r_r43.f2;
-    PyTuple_SET_ITEM(cpy_r_r44, 2, __tmp372);
+    PyObject *__tmp369 = PyFloat_FromDouble(cpy_r_r43.f0);
+    PyTuple_SET_ITEM(cpy_r_r44, 0, __tmp369);
+    PyObject *__tmp370 = CPyTagged_StealAsObject(cpy_r_r43.f1);
+    PyTuple_SET_ITEM(cpy_r_r44, 1, __tmp370);
+    PyObject *__tmp371 = cpy_r_r43.f2;
+    PyTuple_SET_ITEM(cpy_r_r44, 2, __tmp371);
     cpy_r_r45 = CPyList_Remove(cpy_r_r42, cpy_r_r44);
     CPy_DECREF_NO_IMM(cpy_r_r42);
     CPy_DECREF(cpy_r_r44);
     cpy_r_r46 = cpy_r_r45 >= 0;
     if (unlikely(!cpy_r_r46)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     } else
         goto CPyL15;
 CPyL35: ;
     cpy_r_r47 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter;
     if (unlikely(cpy_r_r47 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 150, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 130, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
     CPy_INCREF(cpy_r_r47);
 CPyL36: ;
@@ -91281,7 +90420,7 @@ CPyL36: ;
     cpy_r_r51 = PyObject_VectorcallMethod(cpy_r_r48, cpy_r_r50, 9223372036854775809ULL, 0);
     if (unlikely(cpy_r_r51 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL164;
+        goto CPyL142;
     }
     CPy_DECREF(cpy_r_r47);
     if (unlikely(!PyBool_Check(cpy_r_r51))) {
@@ -91291,776 +90430,616 @@ CPyL36: ;
     CPy_DECREF(cpy_r_r51);
     if (unlikely(cpy_r_r52 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    if (!cpy_r_r52) goto CPyL54;
-    cpy_r_r53 = CPyStatic__rate_limit____rate_limit_waiters;
-    if (likely(cpy_r_r53 != NULL)) goto CPyL42;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_waiters\" was not set");
-    cpy_r_r54 = 0;
-    if (unlikely(!cpy_r_r54)) {
+    if (!cpy_r_r52) goto CPyL43;
+    cpy_r_r53 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'last waiter is done' */
+    cpy_r_r54 = CPyModule_builtins;
+    cpy_r_r55 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'RuntimeError' */
+    cpy_r_r56 = CPyObject_GetAttr(cpy_r_r54, cpy_r_r55);
+    if (unlikely(cpy_r_r56 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    CPy_Unreachable();
-CPyL42: ;
-    cpy_r_r55 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r55 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 152, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r55);
-CPyL43: ;
-    cpy_r_r56 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'pop' */
-    PyObject *cpy_r_r57[2] = {cpy_r_r53, cpy_r_r55};
+    PyObject *cpy_r_r57[1] = {cpy_r_r53};
     cpy_r_r58 = (PyObject **)&cpy_r_r57;
-    cpy_r_r59 = PyObject_VectorcallMethod(cpy_r_r56, cpy_r_r58, 9223372036854775810ULL, 0);
+    cpy_r_r59 = PyObject_Vectorcall(cpy_r_r56, cpy_r_r58, 1, 0);
+    CPy_DECREF(cpy_r_r56);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL165;
+        goto CPyL136;
     }
-    CPy_DECREF(cpy_r_r55);
-    cpy_r_r60 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set' */
-    PyObject *cpy_r_r61[1] = {cpy_r_r59};
-    cpy_r_r62 = (PyObject **)&cpy_r_r61;
-    cpy_r_r63 = PyObject_VectorcallMethod(cpy_r_r60, cpy_r_r62, 9223372036854775809ULL, 0);
-    if (unlikely(cpy_r_r63 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL166;
-    } else
-        goto CPyL167;
-CPyL45: ;
+    CPy_Raise(cpy_r_r59);
     CPy_DECREF(cpy_r_r59);
-    cpy_r_r64 = CPyStatic__rate_limit____rate_limit_tasks;
-    if (likely(cpy_r_r64 != NULL)) goto CPyL48;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
-    cpy_r_r65 = 0;
-    if (unlikely(!cpy_r_r65)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_Unreachable();
-CPyL48: ;
-    cpy_r_r66 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r66 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 153, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r66);
-CPyL49: ;
-    cpy_r_r67 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'pop' */
-    PyObject *cpy_r_r68[2] = {cpy_r_r64, cpy_r_r66};
-    cpy_r_r69 = (PyObject **)&cpy_r_r68;
-    cpy_r_r70 = PyObject_VectorcallMethod(cpy_r_r67, cpy_r_r69, 9223372036854775810ULL, 0);
-    if (unlikely(cpy_r_r70 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL168;
-    } else
-        goto CPyL169;
-CPyL50: ;
-    CPy_DECREF(cpy_r_r66);
-    cpy_r_r71 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'last waiter is done' */
-    cpy_r_r72 = CPyModule_builtins;
-    cpy_r_r73 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'RuntimeError' */
-    cpy_r_r74 = CPyObject_GetAttr(cpy_r_r72, cpy_r_r73);
-    if (unlikely(cpy_r_r74 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    PyObject *cpy_r_r75[1] = {cpy_r_r71};
-    cpy_r_r76 = (PyObject **)&cpy_r_r75;
-    cpy_r_r77 = PyObject_Vectorcall(cpy_r_r74, cpy_r_r76, 1, 0);
-    CPy_DECREF(cpy_r_r74);
-    if (unlikely(cpy_r_r77 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_Raise(cpy_r_r77);
-    CPy_DECREF(cpy_r_r77);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
-CPyL54: ;
-    cpy_r_r78 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter;
-    if (unlikely(cpy_r_r78 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 158, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+CPyL43: ;
+    cpy_r_r60 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__last_waiter;
+    if (unlikely(cpy_r_r60 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "last_waiter", 136, CPyStatic__rate_limit___globals);
+        goto CPyL72;
     }
-    CPy_INCREF(cpy_r_r78);
-CPyL55: ;
-    cpy_r_r79 = CPy_GetCoro(cpy_r_r78);
-    CPy_DECREF(cpy_r_r78);
-    if (unlikely(cpy_r_r79 == NULL)) {
+    CPy_INCREF(cpy_r_r60);
+CPyL44: ;
+    cpy_r_r61 = CPy_GetCoro(cpy_r_r60);
+    CPy_DECREF(cpy_r_r60);
+    if (unlikely(cpy_r_r61 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+        goto CPyL72;
     }
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22);
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22 = cpy_r_r79;
-    cpy_r_r80 = 1;
-    if (unlikely(!cpy_r_r80)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8 = cpy_r_r61;
+    cpy_r_r62 = 1;
+    if (unlikely(!cpy_r_r62)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+        goto CPyL72;
     }
-    cpy_r_r81 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22;
-    if (unlikely(cpy_r_r81 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__22", -1, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+    cpy_r_r63 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8;
+    if (unlikely(cpy_r_r63 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__8", -1, CPyStatic__rate_limit___globals);
+        goto CPyL72;
     }
-    CPy_INCREF(cpy_r_r81);
-CPyL58: ;
-    cpy_r_r82 = CPyIter_Next(cpy_r_r81);
-    CPy_DECREF(cpy_r_r81);
-    if (cpy_r_r82 != NULL) goto CPyL61;
-    cpy_r_r83 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r83 == NULL)) {
+    CPy_INCREF(cpy_r_r63);
+CPyL47: ;
+    cpy_r_r64 = CPyIter_Next(cpy_r_r63);
+    CPy_DECREF(cpy_r_r63);
+    if (cpy_r_r64 != NULL) goto CPyL50;
+    cpy_r_r65 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r65 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+        goto CPyL72;
     }
-    cpy_r_r84 = cpy_r_r83;
-    CPy_DECREF(cpy_r_r84);
-    cpy_r_r85 = NULL;
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22);
+    cpy_r_r66 = cpy_r_r65;
+    CPy_DECREF(cpy_r_r66);
+    cpy_r_r67 = NULL;
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22 = cpy_r_r85;
-    cpy_r_r86 = 1;
-    if (unlikely(!cpy_r_r86)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8 = cpy_r_r67;
+    cpy_r_r68 = 1;
+    if (unlikely(!cpy_r_r68)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+        goto CPyL72;
     } else
-        goto CPyL95;
-CPyL61: ;
-    cpy_r_r87 = cpy_r_r82;
-CPyL62: ;
+        goto CPyL84;
+CPyL50: ;
+    cpy_r_r69 = cpy_r_r64;
+CPyL51: ;
     ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = 1;
-    return cpy_r_r87;
-CPyL63: ;
-    cpy_r_r89 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r90 = cpy_r_type != cpy_r_r89;
-    if (!cpy_r_r90) goto CPyL170;
+    return cpy_r_r69;
+CPyL52: ;
+    cpy_r_r71 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r72 = cpy_r_type != cpy_r_r71;
+    if (!cpy_r_r72) goto CPyL143;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL67;
+        goto CPyL56;
     } else
-        goto CPyL171;
-CPyL65: ;
+        goto CPyL144;
+CPyL54: ;
     CPy_Unreachable();
-CPyL66: ;
+CPyL55: ;
     CPy_INCREF(cpy_r_arg);
-    goto CPyL78;
+    goto CPyL67;
+CPyL56: ;
+    cpy_r_r73 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9.f2);
+    }
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9 = cpy_r_r73;
+    cpy_r_r74 = 1;
+    if (unlikely(!cpy_r_r74)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL145;
+    }
+    cpy_r_r75 = (PyObject **)&cpy_r_r1;
+    cpy_r_r76 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8;
+    if (unlikely(cpy_r_r76 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__8", -1, CPyStatic__rate_limit___globals);
+        goto CPyL145;
+    }
+    CPy_INCREF(cpy_r_r76);
+CPyL58: ;
+    cpy_r_r77 = CPy_YieldFromErrorHandle(cpy_r_r76, cpy_r_r75);
+    CPy_DecRef(cpy_r_r76);
+    if (unlikely(cpy_r_r77 == 2)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL145;
+    }
+    if (cpy_r_r77) goto CPyL62;
+    cpy_r_r69 = cpy_r_r1;
+    cpy_r_r78 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9;
+    if (unlikely(cpy_r_r78.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__9", -1, CPyStatic__rate_limit___globals);
+        goto CPyL146;
+    }
+    CPy_INCREF(cpy_r_r78.f0);
+    CPy_INCREF(cpy_r_r78.f1);
+    CPy_INCREF(cpy_r_r78.f2);
+CPyL61: ;
+    CPy_RestoreExcInfo(cpy_r_r78);
+    CPy_DecRef(cpy_r_r78.f0);
+    CPy_DecRef(cpy_r_r78.f1);
+    CPy_DecRef(cpy_r_r78.f2);
+    goto CPyL51;
+CPyL62: ;
+    cpy_r_r66 = cpy_r_r1;
+    CPy_DecRef(cpy_r_r66);
+    cpy_r_r79 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9;
+    if (unlikely(cpy_r_r79.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__9", -1, CPyStatic__rate_limit___globals);
+        goto CPyL64;
+    }
+    CPy_INCREF(cpy_r_r79.f0);
+    CPy_INCREF(cpy_r_r79.f1);
+    CPy_INCREF(cpy_r_r79.f2);
+CPyL63: ;
+    CPy_RestoreExcInfo(cpy_r_r79);
+    CPy_DecRef(cpy_r_r79.f0);
+    CPy_DecRef(cpy_r_r79.f1);
+    CPy_DecRef(cpy_r_r79.f2);
+    goto CPyL84;
+CPyL64: ;
+    cpy_r_r80 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__9;
+    if (unlikely(cpy_r_r80.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__9", -1, CPyStatic__rate_limit___globals);
+        goto CPyL72;
+    }
+    CPy_INCREF(cpy_r_r80.f0);
+    CPy_INCREF(cpy_r_r80.f1);
+    CPy_INCREF(cpy_r_r80.f2);
+CPyL65: ;
+    CPy_RestoreExcInfo(cpy_r_r80);
+    CPy_DecRef(cpy_r_r80.f0);
+    CPy_DecRef(cpy_r_r80.f1);
+    CPy_DecRef(cpy_r_r80.f2);
+    cpy_r_r81 = CPy_KeepPropagating();
+    if (!cpy_r_r81) goto CPyL72;
+    CPy_Unreachable();
 CPyL67: ;
-    cpy_r_r91 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23.f2);
+    cpy_r_r82 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__8;
+    if (unlikely(cpy_r_r82 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__8", -1, CPyStatic__rate_limit___globals);
+        goto CPyL147;
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23 = cpy_r_r91;
-    cpy_r_r92 = 1;
-    if (unlikely(!cpy_r_r92)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL172;
-    }
-    cpy_r_r93 = (PyObject **)&cpy_r_r1;
-    cpy_r_r94 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22;
-    if (unlikely(cpy_r_r94 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__22", -1, CPyStatic__rate_limit___globals);
-        goto CPyL172;
-    }
-    CPy_INCREF(cpy_r_r94);
-CPyL69: ;
-    cpy_r_r95 = CPy_YieldFromErrorHandle(cpy_r_r94, cpy_r_r93);
-    CPy_DecRef(cpy_r_r94);
-    if (unlikely(cpy_r_r95 == 2)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL172;
-    }
-    if (cpy_r_r95) goto CPyL73;
-    cpy_r_r87 = cpy_r_r1;
-    cpy_r_r96 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23;
-    if (unlikely(cpy_r_r96.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__23", -1, CPyStatic__rate_limit___globals);
-        goto CPyL173;
-    }
-    CPy_INCREF(cpy_r_r96.f0);
-    CPy_INCREF(cpy_r_r96.f1);
-    CPy_INCREF(cpy_r_r96.f2);
-CPyL72: ;
-    CPy_RestoreExcInfo(cpy_r_r96);
-    CPy_DecRef(cpy_r_r96.f0);
-    CPy_DecRef(cpy_r_r96.f1);
-    CPy_DecRef(cpy_r_r96.f2);
-    goto CPyL62;
-CPyL73: ;
-    cpy_r_r84 = cpy_r_r1;
-    CPy_DecRef(cpy_r_r84);
-    cpy_r_r97 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23;
-    if (unlikely(cpy_r_r97.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__23", -1, CPyStatic__rate_limit___globals);
-        goto CPyL75;
-    }
-    CPy_INCREF(cpy_r_r97.f0);
-    CPy_INCREF(cpy_r_r97.f1);
-    CPy_INCREF(cpy_r_r97.f2);
-CPyL74: ;
-    CPy_RestoreExcInfo(cpy_r_r97);
-    CPy_DecRef(cpy_r_r97.f0);
-    CPy_DecRef(cpy_r_r97.f1);
-    CPy_DecRef(cpy_r_r97.f2);
-    goto CPyL95;
-CPyL75: ;
-    cpy_r_r98 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__23;
-    if (unlikely(cpy_r_r98.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__23", -1, CPyStatic__rate_limit___globals);
-        goto CPyL83;
-    }
-    CPy_INCREF(cpy_r_r98.f0);
-    CPy_INCREF(cpy_r_r98.f1);
-    CPy_INCREF(cpy_r_r98.f2);
-CPyL76: ;
-    CPy_RestoreExcInfo(cpy_r_r98);
-    CPy_DecRef(cpy_r_r98.f0);
-    CPy_DecRef(cpy_r_r98.f1);
-    CPy_DecRef(cpy_r_r98.f2);
-    cpy_r_r99 = CPy_KeepPropagating();
-    if (!cpy_r_r99) goto CPyL83;
-    CPy_Unreachable();
-CPyL78: ;
-    cpy_r_r100 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__22;
-    if (unlikely(cpy_r_r100 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__22", -1, CPyStatic__rate_limit___globals);
-        goto CPyL174;
-    }
-    CPy_INCREF(cpy_r_r100);
-CPyL79: ;
-    cpy_r_r101 = CPyIter_Send(cpy_r_r100, cpy_r_arg);
-    CPy_DECREF(cpy_r_r100);
+    CPy_INCREF(cpy_r_r82);
+CPyL68: ;
+    cpy_r_r83 = CPyIter_Send(cpy_r_r82, cpy_r_arg);
+    CPy_DECREF(cpy_r_r82);
     CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r101 == NULL) goto CPyL81;
-    cpy_r_r87 = cpy_r_r101;
-    goto CPyL62;
-CPyL81: ;
-    cpy_r_r102 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r102 == NULL)) {
+    if (cpy_r_r83 == NULL) goto CPyL70;
+    cpy_r_r69 = cpy_r_r83;
+    goto CPyL51;
+CPyL70: ;
+    cpy_r_r84 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r84 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL83;
+        goto CPyL72;
     }
-    cpy_r_r84 = cpy_r_r102;
-    CPy_DECREF(cpy_r_r84);
-    goto CPyL95;
-CPyL83: ;
-    cpy_r_r103 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24.f2);
+    cpy_r_r66 = cpy_r_r84;
+    CPy_DECREF(cpy_r_r66);
+    goto CPyL84;
+CPyL72: ;
+    cpy_r_r85 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10.f2);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24 = cpy_r_r103;
-    cpy_r_r104 = 1;
-    if (unlikely(!cpy_r_r104)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10 = cpy_r_r85;
+    cpy_r_r86 = 1;
+    if (unlikely(!cpy_r_r86)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL92;
+        goto CPyL81;
     }
-    cpy_r_r105 = CPyStatic__rate_limit___CancelledError;
-    if (likely(cpy_r_r105 != NULL)) goto CPyL87;
+    cpy_r_r87 = CPyStatic__rate_limit___CancelledError;
+    if (likely(cpy_r_r87 != NULL)) goto CPyL76;
     PyErr_SetString(PyExc_NameError, "value for final name \"CancelledError\" was not set");
-    cpy_r_r106 = 0;
-    if (unlikely(!cpy_r_r106)) {
+    cpy_r_r88 = 0;
+    if (unlikely(!cpy_r_r88)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL92;
+        goto CPyL81;
     }
     CPy_Unreachable();
-CPyL87: ;
-    cpy_r_r107 = CPy_ExceptionMatches(cpy_r_r105);
-    if (cpy_r_r107) goto CPyL90;
+CPyL76: ;
+    cpy_r_r89 = CPy_ExceptionMatches(cpy_r_r87);
+    if (cpy_r_r89) goto CPyL79;
     CPy_Reraise();
-    if (!0) goto CPyL92;
+    if (!0) goto CPyL81;
     CPy_Unreachable();
-CPyL90: ;
-    cpy_r_r108 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24;
-    if (unlikely(cpy_r_r108.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__24", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+CPyL79: ;
+    cpy_r_r90 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10;
+    if (unlikely(cpy_r_r90.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__10", -1, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
-    CPy_INCREF(cpy_r_r108.f0);
-    CPy_INCREF(cpy_r_r108.f1);
-    CPy_INCREF(cpy_r_r108.f2);
-CPyL91: ;
-    CPy_RestoreExcInfo(cpy_r_r108);
-    CPy_DecRef(cpy_r_r108.f0);
-    CPy_DecRef(cpy_r_r108.f1);
-    CPy_DecRef(cpy_r_r108.f2);
-    goto CPyL95;
-CPyL92: ;
-    cpy_r_r109 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__24;
-    if (unlikely(cpy_r_r109.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__24", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+    CPy_INCREF(cpy_r_r90.f0);
+    CPy_INCREF(cpy_r_r90.f1);
+    CPy_INCREF(cpy_r_r90.f2);
+CPyL80: ;
+    CPy_RestoreExcInfo(cpy_r_r90);
+    CPy_DecRef(cpy_r_r90.f0);
+    CPy_DecRef(cpy_r_r90.f1);
+    CPy_DecRef(cpy_r_r90.f2);
+    goto CPyL84;
+CPyL81: ;
+    cpy_r_r91 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__10;
+    if (unlikely(cpy_r_r91.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__10", -1, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
-    CPy_INCREF(cpy_r_r109.f0);
-    CPy_INCREF(cpy_r_r109.f1);
-    CPy_INCREF(cpy_r_r109.f2);
-CPyL93: ;
-    CPy_RestoreExcInfo(cpy_r_r109);
-    CPy_DecRef(cpy_r_r109.f0);
-    CPy_DecRef(cpy_r_r109.f1);
-    CPy_DecRef(cpy_r_r109.f2);
-    cpy_r_r110 = CPy_KeepPropagating();
-    if (!cpy_r_r110) goto CPyL158;
+    CPy_INCREF(cpy_r_r91.f0);
+    CPy_INCREF(cpy_r_r91.f1);
+    CPy_INCREF(cpy_r_r91.f2);
+CPyL82: ;
+    CPy_RestoreExcInfo(cpy_r_r91);
+    CPy_DecRef(cpy_r_r91.f0);
+    CPy_DecRef(cpy_r_r91.f1);
+    CPy_DecRef(cpy_r_r91.f2);
+    cpy_r_r92 = CPy_KeepPropagating();
+    if (!cpy_r_r92) goto CPyL136;
     CPy_Unreachable();
-CPyL95: ;
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__25 = 20;
-    cpy_r_r111 = 1;
-    if (unlikely(!cpy_r_r111)) {
+CPyL84: ;
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__11 = 20;
+    cpy_r_r93 = 1;
+    if (unlikely(!cpy_r_r93)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__26 = 0;
-    cpy_r_r112 = 1;
-    if (unlikely(!cpy_r_r112)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__12 = 0;
+    cpy_r_r94 = 1;
+    if (unlikely(!cpy_r_r94)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    cpy_r_r113 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__26;
-    if (unlikely(cpy_r_r113 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__26", 166, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+    cpy_r_r95 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__12;
+    if (unlikely(cpy_r_r95 == CPY_INT_TAG)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__12", 144, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
-CPyL98: ;
-    cpy_r_r114 = CPyTagged_StealAsObject(cpy_r_r113);
+CPyL87: ;
+    cpy_r_r96 = CPyTagged_StealAsObject(cpy_r_r95);
     if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ != NULL) {
         CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ = cpy_r_r114;
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ = cpy_r_r96;
+    cpy_r_r97 = 1;
+    if (unlikely(!cpy_r_r97)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+CPyL88: ;
+    cpy_r_r98 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__12;
+    if (unlikely(cpy_r_r98 == CPY_INT_TAG)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__12", 144, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+CPyL89: ;
+    cpy_r_r99 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__11;
+    if (unlikely(cpy_r_r99 == CPY_INT_TAG)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__11", 144, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+CPyL90: ;
+    cpy_r_r100 = (Py_ssize_t)cpy_r_r98 < (Py_ssize_t)cpy_r_r99;
+    if (!cpy_r_r100) goto CPyL15;
+    cpy_r_r101 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__waiters;
+    if (unlikely(cpy_r_r101 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 145, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    CPy_INCREF_NO_IMM(cpy_r_r101);
+CPyL92: ;
+    cpy_r_r102 = (CPyPtr)&((PyVarObject *)cpy_r_r101)->ob_size;
+    cpy_r_r103 = *(int64_t *)cpy_r_r102;
+    CPy_DECREF_NO_IMM(cpy_r_r101);
+    cpy_r_r104 = cpy_r_r103 << 1;
+    cpy_r_r105 = cpy_r_r104 != 0;
+    if (cpy_r_r105) goto CPyL15;
+    cpy_r_r106 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__yield_to_loop;
+    if (unlikely(cpy_r_r106 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "yield_to_loop", 147, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    CPy_INCREF(cpy_r_r106);
+CPyL94: ;
+    cpy_r_r107 = PyObject_Vectorcall(cpy_r_r106, 0, 0, 0);
+    CPy_DECREF(cpy_r_r106);
+    if (unlikely(cpy_r_r107 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    cpy_r_r108 = CPy_GetCoro(cpy_r_r107);
+    CPy_DECREF(cpy_r_r107);
+    if (unlikely(cpy_r_r108 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13);
+    }
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13 = cpy_r_r108;
+    cpy_r_r109 = 1;
+    if (unlikely(!cpy_r_r109)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    cpy_r_r110 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13;
+    if (unlikely(cpy_r_r110 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__13", -1, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    CPy_INCREF(cpy_r_r110);
+CPyL98: ;
+    cpy_r_r111 = CPyIter_Next(cpy_r_r110);
+    CPy_DECREF(cpy_r_r110);
+    if (cpy_r_r111 != NULL) goto CPyL101;
+    cpy_r_r112 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r112 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL136;
+    }
+    cpy_r_r113 = cpy_r_r112;
+    CPy_DECREF(cpy_r_r113);
+    cpy_r_r114 = NULL;
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13);
+    }
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13 = cpy_r_r114;
     cpy_r_r115 = 1;
     if (unlikely(!cpy_r_r115)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-CPyL99: ;
-    cpy_r_r116 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__26;
-    if (unlikely(cpy_r_r116 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__26", 166, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-CPyL100: ;
-    cpy_r_r117 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__25;
-    if (unlikely(cpy_r_r117 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__25", 166, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-CPyL101: ;
-    cpy_r_r118 = (Py_ssize_t)cpy_r_r116 < (Py_ssize_t)cpy_r_r117;
-    if (!cpy_r_r118) goto CPyL15;
-    cpy_r_r119 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__waiters;
-    if (unlikely(cpy_r_r119 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "waiters", 167, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF_NO_IMM(cpy_r_r119);
-CPyL103: ;
-    cpy_r_r120 = (CPyPtr)&((PyVarObject *)cpy_r_r119)->ob_size;
-    cpy_r_r121 = *(int64_t *)cpy_r_r120;
-    CPy_DECREF_NO_IMM(cpy_r_r119);
-    cpy_r_r122 = cpy_r_r121 << 1;
-    cpy_r_r123 = cpy_r_r122 != 0;
-    if (cpy_r_r123) goto CPyL15;
-    cpy_r_r124 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__yield_to_loop;
-    if (unlikely(cpy_r_r124 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "yield_to_loop", 169, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r124);
-CPyL105: ;
-    cpy_r_r125 = PyObject_Vectorcall(cpy_r_r124, 0, 0, 0);
-    CPy_DECREF(cpy_r_r124);
-    if (unlikely(cpy_r_r125 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    cpy_r_r126 = CPy_GetCoro(cpy_r_r125);
-    CPy_DECREF(cpy_r_r125);
-    if (unlikely(cpy_r_r126 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27);
-    }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27 = cpy_r_r126;
-    cpy_r_r127 = 1;
-    if (unlikely(!cpy_r_r127)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    cpy_r_r128 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27;
-    if (unlikely(cpy_r_r128 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__27", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r128);
-CPyL109: ;
-    cpy_r_r129 = CPyIter_Next(cpy_r_r128);
-    CPy_DECREF(cpy_r_r128);
-    if (cpy_r_r129 != NULL) goto CPyL112;
-    cpy_r_r130 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r130 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    cpy_r_r131 = cpy_r_r130;
-    CPy_DECREF(cpy_r_r131);
-    cpy_r_r132 = NULL;
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27);
-    }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27 = cpy_r_r132;
-    cpy_r_r133 = 1;
-    if (unlikely(!cpy_r_r133)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     } else
-        goto CPyL134;
-CPyL112: ;
-    cpy_r_r134 = cpy_r_r129;
-CPyL113: ;
+        goto CPyL123;
+CPyL101: ;
+    cpy_r_r116 = cpy_r_r111;
+CPyL102: ;
     ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = 2;
-    return cpy_r_r134;
-CPyL114: ;
-    cpy_r_r136 = (PyObject *)&_Py_NoneStruct;
-    cpy_r_r137 = cpy_r_type != cpy_r_r136;
-    if (!cpy_r_r137) goto CPyL175;
+    return cpy_r_r116;
+CPyL103: ;
+    cpy_r_r118 = (PyObject *)&_Py_NoneStruct;
+    cpy_r_r119 = cpy_r_type != cpy_r_r118;
+    if (!cpy_r_r119) goto CPyL148;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL118;
+        goto CPyL107;
     } else
-        goto CPyL176;
-CPyL116: ;
+        goto CPyL149;
+CPyL105: ;
     CPy_Unreachable();
-CPyL117: ;
+CPyL106: ;
     CPy_INCREF(cpy_r_arg);
-    goto CPyL129;
-CPyL118: ;
-    cpy_r_r138 = CPy_CatchError();
-    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28.f0 != NULL) {
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28.f0);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28.f1);
-        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28.f2);
+    goto CPyL118;
+CPyL107: ;
+    cpy_r_r120 = CPy_CatchError();
+    if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14.f0 != NULL) {
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14.f0);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14.f1);
+        CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14.f2);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28 = cpy_r_r138;
-    cpy_r_r139 = 1;
-    if (unlikely(!cpy_r_r139)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14 = cpy_r_r120;
+    cpy_r_r121 = 1;
+    if (unlikely(!cpy_r_r121)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", -1, CPyStatic__rate_limit___globals);
-        goto CPyL177;
+        goto CPyL150;
     }
-    cpy_r_r140 = (PyObject **)&cpy_r_r3;
-    cpy_r_r141 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27;
-    if (unlikely(cpy_r_r141 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__27", -1, CPyStatic__rate_limit___globals);
-        goto CPyL177;
+    cpy_r_r122 = (PyObject **)&cpy_r_r3;
+    cpy_r_r123 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13;
+    if (unlikely(cpy_r_r123 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__13", -1, CPyStatic__rate_limit___globals);
+        goto CPyL150;
     }
-    CPy_INCREF(cpy_r_r141);
-CPyL120: ;
-    cpy_r_r142 = CPy_YieldFromErrorHandle(cpy_r_r141, cpy_r_r140);
-    CPy_DecRef(cpy_r_r141);
-    if (unlikely(cpy_r_r142 == 2)) {
+    CPy_INCREF(cpy_r_r123);
+CPyL109: ;
+    cpy_r_r124 = CPy_YieldFromErrorHandle(cpy_r_r123, cpy_r_r122);
+    CPy_DecRef(cpy_r_r123);
+    if (unlikely(cpy_r_r124 == 2)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL177;
+        goto CPyL150;
     }
-    if (cpy_r_r142) goto CPyL124;
-    cpy_r_r134 = cpy_r_r3;
-    cpy_r_r143 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28;
-    if (unlikely(cpy_r_r143.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__28", -1, CPyStatic__rate_limit___globals);
-        goto CPyL178;
+    if (cpy_r_r124) goto CPyL113;
+    cpy_r_r116 = cpy_r_r3;
+    cpy_r_r125 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14;
+    if (unlikely(cpy_r_r125.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
+        goto CPyL151;
     }
-    CPy_INCREF(cpy_r_r143.f0);
-    CPy_INCREF(cpy_r_r143.f1);
-    CPy_INCREF(cpy_r_r143.f2);
-CPyL123: ;
-    CPy_RestoreExcInfo(cpy_r_r143);
-    CPy_DecRef(cpy_r_r143.f0);
-    CPy_DecRef(cpy_r_r143.f1);
-    CPy_DecRef(cpy_r_r143.f2);
-    goto CPyL113;
-CPyL124: ;
-    cpy_r_r131 = cpy_r_r3;
-    CPy_DecRef(cpy_r_r131);
-    cpy_r_r144 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28;
-    if (unlikely(cpy_r_r144.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__28", -1, CPyStatic__rate_limit___globals);
-        goto CPyL126;
+    CPy_INCREF(cpy_r_r125.f0);
+    CPy_INCREF(cpy_r_r125.f1);
+    CPy_INCREF(cpy_r_r125.f2);
+CPyL112: ;
+    CPy_RestoreExcInfo(cpy_r_r125);
+    CPy_DecRef(cpy_r_r125.f0);
+    CPy_DecRef(cpy_r_r125.f1);
+    CPy_DecRef(cpy_r_r125.f2);
+    goto CPyL102;
+CPyL113: ;
+    cpy_r_r113 = cpy_r_r3;
+    CPy_DecRef(cpy_r_r113);
+    cpy_r_r126 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14;
+    if (unlikely(cpy_r_r126.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
+        goto CPyL115;
     }
-    CPy_INCREF(cpy_r_r144.f0);
-    CPy_INCREF(cpy_r_r144.f1);
-    CPy_INCREF(cpy_r_r144.f2);
-CPyL125: ;
-    CPy_RestoreExcInfo(cpy_r_r144);
-    CPy_DecRef(cpy_r_r144.f0);
-    CPy_DecRef(cpy_r_r144.f1);
-    CPy_DecRef(cpy_r_r144.f2);
-    goto CPyL134;
-CPyL126: ;
-    cpy_r_r145 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__28;
-    if (unlikely(cpy_r_r145.f0 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__28", -1, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+    CPy_INCREF(cpy_r_r126.f0);
+    CPy_INCREF(cpy_r_r126.f1);
+    CPy_INCREF(cpy_r_r126.f2);
+CPyL114: ;
+    CPy_RestoreExcInfo(cpy_r_r126);
+    CPy_DecRef(cpy_r_r126.f0);
+    CPy_DecRef(cpy_r_r126.f1);
+    CPy_DecRef(cpy_r_r126.f2);
+    goto CPyL123;
+CPyL115: ;
+    cpy_r_r127 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__14;
+    if (unlikely(cpy_r_r127.f0 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__14", -1, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
-    CPy_INCREF(cpy_r_r145.f0);
-    CPy_INCREF(cpy_r_r145.f1);
-    CPy_INCREF(cpy_r_r145.f2);
-CPyL127: ;
-    CPy_RestoreExcInfo(cpy_r_r145);
-    CPy_DecRef(cpy_r_r145.f0);
-    CPy_DecRef(cpy_r_r145.f1);
-    CPy_DecRef(cpy_r_r145.f2);
-    cpy_r_r146 = CPy_KeepPropagating();
-    if (!cpy_r_r146) goto CPyL158;
+    CPy_INCREF(cpy_r_r127.f0);
+    CPy_INCREF(cpy_r_r127.f1);
+    CPy_INCREF(cpy_r_r127.f2);
+CPyL116: ;
+    CPy_RestoreExcInfo(cpy_r_r127);
+    CPy_DecRef(cpy_r_r127.f0);
+    CPy_DecRef(cpy_r_r127.f1);
+    CPy_DecRef(cpy_r_r127.f2);
+    cpy_r_r128 = CPy_KeepPropagating();
+    if (!cpy_r_r128) goto CPyL136;
     CPy_Unreachable();
-CPyL129: ;
-    cpy_r_r147 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__27;
-    if (unlikely(cpy_r_r147 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__27", -1, CPyStatic__rate_limit___globals);
-        goto CPyL179;
+CPyL118: ;
+    cpy_r_r129 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__13;
+    if (unlikely(cpy_r_r129 == NULL)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__13", -1, CPyStatic__rate_limit___globals);
+        goto CPyL152;
     }
-    CPy_INCREF(cpy_r_r147);
-CPyL130: ;
-    cpy_r_r148 = CPyIter_Send(cpy_r_r147, cpy_r_arg);
-    CPy_DECREF(cpy_r_r147);
+    CPy_INCREF(cpy_r_r129);
+CPyL119: ;
+    cpy_r_r130 = CPyIter_Send(cpy_r_r129, cpy_r_arg);
+    CPy_DECREF(cpy_r_r129);
     CPy_DECREF(cpy_r_arg);
-    if (cpy_r_r148 == NULL) goto CPyL132;
-    cpy_r_r134 = cpy_r_r148;
-    goto CPyL113;
-CPyL132: ;
-    cpy_r_r149 = CPy_FetchStopIterationValue();
-    if (unlikely(cpy_r_r149 == NULL)) {
+    if (cpy_r_r130 == NULL) goto CPyL121;
+    cpy_r_r116 = cpy_r_r130;
+    goto CPyL102;
+CPyL121: ;
+    cpy_r_r131 = CPy_FetchStopIterationValue();
+    if (unlikely(cpy_r_r131 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    cpy_r_r131 = cpy_r_r149;
-    CPy_DECREF(cpy_r_r131);
-CPyL134: ;
-    cpy_r_r150 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__26;
-    if (unlikely(cpy_r_r150 == CPY_INT_TAG)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__26", 166, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+    cpy_r_r113 = cpy_r_r131;
+    CPy_DECREF(cpy_r_r113);
+CPyL123: ;
+    cpy_r_r132 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__12;
+    if (unlikely(cpy_r_r132 == CPY_INT_TAG)) {
+        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "__mypyc_temp__12", 144, CPyStatic__rate_limit___globals);
+        goto CPyL136;
     }
-CPyL135: ;
-    cpy_r_r151 = cpy_r_r150 + 2;
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__26 = cpy_r_r151;
-    cpy_r_r152 = 1;
-    if (unlikely(!cpy_r_r152)) {
+CPyL124: ;
+    cpy_r_r133 = cpy_r_r132 + 2;
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__12 = cpy_r_r133;
+    cpy_r_r134 = 1;
+    if (unlikely(!cpy_r_r134)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
-    cpy_r_r153 = CPyTagged_StealAsObject(cpy_r_r151);
+    cpy_r_r135 = CPyTagged_StealAsObject(cpy_r_r133);
     if (((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ != NULL) {
         CPy_DECREF(((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___);
     }
-    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ = cpy_r_r153;
-    cpy_r_r154 = 1;
-    if (unlikely(!cpy_r_r154)) {
+    ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute___ = cpy_r_r135;
+    cpy_r_r136 = 1;
+    if (unlikely(!cpy_r_r136)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     } else
-        goto CPyL99;
-CPyL137: ;
-    cpy_r_r155 = CPyStatic__rate_limit____rate_limit_waiters;
-    if (likely(cpy_r_r155 != NULL)) goto CPyL140;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_waiters\" was not set");
-    cpy_r_r156 = 0;
-    if (unlikely(!cpy_r_r156)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_Unreachable();
-CPyL140: ;
-    cpy_r_r157 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r157 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 171, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r157);
-CPyL141: ;
-    cpy_r_r158 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'pop' */
-    PyObject *cpy_r_r159[2] = {cpy_r_r155, cpy_r_r157};
-    cpy_r_r160 = (PyObject **)&cpy_r_r159;
-    cpy_r_r161 = PyObject_VectorcallMethod(cpy_r_r158, cpy_r_r160, 9223372036854775810ULL, 0);
-    if (unlikely(cpy_r_r161 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL180;
-    }
-    CPy_DECREF(cpy_r_r157);
-    cpy_r_r162 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'set' */
-    PyObject *cpy_r_r163[1] = {cpy_r_r161};
-    cpy_r_r164 = (PyObject **)&cpy_r_r163;
-    cpy_r_r165 = PyObject_VectorcallMethod(cpy_r_r162, cpy_r_r164, 9223372036854775809ULL, 0);
-    if (unlikely(cpy_r_r165 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL181;
-    } else
-        goto CPyL182;
-CPyL143: ;
-    CPy_DECREF(cpy_r_r161);
-    cpy_r_r166 = CPyStatic__rate_limit____rate_limit_tasks;
-    if (likely(cpy_r_r166 != NULL)) goto CPyL146;
-    PyErr_SetString(PyExc_NameError, "value for final name \"_rate_limit_tasks\" was not set");
-    cpy_r_r167 = 0;
-    if (unlikely(!cpy_r_r167)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_Unreachable();
-CPyL146: ;
-    cpy_r_r168 = ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__endpoint;
-    if (unlikely(cpy_r_r168 == NULL)) {
-        CPy_AttributeError("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", "__rate_limit_inactive_gen", "endpoint", 172, CPyStatic__rate_limit___globals);
-        goto CPyL158;
-    }
-    CPy_INCREF(cpy_r_r168);
-CPyL147: ;
-    cpy_r_r169 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'pop' */
-    PyObject *cpy_r_r170[2] = {cpy_r_r166, cpy_r_r168};
-    cpy_r_r171 = (PyObject **)&cpy_r_r170;
-    cpy_r_r172 = PyObject_VectorcallMethod(cpy_r_r169, cpy_r_r171, 9223372036854775810ULL, 0);
-    if (unlikely(cpy_r_r172 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL183;
-    } else
-        goto CPyL184;
-CPyL148: ;
-    CPy_DECREF(cpy_r_r168);
-    cpy_r_r173 = Py_None;
+        goto CPyL88;
+CPyL126: ;
+    cpy_r_r137 = Py_None;
     ((dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *)cpy_r___mypyc_self__)->___mypyc_next_label__ = -1;
-    if (cpy_r_stop_iter_ptr != NULL) goto CPyL152;
-    CPyGen_SetStopIterationValue(cpy_r_r173);
-    if (!0) goto CPyL158;
+    if (cpy_r_stop_iter_ptr != NULL) goto CPyL130;
+    CPyGen_SetStopIterationValue(cpy_r_r137);
+    if (!0) goto CPyL136;
     CPy_Unreachable();
-CPyL152: ;
-    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r173;
+CPyL130: ;
+    *(PyObject * *)cpy_r_stop_iter_ptr = cpy_r_r137;
     return 0;
-CPyL153: ;
-    cpy_r_r175 = cpy_r_r4 == 0;
-    if (cpy_r_r175) goto CPyL185;
-    cpy_r_r176 = cpy_r_r4 == 1;
-    if (cpy_r_r176) {
-        goto CPyL186;
+CPyL131: ;
+    cpy_r_r139 = cpy_r_r4 == 0;
+    if (cpy_r_r139) goto CPyL153;
+    cpy_r_r140 = cpy_r_r4 == 1;
+    if (cpy_r_r140) {
+        goto CPyL154;
     } else
-        goto CPyL187;
-CPyL155: ;
-    cpy_r_r177 = cpy_r_r4 == 2;
-    if (cpy_r_r177) {
-        goto CPyL114;
+        goto CPyL155;
+CPyL133: ;
+    cpy_r_r141 = cpy_r_r4 == 2;
+    if (cpy_r_r141) {
+        goto CPyL103;
     } else
-        goto CPyL188;
-CPyL156: ;
+        goto CPyL156;
+CPyL134: ;
     PyErr_SetNone(PyExc_StopIteration);
-    cpy_r_r178 = 0;
-    if (unlikely(!cpy_r_r178)) {
+    cpy_r_r142 = 0;
+    if (unlikely(!cpy_r_r142)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "__rate_limit_inactive", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL158;
+        goto CPyL136;
     }
     CPy_Unreachable();
-CPyL158: ;
-    cpy_r_r179 = NULL;
-    return cpy_r_r179;
-CPyL159: ;
+CPyL136: ;
+    cpy_r_r143 = NULL;
+    return cpy_r_r143;
+CPyL137: ;
     CPy_DecRef(cpy_r_r22);
     goto CPyL19;
-CPyL160: ;
+CPyL138: ;
     CPy_DecRef(cpy_r_r22);
-    goto CPyL158;
-CPyL161: ;
+    goto CPyL136;
+CPyL139: ;
     CPy_DecRef(cpy_r_r28);
-    goto CPyL158;
-CPyL162: ;
+    goto CPyL136;
+CPyL140: ;
     CPy_DecRef(cpy_r_r36);
-    goto CPyL158;
-CPyL163: ;
+    goto CPyL136;
+CPyL141: ;
     CPy_DecRef(cpy_r_r42);
-    goto CPyL158;
-CPyL164: ;
+    goto CPyL136;
+CPyL142: ;
     CPy_DecRef(cpy_r_r47);
-    goto CPyL158;
-CPyL165: ;
-    CPy_DecRef(cpy_r_r55);
-    goto CPyL158;
-CPyL166: ;
-    CPy_DecRef(cpy_r_r59);
-    goto CPyL158;
-CPyL167: ;
-    CPy_DECREF(cpy_r_r63);
-    goto CPyL45;
-CPyL168: ;
-    CPy_DecRef(cpy_r_r66);
-    goto CPyL158;
-CPyL169: ;
-    CPy_DECREF(cpy_r_r70);
-    goto CPyL50;
-CPyL170: ;
+    goto CPyL136;
+CPyL143: ;
     CPy_XDECREF(cpy_r_r1);
-    goto CPyL66;
-CPyL171: ;
+    goto CPyL55;
+CPyL144: ;
     CPy_XDECREF(cpy_r_r1);
-    goto CPyL65;
-CPyL172: ;
+    goto CPyL54;
+CPyL145: ;
     CPy_XDecRef(cpy_r_r1);
-    goto CPyL75;
-CPyL173: ;
-    CPy_DecRef(cpy_r_r87);
-    goto CPyL75;
-CPyL174: ;
+    goto CPyL64;
+CPyL146: ;
+    CPy_DecRef(cpy_r_r69);
+    goto CPyL64;
+CPyL147: ;
     CPy_DecRef(cpy_r_arg);
-    goto CPyL83;
-CPyL175: ;
+    goto CPyL72;
+CPyL148: ;
     CPy_XDECREF(cpy_r_r3);
-    goto CPyL117;
-CPyL176: ;
+    goto CPyL106;
+CPyL149: ;
     CPy_XDECREF(cpy_r_r3);
-    goto CPyL116;
-CPyL177: ;
+    goto CPyL105;
+CPyL150: ;
     CPy_XDecRef(cpy_r_r3);
-    goto CPyL126;
-CPyL178: ;
-    CPy_DecRef(cpy_r_r134);
-    goto CPyL126;
-CPyL179: ;
+    goto CPyL115;
+CPyL151: ;
+    CPy_DecRef(cpy_r_r116);
+    goto CPyL115;
+CPyL152: ;
     CPy_DecRef(cpy_r_arg);
-    goto CPyL158;
-CPyL180: ;
-    CPy_DecRef(cpy_r_r157);
-    goto CPyL158;
-CPyL181: ;
-    CPy_DecRef(cpy_r_r161);
-    goto CPyL158;
-CPyL182: ;
-    CPy_DECREF(cpy_r_r165);
-    goto CPyL143;
-CPyL183: ;
-    CPy_DecRef(cpy_r_r168);
-    goto CPyL158;
-CPyL184: ;
-    CPy_DECREF(cpy_r_r172);
-    goto CPyL148;
-CPyL185: ;
+    goto CPyL136;
+CPyL153: ;
     CPy_XDECREF(cpy_r_r1);
     CPy_XDECREF(cpy_r_r3);
     goto CPyL1;
-CPyL186: ;
+CPyL154: ;
     CPy_XDECREF(cpy_r_r3);
-    goto CPyL63;
-CPyL187: ;
+    goto CPyL52;
+CPyL155: ;
     CPy_XDECREF(cpy_r_r1);
-    goto CPyL155;
-CPyL188: ;
+    goto CPyL133;
+CPyL156: ;
     CPy_XDECREF(cpy_r_r3);
-    goto CPyL156;
+    goto CPyL134;
 }
 
 PyObject *CPyDef__rate_limit_____rate_limit_inactive_gen_____next__(PyObject *cpy_r___mypyc_self__) {
@@ -92261,10 +91240,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp373 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp373);
-    PyObject *__tmp374 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp374);
+    PyObject *__tmp372 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp372);
+    PyObject *__tmp373 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp373);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -92426,14 +91405,14 @@ char CPyDef__rate_limit_____top_level__(void) {
     PyObject *cpy_r_r22;
     PyObject *cpy_r_r23;
     PyObject **cpy_r_r24;
-    PyObject **cpy_r_r25;
-    void *cpy_r_r27;
-    void *cpy_r_r29;
+    void *cpy_r_r26;
+    void *cpy_r_r28;
+    PyObject *cpy_r_r29;
     PyObject *cpy_r_r30;
     PyObject *cpy_r_r31;
     PyObject *cpy_r_r32;
-    PyObject *cpy_r_r33;
-    char cpy_r_r34;
+    char cpy_r_r33;
+    PyObject *cpy_r_r34;
     PyObject *cpy_r_r35;
     PyObject *cpy_r_r36;
     PyObject *cpy_r_r37;
@@ -92461,55 +91440,54 @@ char CPyDef__rate_limit_____top_level__(void) {
     PyObject *cpy_r_r59;
     PyObject *cpy_r_r60;
     PyObject *cpy_r_r61;
-    PyObject *cpy_r_r62;
-    PyObject *cpy_r_r63;
+    int32_t cpy_r_r62;
+    char cpy_r_r63;
     PyObject *cpy_r_r64;
     PyObject *cpy_r_r65;
     PyObject *cpy_r_r66;
-    int32_t cpy_r_r67;
-    char cpy_r_r68;
-    PyObject *cpy_r_r69;
+    PyObject *cpy_r_r67;
+    int32_t cpy_r_r68;
+    char cpy_r_r69;
     PyObject *cpy_r_r70;
     PyObject *cpy_r_r71;
     PyObject *cpy_r_r72;
-    int32_t cpy_r_r73;
-    char cpy_r_r74;
-    PyObject *cpy_r_r75;
-    PyObject *cpy_r_r76;
+    PyObject *cpy_r_r73;
+    PyObject *cpy_r_r74;
+    int32_t cpy_r_r75;
+    char cpy_r_r76;
     PyObject *cpy_r_r77;
     PyObject *cpy_r_r78;
     PyObject *cpy_r_r79;
-    int32_t cpy_r_r80;
-    char cpy_r_r81;
-    PyObject *cpy_r_r82;
-    PyObject *cpy_r_r83;
+    PyObject *cpy_r_r80;
+    PyObject *cpy_r_r81;
+    int32_t cpy_r_r82;
+    char cpy_r_r83;
     PyObject *cpy_r_r84;
     PyObject *cpy_r_r85;
     PyObject *cpy_r_r86;
-    int32_t cpy_r_r87;
-    char cpy_r_r88;
-    PyObject *cpy_r_r89;
-    PyObject *cpy_r_r90;
+    PyObject *cpy_r_r87;
+    PyObject *cpy_r_r88;
+    int32_t cpy_r_r89;
+    char cpy_r_r90;
     PyObject *cpy_r_r91;
     PyObject *cpy_r_r92;
     PyObject *cpy_r_r93;
-    int32_t cpy_r_r94;
-    char cpy_r_r95;
-    PyObject *cpy_r_r96;
-    PyObject *cpy_r_r97;
+    PyObject *cpy_r_r94;
+    PyObject *cpy_r_r95;
+    int32_t cpy_r_r96;
+    char cpy_r_r97;
     PyObject *cpy_r_r98;
     PyObject *cpy_r_r99;
     PyObject *cpy_r_r100;
-    int32_t cpy_r_r101;
-    char cpy_r_r102;
-    PyObject *cpy_r_r103;
-    PyObject *cpy_r_r104;
+    PyObject *cpy_r_r101;
+    PyObject *cpy_r_r102;
+    int32_t cpy_r_r103;
+    char cpy_r_r104;
     PyObject *cpy_r_r105;
     PyObject *cpy_r_r106;
     PyObject *cpy_r_r107;
-    int32_t cpy_r_r108;
-    char cpy_r_r109;
-    PyObject *cpy_r_r110;
+    PyObject *cpy_r_r108;
+    PyObject **cpy_r_r110;
     PyObject *cpy_r_r111;
     PyObject *cpy_r_r112;
     PyObject *cpy_r_r113;
@@ -92519,43 +91497,9 @@ char CPyDef__rate_limit_____top_level__(void) {
     PyObject *cpy_r_r117;
     PyObject *cpy_r_r118;
     PyObject *cpy_r_r119;
-    PyObject *cpy_r_r120;
-    PyObject *cpy_r_r121;
-    int32_t cpy_r_r122;
-    char cpy_r_r123;
-    PyObject *cpy_r_r124;
-    PyObject *cpy_r_r125;
-    PyObject *cpy_r_r126;
-    PyObject *cpy_r_r127;
-    PyObject **cpy_r_r129;
-    PyObject *cpy_r_r130;
-    PyObject *cpy_r_r131;
-    PyObject *cpy_r_r132;
-    PyObject *cpy_r_r133;
-    int32_t cpy_r_r134;
-    char cpy_r_r135;
-    PyObject *cpy_r_r136;
-    PyObject *cpy_r_r137;
-    PyObject *cpy_r_r138;
-    PyObject *cpy_r_r139;
-    PyObject **cpy_r_r141;
-    PyObject *cpy_r_r142;
-    PyObject *cpy_r_r143;
-    PyObject *cpy_r_r144;
-    PyObject *cpy_r_r145;
-    int32_t cpy_r_r146;
-    char cpy_r_r147;
-    PyObject *cpy_r_r148;
-    PyObject *cpy_r_r149;
-    PyObject *cpy_r_r150;
-    int32_t cpy_r_r151;
-    char cpy_r_r152;
-    PyObject *cpy_r_r153;
-    PyObject *cpy_r_r154;
-    PyObject *cpy_r_r155;
-    int32_t cpy_r_r156;
-    char cpy_r_r157;
-    char cpy_r_r158;
+    int32_t cpy_r_r120;
+    char cpy_r_r121;
+    char cpy_r_r122;
     cpy_r_r0 = CPyModule_builtins;
     cpy_r_r1 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r2 = cpy_r_r0 != cpy_r_r1;
@@ -92564,7 +91508,7 @@ char CPyDef__rate_limit_____top_level__(void) {
     cpy_r_r4 = PyImport_Import(cpy_r_r3);
     if (unlikely(cpy_r_r4 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", -1, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
     CPyModule_builtins = cpy_r_r4;
     CPy_INCREF(CPyModule_builtins);
@@ -92582,389 +91526,291 @@ CPyL3: ;
     cpy_r_r13 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids/helpers/_rate_limit.py' */
     cpy_r_r14 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '<module>' */
     cpy_r_r15 = CPyImport_ImportMany(cpy_r_r11, cpy_r_r8, cpy_r_r12, cpy_r_r13, cpy_r_r14, cpy_r_r10);
-    if (!cpy_r_r15) goto CPyL46;
+    if (!cpy_r_r15) goto CPyL35;
     cpy_r_r16 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('defaultdict',) */
     cpy_r_r17 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'collections' */
     cpy_r_r18 = CPyStatic__rate_limit___globals;
     cpy_r_r19 = CPyImport_ImportFromMany(cpy_r_r17, cpy_r_r16, cpy_r_r16, cpy_r_r18);
     if (unlikely(cpy_r_r19 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
     CPyModule_collections = cpy_r_r19;
     CPy_INCREF(CPyModule_collections);
     CPy_DECREF(cpy_r_r19);
-    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('DefaultDict', 'Final') */
+    cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('Final',) */
     cpy_r_r21 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'typing' */
     cpy_r_r22 = CPyStatic__rate_limit___globals;
     cpy_r_r23 = CPyImport_ImportFromMany(cpy_r_r21, cpy_r_r20, cpy_r_r20, cpy_r_r22);
     if (unlikely(cpy_r_r23 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
     CPyModule_typing = cpy_r_r23;
     CPy_INCREF(CPyModule_typing);
     CPy_DECREF(cpy_r_r23);
-    cpy_r_r24 = (PyObject **)&CPyModule_a_sync;
-    cpy_r_r25 = (PyObject **)&CPyModule_a_sync___asyncio;
-    PyObject **cpy_r_r26[2] = {cpy_r_r24, cpy_r_r25};
-    cpy_r_r27 = (void *)&cpy_r_r26;
-    int64_t cpy_r_r28[2] = {6, 7};
-    cpy_r_r29 = (void *)&cpy_r_r28;
-    cpy_r_r30 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* (('a_sync', 'a_sync', 'a_sync'),
-                                     ('a_sync.asyncio', 'a_sync', 'a_sync')) */
-    cpy_r_r31 = CPyStatic__rate_limit___globals;
-    cpy_r_r32 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids/helpers/_rate_limit.py' */
-    cpy_r_r33 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '<module>' */
-    cpy_r_r34 = CPyImport_ImportMany(cpy_r_r30, cpy_r_r27, cpy_r_r31, cpy_r_r32, cpy_r_r33, cpy_r_r29);
-    if (!cpy_r_r34) goto CPyL46;
-    cpy_r_r35 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('ENVIRONMENT_VARIABLES',) */
-    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('ENVS',) */
-    cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids' */
-    cpy_r_r38 = CPyStatic__rate_limit___globals;
-    cpy_r_r39 = CPyImport_ImportFromMany(cpy_r_r37, cpy_r_r35, cpy_r_r36, cpy_r_r38);
-    if (unlikely(cpy_r_r39 == NULL)) {
+    cpy_r_r24 = (PyObject **)&CPyModule_a_sync___asyncio;
+    PyObject **cpy_r_r25[1] = {cpy_r_r24};
+    cpy_r_r26 = (void *)&cpy_r_r25;
+    int64_t cpy_r_r27[1] = {6};
+    cpy_r_r28 = (void *)&cpy_r_r27;
+    cpy_r_r29 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* (('a_sync.asyncio', 'a_sync', 'a_sync'),) */
+    cpy_r_r30 = CPyStatic__rate_limit___globals;
+    cpy_r_r31 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids/helpers/_rate_limit.py' */
+    cpy_r_r32 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '<module>' */
+    cpy_r_r33 = CPyImport_ImportMany(cpy_r_r29, cpy_r_r26, cpy_r_r30, cpy_r_r31, cpy_r_r32, cpy_r_r28);
+    if (!cpy_r_r33) goto CPyL35;
+    cpy_r_r34 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('ENVIRONMENT_VARIABLES',) */
+    cpy_r_r35 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('ENVS',) */
+    cpy_r_r36 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids' */
+    cpy_r_r37 = CPyStatic__rate_limit___globals;
+    cpy_r_r38 = CPyImport_ImportFromMany(cpy_r_r36, cpy_r_r34, cpy_r_r35, cpy_r_r37);
+    if (unlikely(cpy_r_r38 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids = cpy_r_r39;
+    CPyModule_dank_mids = cpy_r_r38;
     CPy_INCREF(CPyModule_dank_mids);
-    CPy_DECREF(cpy_r_r39);
-    cpy_r_r40 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('shield',) */
-    cpy_r_r41 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._tasks' */
-    cpy_r_r42 = CPyStatic__rate_limit___globals;
-    cpy_r_r43 = CPyImport_ImportFromMany(cpy_r_r41, cpy_r_r40, cpy_r_r40, cpy_r_r42);
-    if (unlikely(cpy_r_r43 == NULL)) {
+    CPy_DECREF(cpy_r_r38);
+    cpy_r_r39 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('shield',) */
+    cpy_r_r40 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._tasks' */
+    cpy_r_r41 = CPyStatic__rate_limit___globals;
+    cpy_r_r42 = CPyImport_ImportFromMany(cpy_r_r40, cpy_r_r39, cpy_r_r39, cpy_r_r41);
+    if (unlikely(cpy_r_r42 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids____tasks = cpy_r_r43;
+    CPyModule_dank_mids____tasks = cpy_r_r42;
     CPy_INCREF(CPyModule_dank_mids____tasks);
-    CPy_DECREF(cpy_r_r43);
-    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('AsyncLimiter',) */
-    cpy_r_r45 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._vendor.aiolimiter.src.aiolimiter' */
-    cpy_r_r46 = CPyStatic__rate_limit___globals;
-    cpy_r_r47 = CPyImport_ImportFromMany(cpy_r_r45, cpy_r_r44, cpy_r_r44, cpy_r_r46);
-    if (unlikely(cpy_r_r47 == NULL)) {
+    CPy_DECREF(cpy_r_r42);
+    cpy_r_r43 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('AsyncLimiter',) */
+    cpy_r_r44 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids._vendor.aiolimiter.src.aiolimiter' */
+    cpy_r_r45 = CPyStatic__rate_limit___globals;
+    cpy_r_r46 = CPyImport_ImportFromMany(cpy_r_r44, cpy_r_r43, cpy_r_r43, cpy_r_r45);
+    if (unlikely(cpy_r_r46 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter = cpy_r_r47;
+    CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter = cpy_r_r46;
     CPy_INCREF(CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter);
-    CPy_DECREF(cpy_r_r47);
-    cpy_r_r48 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('_requester',) */
-    cpy_r_r49 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._requester' */
-    cpy_r_r50 = CPyStatic__rate_limit___globals;
-    cpy_r_r51 = CPyImport_ImportFromMany(cpy_r_r49, cpy_r_r48, cpy_r_r48, cpy_r_r50);
-    if (unlikely(cpy_r_r51 == NULL)) {
+    CPy_DECREF(cpy_r_r46);
+    cpy_r_r47 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('_requester',) */
+    cpy_r_r48 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.helpers._requester' */
+    cpy_r_r49 = CPyStatic__rate_limit___globals;
+    cpy_r_r50 = CPyImport_ImportFromMany(cpy_r_r48, cpy_r_r47, cpy_r_r47, cpy_r_r49);
+    if (unlikely(cpy_r_r50 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids___helpers____requester = cpy_r_r51;
+    CPyModule_dank_mids___helpers____requester = cpy_r_r50;
     CPy_INCREF(CPyModule_dank_mids___helpers____requester);
-    CPy_DECREF(cpy_r_r51);
-    cpy_r_r52 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('Lock',) */
-    cpy_r_r53 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.lock' */
-    cpy_r_r54 = CPyStatic__rate_limit___globals;
-    cpy_r_r55 = CPyImport_ImportFromMany(cpy_r_r53, cpy_r_r52, cpy_r_r52, cpy_r_r54);
-    if (unlikely(cpy_r_r55 == NULL)) {
+    CPy_DECREF(cpy_r_r50);
+    cpy_r_r51 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('get_c_logger',) */
+    cpy_r_r52 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
+    cpy_r_r53 = CPyStatic__rate_limit___globals;
+    cpy_r_r54 = CPyImport_ImportFromMany(cpy_r_r52, cpy_r_r51, cpy_r_r51, cpy_r_r53);
+    if (unlikely(cpy_r_r54 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids___lock = cpy_r_r55;
-    CPy_INCREF(CPyModule_dank_mids___lock);
-    CPy_DECREF(cpy_r_r55);
-    cpy_r_r56 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('get_c_logger',) */
-    cpy_r_r57 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.logging' */
-    cpy_r_r58 = CPyStatic__rate_limit___globals;
-    cpy_r_r59 = CPyImport_ImportFromMany(cpy_r_r57, cpy_r_r56, cpy_r_r56, cpy_r_r58);
+    CPyModule_dank_mids___logging = cpy_r_r54;
+    CPy_INCREF(CPyModule_dank_mids___logging);
+    CPy_DECREF(cpy_r_r54);
+    cpy_r_r55 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('RateLimiters',) */
+    cpy_r_r56 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.types' */
+    cpy_r_r57 = CPyStatic__rate_limit___globals;
+    cpy_r_r58 = CPyImport_ImportFromMany(cpy_r_r56, cpy_r_r55, cpy_r_r55, cpy_r_r57);
+    if (unlikely(cpy_r_r58 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL35;
+    }
+    CPyModule_dank_mids___types = cpy_r_r58;
+    CPy_INCREF(CPyModule_dank_mids___types);
+    CPy_DECREF(cpy_r_r58);
+    cpy_r_r59 = PySet_New(NULL);
     if (unlikely(cpy_r_r59 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyModule_dank_mids___logging = cpy_r_r59;
-    CPy_INCREF(CPyModule_dank_mids___logging);
-    CPy_DECREF(cpy_r_r59);
-    cpy_r_r60 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('RateLimiters',) */
-    cpy_r_r61 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.types' */
-    cpy_r_r62 = CPyStatic__rate_limit___globals;
-    cpy_r_r63 = CPyImport_ImportFromMany(cpy_r_r61, cpy_r_r60, cpy_r_r60, cpy_r_r62);
-    if (unlikely(cpy_r_r63 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    CPyModule_dank_mids___types = cpy_r_r63;
-    CPy_INCREF(CPyModule_dank_mids___types);
-    CPy_DECREF(cpy_r_r63);
-    cpy_r_r64 = PySet_New(NULL);
-    if (unlikely(cpy_r_r64 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit___TASKS = cpy_r_r64;
+    CPyStatic__rate_limit___TASKS = cpy_r_r59;
     CPy_INCREF(CPyStatic__rate_limit___TASKS);
-    cpy_r_r65 = CPyStatic__rate_limit___globals;
-    cpy_r_r66 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'TASKS' */
-    cpy_r_r67 = CPyDict_SetItem(cpy_r_r65, cpy_r_r66, cpy_r_r64);
-    CPy_DECREF(cpy_r_r64);
-    cpy_r_r68 = cpy_r_r67 >= 0;
-    if (unlikely(!cpy_r_r68)) {
+    cpy_r_r60 = CPyStatic__rate_limit___globals;
+    cpy_r_r61 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'TASKS' */
+    cpy_r_r62 = CPyDict_SetItem(cpy_r_r60, cpy_r_r61, cpy_r_r59);
+    CPy_DECREF(cpy_r_r59);
+    cpy_r_r63 = cpy_r_r62 >= 0;
+    if (unlikely(!cpy_r_r63)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r69 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.rate_limit' */
-    cpy_r_r70 = CPyDef_logging___get_c_logger(cpy_r_r69);
-    if (unlikely(cpy_r_r70 == NULL)) {
+    cpy_r_r64 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'dank_mids.rate_limit' */
+    cpy_r_r65 = CPyDef_logging___get_c_logger(cpy_r_r64);
+    if (unlikely(cpy_r_r65 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___logger = cpy_r_r70;
+    CPyStatic__rate_limit___logger = cpy_r_r65;
     CPy_INCREF_NO_IMM(CPyStatic__rate_limit___logger);
-    cpy_r_r71 = CPyStatic__rate_limit___globals;
-    cpy_r_r72 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'logger' */
-    cpy_r_r73 = CPyDict_SetItem(cpy_r_r71, cpy_r_r72, cpy_r_r70);
-    CPy_DECREF_NO_IMM(cpy_r_r70);
-    cpy_r_r74 = cpy_r_r73 >= 0;
-    if (unlikely(!cpy_r_r74)) {
+    cpy_r_r66 = CPyStatic__rate_limit___globals;
+    cpy_r_r67 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'logger' */
+    cpy_r_r68 = CPyDict_SetItem(cpy_r_r66, cpy_r_r67, cpy_r_r65);
+    CPy_DECREF_NO_IMM(cpy_r_r65);
+    cpy_r_r69 = cpy_r_r68 >= 0;
+    if (unlikely(!cpy_r_r69)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r75 = CPyModule_asyncio;
-    cpy_r_r76 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'CancelledError' */
-    cpy_r_r77 = CPyObject_GetAttr(cpy_r_r75, cpy_r_r76);
-    if (unlikely(cpy_r_r77 == NULL)) {
+    cpy_r_r70 = CPyModule_asyncio;
+    cpy_r_r71 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'CancelledError' */
+    cpy_r_r72 = CPyObject_GetAttr(cpy_r_r70, cpy_r_r71);
+    if (unlikely(cpy_r_r72 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___CancelledError = cpy_r_r77;
+    CPyStatic__rate_limit___CancelledError = cpy_r_r72;
     CPy_INCREF(CPyStatic__rate_limit___CancelledError);
-    cpy_r_r78 = CPyStatic__rate_limit___globals;
-    cpy_r_r79 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'CancelledError' */
-    cpy_r_r80 = CPyDict_SetItem(cpy_r_r78, cpy_r_r79, cpy_r_r77);
-    CPy_DECREF(cpy_r_r77);
-    cpy_r_r81 = cpy_r_r80 >= 0;
-    if (unlikely(!cpy_r_r81)) {
+    cpy_r_r73 = CPyStatic__rate_limit___globals;
+    cpy_r_r74 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'CancelledError' */
+    cpy_r_r75 = CPyDict_SetItem(cpy_r_r73, cpy_r_r74, cpy_r_r72);
+    CPy_DECREF(cpy_r_r72);
+    cpy_r_r76 = cpy_r_r75 >= 0;
+    if (unlikely(!cpy_r_r76)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r82 = CPyModule_asyncio;
-    cpy_r_r83 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'InvalidStateError' */
-    cpy_r_r84 = CPyObject_GetAttr(cpy_r_r82, cpy_r_r83);
-    if (unlikely(cpy_r_r84 == NULL)) {
+    cpy_r_r77 = CPyModule_asyncio;
+    cpy_r_r78 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_task' */
+    cpy_r_r79 = CPyObject_GetAttr(cpy_r_r77, cpy_r_r78);
+    if (unlikely(cpy_r_r79 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___InvalidStateError = cpy_r_r84;
-    CPy_INCREF(CPyStatic__rate_limit___InvalidStateError);
-    cpy_r_r85 = CPyStatic__rate_limit___globals;
-    cpy_r_r86 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'InvalidStateError' */
-    cpy_r_r87 = CPyDict_SetItem(cpy_r_r85, cpy_r_r86, cpy_r_r84);
-    CPy_DECREF(cpy_r_r84);
-    cpy_r_r88 = cpy_r_r87 >= 0;
-    if (unlikely(!cpy_r_r88)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r89 = CPyModule_asyncio;
-    cpy_r_r90 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_task' */
-    cpy_r_r91 = CPyObject_GetAttr(cpy_r_r89, cpy_r_r90);
-    if (unlikely(cpy_r_r91 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit___create_task = cpy_r_r91;
+    CPyStatic__rate_limit___create_task = cpy_r_r79;
     CPy_INCREF(CPyStatic__rate_limit___create_task);
-    cpy_r_r92 = CPyStatic__rate_limit___globals;
-    cpy_r_r93 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_task' */
-    cpy_r_r94 = CPyDict_SetItem(cpy_r_r92, cpy_r_r93, cpy_r_r91);
-    CPy_DECREF(cpy_r_r91);
-    cpy_r_r95 = cpy_r_r94 >= 0;
-    if (unlikely(!cpy_r_r95)) {
+    cpy_r_r80 = CPyStatic__rate_limit___globals;
+    cpy_r_r81 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'create_task' */
+    cpy_r_r82 = CPyDict_SetItem(cpy_r_r80, cpy_r_r81, cpy_r_r79);
+    CPy_DECREF(cpy_r_r79);
+    cpy_r_r83 = cpy_r_r82 >= 0;
+    if (unlikely(!cpy_r_r83)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r96 = CPyModule_asyncio;
-    cpy_r_r97 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'get_running_loop' */
-    cpy_r_r98 = CPyObject_GetAttr(cpy_r_r96, cpy_r_r97);
-    if (unlikely(cpy_r_r98 == NULL)) {
+    cpy_r_r84 = CPyModule_asyncio;
+    cpy_r_r85 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'get_running_loop' */
+    cpy_r_r86 = CPyObject_GetAttr(cpy_r_r84, cpy_r_r85);
+    if (unlikely(cpy_r_r86 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___get_running_loop = cpy_r_r98;
+    CPyStatic__rate_limit___get_running_loop = cpy_r_r86;
     CPy_INCREF(CPyStatic__rate_limit___get_running_loop);
-    cpy_r_r99 = CPyStatic__rate_limit___globals;
-    cpy_r_r100 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'get_running_loop' */
-    cpy_r_r101 = CPyDict_SetItem(cpy_r_r99, cpy_r_r100, cpy_r_r98);
-    CPy_DECREF(cpy_r_r98);
-    cpy_r_r102 = cpy_r_r101 >= 0;
-    if (unlikely(!cpy_r_r102)) {
+    cpy_r_r87 = CPyStatic__rate_limit___globals;
+    cpy_r_r88 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'get_running_loop' */
+    cpy_r_r89 = CPyDict_SetItem(cpy_r_r87, cpy_r_r88, cpy_r_r86);
+    CPy_DECREF(cpy_r_r86);
+    cpy_r_r90 = cpy_r_r89 >= 0;
+    if (unlikely(!cpy_r_r90)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r103 = CPyModule_heapq;
-    cpy_r_r104 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'nlargest' */
-    cpy_r_r105 = CPyObject_GetAttr(cpy_r_r103, cpy_r_r104);
+    cpy_r_r91 = CPyModule_heapq;
+    cpy_r_r92 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'nlargest' */
+    cpy_r_r93 = CPyObject_GetAttr(cpy_r_r91, cpy_r_r92);
+    if (unlikely(cpy_r_r93 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL35;
+    }
+    CPyStatic__rate_limit___nlargest = cpy_r_r93;
+    CPy_INCREF(CPyStatic__rate_limit___nlargest);
+    cpy_r_r94 = CPyStatic__rate_limit___globals;
+    cpy_r_r95 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'nlargest' */
+    cpy_r_r96 = CPyDict_SetItem(cpy_r_r94, cpy_r_r95, cpy_r_r93);
+    CPy_DECREF(cpy_r_r93);
+    cpy_r_r97 = cpy_r_r96 >= 0;
+    if (unlikely(!cpy_r_r97)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL35;
+    }
+    cpy_r_r98 = CPyModule_a_sync___asyncio;
+    cpy_r_r99 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'sleep0' */
+    cpy_r_r100 = CPyObject_GetAttr(cpy_r_r98, cpy_r_r99);
+    if (unlikely(cpy_r_r100 == NULL)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL35;
+    }
+    CPyStatic__rate_limit___sleep0 = cpy_r_r100;
+    CPy_INCREF(CPyStatic__rate_limit___sleep0);
+    cpy_r_r101 = CPyStatic__rate_limit___globals;
+    cpy_r_r102 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'sleep0' */
+    cpy_r_r103 = CPyDict_SetItem(cpy_r_r101, cpy_r_r102, cpy_r_r100);
+    CPy_DECREF(cpy_r_r100);
+    cpy_r_r104 = cpy_r_r103 >= 0;
+    if (unlikely(!cpy_r_r104)) {
+        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
+        goto CPyL35;
+    }
+    cpy_r_r105 = CPyDef__rate_limit_____mypyc_lambda__0_obj();
     if (unlikely(cpy_r_r105 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___nlargest = cpy_r_r105;
-    CPy_INCREF(CPyStatic__rate_limit___nlargest);
     cpy_r_r106 = CPyStatic__rate_limit___globals;
-    cpy_r_r107 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'nlargest' */
-    cpy_r_r108 = CPyDict_SetItem(cpy_r_r106, cpy_r_r107, cpy_r_r105);
-    CPy_DECREF(cpy_r_r105);
-    cpy_r_r109 = cpy_r_r108 >= 0;
-    if (unlikely(!cpy_r_r109)) {
+    cpy_r_r107 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'defaultdict' */
+    cpy_r_r108 = CPyDict_GetItem(cpy_r_r106, cpy_r_r107);
+    if (unlikely(cpy_r_r108 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL36;
     }
-    cpy_r_r110 = CPyModule_a_sync;
-    cpy_r_r111 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'Event' */
-    cpy_r_r112 = CPyObject_GetAttr(cpy_r_r110, cpy_r_r111);
-    if (unlikely(cpy_r_r112 == NULL)) {
+    PyObject *cpy_r_r109[1] = {cpy_r_r105};
+    cpy_r_r110 = (PyObject **)&cpy_r_r109;
+    cpy_r_r111 = PyObject_Vectorcall(cpy_r_r108, cpy_r_r110, 1, 0);
+    CPy_DECREF(cpy_r_r108);
+    if (unlikely(cpy_r_r111 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL36;
     }
-    CPyStatic__rate_limit___Event = cpy_r_r112;
-    CPy_INCREF(CPyStatic__rate_limit___Event);
+    CPy_DECREF_NO_IMM(cpy_r_r105);
+    if (likely(PyDict_Check(cpy_r_r111)))
+        cpy_r_r112 = cpy_r_r111;
+    else {
+        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "<module>", 29, CPyStatic__rate_limit___globals, "dict", cpy_r_r111);
+        goto CPyL35;
+    }
+    CPyStatic__rate_limit___limiters = cpy_r_r112;
+    CPy_INCREF(CPyStatic__rate_limit___limiters);
     cpy_r_r113 = CPyStatic__rate_limit___globals;
-    cpy_r_r114 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'Event' */
+    cpy_r_r114 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'limiters' */
     cpy_r_r115 = CPyDict_SetItem(cpy_r_r113, cpy_r_r114, cpy_r_r112);
     CPy_DECREF(cpy_r_r112);
     cpy_r_r116 = cpy_r_r115 >= 0;
     if (unlikely(!cpy_r_r116)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    cpy_r_r117 = CPyModule_a_sync___asyncio;
-    cpy_r_r118 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'sleep0' */
-    cpy_r_r119 = CPyObject_GetAttr(cpy_r_r117, cpy_r_r118);
-    if (unlikely(cpy_r_r119 == NULL)) {
+    cpy_r_r117 = PyDict_New();
+    if (unlikely(cpy_r_r117 == NULL)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
-    CPyStatic__rate_limit___sleep0 = cpy_r_r119;
-    CPy_INCREF(CPyStatic__rate_limit___sleep0);
-    cpy_r_r120 = CPyStatic__rate_limit___globals;
-    cpy_r_r121 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'sleep0' */
-    cpy_r_r122 = CPyDict_SetItem(cpy_r_r120, cpy_r_r121, cpy_r_r119);
-    CPy_DECREF(cpy_r_r119);
-    cpy_r_r123 = cpy_r_r122 >= 0;
-    if (unlikely(!cpy_r_r123)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r124 = CPyDef__rate_limit_____mypyc_lambda__0_obj();
-    if (unlikely(cpy_r_r124 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r125 = CPyStatic__rate_limit___globals;
-    cpy_r_r126 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'defaultdict' */
-    cpy_r_r127 = CPyDict_GetItem(cpy_r_r125, cpy_r_r126);
-    if (unlikely(cpy_r_r127 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL47;
-    }
-    PyObject *cpy_r_r128[1] = {cpy_r_r124};
-    cpy_r_r129 = (PyObject **)&cpy_r_r128;
-    cpy_r_r130 = PyObject_Vectorcall(cpy_r_r127, cpy_r_r129, 1, 0);
-    CPy_DECREF(cpy_r_r127);
-    if (unlikely(cpy_r_r130 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL47;
-    }
-    CPy_DECREF_NO_IMM(cpy_r_r124);
-    if (likely(PyDict_Check(cpy_r_r130)))
-        cpy_r_r131 = cpy_r_r130;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "<module>", 33, CPyStatic__rate_limit___globals, "dict", cpy_r_r130);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit___limiters = cpy_r_r131;
-    CPy_INCREF(CPyStatic__rate_limit___limiters);
-    cpy_r_r132 = CPyStatic__rate_limit___globals;
-    cpy_r_r133 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'limiters' */
-    cpy_r_r134 = CPyDict_SetItem(cpy_r_r132, cpy_r_r133, cpy_r_r131);
-    CPy_DECREF(cpy_r_r131);
-    cpy_r_r135 = cpy_r_r134 >= 0;
-    if (unlikely(!cpy_r_r135)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r136 = (PyObject *)CPyType_lock___Lock;
-    cpy_r_r137 = CPyStatic__rate_limit___globals;
-    cpy_r_r138 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'defaultdict' */
-    cpy_r_r139 = CPyDict_GetItem(cpy_r_r137, cpy_r_r138);
-    if (unlikely(cpy_r_r139 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    PyObject *cpy_r_r140[1] = {cpy_r_r136};
-    cpy_r_r141 = (PyObject **)&cpy_r_r140;
-    cpy_r_r142 = PyObject_Vectorcall(cpy_r_r139, cpy_r_r141, 1, 0);
-    CPy_DECREF(cpy_r_r139);
-    if (unlikely(cpy_r_r142 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    if (likely(PyDict_Check(cpy_r_r142)))
-        cpy_r_r143 = cpy_r_r142;
-    else {
-        CPy_TypeErrorTraceback("dank_mids/helpers/_rate_limit.py", "<module>", 37, CPyStatic__rate_limit___globals, "dict", cpy_r_r142);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit___locks = cpy_r_r143;
-    CPy_INCREF(CPyStatic__rate_limit___locks);
-    cpy_r_r144 = CPyStatic__rate_limit___globals;
-    cpy_r_r145 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'locks' */
-    cpy_r_r146 = CPyDict_SetItem(cpy_r_r144, cpy_r_r145, cpy_r_r143);
-    CPy_DECREF(cpy_r_r143);
-    cpy_r_r147 = cpy_r_r146 >= 0;
-    if (unlikely(!cpy_r_r147)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r148 = PyDict_New();
-    if (unlikely(cpy_r_r148 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit____rate_limit_waiters = cpy_r_r148;
-    CPy_INCREF(CPyStatic__rate_limit____rate_limit_waiters);
-    cpy_r_r149 = CPyStatic__rate_limit___globals;
-    cpy_r_r150 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_rate_limit_waiters' */
-    cpy_r_r151 = CPyDict_SetItem(cpy_r_r149, cpy_r_r150, cpy_r_r148);
-    CPy_DECREF(cpy_r_r148);
-    cpy_r_r152 = cpy_r_r151 >= 0;
-    if (unlikely(!cpy_r_r152)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    cpy_r_r153 = PyDict_New();
-    if (unlikely(cpy_r_r153 == NULL)) {
-        CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
-    }
-    CPyStatic__rate_limit____rate_limit_tasks = cpy_r_r153;
+    CPyStatic__rate_limit____rate_limit_tasks = cpy_r_r117;
     CPy_INCREF(CPyStatic__rate_limit____rate_limit_tasks);
-    cpy_r_r154 = CPyStatic__rate_limit___globals;
-    cpy_r_r155 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_rate_limit_tasks' */
-    cpy_r_r156 = CPyDict_SetItem(cpy_r_r154, cpy_r_r155, cpy_r_r153);
-    CPy_DECREF(cpy_r_r153);
-    cpy_r_r157 = cpy_r_r156 >= 0;
-    if (unlikely(!cpy_r_r157)) {
+    cpy_r_r118 = CPyStatic__rate_limit___globals;
+    cpy_r_r119 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_rate_limit_tasks' */
+    cpy_r_r120 = CPyDict_SetItem(cpy_r_r118, cpy_r_r119, cpy_r_r117);
+    CPy_DECREF(cpy_r_r117);
+    cpy_r_r121 = cpy_r_r120 >= 0;
+    if (unlikely(!cpy_r_r121)) {
         CPy_AddTraceback("dank_mids/helpers/_rate_limit.py", "<module>", DIFFCHECK_PLACEHOLDER, CPyStatic__rate_limit___globals);
-        goto CPyL46;
+        goto CPyL35;
     }
     return 1;
-CPyL46: ;
-    cpy_r_r158 = 2;
-    return cpy_r_r158;
-CPyL47: ;
-    CPy_DecRef(cpy_r_r124);
-    goto CPyL46;
+CPyL35: ;
+    cpy_r_r122 = 2;
+    return cpy_r_r122;
+CPyL36: ;
+    CPy_DecRef(cpy_r_r105);
+    goto CPyL35;
 }
 
 PyObject *CPyDef__retry_mechanics_____mypyc__RetryBudget_setup(PyObject *cpy_r_type);
@@ -93165,16 +92011,16 @@ _retry_mechanics___RetryBudget_set_max_attempts(dank_mids___helpers____retry_mec
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL375;
+    if (tmp != NULL) goto __LL374;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL375;
+    if (tmp != NULL) goto __LL374;
     CPy_TypeError("int or None", value); 
     tmp = NULL;
-__LL375: ;
+__LL374: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -95211,16 +94057,16 @@ _requester___HTTPRequesterThread_set__session(dank_mids___helpers____requester__
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL376;
+    if (tmp != NULL) goto __LL375;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL376;
+    if (tmp != NULL) goto __LL375;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL376: ;
+__LL375: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -97165,8 +96011,8 @@ CPyL13: ;
     if (!cpy_r_r19) goto CPyL16;
     CPy_Unreachable();
 CPyL15: ;
-    tuple_T3OOO __tmp377 = { NULL, NULL, NULL };
-    cpy_r_r20 = __tmp377;
+    tuple_T3OOO __tmp376 = { NULL, NULL, NULL };
+    cpy_r_r20 = __tmp376;
     cpy_r_r21 = cpy_r_r20;
     goto CPyL17;
 CPyL16: ;
@@ -98501,10 +97347,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp378 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp378);
-    PyObject *__tmp379 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp379);
+    PyObject *__tmp377 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp377);
+    PyObject *__tmp378 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp378);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -99699,10 +98545,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp380 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp380);
-    PyObject *__tmp381 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp381);
+    PyObject *__tmp379 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp379);
+    PyObject *__tmp380 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp380);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -100583,10 +99429,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp382 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp382);
-    PyObject *__tmp383 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp383);
+    PyObject *__tmp381 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp381);
+    PyObject *__tmp382 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp382);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -102332,19 +101178,19 @@ PyObject *CPyPy__weaklist___WeakList_____init__(PyObject *self, PyObject *args, 
     PyObject *arg_data;
     if (obj_data == NULL) {
         arg_data = NULL;
-        goto __LL384;
+        goto __LL383;
     }
     arg_data = obj_data;
-    if (arg_data != NULL) goto __LL384;
+    if (arg_data != NULL) goto __LL383;
     if (obj_data == Py_None)
         arg_data = obj_data;
     else {
         arg_data = NULL;
     }
-    if (arg_data != NULL) goto __LL384;
+    if (arg_data != NULL) goto __LL383;
     CPy_TypeError("object or None", obj_data); 
     goto fail;
-__LL384: ;
+__LL383: ;
     char retval = CPyDef__weaklist___WeakList_____init__(arg_self, arg_data);
     if (retval == 2) {
         return NULL;
@@ -103131,10 +101977,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp385 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp385);
-    PyObject *__tmp386 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp386);
+    PyObject *__tmp384 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp384);
+    PyObject *__tmp385 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp385);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -103361,10 +102207,10 @@ CPyL3: ;
     cpy_r_r7 = PyTuple_New(2);
     if (unlikely(cpy_r_r7 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp387 = CPyTagged_StealAsObject(cpy_r_r6.f0);
-    PyTuple_SET_ITEM(cpy_r_r7, 0, __tmp387);
-    PyObject *__tmp388 = cpy_r_r6.f1;
-    PyTuple_SET_ITEM(cpy_r_r7, 1, __tmp388);
+    PyObject *__tmp386 = CPyTagged_StealAsObject(cpy_r_r6.f0);
+    PyTuple_SET_ITEM(cpy_r_r7, 0, __tmp386);
+    PyObject *__tmp387 = cpy_r_r6.f1;
+    PyTuple_SET_ITEM(cpy_r_r7, 1, __tmp387);
     cpy_r_r8 = PyList_Append(cpy_r_r1, cpy_r_r7);
     CPy_DECREF(cpy_r_r7);
     cpy_r_r9 = cpy_r_r8 >= 0;
@@ -106137,16 +104983,16 @@ CPyL4: ;
     else {
         cpy_r_r5 = NULL;
     }
-    if (cpy_r_r5 != NULL) goto __LL389;
+    if (cpy_r_r5 != NULL) goto __LL388;
     if (PyTuple_Check(cpy_r_obj))
         cpy_r_r5 = cpy_r_obj;
     else {
         cpy_r_r5 = NULL;
     }
-    if (cpy_r_r5 != NULL) goto __LL389;
+    if (cpy_r_r5 != NULL) goto __LL388;
     CPy_TypeErrorTraceback("dank_mids/helpers/hashing.py", "make_hashable", 21, CPyStatic_hashing___globals, "union[list, tuple]", cpy_r_obj);
     goto CPyL26;
-__LL389: ;
+__LL388: ;
     cpy_r_r6 = CPyModule_builtins;
     cpy_r_r7 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'map' */
     cpy_r_r8 = CPyObject_GetAttr(cpy_r_r6, cpy_r_r7);
@@ -106552,16 +105398,16 @@ CPyTagged CPyDef_hashing_____hash___3_AttributeDict_obj_____call__(PyObject *cpy
     else {
         cpy_r_r2 = NULL;
     }
-    if (cpy_r_r2 != NULL) goto __LL390;
+    if (cpy_r_r2 != NULL) goto __LL389;
     if (cpy_r_r1 == Py_None)
         cpy_r_r2 = cpy_r_r1;
     else {
         cpy_r_r2 = NULL;
     }
-    if (cpy_r_r2 != NULL) goto __LL390;
+    if (cpy_r_r2 != NULL) goto __LL389;
     CPy_TypeErrorTraceback("dank_mids/helpers/hashing.py", "__hash__", 42, CPyStatic_hashing___globals, "int or None", cpy_r_r1);
     goto CPyL12;
-__LL390: ;
+__LL389: ;
     cpy_r_retval = cpy_r_r2;
     cpy_r_r3 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r4 = cpy_r_retval == cpy_r_r3;
@@ -106981,7 +105827,7 @@ CPyL5: ;
         goto CPyL15;
 CPyL9: ;
     cpy_r_r18 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('This data is immutable -- create a copy instead of '
-                                     'modifying') */
+                                    'modifying') */
     cpy_r_r19 = CPyModule_builtins;
     cpy_r_r20 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'TypeError' */
     cpy_r_r21 = CPyObject_GetAttr(cpy_r_r19, cpy_r_r20);
@@ -107099,7 +105945,7 @@ char CPyDef_hashing_____delattr___3_AttributeDict_obj_____call__(PyObject *cpy_r
     PyObject *cpy_r_r6;
     char cpy_r_r7;
     cpy_r_r0 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* ('This data is immutable -- create a copy instead of '
-                                    'modifying') */
+                                   'modifying') */
     cpy_r_r1 = CPyModule_builtins;
     cpy_r_r2 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'TypeError' */
     cpy_r_r3 = CPyObject_GetAttr(cpy_r_r1, cpy_r_r2);
@@ -108085,30 +106931,30 @@ CPyL18: ;
 CPyL24: ;
     cpy_r_r46 = PyIter_Next(cpy_r_r45);
     if (cpy_r_r46 == NULL) goto CPyL62;
-    PyObject *__tmp391;
+    PyObject *__tmp390;
     if (unlikely(!(PyTuple_Check(cpy_r_r46) && PyTuple_GET_SIZE(cpy_r_r46) == 2))) {
-        __tmp391 = NULL;
-        goto __LL392;
+        __tmp390 = NULL;
+        goto __LL391;
     }
-    __tmp391 = PyTuple_GET_ITEM(cpy_r_r46, 0);
-    if (__tmp391 == NULL) goto __LL392;
-    __tmp391 = PyTuple_GET_ITEM(cpy_r_r46, 1);
-    if (__tmp391 == NULL) goto __LL392;
-    __tmp391 = cpy_r_r46;
-__LL392: ;
-    if (unlikely(__tmp391 == NULL)) {
+    __tmp390 = PyTuple_GET_ITEM(cpy_r_r46, 0);
+    if (__tmp390 == NULL) goto __LL391;
+    __tmp390 = PyTuple_GET_ITEM(cpy_r_r46, 1);
+    if (__tmp390 == NULL) goto __LL391;
+    __tmp390 = cpy_r_r46;
+__LL391: ;
+    if (unlikely(__tmp390 == NULL)) {
         CPy_TypeError("tuple[object, object]", cpy_r_r46); cpy_r_r47 = (tuple_T2OO) { NULL, NULL };
     } else {
-        PyObject *__tmp393 = PyTuple_GET_ITEM(cpy_r_r46, 0);
-        CPy_INCREF(__tmp393);
-        PyObject *__tmp394;
-        __tmp394 = __tmp393;
-        cpy_r_r47.f0 = __tmp394;
-        PyObject *__tmp395 = PyTuple_GET_ITEM(cpy_r_r46, 1);
-        CPy_INCREF(__tmp395);
-        PyObject *__tmp396;
-        __tmp396 = __tmp395;
-        cpy_r_r47.f1 = __tmp396;
+        PyObject *__tmp392 = PyTuple_GET_ITEM(cpy_r_r46, 0);
+        CPy_INCREF(__tmp392);
+        PyObject *__tmp393;
+        __tmp393 = __tmp392;
+        cpy_r_r47.f0 = __tmp393;
+        PyObject *__tmp394 = PyTuple_GET_ITEM(cpy_r_r46, 1);
+        CPy_INCREF(__tmp394);
+        PyObject *__tmp395;
+        __tmp395 = __tmp394;
+        cpy_r_r47.f1 = __tmp395;
     }
     CPy_DECREF(cpy_r_r46);
     if (unlikely(cpy_r_r47.f0 == NULL)) {
@@ -108772,30 +107618,30 @@ CPyL7: ;
 CPyL8: ;
     cpy_r_r17 = PyIter_Next(cpy_r_r16);
     if (cpy_r_r17 == NULL) goto CPyL53;
-    PyObject *__tmp397;
+    PyObject *__tmp396;
     if (unlikely(!(PyTuple_Check(cpy_r_r17) && PyTuple_GET_SIZE(cpy_r_r17) == 2))) {
-        __tmp397 = NULL;
-        goto __LL398;
+        __tmp396 = NULL;
+        goto __LL397;
     }
-    __tmp397 = PyTuple_GET_ITEM(cpy_r_r17, 0);
-    if (__tmp397 == NULL) goto __LL398;
-    __tmp397 = PyTuple_GET_ITEM(cpy_r_r17, 1);
-    if (__tmp397 == NULL) goto __LL398;
-    __tmp397 = cpy_r_r17;
-__LL398: ;
-    if (unlikely(__tmp397 == NULL)) {
+    __tmp396 = PyTuple_GET_ITEM(cpy_r_r17, 0);
+    if (__tmp396 == NULL) goto __LL397;
+    __tmp396 = PyTuple_GET_ITEM(cpy_r_r17, 1);
+    if (__tmp396 == NULL) goto __LL397;
+    __tmp396 = cpy_r_r17;
+__LL397: ;
+    if (unlikely(__tmp396 == NULL)) {
         CPy_TypeError("tuple[object, object]", cpy_r_r17); cpy_r_r18 = (tuple_T2OO) { NULL, NULL };
     } else {
-        PyObject *__tmp399 = PyTuple_GET_ITEM(cpy_r_r17, 0);
-        CPy_INCREF(__tmp399);
-        PyObject *__tmp400;
-        __tmp400 = __tmp399;
-        cpy_r_r18.f0 = __tmp400;
-        PyObject *__tmp401 = PyTuple_GET_ITEM(cpy_r_r17, 1);
-        CPy_INCREF(__tmp401);
-        PyObject *__tmp402;
-        __tmp402 = __tmp401;
-        cpy_r_r18.f1 = __tmp402;
+        PyObject *__tmp398 = PyTuple_GET_ITEM(cpy_r_r17, 0);
+        CPy_INCREF(__tmp398);
+        PyObject *__tmp399;
+        __tmp399 = __tmp398;
+        cpy_r_r18.f0 = __tmp399;
+        PyObject *__tmp400 = PyTuple_GET_ITEM(cpy_r_r17, 1);
+        CPy_INCREF(__tmp400);
+        PyObject *__tmp401;
+        __tmp401 = __tmp400;
+        cpy_r_r18.f1 = __tmp401;
     }
     CPy_DECREF(cpy_r_r17);
     if (unlikely(cpy_r_r18.f0 == NULL)) {
@@ -109102,12 +107948,12 @@ PyObject *CPyPy_hashing___tupleize_lists_nested(PyObject *self, PyObject *const 
     else {
         arg_d = NULL;
     }
-    if (arg_d != NULL) goto __LL403;
+    if (arg_d != NULL) goto __LL402;
     arg_d = obj_d;
-    if (arg_d != NULL) goto __LL403;
+    if (arg_d != NULL) goto __LL402;
     CPy_TypeError("union[dank_mids.helpers.hashing.AttributeDict, object]", obj_d); 
     goto fail;
-__LL403: ;
+__LL402: ;
     PyObject *retval = CPyDef_hashing___tupleize_lists_nested(arg_d);
     return retval;
 fail: ;
@@ -109611,30 +108457,30 @@ PyObject *CPyDef_hashing____tupleize_attrdict_lists_nested(PyObject *cpy_r_d) {
 CPyL3: ;
     cpy_r_r6 = PyIter_Next(cpy_r_r5);
     if (cpy_r_r6 == NULL) goto CPyL46;
-    PyObject *__tmp404;
+    PyObject *__tmp403;
     if (unlikely(!(PyTuple_Check(cpy_r_r6) && PyTuple_GET_SIZE(cpy_r_r6) == 2))) {
-        __tmp404 = NULL;
-        goto __LL405;
+        __tmp403 = NULL;
+        goto __LL404;
     }
-    __tmp404 = PyTuple_GET_ITEM(cpy_r_r6, 0);
-    if (__tmp404 == NULL) goto __LL405;
-    __tmp404 = PyTuple_GET_ITEM(cpy_r_r6, 1);
-    if (__tmp404 == NULL) goto __LL405;
-    __tmp404 = cpy_r_r6;
-__LL405: ;
-    if (unlikely(__tmp404 == NULL)) {
+    __tmp403 = PyTuple_GET_ITEM(cpy_r_r6, 0);
+    if (__tmp403 == NULL) goto __LL404;
+    __tmp403 = PyTuple_GET_ITEM(cpy_r_r6, 1);
+    if (__tmp403 == NULL) goto __LL404;
+    __tmp403 = cpy_r_r6;
+__LL404: ;
+    if (unlikely(__tmp403 == NULL)) {
         CPy_TypeError("tuple[object, object]", cpy_r_r6); cpy_r_r7 = (tuple_T2OO) { NULL, NULL };
     } else {
-        PyObject *__tmp406 = PyTuple_GET_ITEM(cpy_r_r6, 0);
-        CPy_INCREF(__tmp406);
-        PyObject *__tmp407;
-        __tmp407 = __tmp406;
-        cpy_r_r7.f0 = __tmp407;
-        PyObject *__tmp408 = PyTuple_GET_ITEM(cpy_r_r6, 1);
-        CPy_INCREF(__tmp408);
-        PyObject *__tmp409;
-        __tmp409 = __tmp408;
-        cpy_r_r7.f1 = __tmp409;
+        PyObject *__tmp405 = PyTuple_GET_ITEM(cpy_r_r6, 0);
+        CPy_INCREF(__tmp405);
+        PyObject *__tmp406;
+        __tmp406 = __tmp405;
+        cpy_r_r7.f0 = __tmp406;
+        PyObject *__tmp407 = PyTuple_GET_ITEM(cpy_r_r6, 1);
+        CPy_INCREF(__tmp407);
+        PyObject *__tmp408;
+        __tmp408 = __tmp407;
+        cpy_r_r7.f1 = __tmp408;
     }
     CPy_DECREF(cpy_r_r6);
     if (unlikely(cpy_r_r7.f0 == NULL)) {
@@ -112559,14 +111405,14 @@ CPyL3: ;
     cpy_r_r3 = PyTuple_New(4);
     if (unlikely(cpy_r_r3 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp410 = cpy_r_r1.f0;
-    PyTuple_SET_ITEM(cpy_r_r3, 0, __tmp410);
-    PyObject *__tmp411 = cpy_r_r1.f1;
-    PyTuple_SET_ITEM(cpy_r_r3, 1, __tmp411);
-    PyObject *__tmp412 = cpy_r_r1.f2;
-    PyTuple_SET_ITEM(cpy_r_r3, 2, __tmp412);
-    PyObject *__tmp413 = cpy_r_r1.f3;
-    PyTuple_SET_ITEM(cpy_r_r3, 3, __tmp413);
+    PyObject *__tmp409 = cpy_r_r1.f0;
+    PyTuple_SET_ITEM(cpy_r_r3, 0, __tmp409);
+    PyObject *__tmp410 = cpy_r_r1.f1;
+    PyTuple_SET_ITEM(cpy_r_r3, 1, __tmp410);
+    PyObject *__tmp411 = cpy_r_r1.f2;
+    PyTuple_SET_ITEM(cpy_r_r3, 2, __tmp411);
+    PyObject *__tmp412 = cpy_r_r1.f3;
+    PyTuple_SET_ITEM(cpy_r_r3, 3, __tmp412);
     cpy_r_r4 = PyObject_GetIter(cpy_r_r3);
     CPy_DECREF(cpy_r_r3);
     if (unlikely(cpy_r_r4 == NULL)) {
@@ -112754,14 +111600,14 @@ CPyL3: ;
     cpy_r_r20 = PyTuple_New(4);
     if (unlikely(cpy_r_r20 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp414 = cpy_r_r17.f0;
-    PyTuple_SET_ITEM(cpy_r_r20, 0, __tmp414);
-    PyObject *__tmp415 = cpy_r_r17.f1;
-    PyTuple_SET_ITEM(cpy_r_r20, 1, __tmp415);
-    PyObject *__tmp416 = cpy_r_r17.f2;
-    PyTuple_SET_ITEM(cpy_r_r20, 2, __tmp416);
-    PyObject *__tmp417 = cpy_r_r17.f3;
-    PyTuple_SET_ITEM(cpy_r_r20, 3, __tmp417);
+    PyObject *__tmp413 = cpy_r_r17.f0;
+    PyTuple_SET_ITEM(cpy_r_r20, 0, __tmp413);
+    PyObject *__tmp414 = cpy_r_r17.f1;
+    PyTuple_SET_ITEM(cpy_r_r20, 1, __tmp414);
+    PyObject *__tmp415 = cpy_r_r17.f2;
+    PyTuple_SET_ITEM(cpy_r_r20, 2, __tmp415);
+    PyObject *__tmp416 = cpy_r_r17.f3;
+    PyTuple_SET_ITEM(cpy_r_r20, 3, __tmp416);
     cpy_r_r21 = CPyDict_SetItem(cpy_r_r18, cpy_r_r19, cpy_r_r20);
     CPy_DECREF(cpy_r_r20);
     cpy_r_r22 = cpy_r_r21 >= 0;
@@ -113093,16 +111939,16 @@ lock___AlertingRLock_set__owner(dank_mids___lock___AlertingRLockObject *self, Py
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL418;
+    if (tmp != NULL) goto __LL417;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL418;
+    if (tmp != NULL) goto __LL417;
     CPy_TypeError("int or None", value); 
     tmp = NULL;
-__LL418: ;
+__LL417: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -113381,16 +112227,16 @@ lock___Lock_set__loop(dank_mids___lock___LockObject *self, PyObject *value, void
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL419;
+    if (tmp != NULL) goto __LL418;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL419;
+    if (tmp != NULL) goto __LL418;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL419: ;
+__LL418: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -113424,16 +112270,16 @@ lock___Lock_set__waiters(dank_mids___lock___LockObject *self, PyObject *value, v
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL420;
+    if (tmp != NULL) goto __LL419;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL420;
+    if (tmp != NULL) goto __LL419;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL420: ;
+__LL419: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -114152,40 +112998,40 @@ PyObject *CPyPy_lock___AlertingRLock_____exit__(PyObject *self, PyObject *const 
     }
     PyObject *arg_t;
     arg_t = obj_t;
-    if (arg_t != NULL) goto __LL421;
+    if (arg_t != NULL) goto __LL420;
     if (obj_t == Py_None)
         arg_t = obj_t;
     else {
         arg_t = NULL;
     }
-    if (arg_t != NULL) goto __LL421;
+    if (arg_t != NULL) goto __LL420;
     CPy_TypeError("object or None", obj_t); 
     goto fail;
-__LL421: ;
+__LL420: ;
     PyObject *arg_v;
     arg_v = obj_v;
-    if (arg_v != NULL) goto __LL422;
+    if (arg_v != NULL) goto __LL421;
     if (obj_v == Py_None)
         arg_v = obj_v;
     else {
         arg_v = NULL;
     }
-    if (arg_v != NULL) goto __LL422;
+    if (arg_v != NULL) goto __LL421;
     CPy_TypeError("object or None", obj_v); 
     goto fail;
-__LL422: ;
+__LL421: ;
     PyObject *arg_tb;
     arg_tb = obj_tb;
-    if (arg_tb != NULL) goto __LL423;
+    if (arg_tb != NULL) goto __LL422;
     if (obj_tb == Py_None)
         arg_tb = obj_tb;
     else {
         arg_tb = NULL;
     }
-    if (arg_tb != NULL) goto __LL423;
+    if (arg_tb != NULL) goto __LL422;
     CPy_TypeError("object or None", obj_tb); 
     goto fail;
-__LL423: ;
+__LL422: ;
     char retval = CPyDef_lock___AlertingRLock_____exit__(arg_self, arg_t, arg_v, arg_tb);
     if (retval == 2) {
         return NULL;
@@ -115074,63 +113920,63 @@ PyObject *CPyPy_lock___AlertingRLock____acquire_restore(PyObject *self, PyObject
         goto fail;
     }
     tuple_T2IO arg_state;
-    PyObject *__tmp424;
+    PyObject *__tmp423;
     if (unlikely(!(PyTuple_Check(obj_state) && PyTuple_GET_SIZE(obj_state) == 2))) {
-        __tmp424 = NULL;
-        goto __LL425;
+        __tmp423 = NULL;
+        goto __LL424;
     }
     if (likely(PyLong_Check(PyTuple_GET_ITEM(obj_state, 0))))
-        __tmp424 = PyTuple_GET_ITEM(obj_state, 0);
+        __tmp423 = PyTuple_GET_ITEM(obj_state, 0);
     else {
-        __tmp424 = NULL;
+        __tmp423 = NULL;
     }
-    if (__tmp424 == NULL) goto __LL425;
+    if (__tmp423 == NULL) goto __LL424;
     if (PyLong_Check(PyTuple_GET_ITEM(obj_state, 1)))
-        __tmp424 = PyTuple_GET_ITEM(obj_state, 1);
+        __tmp423 = PyTuple_GET_ITEM(obj_state, 1);
     else {
-        __tmp424 = NULL;
+        __tmp423 = NULL;
     }
-    if (__tmp424 != NULL) goto __LL426;
+    if (__tmp423 != NULL) goto __LL425;
     if (PyTuple_GET_ITEM(obj_state, 1) == Py_None)
-        __tmp424 = PyTuple_GET_ITEM(obj_state, 1);
+        __tmp423 = PyTuple_GET_ITEM(obj_state, 1);
     else {
-        __tmp424 = NULL;
+        __tmp423 = NULL;
     }
-    if (__tmp424 != NULL) goto __LL426;
-    __tmp424 = NULL;
-__LL426: ;
-    if (__tmp424 == NULL) goto __LL425;
-    __tmp424 = obj_state;
+    if (__tmp423 != NULL) goto __LL425;
+    __tmp423 = NULL;
 __LL425: ;
-    if (unlikely(__tmp424 == NULL)) {
+    if (__tmp423 == NULL) goto __LL424;
+    __tmp423 = obj_state;
+__LL424: ;
+    if (unlikely(__tmp423 == NULL)) {
         CPy_TypeError("tuple[int, union[int, None]]", obj_state); goto fail;
     } else {
-        PyObject *__tmp427 = PyTuple_GET_ITEM(obj_state, 0);
-        CPyTagged __tmp428;
-        if (likely(PyLong_Check(__tmp427)))
-            __tmp428 = CPyTagged_BorrowFromObject(__tmp427);
+        PyObject *__tmp426 = PyTuple_GET_ITEM(obj_state, 0);
+        CPyTagged __tmp427;
+        if (likely(PyLong_Check(__tmp426)))
+            __tmp427 = CPyTagged_BorrowFromObject(__tmp426);
         else {
-            CPy_TypeError("int", __tmp427); goto fail;
+            CPy_TypeError("int", __tmp426); goto fail;
         }
-        arg_state.f0 = __tmp428;
-        PyObject *__tmp429 = PyTuple_GET_ITEM(obj_state, 1);
-        PyObject *__tmp430;
-        if (PyLong_Check(__tmp429))
-            __tmp430 = __tmp429;
+        arg_state.f0 = __tmp427;
+        PyObject *__tmp428 = PyTuple_GET_ITEM(obj_state, 1);
+        PyObject *__tmp429;
+        if (PyLong_Check(__tmp428))
+            __tmp429 = __tmp428;
         else {
-            __tmp430 = NULL;
+            __tmp429 = NULL;
         }
-        if (__tmp430 != NULL) goto __LL431;
-        if (__tmp429 == Py_None)
-            __tmp430 = __tmp429;
+        if (__tmp429 != NULL) goto __LL430;
+        if (__tmp428 == Py_None)
+            __tmp429 = __tmp428;
         else {
-            __tmp430 = NULL;
+            __tmp429 = NULL;
         }
-        if (__tmp430 != NULL) goto __LL431;
-        CPy_TypeError("int or None", __tmp429); 
-        __tmp430 = NULL;
-__LL431: ;
-        arg_state.f1 = __tmp430;
+        if (__tmp429 != NULL) goto __LL430;
+        CPy_TypeError("int or None", __tmp428); 
+        __tmp429 = NULL;
+__LL430: ;
+        arg_state.f1 = __tmp429;
     }
     char retval = CPyDef_lock___AlertingRLock____acquire_restore(arg_self, arg_state);
     if (retval == 2) {
@@ -115217,8 +114063,8 @@ CPyL6: ;
     cpy_r_r19.f1 = cpy_r_r11;
     return cpy_r_r19;
 CPyL7: ;
-    tuple_T2IO __tmp432 = { CPY_INT_TAG, NULL };
-    cpy_r_r20 = __tmp432;
+    tuple_T2IO __tmp431 = { CPY_INT_TAG, NULL };
+    cpy_r_r20 = __tmp431;
     return cpy_r_r20;
 CPyL8: ;
     CPyTagged_DecRef(cpy_r_r9);
@@ -115251,10 +114097,10 @@ PyObject *CPyPy_lock___AlertingRLock____release_save(PyObject *self, PyObject *c
     PyObject *retbox = PyTuple_New(2);
     if (unlikely(retbox == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp433 = CPyTagged_StealAsObject(retval.f0);
-    PyTuple_SET_ITEM(retbox, 0, __tmp433);
-    PyObject *__tmp434 = retval.f1;
-    PyTuple_SET_ITEM(retbox, 1, __tmp434);
+    PyObject *__tmp432 = CPyTagged_StealAsObject(retval.f0);
+    PyTuple_SET_ITEM(retbox, 0, __tmp432);
+    PyObject *__tmp433 = retval.f1;
+    PyTuple_SET_ITEM(retbox, 1, __tmp433);
     return retbox;
 fail: ;
     CPy_AddTraceback("dank_mids/lock.py", "_release_save", DIFFCHECK_PLACEHOLDER, CPyStatic_lock___globals);
@@ -116066,10 +114912,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp435 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp435);
-    PyObject *__tmp436 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp436);
+    PyObject *__tmp434 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp434);
+    PyObject *__tmp435 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp435);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -116466,10 +115312,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp437 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp437);
-    PyObject *__tmp438 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp438);
+    PyObject *__tmp436 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp436);
+    PyObject *__tmp437 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp437);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -116638,40 +115484,40 @@ PyObject *CPyPy_lock___Lock_____aexit__(PyObject *self, PyObject *const *args, s
     }
     PyObject *arg_t;
     arg_t = obj_t;
-    if (arg_t != NULL) goto __LL439;
+    if (arg_t != NULL) goto __LL438;
     if (obj_t == Py_None)
         arg_t = obj_t;
     else {
         arg_t = NULL;
     }
-    if (arg_t != NULL) goto __LL439;
+    if (arg_t != NULL) goto __LL438;
     CPy_TypeError("object or None", obj_t); 
     goto fail;
-__LL439: ;
+__LL438: ;
     PyObject *arg_v;
     arg_v = obj_v;
-    if (arg_v != NULL) goto __LL440;
+    if (arg_v != NULL) goto __LL439;
     if (obj_v == Py_None)
         arg_v = obj_v;
     else {
         arg_v = NULL;
     }
-    if (arg_v != NULL) goto __LL440;
+    if (arg_v != NULL) goto __LL439;
     CPy_TypeError("object or None", obj_v); 
     goto fail;
-__LL440: ;
+__LL439: ;
     PyObject *arg_tb;
     arg_tb = obj_tb;
-    if (arg_tb != NULL) goto __LL441;
+    if (arg_tb != NULL) goto __LL440;
     if (obj_tb == Py_None)
         arg_tb = obj_tb;
     else {
         arg_tb = NULL;
     }
-    if (arg_tb != NULL) goto __LL441;
+    if (arg_tb != NULL) goto __LL440;
     CPy_TypeError("object or None", obj_tb); 
     goto fail;
-__LL441: ;
+__LL440: ;
     PyObject *retval = CPyDef_lock___Lock_____aexit__(arg_self, arg_t, arg_v, arg_tb);
     return retval;
 fail: ;
@@ -117246,8 +116092,8 @@ CPyL70: ;
     cpy_r_r64 = cpy_r_r82;
     CPy_DECREF(cpy_r_r64);
 CPyL72: ;
-    tuple_T3OOO __tmp442 = { NULL, NULL, NULL };
-    cpy_r_r83 = __tmp442;
+    tuple_T3OOO __tmp441 = { NULL, NULL, NULL };
+    cpy_r_r83 = __tmp441;
     cpy_r_r84 = cpy_r_r83;
     goto CPyL74;
 CPyL73: ;
@@ -117676,10 +116522,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp443 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp443);
-    PyObject *__tmp444 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp444);
+    PyObject *__tmp442 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp442);
+    PyObject *__tmp443 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp443);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -118281,8 +117127,8 @@ CPyL21: ;
 CPyL22: ;
     CPy_Unreachable();
 CPyL23: ;
-    tuple_T3OOO __tmp445 = { NULL, NULL, NULL };
-    cpy_r_r35 = __tmp445;
+    tuple_T3OOO __tmp444 = { NULL, NULL, NULL };
+    cpy_r_r35 = __tmp444;
     cpy_r_r36 = cpy_r_r35;
     goto CPyL25;
 CPyL24: ;
@@ -119321,16 +118167,16 @@ logging___CLogger_set_parent(dank_mids___logging___CLoggerObject *self, PyObject
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL446;
+    if (tmp != NULL) goto __LL445;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL446;
+    if (tmp != NULL) goto __LL445;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL446: ;
+__LL445: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -120007,10 +118853,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp447 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp447);
-    PyObject *__tmp448 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp448);
+    PyObject *__tmp446 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp446);
+    PyObject *__tmp447 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp447);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -120263,8 +119109,8 @@ CPyL18: ;
     cpy_r_r33 = NULL;
     cpy_r_r20 = cpy_r_r33;
 CPyL19: ;
-    tuple_T3OOO __tmp449 = { NULL, NULL, NULL };
-    cpy_r_r34 = __tmp449;
+    tuple_T3OOO __tmp448 = { NULL, NULL, NULL };
+    cpy_r_r34 = __tmp448;
     cpy_r_r35 = cpy_r_r34;
     goto CPyL21;
 CPyL20: ;
@@ -120688,16 +119534,16 @@ PyObject *CPyPy_logging____checkLevel(PyObject *self, PyObject *const *args, siz
     else {
         arg_level = NULL;
     }
-    if (arg_level != NULL) goto __LL450;
+    if (arg_level != NULL) goto __LL449;
     if (PyUnicode_Check(obj_level))
         arg_level = obj_level;
     else {
         arg_level = NULL;
     }
-    if (arg_level != NULL) goto __LL450;
+    if (arg_level != NULL) goto __LL449;
     CPy_TypeError("union[int, str]", obj_level); 
     goto fail;
-__LL450: ;
+__LL449: ;
     CPyTagged retval = CPyDef_logging____checkLevel(arg_level);
     if (retval == CPY_INT_TAG) {
         return NULL;
@@ -120870,23 +119716,23 @@ PyObject *CPyPy_logging___CLogger_____init__(PyObject *self, PyObject *args, PyO
     PyObject *arg_level;
     if (obj_level == NULL) {
         arg_level = NULL;
-        goto __LL451;
+        goto __LL450;
     }
     if (PyLong_Check(obj_level))
         arg_level = obj_level;
     else {
         arg_level = NULL;
     }
-    if (arg_level != NULL) goto __LL451;
+    if (arg_level != NULL) goto __LL450;
     if (PyUnicode_Check(obj_level))
         arg_level = obj_level;
     else {
         arg_level = NULL;
     }
-    if (arg_level != NULL) goto __LL451;
+    if (arg_level != NULL) goto __LL450;
     CPy_TypeError("union[int, str]", obj_level); 
     goto fail;
-__LL451: ;
+__LL450: ;
     char retval = CPyDef_logging___CLogger_____init__(arg_self, arg_name, arg_level);
     if (retval == 2) {
         return NULL;
@@ -121271,8 +120117,8 @@ CPyL29: ;
         goto CPyL31;
     }
 CPyL30: ;
-    tuple_T3OOO __tmp452 = { NULL, NULL, NULL };
-    cpy_r_r46 = __tmp452;
+    tuple_T3OOO __tmp451 = { NULL, NULL, NULL };
+    cpy_r_r46 = __tmp451;
     cpy_r_r47 = cpy_r_r46;
     goto CPyL32;
 CPyL31: ;
@@ -122080,72 +120926,72 @@ PyObject *CPyPy_logging___CLogger___exception(PyObject *self, PyObject *const *a
     PyObject *arg_exc_info;
     if (obj_exc_info == NULL) {
         arg_exc_info = NULL;
-        goto __LL453;
+        goto __LL452;
     }
     if (PyBool_Check(obj_exc_info))
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL453;
+    if (arg_exc_info != NULL) goto __LL452;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL454;
+        goto __LL453;
     }
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
-    if (arg_exc_info == NULL) goto __LL454;
+    if (arg_exc_info == NULL) goto __LL453;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
-    if (arg_exc_info == NULL) goto __LL454;
+    if (arg_exc_info == NULL) goto __LL453;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
-    if (arg_exc_info != NULL) goto __LL455;
+    if (arg_exc_info != NULL) goto __LL454;
     if (PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None)
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL455;
+    if (arg_exc_info != NULL) goto __LL454;
     arg_exc_info = NULL;
-__LL455: ;
-    if (arg_exc_info == NULL) goto __LL454;
-    arg_exc_info = obj_exc_info;
 __LL454: ;
-    if (arg_exc_info != NULL) goto __LL453;
+    if (arg_exc_info == NULL) goto __LL453;
+    arg_exc_info = obj_exc_info;
+__LL453: ;
+    if (arg_exc_info != NULL) goto __LL452;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL456;
+        goto __LL455;
     }
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 0) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL456;
+    if (arg_exc_info == NULL) goto __LL455;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 1) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL456;
+    if (arg_exc_info == NULL) goto __LL455;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL456;
+    if (arg_exc_info == NULL) goto __LL455;
     arg_exc_info = obj_exc_info;
-__LL456: ;
-    if (arg_exc_info != NULL) goto __LL453;
+__LL455: ;
+    if (arg_exc_info != NULL) goto __LL452;
     arg_exc_info = obj_exc_info;
-    if (arg_exc_info != NULL) goto __LL453;
+    if (arg_exc_info != NULL) goto __LL452;
     if (obj_exc_info == Py_None)
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL453;
+    if (arg_exc_info != NULL) goto __LL452;
     CPy_TypeError("union[bool, tuple[object, object, union[object, None]], tuple[None, None, None], object, None]", obj_exc_info); 
     goto fail;
-__LL453: ;
+__LL452: ;
     PyObject *arg_kwargs = obj_kwargs;
     char retval = CPyDef_logging___CLogger___exception(arg_self, arg_msg, arg_args, arg_exc_info, arg_kwargs);
     CPy_DECREF(obj_args);
@@ -123009,8 +121855,8 @@ CPyL65: ;
 CPyL70: ;
     return cpy_r_rv;
 CPyL71: ;
-    tuple_T4OIOO __tmp457 = { NULL, CPY_INT_TAG, NULL, NULL };
-    cpy_r_r100 = __tmp457;
+    tuple_T4OIOO __tmp456 = { NULL, CPY_INT_TAG, NULL, NULL };
+    cpy_r_r100 = __tmp456;
     return cpy_r_r100;
 CPyL72: ;
     CPyTagged_INCREF(cpy_r_stacklevel);
@@ -123187,14 +122033,14 @@ PyObject *CPyPy_logging___CLogger___findCaller(PyObject *self, PyObject *const *
     PyObject *retbox = PyTuple_New(4);
     if (unlikely(retbox == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp458 = retval.f0;
-    PyTuple_SET_ITEM(retbox, 0, __tmp458);
-    PyObject *__tmp459 = CPyTagged_StealAsObject(retval.f1);
-    PyTuple_SET_ITEM(retbox, 1, __tmp459);
-    PyObject *__tmp460 = retval.f2;
-    PyTuple_SET_ITEM(retbox, 2, __tmp460);
-    PyObject *__tmp461 = retval.f3;
-    PyTuple_SET_ITEM(retbox, 3, __tmp461);
+    PyObject *__tmp457 = retval.f0;
+    PyTuple_SET_ITEM(retbox, 0, __tmp457);
+    PyObject *__tmp458 = CPyTagged_StealAsObject(retval.f1);
+    PyTuple_SET_ITEM(retbox, 1, __tmp458);
+    PyObject *__tmp459 = retval.f2;
+    PyTuple_SET_ITEM(retbox, 2, __tmp459);
+    PyObject *__tmp460 = retval.f3;
+    PyTuple_SET_ITEM(retbox, 3, __tmp460);
     return retbox;
 fail: ;
     CPy_AddTraceback("dank_mids/logging.py", "findCaller", DIFFCHECK_PLACEHOLDER, CPyStatic_logging___globals);
@@ -123521,131 +122367,131 @@ PyObject *CPyPy_logging___CLogger___makeRecord(PyObject *self, PyObject *const *
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL462;
+    if (arg_args != NULL) goto __LL461;
     arg_args = obj_args;
-    if (arg_args != NULL) goto __LL462;
+    if (arg_args != NULL) goto __LL461;
     if (obj_args == Py_None)
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL462;
+    if (arg_args != NULL) goto __LL461;
     CPy_TypeError("union[tuple, object, None]", obj_args); 
     goto fail;
-__LL462: ;
+__LL461: ;
     PyObject *arg_exc_info;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL464;
+        goto __LL463;
     }
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
-    if (arg_exc_info == NULL) goto __LL464;
+    if (arg_exc_info == NULL) goto __LL463;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
-    if (arg_exc_info == NULL) goto __LL464;
+    if (arg_exc_info == NULL) goto __LL463;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
-    if (arg_exc_info != NULL) goto __LL465;
+    if (arg_exc_info != NULL) goto __LL464;
     if (PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None)
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL465;
+    if (arg_exc_info != NULL) goto __LL464;
     arg_exc_info = NULL;
-__LL465: ;
-    if (arg_exc_info == NULL) goto __LL464;
-    arg_exc_info = obj_exc_info;
 __LL464: ;
-    if (arg_exc_info != NULL) goto __LL463;
+    if (arg_exc_info == NULL) goto __LL463;
+    arg_exc_info = obj_exc_info;
+__LL463: ;
+    if (arg_exc_info != NULL) goto __LL462;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL466;
+        goto __LL465;
     }
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 0) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL466;
+    if (arg_exc_info == NULL) goto __LL465;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 1) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL466;
+    if (arg_exc_info == NULL) goto __LL465;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL466;
+    if (arg_exc_info == NULL) goto __LL465;
     arg_exc_info = obj_exc_info;
-__LL466: ;
-    if (arg_exc_info != NULL) goto __LL463;
+__LL465: ;
+    if (arg_exc_info != NULL) goto __LL462;
     if (obj_exc_info == Py_None)
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL463;
+    if (arg_exc_info != NULL) goto __LL462;
     CPy_TypeError("union[tuple[object, object, union[object, None]], tuple[None, None, None], None]", obj_exc_info); 
     goto fail;
-__LL463: ;
+__LL462: ;
     PyObject *arg_func;
     if (obj_func == NULL) {
         arg_func = NULL;
-        goto __LL467;
+        goto __LL466;
     }
     if (PyUnicode_Check(obj_func))
         arg_func = obj_func;
     else {
         arg_func = NULL;
     }
-    if (arg_func != NULL) goto __LL467;
+    if (arg_func != NULL) goto __LL466;
     if (obj_func == Py_None)
         arg_func = obj_func;
     else {
         arg_func = NULL;
     }
-    if (arg_func != NULL) goto __LL467;
+    if (arg_func != NULL) goto __LL466;
     CPy_TypeError("str or None", obj_func); 
     goto fail;
-__LL467: ;
+__LL466: ;
     PyObject *arg_extra;
     if (obj_extra == NULL) {
         arg_extra = NULL;
-        goto __LL468;
+        goto __LL467;
     }
     arg_extra = obj_extra;
-    if (arg_extra != NULL) goto __LL468;
+    if (arg_extra != NULL) goto __LL467;
     if (obj_extra == Py_None)
         arg_extra = obj_extra;
     else {
         arg_extra = NULL;
     }
-    if (arg_extra != NULL) goto __LL468;
+    if (arg_extra != NULL) goto __LL467;
     CPy_TypeError("object or None", obj_extra); 
     goto fail;
-__LL468: ;
+__LL467: ;
     PyObject *arg_sinfo;
     if (obj_sinfo == NULL) {
         arg_sinfo = NULL;
-        goto __LL469;
+        goto __LL468;
     }
     if (PyUnicode_Check(obj_sinfo))
         arg_sinfo = obj_sinfo;
     else {
         arg_sinfo = NULL;
     }
-    if (arg_sinfo != NULL) goto __LL469;
+    if (arg_sinfo != NULL) goto __LL468;
     if (obj_sinfo == Py_None)
         arg_sinfo = obj_sinfo;
     else {
         arg_sinfo = NULL;
     }
-    if (arg_sinfo != NULL) goto __LL469;
+    if (arg_sinfo != NULL) goto __LL468;
     CPy_TypeError("str or None", obj_sinfo); 
     goto fail;
-__LL469: ;
+__LL468: ;
     PyObject *retval = CPyDef_logging___CLogger___makeRecord(arg_self, arg_name, arg_level, arg_fn, arg_lno, arg_msg, arg_args, arg_exc_info, arg_func, arg_extra, arg_sinfo);
     return retval;
 fail: ;
@@ -123871,12 +122717,12 @@ CPyL25: ;
     cpy_r_r43 = PyTuple_New(3);
     if (unlikely(cpy_r_r43 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp470 = cpy_r_r42.f0;
-    PyTuple_SET_ITEM(cpy_r_r43, 0, __tmp470);
-    PyObject *__tmp471 = cpy_r_r42.f1;
-    PyTuple_SET_ITEM(cpy_r_r43, 1, __tmp471);
-    PyObject *__tmp472 = cpy_r_r42.f2;
-    PyTuple_SET_ITEM(cpy_r_r43, 2, __tmp472);
+    PyObject *__tmp469 = cpy_r_r42.f0;
+    PyTuple_SET_ITEM(cpy_r_r43, 0, __tmp469);
+    PyObject *__tmp470 = cpy_r_r42.f1;
+    PyTuple_SET_ITEM(cpy_r_r43, 1, __tmp470);
+    PyObject *__tmp471 = cpy_r_r42.f2;
+    PyTuple_SET_ITEM(cpy_r_r43, 2, __tmp471);
     cpy_r_exc_info = cpy_r_r43;
     goto CPyL38;
 CPyL33: ;
@@ -123901,45 +122747,45 @@ CPyL34: ;
     }
     if (unlikely(!(PyTuple_Check(cpy_r_r48) && PyTuple_GET_SIZE(cpy_r_r48) == 3))) {
         cpy_r_r49 = NULL;
-        goto __LL474;
+        goto __LL473;
     }
     cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 0);
-    if (cpy_r_r49 == NULL) goto __LL474;
+    if (cpy_r_r49 == NULL) goto __LL473;
     cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 1);
-    if (cpy_r_r49 == NULL) goto __LL474;
+    if (cpy_r_r49 == NULL) goto __LL473;
     cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 2);
-    if (cpy_r_r49 == NULL) goto __LL474;
+    if (cpy_r_r49 == NULL) goto __LL473;
     cpy_r_r49 = cpy_r_r48;
-__LL474: ;
-    if (cpy_r_r49 != NULL) goto __LL473;
+__LL473: ;
+    if (cpy_r_r49 != NULL) goto __LL472;
     if (unlikely(!(PyTuple_Check(cpy_r_r48) && PyTuple_GET_SIZE(cpy_r_r48) == 3))) {
         cpy_r_r49 = NULL;
-        goto __LL475;
+        goto __LL474;
     }
     if (likely(PyTuple_GET_ITEM(cpy_r_r48, 0) == Py_None))
         cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 0);
     else {
         cpy_r_r49 = NULL;
     }
-    if (cpy_r_r49 == NULL) goto __LL475;
+    if (cpy_r_r49 == NULL) goto __LL474;
     if (likely(PyTuple_GET_ITEM(cpy_r_r48, 1) == Py_None))
         cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 1);
     else {
         cpy_r_r49 = NULL;
     }
-    if (cpy_r_r49 == NULL) goto __LL475;
+    if (cpy_r_r49 == NULL) goto __LL474;
     if (likely(PyTuple_GET_ITEM(cpy_r_r48, 2) == Py_None))
         cpy_r_r49 = PyTuple_GET_ITEM(cpy_r_r48, 2);
     else {
         cpy_r_r49 = NULL;
     }
-    if (cpy_r_r49 == NULL) goto __LL475;
+    if (cpy_r_r49 == NULL) goto __LL474;
     cpy_r_r49 = cpy_r_r48;
-__LL475: ;
-    if (cpy_r_r49 != NULL) goto __LL473;
+__LL474: ;
+    if (cpy_r_r49 != NULL) goto __LL472;
     CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 304, CPyStatic_logging___globals, "union[tuple[object, object, object], tuple[None, None, None]]", cpy_r_r48);
     goto CPyL57;
-__LL473: ;
+__LL472: ;
     cpy_r_exc_info = cpy_r_r49;
 CPyL38: ;
     cpy_r_r50 = ((dank_mids___logging___CLoggerObject *)cpy_r_self)->_name;
@@ -123951,60 +122797,60 @@ CPyL38: ;
 CPyL39: ;
     if (unlikely(!(PyTuple_Check(cpy_r_exc_info) && PyTuple_GET_SIZE(cpy_r_exc_info) == 3))) {
         cpy_r_r51 = NULL;
-        goto __LL477;
+        goto __LL476;
     }
     cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 0);
-    if (cpy_r_r51 == NULL) goto __LL477;
+    if (cpy_r_r51 == NULL) goto __LL476;
     cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 1);
-    if (cpy_r_r51 == NULL) goto __LL477;
+    if (cpy_r_r51 == NULL) goto __LL476;
     cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 2);
-    if (cpy_r_r51 != NULL) goto __LL478;
+    if (cpy_r_r51 != NULL) goto __LL477;
     if (PyTuple_GET_ITEM(cpy_r_exc_info, 2) == Py_None)
         cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 2);
     else {
         cpy_r_r51 = NULL;
     }
-    if (cpy_r_r51 != NULL) goto __LL478;
+    if (cpy_r_r51 != NULL) goto __LL477;
     cpy_r_r51 = NULL;
-__LL478: ;
-    if (cpy_r_r51 == NULL) goto __LL477;
-    cpy_r_r51 = cpy_r_exc_info;
 __LL477: ;
-    if (cpy_r_r51 != NULL) goto __LL476;
+    if (cpy_r_r51 == NULL) goto __LL476;
+    cpy_r_r51 = cpy_r_exc_info;
+__LL476: ;
+    if (cpy_r_r51 != NULL) goto __LL475;
     if (unlikely(!(PyTuple_Check(cpy_r_exc_info) && PyTuple_GET_SIZE(cpy_r_exc_info) == 3))) {
         cpy_r_r51 = NULL;
-        goto __LL479;
+        goto __LL478;
     }
     if (likely(PyTuple_GET_ITEM(cpy_r_exc_info, 0) == Py_None))
         cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 0);
     else {
         cpy_r_r51 = NULL;
     }
-    if (cpy_r_r51 == NULL) goto __LL479;
+    if (cpy_r_r51 == NULL) goto __LL478;
     if (likely(PyTuple_GET_ITEM(cpy_r_exc_info, 1) == Py_None))
         cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 1);
     else {
         cpy_r_r51 = NULL;
     }
-    if (cpy_r_r51 == NULL) goto __LL479;
+    if (cpy_r_r51 == NULL) goto __LL478;
     if (likely(PyTuple_GET_ITEM(cpy_r_exc_info, 2) == Py_None))
         cpy_r_r51 = PyTuple_GET_ITEM(cpy_r_exc_info, 2);
     else {
         cpy_r_r51 = NULL;
     }
-    if (cpy_r_r51 == NULL) goto __LL479;
+    if (cpy_r_r51 == NULL) goto __LL478;
     cpy_r_r51 = cpy_r_exc_info;
-__LL479: ;
-    if (cpy_r_r51 != NULL) goto __LL476;
+__LL478: ;
+    if (cpy_r_r51 != NULL) goto __LL475;
     if (cpy_r_exc_info == Py_None)
         cpy_r_r51 = cpy_r_exc_info;
     else {
         cpy_r_r51 = NULL;
     }
-    if (cpy_r_r51 != NULL) goto __LL476;
+    if (cpy_r_r51 != NULL) goto __LL475;
     CPy_TypeErrorTraceback("dank_mids/logging.py", "_log", 305, CPyStatic_logging___globals, "union[tuple[object, object, union[object, None]], tuple[None, None, None], None]", cpy_r_exc_info);
     goto CPyL58;
-__LL476: ;
+__LL475: ;
     cpy_r_r52 = CPyDef_logging___CLogger___makeRecord(cpy_r_self, cpy_r_r50, cpy_r_level, cpy_r_fn, cpy_r_lno, cpy_r_msg, cpy_r_args, cpy_r_r51, cpy_r_func, cpy_r_extra, cpy_r_sinfo);
     CPy_DECREF(cpy_r_r50);
     CPy_DECREF(cpy_r_fn);
@@ -124151,103 +122997,103 @@ PyObject *CPyPy_logging___CLogger____log(PyObject *self, PyObject *const *args, 
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL480;
+    if (arg_args != NULL) goto __LL479;
     arg_args = obj_args;
-    if (arg_args != NULL) goto __LL480;
+    if (arg_args != NULL) goto __LL479;
     if (obj_args == Py_None)
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL480;
+    if (arg_args != NULL) goto __LL479;
     CPy_TypeError("union[tuple, object, None]", obj_args); 
     goto fail;
-__LL480: ;
+__LL479: ;
     PyObject *arg_exc_info;
     if (obj_exc_info == NULL) {
         arg_exc_info = NULL;
-        goto __LL481;
+        goto __LL480;
     }
     if (PyBool_Check(obj_exc_info))
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL481;
+    if (arg_exc_info != NULL) goto __LL480;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL482;
+        goto __LL481;
     }
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
-    if (arg_exc_info == NULL) goto __LL482;
+    if (arg_exc_info == NULL) goto __LL481;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
-    if (arg_exc_info == NULL) goto __LL482;
+    if (arg_exc_info == NULL) goto __LL481;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
-    if (arg_exc_info != NULL) goto __LL483;
+    if (arg_exc_info != NULL) goto __LL482;
     if (PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None)
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL483;
+    if (arg_exc_info != NULL) goto __LL482;
     arg_exc_info = NULL;
-__LL483: ;
-    if (arg_exc_info == NULL) goto __LL482;
-    arg_exc_info = obj_exc_info;
 __LL482: ;
-    if (arg_exc_info != NULL) goto __LL481;
+    if (arg_exc_info == NULL) goto __LL481;
+    arg_exc_info = obj_exc_info;
+__LL481: ;
+    if (arg_exc_info != NULL) goto __LL480;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL484;
+        goto __LL483;
     }
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 0) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL484;
+    if (arg_exc_info == NULL) goto __LL483;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 1) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL484;
+    if (arg_exc_info == NULL) goto __LL483;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL484;
+    if (arg_exc_info == NULL) goto __LL483;
     arg_exc_info = obj_exc_info;
-__LL484: ;
-    if (arg_exc_info != NULL) goto __LL481;
+__LL483: ;
+    if (arg_exc_info != NULL) goto __LL480;
     arg_exc_info = obj_exc_info;
-    if (arg_exc_info != NULL) goto __LL481;
+    if (arg_exc_info != NULL) goto __LL480;
     if (obj_exc_info == Py_None)
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL481;
+    if (arg_exc_info != NULL) goto __LL480;
     CPy_TypeError("union[bool, tuple[object, object, union[object, None]], tuple[None, None, None], object, None]", obj_exc_info); 
     goto fail;
-__LL481: ;
+__LL480: ;
     PyObject *arg_extra;
     if (obj_extra == NULL) {
         arg_extra = NULL;
-        goto __LL485;
+        goto __LL484;
     }
     arg_extra = obj_extra;
-    if (arg_extra != NULL) goto __LL485;
+    if (arg_extra != NULL) goto __LL484;
     if (obj_extra == Py_None)
         arg_extra = obj_extra;
     else {
         arg_extra = NULL;
     }
-    if (arg_extra != NULL) goto __LL485;
+    if (arg_extra != NULL) goto __LL484;
     CPy_TypeError("object or None", obj_extra); 
     goto fail;
-__LL485: ;
+__LL484: ;
     char arg_stack_info;
     if (obj_stack_info == NULL) {
         arg_stack_info = 2;
@@ -124664,14 +123510,14 @@ CPyL3: ;
     cpy_r_r52 = PyTuple_New(4);
     if (unlikely(cpy_r_r52 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp486 = cpy_r_r51.f0;
-    PyTuple_SET_ITEM(cpy_r_r52, 0, __tmp486);
-    PyObject *__tmp487 = cpy_r_r51.f1;
-    PyTuple_SET_ITEM(cpy_r_r52, 1, __tmp487);
-    PyObject *__tmp488 = cpy_r_r51.f2;
-    PyTuple_SET_ITEM(cpy_r_r52, 2, __tmp488);
-    PyObject *__tmp489 = cpy_r_r51.f3;
-    PyTuple_SET_ITEM(cpy_r_r52, 3, __tmp489);
+    PyObject *__tmp485 = cpy_r_r51.f0;
+    PyTuple_SET_ITEM(cpy_r_r52, 0, __tmp485);
+    PyObject *__tmp486 = cpy_r_r51.f1;
+    PyTuple_SET_ITEM(cpy_r_r52, 1, __tmp486);
+    PyObject *__tmp487 = cpy_r_r51.f2;
+    PyTuple_SET_ITEM(cpy_r_r52, 2, __tmp487);
+    PyObject *__tmp488 = cpy_r_r51.f3;
+    PyTuple_SET_ITEM(cpy_r_r52, 3, __tmp488);
     cpy_r_r53 = PyObject_GetItem(cpy_r_r44, cpy_r_r52);
     CPy_DECREF(cpy_r_r52);
     if (unlikely(cpy_r_r53 == NULL)) {
@@ -124702,10 +123548,10 @@ CPyL3: ;
     cpy_r_r64 = PyTuple_New(2);
     if (unlikely(cpy_r_r64 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp490 = cpy_r_r63.f0;
-    PyTuple_SET_ITEM(cpy_r_r64, 0, __tmp490);
-    PyObject *__tmp491 = cpy_r_r63.f1;
-    PyTuple_SET_ITEM(cpy_r_r64, 1, __tmp491);
+    PyObject *__tmp489 = cpy_r_r63.f0;
+    PyTuple_SET_ITEM(cpy_r_r64, 0, __tmp489);
+    PyObject *__tmp490 = cpy_r_r63.f1;
+    PyTuple_SET_ITEM(cpy_r_r64, 1, __tmp490);
     cpy_r_r65 = PyObject_GetItem(cpy_r_r58, cpy_r_r64);
     CPy_DECREF(cpy_r_r64);
     if (unlikely(cpy_r_r65 == NULL)) {
@@ -124733,10 +123579,10 @@ CPyL3: ;
     cpy_r_r74 = PyTuple_New(2);
     if (unlikely(cpy_r_r74 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp492 = cpy_r_r73.f0;
-    PyTuple_SET_ITEM(cpy_r_r74, 0, __tmp492);
-    PyObject *__tmp493 = cpy_r_r73.f1;
-    PyTuple_SET_ITEM(cpy_r_r74, 1, __tmp493);
+    PyObject *__tmp491 = cpy_r_r73.f0;
+    PyTuple_SET_ITEM(cpy_r_r74, 0, __tmp491);
+    PyObject *__tmp492 = cpy_r_r73.f1;
+    PyTuple_SET_ITEM(cpy_r_r74, 1, __tmp492);
     cpy_r_r75 = PyObject_GetItem(cpy_r_r68, cpy_r_r74);
     CPy_DECREF(cpy_r_r68);
     CPy_DECREF(cpy_r_r74);
@@ -124810,12 +123656,12 @@ CPyL3: ;
     cpy_r_r99 = PyTuple_New(3);
     if (unlikely(cpy_r_r99 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp494 = cpy_r_r98.f0;
-    PyTuple_SET_ITEM(cpy_r_r99, 0, __tmp494);
-    PyObject *__tmp495 = cpy_r_r98.f1;
-    PyTuple_SET_ITEM(cpy_r_r99, 1, __tmp495);
-    PyObject *__tmp496 = cpy_r_r98.f2;
-    PyTuple_SET_ITEM(cpy_r_r99, 2, __tmp496);
+    PyObject *__tmp493 = cpy_r_r98.f0;
+    PyTuple_SET_ITEM(cpy_r_r99, 0, __tmp493);
+    PyObject *__tmp494 = cpy_r_r98.f1;
+    PyTuple_SET_ITEM(cpy_r_r99, 1, __tmp494);
+    PyObject *__tmp495 = cpy_r_r98.f2;
+    PyTuple_SET_ITEM(cpy_r_r99, 2, __tmp495);
     cpy_r_r100 = PyObject_GetItem(cpy_r_r84, cpy_r_r99);
     CPy_DECREF(cpy_r_r99);
     if (unlikely(cpy_r_r100 == NULL)) {
@@ -124838,12 +123684,12 @@ CPyL3: ;
     cpy_r_r107 = PyTuple_New(3);
     if (unlikely(cpy_r_r107 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp497 = cpy_r_r106.f0;
-    PyTuple_SET_ITEM(cpy_r_r107, 0, __tmp497);
-    PyObject *__tmp498 = cpy_r_r106.f1;
-    PyTuple_SET_ITEM(cpy_r_r107, 1, __tmp498);
-    PyObject *__tmp499 = cpy_r_r106.f2;
-    PyTuple_SET_ITEM(cpy_r_r107, 2, __tmp499);
+    PyObject *__tmp496 = cpy_r_r106.f0;
+    PyTuple_SET_ITEM(cpy_r_r107, 0, __tmp496);
+    PyObject *__tmp497 = cpy_r_r106.f1;
+    PyTuple_SET_ITEM(cpy_r_r107, 1, __tmp497);
+    PyObject *__tmp498 = cpy_r_r106.f2;
+    PyTuple_SET_ITEM(cpy_r_r107, 2, __tmp498);
     cpy_r_r108 = PyObject_GetItem(cpy_r_r102, cpy_r_r107);
     CPy_DECREF(cpy_r_r107);
     if (unlikely(cpy_r_r108 == NULL)) {
@@ -124929,12 +123775,12 @@ CPyL3: ;
     cpy_r_r135 = PyTuple_New(3);
     if (unlikely(cpy_r_r135 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp500 = cpy_r_r134.f0;
-    PyTuple_SET_ITEM(cpy_r_r135, 0, __tmp500);
-    PyObject *__tmp501 = cpy_r_r134.f1;
-    PyTuple_SET_ITEM(cpy_r_r135, 1, __tmp501);
-    PyObject *__tmp502 = cpy_r_r134.f2;
-    PyTuple_SET_ITEM(cpy_r_r135, 2, __tmp502);
+    PyObject *__tmp499 = cpy_r_r134.f0;
+    PyTuple_SET_ITEM(cpy_r_r135, 0, __tmp499);
+    PyObject *__tmp500 = cpy_r_r134.f1;
+    PyTuple_SET_ITEM(cpy_r_r135, 1, __tmp500);
+    PyObject *__tmp501 = cpy_r_r134.f2;
+    PyTuple_SET_ITEM(cpy_r_r135, 2, __tmp501);
     cpy_r_r136 = PyObject_GetItem(cpy_r_r120, cpy_r_r135);
     CPy_DECREF(cpy_r_r135);
     if (unlikely(cpy_r_r136 == NULL)) {
@@ -124951,12 +123797,12 @@ CPyL3: ;
     cpy_r_r142 = PyTuple_New(3);
     if (unlikely(cpy_r_r142 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp503 = cpy_r_r141.f0;
-    PyTuple_SET_ITEM(cpy_r_r142, 0, __tmp503);
-    PyObject *__tmp504 = cpy_r_r141.f1;
-    PyTuple_SET_ITEM(cpy_r_r142, 1, __tmp504);
-    PyObject *__tmp505 = cpy_r_r141.f2;
-    PyTuple_SET_ITEM(cpy_r_r142, 2, __tmp505);
+    PyObject *__tmp502 = cpy_r_r141.f0;
+    PyTuple_SET_ITEM(cpy_r_r142, 0, __tmp502);
+    PyObject *__tmp503 = cpy_r_r141.f1;
+    PyTuple_SET_ITEM(cpy_r_r142, 1, __tmp503);
+    PyObject *__tmp504 = cpy_r_r141.f2;
+    PyTuple_SET_ITEM(cpy_r_r142, 2, __tmp504);
     cpy_r_r143 = PyObject_GetItem(cpy_r_r137, cpy_r_r142);
     CPy_DECREF(cpy_r_r142);
     if (unlikely(cpy_r_r143 == NULL)) {
@@ -125181,16 +124027,16 @@ CPyL3: ;
     else {
         cpy_r_r232 = NULL;
     }
-    if (cpy_r_r232 != NULL) goto __LL506;
+    if (cpy_r_r232 != NULL) goto __LL505;
     if (cpy_r_r231 == Py_None)
         cpy_r_r232 = cpy_r_r231;
     else {
         cpy_r_r232 = NULL;
     }
-    if (cpy_r_r232 != NULL) goto __LL506;
+    if (cpy_r_r232 != NULL) goto __LL505;
     CPy_TypeErrorTraceback("dank_mids/logging.py", "<module>", 38, CPyStatic_logging___globals, "str or None", cpy_r_r231);
     goto CPyL79;
-__LL506: ;
+__LL505: ;
     CPyStatic_logging____srcfile = cpy_r_r232;
     CPy_INCREF(CPyStatic_logging____srcfile);
     cpy_r_r233 = CPyStatic_logging___globals;
@@ -125652,10 +124498,10 @@ CPyL14: ;
     cpy_r_r12 = PyTuple_New(2);
     if (unlikely(cpy_r_r12 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp507 = cpy_r_r11.f0;
-    PyTuple_SET_ITEM(cpy_r_r12, 0, __tmp507);
-    PyObject *__tmp508 = cpy_r_r11.f1;
-    PyTuple_SET_ITEM(cpy_r_r12, 1, __tmp508);
+    PyObject *__tmp506 = cpy_r_r11.f0;
+    PyTuple_SET_ITEM(cpy_r_r12, 0, __tmp506);
+    PyObject *__tmp507 = cpy_r_r11.f1;
+    PyTuple_SET_ITEM(cpy_r_r12, 1, __tmp507);
     cpy_r_r13 = CPyDict_GetWithNone(cpy_r_r9, cpy_r_r12);
     CPy_DECREF(cpy_r_r12);
     if (unlikely(cpy_r_r13 == NULL)) {
@@ -125667,16 +124513,16 @@ CPyL14: ;
     else {
         cpy_r_r14 = NULL;
     }
-    if (cpy_r_r14 != NULL) goto __LL509;
+    if (cpy_r_r14 != NULL) goto __LL508;
     if (cpy_r_r13 == Py_None)
         cpy_r_r14 = cpy_r_r13;
     else {
         cpy_r_r14 = NULL;
     }
-    if (cpy_r_r14 != NULL) goto __LL509;
+    if (cpy_r_r14 != NULL) goto __LL508;
     CPy_TypeErrorTraceback("dank_mids/middleware.py", "dank_middleware", 63, CPyStatic_middleware___globals, "dank_mids.controller.DankMiddlewareController or None", cpy_r_r13);
     goto CPyL39;
-__LL509: ;
+__LL508: ;
     if (((dank_mids___middleware___dank_middleware_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__controller != NULL) {
         CPy_DECREF(((dank_mids___middleware___dank_middleware_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__controller);
     }
@@ -125757,10 +124603,10 @@ CPyL28: ;
     cpy_r_r27 = PyTuple_New(2);
     if (unlikely(cpy_r_r27 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp510 = cpy_r_r26.f0;
-    PyTuple_SET_ITEM(cpy_r_r27, 0, __tmp510);
-    PyObject *__tmp511 = cpy_r_r26.f1;
-    PyTuple_SET_ITEM(cpy_r_r27, 1, __tmp511);
+    PyObject *__tmp509 = cpy_r_r26.f0;
+    PyTuple_SET_ITEM(cpy_r_r27, 0, __tmp509);
+    PyObject *__tmp510 = cpy_r_r26.f1;
+    PyTuple_SET_ITEM(cpy_r_r27, 1, __tmp510);
     cpy_r_r28 = CPyDict_SetItem(cpy_r_r24, cpy_r_r27, cpy_r_r23);
     CPy_DECREF(cpy_r_r27);
     CPy_DECREF_NO_IMM(cpy_r_r23);
@@ -126017,10 +124863,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp512 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp512);
-    PyObject *__tmp513 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp513);
+    PyObject *__tmp511 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp511);
+    PyObject *__tmp512 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp512);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -127672,16 +126518,16 @@ stats____SentryExporter_set_set_tag(dank_mids___stats____SentryExporterObject *s
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL514;
+    if (tmp != NULL) goto __LL513;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL514;
+    if (tmp != NULL) goto __LL513;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL514: ;
+__LL513: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -127715,16 +126561,16 @@ stats____SentryExporter_set_set_measurement(dank_mids___stats____SentryExporterO
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL515;
+    if (tmp != NULL) goto __LL514;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL515;
+    if (tmp != NULL) goto __LL514;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL515: ;
+__LL514: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -127758,16 +126604,16 @@ stats____SentryExporter_set__exc(dank_mids___stats____SentryExporterObject *self
     }
     PyObject *tmp;
     tmp = value;
-    if (tmp != NULL) goto __LL516;
+    if (tmp != NULL) goto __LL515;
     if (value == Py_None)
         tmp = value;
     else {
         tmp = NULL;
     }
-    if (tmp != NULL) goto __LL516;
+    if (tmp != NULL) goto __LL515;
     CPy_TypeError("object or None", value); 
     tmp = NULL;
-__LL516: ;
+__LL515: ;
     if (!tmp)
         return -1;
     CPy_INCREF(tmp);
@@ -129641,25 +128487,25 @@ PyObject *CPyPy_stats____StatsLogger____log(PyObject *self, PyObject *const *arg
     PyObject *arg_args;
     if (obj_args == NULL) {
         arg_args = NULL;
-        goto __LL517;
+        goto __LL516;
     }
     if (PyTuple_Check(obj_args))
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL517;
+    if (arg_args != NULL) goto __LL516;
     arg_args = obj_args;
-    if (arg_args != NULL) goto __LL517;
+    if (arg_args != NULL) goto __LL516;
     if (obj_args == Py_None)
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL517;
+    if (arg_args != NULL) goto __LL516;
     CPy_TypeError("union[tuple, object, None]", obj_args); 
     goto fail;
-__LL517: ;
+__LL516: ;
     PyObject *arg_kwargs = obj_kwargs;
     char retval = CPyDef_stats____StatsLogger____log(arg_self, arg_level, arg_msg, arg_args, arg_kwargs);
     CPy_DECREF(obj_kwargs);
@@ -129737,103 +128583,103 @@ PyObject *CPyPy_stats____StatsLogger____log__CLogger_glue(PyObject *self, PyObje
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL518;
+    if (arg_args != NULL) goto __LL517;
     arg_args = obj_args;
-    if (arg_args != NULL) goto __LL518;
+    if (arg_args != NULL) goto __LL517;
     if (obj_args == Py_None)
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL518;
+    if (arg_args != NULL) goto __LL517;
     CPy_TypeError("union[tuple, object, None]", obj_args); 
     goto fail;
-__LL518: ;
+__LL517: ;
     PyObject *arg_exc_info;
     if (obj_exc_info == NULL) {
         arg_exc_info = NULL;
-        goto __LL519;
+        goto __LL518;
     }
     if (PyBool_Check(obj_exc_info))
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL519;
+    if (arg_exc_info != NULL) goto __LL518;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL520;
+        goto __LL519;
     }
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
-    if (arg_exc_info == NULL) goto __LL520;
+    if (arg_exc_info == NULL) goto __LL519;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
-    if (arg_exc_info == NULL) goto __LL520;
+    if (arg_exc_info == NULL) goto __LL519;
     arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
-    if (arg_exc_info != NULL) goto __LL521;
+    if (arg_exc_info != NULL) goto __LL520;
     if (PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None)
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL521;
+    if (arg_exc_info != NULL) goto __LL520;
     arg_exc_info = NULL;
-__LL521: ;
-    if (arg_exc_info == NULL) goto __LL520;
-    arg_exc_info = obj_exc_info;
 __LL520: ;
-    if (arg_exc_info != NULL) goto __LL519;
+    if (arg_exc_info == NULL) goto __LL519;
+    arg_exc_info = obj_exc_info;
+__LL519: ;
+    if (arg_exc_info != NULL) goto __LL518;
     if (unlikely(!(PyTuple_Check(obj_exc_info) && PyTuple_GET_SIZE(obj_exc_info) == 3))) {
         arg_exc_info = NULL;
-        goto __LL522;
+        goto __LL521;
     }
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 0) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 0);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL522;
+    if (arg_exc_info == NULL) goto __LL521;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 1) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 1);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL522;
+    if (arg_exc_info == NULL) goto __LL521;
     if (likely(PyTuple_GET_ITEM(obj_exc_info, 2) == Py_None))
         arg_exc_info = PyTuple_GET_ITEM(obj_exc_info, 2);
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info == NULL) goto __LL522;
+    if (arg_exc_info == NULL) goto __LL521;
     arg_exc_info = obj_exc_info;
-__LL522: ;
-    if (arg_exc_info != NULL) goto __LL519;
+__LL521: ;
+    if (arg_exc_info != NULL) goto __LL518;
     arg_exc_info = obj_exc_info;
-    if (arg_exc_info != NULL) goto __LL519;
+    if (arg_exc_info != NULL) goto __LL518;
     if (obj_exc_info == Py_None)
         arg_exc_info = obj_exc_info;
     else {
         arg_exc_info = NULL;
     }
-    if (arg_exc_info != NULL) goto __LL519;
+    if (arg_exc_info != NULL) goto __LL518;
     CPy_TypeError("union[bool, tuple[object, object, union[object, None]], tuple[None, None, None], object, None]", obj_exc_info); 
     goto fail;
-__LL519: ;
+__LL518: ;
     PyObject *arg_extra;
     if (obj_extra == NULL) {
         arg_extra = NULL;
-        goto __LL523;
+        goto __LL522;
     }
     arg_extra = obj_extra;
-    if (arg_extra != NULL) goto __LL523;
+    if (arg_extra != NULL) goto __LL522;
     if (obj_extra == Py_None)
         arg_extra = obj_extra;
     else {
         arg_extra = NULL;
     }
-    if (arg_extra != NULL) goto __LL523;
+    if (arg_extra != NULL) goto __LL522;
     CPy_TypeError("object or None", obj_extra); 
     goto fail;
-__LL523: ;
+__LL522: ;
     char arg_stack_info;
     if (obj_stack_info == NULL) {
         arg_stack_info = 2;
@@ -130028,45 +128874,45 @@ PyObject *CPyPy_stats____StatsLogger____log_nocheck(PyObject *self, PyObject *co
     PyObject *arg_args;
     if (obj_args == NULL) {
         arg_args = NULL;
-        goto __LL524;
+        goto __LL523;
     }
     if (PyTuple_Check(obj_args))
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL524;
+    if (arg_args != NULL) goto __LL523;
     arg_args = obj_args;
-    if (arg_args != NULL) goto __LL524;
+    if (arg_args != NULL) goto __LL523;
     if (obj_args == Py_None)
         arg_args = obj_args;
     else {
         arg_args = NULL;
     }
-    if (arg_args != NULL) goto __LL524;
+    if (arg_args != NULL) goto __LL523;
     CPy_TypeError("union[tuple, object, None]", obj_args); 
     goto fail;
-__LL524: ;
+__LL523: ;
     PyObject *arg_kwargs;
     if (obj_kwargs == NULL) {
         arg_kwargs = NULL;
-        goto __LL525;
+        goto __LL524;
     }
     if (PyDict_Check(obj_kwargs))
         arg_kwargs = obj_kwargs;
     else {
         arg_kwargs = NULL;
     }
-    if (arg_kwargs != NULL) goto __LL525;
+    if (arg_kwargs != NULL) goto __LL524;
     if (obj_kwargs == Py_None)
         arg_kwargs = obj_kwargs;
     else {
         arg_kwargs = NULL;
     }
-    if (arg_kwargs != NULL) goto __LL525;
+    if (arg_kwargs != NULL) goto __LL524;
     CPy_TypeError("dict or None", obj_kwargs); 
     goto fail;
-__LL525: ;
+__LL524: ;
     char retval = CPyDef_stats____StatsLogger____log_nocheck(arg_self, arg_level, arg_msg, arg_args, arg_kwargs);
     if (retval == 2) {
         return NULL;
@@ -131229,10 +130075,10 @@ CPyL3: ;
     cpy_r_r11 = PyTuple_New(2);
     if (unlikely(cpy_r_r11 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp526 = cpy_r_r10.f0;
-    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp526);
-    PyObject *__tmp527 = cpy_r_r10.f1;
-    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp527);
+    PyObject *__tmp525 = cpy_r_r10.f0;
+    PyTuple_SET_ITEM(cpy_r_r11, 0, __tmp525);
+    PyObject *__tmp526 = cpy_r_r10.f1;
+    PyTuple_SET_ITEM(cpy_r_r11, 1, __tmp526);
     cpy_r_r12 = CPy_ExceptionMatches(cpy_r_r11);
     CPy_DECREF(cpy_r_r11);
     if (!cpy_r_r12) goto CPyL13;
@@ -131452,8 +130298,8 @@ CPyL11: ;
     cpy_r_r15 = PyTuple_New(1);
     if (unlikely(cpy_r_r15 == NULL))
         CPyError_OutOfMemory();
-    PyObject *__tmp528 = cpy_r_r14.f0;
-    PyTuple_SET_ITEM(cpy_r_r15, 0, __tmp528);
+    PyObject *__tmp527 = cpy_r_r14.f0;
+    PyTuple_SET_ITEM(cpy_r_r15, 0, __tmp527);
     cpy_r_r16 = PyDict_New();
     if (unlikely(cpy_r_r16 == NULL)) {
         CPy_AddTraceback("dank_mids/stats/__init__.py", "log_validation_error", DIFFCHECK_PLACEHOLDER, CPyStatic_stats___globals);
@@ -132515,16 +131361,16 @@ CPyL3: ;
     else {
         cpy_r_r9 = NULL;
     }
-    if (cpy_r_r9 != NULL) goto __LL529;
+    if (cpy_r_r9 != NULL) goto __LL528;
     if (PyLong_Check(cpy_r_r8))
         cpy_r_r9 = cpy_r_r8;
     else {
         cpy_r_r9 = NULL;
     }
-    if (cpy_r_r9 != NULL) goto __LL529;
+    if (cpy_r_r9 != NULL) goto __LL528;
     CPy_TypeErrorTraceback("dank_mids/stats/__init__.py", "avg_loop_time", 425, CPyStatic_stats___globals, "union[float, int]", cpy_r_r8);
     goto CPyL14;
-__LL529: ;
+__LL528: ;
     cpy_r_r10 = CPyStatic_stats___collector;
     if (unlikely(cpy_r_r10 == NULL)) {
         goto CPyL16;
@@ -133474,16 +132320,16 @@ CPyL25: ;
     else {
         cpy_r_r47 = NULL;
     }
-    if (cpy_r_r47 != NULL) goto __LL530;
+    if (cpy_r_r47 != NULL) goto __LL529;
     if (cpy_r_r46 == Py_None)
         cpy_r_r47 = cpy_r_r46;
     else {
         cpy_r_r47 = NULL;
     }
-    if (cpy_r_r47 != NULL) goto __LL530;
+    if (cpy_r_r47 != NULL) goto __LL529;
     CPy_TypeErrorTraceback("dank_mids/stats/__init__.py", "push_measurements", 573, CPyStatic_stats___globals, "str or None", cpy_r_r46);
     goto CPyL44;
-__LL530: ;
+__LL529: ;
     cpy_r_r48 = ((dank_mids___stats____SentryExporterObject *)cpy_r_self)->_set_measurement;
     CPy_INCREF(cpy_r_r48);
     PyObject *cpy_r_r49[3] = {cpy_r_r32, cpy_r_attr, cpy_r_r47};
@@ -135381,13 +134227,11 @@ int CPyGlobalsInit(void)
     CPyModule_heapq = Py_None;
     CPyModule_collections = Py_None;
     CPyModule_typing = Py_None;
-    CPyModule_a_sync = Py_None;
     CPyModule_a_sync___asyncio = Py_None;
     CPyModule_dank_mids = Py_None;
     CPyModule_dank_mids____tasks = Py_None;
     CPyModule_dank_mids____vendor___aiolimiter___src___aiolimiter = Py_None;
     CPyModule_dank_mids___helpers____requester = Py_None;
-    CPyModule_dank_mids___lock = Py_None;
     CPyModule_dank_mids___logging = Py_None;
     CPyModule_dank_mids___types = Py_None;
     CPyModule_dank_mids___helpers____retry_mechanics = Py_None;
@@ -135731,25 +134575,24 @@ const char * const CPyLit_Str[] = {
     "\002\004loop6CancelledError in `gatherish`. This should not happen.",
     "\003\034dank_mids/helpers/_gather.py\tCoroutine\016a_sync.asyncio",
     "\005\023asyncio.Future[__T]\rFinishedTasks\fPendingTasks\020dank_mids.gather\004Task",
-    "\004\004wait\006sleep0\ryield_to_loop\024call_soon_threadsafe",
-    "\003(InvalidStateError in rate_limit_inactive\adiscard\bis_alive",
+    "\006\004wait\006sleep0\ryield_to_loop\024call_soon_threadsafe\adiscard\bis_alive",
     "\003\r__traceback__\016with_traceback#rate limit is activated, waiting...",
-    "\0020rate limit inactives, proceeding with more calls\003pop",
-    "\002\023last waiter is done dank_mids/helpers/_rate_limit.py",
-    "\004+dank_mids._vendor.aiolimiter.src.aiolimiter\004Lock\fRateLimiters\005TASKS",
-    "\006\024dank_mids.rate_limit\021InvalidStateError\bnlargest\005Event\blimiters\005locks",
-    "\006\023_rate_limit_waiters\021_rate_limit_tasks\006action\aattempt\005delay\006random",
-    "\006\aIntEnum\004enum\vRetryAction\005RAISE\tRETRY_NOW\021RETRY_AFTER_DELAY",
-    "\003\017RETRY_WITH_RACE\021HANDLE_RATE_LIMIT\"dank_mids.helpers._retry_mechanics",
-    "\a\battempts\fmax_attempts\vRetryBudget\005slots\rRetryDecision\bNO_RETRY\006daemon",
-    "\006\016new_event_loop\016set_event_loop\vrun_forever\005close\fTCPConnector\005limit",
-    "\004\025enable_cleanup_closed\rClientTimeout\fcontent-type\020application/json",
-    "\006\021DankClientSession\tconnector\020raise_for_status\fread_bufsize\004post\005loads",
+    "\0020rate limit inactives, proceeding with more calls\023last waiter is done",
+    "\001 dank_mids/helpers/_rate_limit.py",
+    "\003+dank_mids._vendor.aiolimiter.src.aiolimiter\fRateLimiters\005TASKS",
+    "\005\024dank_mids.rate_limit\bnlargest\blimiters\021_rate_limit_tasks\006action",
+    "\b\aattempt\005delay\006random\aIntEnum\004enum\vRetryAction\005RAISE\tRETRY_NOW",
+    "\003\021RETRY_AFTER_DELAY\017RETRY_WITH_RACE\021HANDLE_RATE_LIMIT",
+    "\004\"dank_mids.helpers._retry_mechanics\battempts\fmax_attempts\vRetryBudget",
+    "\006\005slots\rRetryDecision\bNO_RETRY\006daemon\016new_event_loop\016set_event_loop",
+    "\005\vrun_forever\005close\fTCPConnector\005limit\025enable_cleanup_closed",
+    "\004\rClientTimeout\fcontent-type\020application/json\021DankClientSession",
+    "\005\tconnector\020raise_for_status\fread_bufsize\004post\005loads",
     "\005\030run_coroutine_threadsafe\004stop\004join\006atexit\tthreading",
     "\003\037dank_mids/helpers/_requester.py\aaiohttp\024DEFAULT_JSON_DECODER",
     "\005\020aiohttp.typedefs\032dank_mids.helpers._session\006Thread\b_session\006_tasks",
     "\a\004_exc\023HTTPRequesterThread\027shutdown_http_requester\bregister\002([\002, \004repr",
-    "\005\002])\003any\035list.remove(x): x not in list\aGeneric\003ref",
+    "\006\002])\003any\035list.remove(x): x not in list\003pop\aGeneric\003ref",
     "\003\033dank_mids.helpers._weaklist\005_refs\bWeakList",
     "\0015checking if we should reduce %s batch size... (%s %s)",
     "\004\024dank_mids.batch_size\021batch_size_logger\006__hash\024_AttributeDict__hash",
@@ -135763,7 +134606,7 @@ const char * const CPyLit_Str[] = {
     "\005\006object\023lru_cache_lite_wrap\005cache\tParamSpec\003__P",
     "\003\031eth_getTransactionReceipt\veth_getCode\022eth_getTransaction",
     "\005\016eth_getBlockBy\017eth_blockNumber\veth_getLogs\006trace_\006debug_",
-    "\004\016BYPASS_METHODS\aget_len\fshould_batch\aacquire",
+    "\005\016BYPASS_METHODS\aget_len\fshould_batch\004Lock\aacquire",
     "\002 wtf\?! %s with name %s is locked!\037cannot release un-acquired lock",
     "\a\006locked\bunlocked\n, waiters:\001<\005deque\006remove\025Lock is not acquired.",
     "\004\b__exit__\t__enter__# is bound to a different event loop\005_time",
@@ -135814,56 +134657,55 @@ const char * const CPyLit_Int[] = {
 const double CPyLit_Float[] = {0};
 const double CPyLit_Complex[] = {0};
 const int CPyLit_Tuple[] = {
-    262, 1, 11, 1, 17, 1, 29, 2, 31, 32, 6, 34, 35, 36, 37, 38, 39, 3,
-    41, 41, 41, 1, 1249, 2, 20, 24, 2, 45, 46, 1, 48, 1, 50, 1, 52, 3, 35,
-    36, 39, 1, 69, 1, 36, 1, 76, 1, 78, 3, 129, 129, 129, 1, 1261, 3, 35,
-    131, 36, 1, 132, 3, 148, 141, 149, 1, 153, 3, 159, 159, 159, 1, 1267,
-    4, 34, 36, 161, 39, 1, 162, 1, 188, 3, 30, 30, 30, 1, 1272, 1, 31, 2,
+    259, 1, 11, 1, 17, 1, 29, 2, 31, 32, 6, 34, 35, 36, 37, 38, 39, 3,
+    41, 41, 41, 1, 1244, 2, 20, 24, 2, 45, 46, 1, 48, 1, 50, 1, 52, 3, 35,
+    36, 39, 1, 69, 1, 36, 1, 76, 1, 78, 3, 129, 129, 129, 1, 1256, 3, 35,
+    131, 36, 1, 132, 3, 148, 141, 149, 1, 153, 3, 159, 159, 159, 1, 1262,
+    4, 34, 36, 161, 39, 1, 162, 1, 188, 3, 30, 30, 30, 1, 1267, 1, 31, 2,
     35, 36, 1, 207, 1, 208, 1, 219, 1, 225, 1, 227, 1, 258, 3, 260, 260,
-    260, 3, 261, 261, 261, 3, 262, 262, 262, 4, 1272, 1282, 1283, 1284, 1,
+    260, 3, 261, 261, 261, 3, 262, 262, 262, 4, 1267, 1277, 1278, 1279, 1,
     240, 2, 242, 241, 1, 232, 1, 267, 1, 39, 1, 272, 1, 38, 3, 141, 283,
-    284, 3, 33, 303, 303, 1, 1294, 1, 305, 1, 306, 4, 35, 36, 37, 39, 1,
+    284, 3, 33, 303, 303, 1, 1289, 1, 305, 1, 306, 4, 35, 36, 37, 39, 1,
     308, 1, 309, 2, 311, 300, 1, 331, 3, 305, 340, 341, 3, 35, 36, 37, 1,
     333, 1, 337, 5, 338, 344, 339, 345, 346, 2, 348, 332, 3, 350, 351,
     352, 1, 354, 1, 366, 2, 366, 92, 2, 370, 371, 1, 268, 1, 378, 1, 384,
     1, 385, 1, 373, 1, 391, 1, 393, 1, 341, 1, 408, 1, 410, 2, 412, 413,
-    1, 414, 1, 416, 1, 418, 1, 428, 3, 495, 495, 495, 1, 1329, 2, 305,
+    1, 414, 1, 416, 1, 418, 1, 428, 3, 495, 495, 495, 1, 1324, 2, 305,
     341, 1, 459, 1, 463, 1, 438, 7, 34, 35, 36, 499, 500, 37, 38, 3, 501,
     367, 367, 3, 502, 367, 367, 3, 503, 367, 367, 3, 504, 367, 367, 3,
-    310, 310, 310, 3, 312, 310, 310, 3, 505, 505, 505, 7, 1336, 1337,
-    1338, 1339, 1340, 1341, 1342, 1, 462, 1, 506, 1, 472, 2, 479, 484, 1,
+    310, 310, 310, 3, 312, 310, 310, 3, 505, 505, 505, 7, 1331, 1332,
+    1333, 1334, 1335, 1336, 1337, 1, 462, 1, 506, 1, 472, 2, 479, 484, 1,
     509, 2, 447, 452, 1, 511, 1, 513, 1, 311, 1, 515, 1, 517, 1, 519, 1,
     520, 1, 522, 1, 571, 1, 35, 1, 370, 3, 509, 574, 575, 2, 437, 435, 4,
     35, 37, 161, 39, 1, 585, 1, 587, 3, 588, 589, 590, 3, 518, 595, 595,
-    1, 1367, 1, 597, 1, 598, 3, 454, 674, 551, 1, 688, 5, 213, 29, 689,
+    1, 1362, 1, 597, 1, 598, 3, 454, 674, 551, 1, 688, 5, 213, 29, 689,
     234, 216, 1, 662, 2, 317, 341, 1, 712, 1, 713, 1, 236, 6, 35, 715, 36,
-    716, 38, 39, 3, 717, 717, 717, 2, 1249, 1380, 1, 547, 3, 597, 587,
+    716, 38, 39, 3, 717, 717, 717, 2, 1244, 1375, 1, 547, 3, 597, 587,
     132, 1, 720, 1, 657, 1, 660, 1, 722, 2, 351, 352, 1, 678, 1, 68, 5,
     723, 669, 668, 671, 667, 1, 74, 1, 184, 4, 20, 24, 672, 658, 1, 210,
     1, 224, 1, 673, 2, 48, 676, 1, 724, 2, 641, 709, 3, 726, 654, 655, 1,
     728, 1, 675, 2, 647, 646, 2, 763, 764, 1, 766, 1, 767, 3, 77, 77, 77,
-    2, 1249, 1408, 1, 769, 1, 770, 2, 772, 50, 2, 779, 780, 1, 779, 1,
+    2, 1244, 1403, 1, 769, 1, 770, 2, 772, 50, 2, 779, 780, 1, 779, 1,
     809, 3, 34, 35, 36, 1, 808, 1, 401, 4, 820, 646, 821, 819, 1, 820, 3,
     305, 317, 318, 11, 34, 35, 131, 36, 716, 500, 37, 161, 38, 39, 827, 3,
-    824, 824, 824, 2, 1342, 1423, 2, 587, 132, 1, 829, 1, 830, 2, 826,
+    824, 824, 824, 2, 1337, 1418, 2, 587, 132, 1, 829, 1, 830, 2, 826,
     832, 1, 853, 1, 151, 1, 867, 1, 868, 1, 861, 1, 612, 2, 167, 170, 1,
     637, 2, 796, 50, 3, 646, 647, 820, 2, 895, 188, 2, 898, 317, 3, 899,
-    41, 41, 1, 1441, 3, 265, 265, 265, 2, 1272, 1443, 2, 715, 36, 2, 1249,
-    1441, 1, 46, 1, 920, 1, 921, 1, 935, 1, 934, 2, 36, 39, 1, 947, 2,
-    331, 947, 1, 950, 2, 956, 957, 5, 962, 149, 688, 963, 964, 3, 970,
-    970, 970, 3, 971, 971, 971, 3, 1272, 1458, 1459, 2, 958, 955, 1, 974,
-    1, 961, 2, 317, 340, 4, 36, 990, 37, 39, 1, 991, 2, 36, 716, 7, 1006,
-    1009, 340, 1010, 318, 341, 1011, 6, 35, 36, 990, 37, 38, 39, 1, 1013,
-    3, 1026, 92, 92, 1, 1471, 1, 37, 1, 1033, 3, 303, 303, 303, 3, 236,
-    236, 1059, 4, 1272, 1475, 1459, 1476, 4, 1061, 29, 105, 1062, 5, 1063,
-    36, 716, 37, 39, 1, 1091, 3, 829, 829, 829, 3, 714, 714, 714, 3, 1100,
-    1100, 1100, 5, 1481, 1482, 1282, 1283, 1483, 2, 340, 318, 1, 1102, 2,
-    1104, 267, 3, 35, 36, 38, 1, 1459, 1, 351, 1, 761, 1, 1126, 1, 1144,
-    1, 1482, 1, 217, 2, 662, 1053, 2, 305, 317, 1, 84, 1, 1154, 7, 34, 35,
-    715, 1063, 36, 37, 39, 1, 1423, 1, 906, 1, 1181, 3, 1124, 1105, 1107,
-    1, 1174
+    41, 41, 1, 1436, 3, 265, 265, 265, 2, 1267, 1438, 1, 46, 1, 918, 1,
+    928, 1, 927, 2, 36, 39, 1, 940, 2, 331, 940, 1, 943, 2, 949, 950, 5,
+    955, 149, 688, 956, 957, 3, 963, 963, 963, 3, 964, 964, 964, 3, 1267,
+    1450, 1451, 2, 951, 948, 1, 967, 1, 954, 2, 317, 340, 4, 36, 984, 37,
+    39, 1, 985, 2, 36, 716, 7, 1000, 1003, 340, 1004, 318, 341, 1005, 6,
+    35, 36, 984, 37, 38, 39, 1, 1007, 3, 1020, 92, 92, 1, 1463, 1, 37, 1,
+    1027, 3, 303, 303, 303, 3, 236, 236, 1054, 4, 1267, 1467, 1451, 1468,
+    4, 1056, 29, 105, 1057, 5, 1058, 36, 716, 37, 39, 1, 1086, 3, 829,
+    829, 829, 3, 714, 714, 714, 3, 1095, 1095, 1095, 5, 1473, 1474, 1277,
+    1278, 1475, 2, 340, 318, 1, 1097, 2, 1099, 267, 3, 35, 36, 38, 1,
+    1451, 1, 351, 1, 761, 1, 1121, 1, 1139, 1, 1474, 1, 217, 2, 662, 1048,
+    2, 305, 317, 1, 84, 1, 1149, 7, 34, 35, 715, 1058, 36, 37, 39, 1,
+    1418, 1, 906, 1, 1176, 3, 1119, 1100, 1102, 1, 1169
 };
-const int CPyLit_FrozenSet[] = {1, 2, 1036, 1037};
+const int CPyLit_FrozenSet[] = {1, 2, 1030, 1031};
 CPyModule *CPyModule_dank_mids____batch__internal = NULL;
 CPyModule *CPyModule_dank_mids____batch;
 PyObject *CPyStatic__batch___globals;
@@ -136848,15 +135690,11 @@ char CPyDef__gather_____top_level__(void);
 PyObject *CPyStatic__rate_limit___TASKS = NULL;
 PyObject *CPyStatic__rate_limit___logger = NULL;
 PyObject *CPyStatic__rate_limit___CancelledError = NULL;
-PyObject *CPyStatic__rate_limit___InvalidStateError = NULL;
 PyObject *CPyStatic__rate_limit___create_task = NULL;
 PyObject *CPyStatic__rate_limit___get_running_loop = NULL;
 PyObject *CPyStatic__rate_limit___nlargest = NULL;
-PyObject *CPyStatic__rate_limit___Event = NULL;
 PyObject *CPyStatic__rate_limit___sleep0 = NULL;
 PyObject *CPyStatic__rate_limit___limiters = NULL;
-PyObject *CPyStatic__rate_limit___locks = NULL;
-PyObject *CPyStatic__rate_limit____rate_limit_waiters = NULL;
 PyObject *CPyStatic__rate_limit____rate_limit_tasks = NULL;
 PyTypeObject *CPyType__rate_limit_____mypyc_lambda__0_obj;
 PyObject *CPyDef__rate_limit_____mypyc_lambda__0_obj(void);
@@ -136867,21 +135705,30 @@ CPyThreadLocal dank_mids___helpers____rate_limit___rate_limit_inactive_envObject
 PyTypeObject *CPyType__rate_limit___rate_limit_inactive_gen;
 PyObject *CPyDef__rate_limit___rate_limit_inactive_gen(void);
 CPyThreadLocal dank_mids___helpers____rate_limit___rate_limit_inactive_genObject *_rate_limit___rate_limit_inactive_gen_free_instance;
+PyTypeObject *CPyType__rate_limit___finish_rate_limit_inactive_obj;
+PyObject *CPyDef__rate_limit___finish_rate_limit_inactive_obj(void);
+CPyThreadLocal dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject *_rate_limit___finish_rate_limit_inactive_obj_free_instance;
 PyTypeObject *CPyType__rate_limit___check_rate_limit_inactive_env;
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_env(void);
 CPyThreadLocal dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject *_rate_limit___check_rate_limit_inactive_env_free_instance;
 PyTypeObject *CPyType__rate_limit___check_rate_limit_inactive_obj;
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_obj(void);
 CPyThreadLocal dank_mids___helpers____rate_limit___check_rate_limit_inactive_objObject *_rate_limit___check_rate_limit_inactive_obj_free_instance;
-PyTypeObject *CPyType__rate_limit___check_gen___3_73;
-PyObject *CPyDef__rate_limit___check_gen___3_73(void);
-CPyThreadLocal dank_mids___helpers____rate_limit___check_gen___3_73Object *_rate_limit___check_gen___3_73_free_instance;
+PyTypeObject *CPyType__rate_limit___check_gen___3_62;
+PyObject *CPyDef__rate_limit___check_gen___3_62(void);
+CPyThreadLocal dank_mids___helpers____rate_limit___check_gen___3_62Object *_rate_limit___check_gen___3_62_free_instance;
 PyTypeObject *CPyType__rate_limit___start_check_rate_limit_inactive_obj;
 PyObject *CPyDef__rate_limit___start_check_rate_limit_inactive_obj(void);
 CPyThreadLocal dank_mids___helpers____rate_limit___start_check_rate_limit_inactive_objObject *_rate_limit___start_check_rate_limit_inactive_obj_free_instance;
+PyTypeObject *CPyType__rate_limit____rate_limit_inactive_env;
+PyObject *CPyDef__rate_limit____rate_limit_inactive_env(void);
+CPyThreadLocal dank_mids___helpers____rate_limit____rate_limit_inactive_envObject *_rate_limit____rate_limit_inactive_env_free_instance;
 PyTypeObject *CPyType__rate_limit____rate_limit_inactive_gen;
 PyObject *CPyDef__rate_limit____rate_limit_inactive_gen(void);
 CPyThreadLocal dank_mids___helpers____rate_limit____rate_limit_inactive_genObject *_rate_limit____rate_limit_inactive_gen_free_instance;
+PyTypeObject *CPyType__rate_limit___discard__rate_limit_inactive_obj;
+PyObject *CPyDef__rate_limit___discard__rate_limit_inactive_obj(void);
+CPyThreadLocal dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject *_rate_limit___discard__rate_limit_inactive_obj_free_instance;
 PyTypeObject *CPyType__rate_limit_____rate_limit_inactive_gen;
 PyObject *CPyDef__rate_limit_____rate_limit_inactive_gen(void);
 CPyThreadLocal dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject *_rate_limit_____rate_limit_inactive_gen_free_instance;
@@ -136889,21 +135736,25 @@ PyObject *CPyDef__rate_limit_____mypyc_lambda__0_obj_____get__(PyObject *cpy_r__
 PyObject *CPyPy__rate_limit_____mypyc_lambda__0_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit_____mypyc_lambda__0_obj_____call__(PyObject *cpy_r___mypyc_self__);
 PyObject *CPyPy__rate_limit_____mypyc_lambda__0_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___finish_rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner);
+PyObject *CPyPy__rate_limit___finish_rate_limit_inactive_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+char CPyDef__rate_limit___finish_rate_limit_inactive_obj_____call__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_error);
+PyObject *CPyPy__rate_limit___finish_rate_limit_inactive_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner);
 PyObject *CPyPy__rate_limit___check_rate_limit_inactive_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr);
-PyObject *CPyDef__rate_limit___check_gen___3_73_____next__(PyObject *cpy_r___mypyc_self__);
-PyObject *CPyPy__rate_limit___check_gen___3_73_____next__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73___send(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_arg);
-PyObject *CPyPy__rate_limit___check_gen___3_73___send(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73_____iter__(PyObject *cpy_r___mypyc_self__);
-PyObject *CPyPy__rate_limit___check_gen___3_73_____iter__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73___throw(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback);
-PyObject *CPyPy__rate_limit___check_gen___3_73___throw(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73___close(PyObject *cpy_r___mypyc_self__);
-PyObject *CPyPy__rate_limit___check_gen___3_73___close(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
-PyObject *CPyDef__rate_limit___check_gen___3_73_____await__(PyObject *cpy_r___mypyc_self__);
-PyObject *CPyPy__rate_limit___check_gen___3_73_____await__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr);
+PyObject *CPyDef__rate_limit___check_gen___3_62_____next__(PyObject *cpy_r___mypyc_self__);
+PyObject *CPyPy__rate_limit___check_gen___3_62_____next__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62___send(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_arg);
+PyObject *CPyPy__rate_limit___check_gen___3_62___send(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62_____iter__(PyObject *cpy_r___mypyc_self__);
+PyObject *CPyPy__rate_limit___check_gen___3_62_____iter__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62___throw(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback);
+PyObject *CPyPy__rate_limit___check_gen___3_62___throw(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62___close(PyObject *cpy_r___mypyc_self__);
+PyObject *CPyPy__rate_limit___check_gen___3_62___close(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___check_gen___3_62_____await__(PyObject *cpy_r___mypyc_self__);
+PyObject *CPyPy__rate_limit___check_gen___3_62_____await__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit___check_rate_limit_inactive_obj_____call__(PyObject *cpy_r___mypyc_self__);
 PyObject *CPyPy__rate_limit___check_rate_limit_inactive_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit___start_check_rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner);
@@ -136925,6 +135776,10 @@ PyObject *CPyDef__rate_limit___rate_limit_inactive_gen_____await__(PyObject *cpy
 PyObject *CPyPy__rate_limit___rate_limit_inactive_gen_____await__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit___rate_limit_inactive(PyObject *cpy_r_endpoint);
 PyObject *CPyPy__rate_limit___rate_limit_inactive(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+PyObject *CPyDef__rate_limit___discard__rate_limit_inactive_obj_____get__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_instance, PyObject *cpy_r_owner);
+PyObject *CPyPy__rate_limit___discard__rate_limit_inactive_obj_____get__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
+char CPyDef__rate_limit___discard__rate_limit_inactive_obj_____call__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_completed);
+PyObject *CPyPy__rate_limit___discard__rate_limit_inactive_obj_____call__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
 PyObject *CPyDef__rate_limit____rate_limit_inactive_gen_____mypyc_generator_helper__(PyObject *cpy_r___mypyc_self__, PyObject *cpy_r_type, PyObject *cpy_r_value, PyObject *cpy_r_traceback, PyObject *cpy_r_arg, PyObject **cpy_r_stop_iter_ptr);
 PyObject *CPyDef__rate_limit____rate_limit_inactive_gen_____next__(PyObject *cpy_r___mypyc_self__);
 PyObject *CPyPy__rate_limit____rate_limit_inactive_gen_____next__(PyObject *self, PyObject *const *args, size_t nargs, PyObject *kwnames);
