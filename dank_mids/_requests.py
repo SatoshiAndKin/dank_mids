@@ -12,8 +12,18 @@ from asyncio import (
 )
 from collections import defaultdict
 from collections.abc import Callable, Coroutine, Generator, Iterable, Iterator, Sequence
-from itertools import chain, filterfalse, groupby
-from typing import TYPE_CHECKING, Any, DefaultDict, Final, Generic, Optional, TypeVar, Union, final
+from itertools import chain, groupby
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    DefaultDict,
+    Final,
+    Generic,
+    Optional,
+    TypeVar,
+    Union,
+    final,
+)
 from weakref import ProxyType
 from weakref import proxy as weak_proxy
 
@@ -35,6 +45,7 @@ from web3.types import RPCResponse
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids import _debugging, constants, stats
+from dank_mids._block import BlockId, block_height, rpc_block
 from dank_mids._demo_mode import demo_logger
 from dank_mids._exceptions import (
     BadResponse,
@@ -57,7 +68,9 @@ from dank_mids._tasks import (
     shield,
 )
 from dank_mids.exceptions import GarbageCollectionError
-from dank_mids.helpers import DebuggableFuture, _codec, _errors as _errors_mod, batch_size, gatherish
+from dank_mids.helpers import DebuggableFuture, _codec
+from dank_mids.helpers import _errors as _errors_mod
+from dank_mids.helpers import batch_size, gatherish
 from dank_mids.helpers._codec import (
     JSONRPCBatchResponse,
     MulticallChunk,
@@ -91,7 +104,7 @@ from dank_mids.helpers.method import should_batch as should_batch_method
 from dank_mids.lock import AlertingRLock, Lock
 from dank_mids.logging import DEBUG, get_c_logger
 from dank_mids.retry_observer import RetryEvent, emit_retry_event
-from dank_mids.types import BatchId, BlockId, JsonrpcParams, PartialRequest, Request, Response
+from dank_mids.types import BatchId, JsonrpcParams, PartialRequest, Request, Response
 
 if TYPE_CHECKING:
     from dank_mids._batch import DankBatch
@@ -264,7 +277,9 @@ class RPCRequest(_RequestBase[RPCResponse]):
         if not fut.done() and not fut._loop.is_closed():
             # If nobody is waiting anymore, treat this as abandoned work and keep noise low.
             if not _future_has_waiters(fut):
-                _log_debug("%s was garbage collected with no waiters; treating as abandoned work", self)
+                _log_debug(
+                    "%s was garbage collected with no waiters; treating as abandoned work", self
+                )
                 return
             try:
                 fut.set_exception(
@@ -507,7 +522,7 @@ class RPCRequest(_RequestBase[RPCResponse]):
     def create_duplicate(self) -> Union["RPCRequest", "eth_call"]:
         dupe_uid = f"{self.uid}_copy"
         if type(self) is eth_call:
-            return eth_call(self.controller, self.params, dupe_uid, self._fut)
+            return eth_call(self.controller, (self.params[0], self.block), dupe_uid, self._fut)
         method = RPCEndpoint(f"{self.method}_raw") if self.raw else self.method
         return RPCRequest(self.controller, method, self.params, dupe_uid, self._fut)
 
@@ -553,14 +568,14 @@ class eth_call(RPCRequest):
         self.block: BlockId = block
         """The block height at which the contract will be called."""
 
-        _rpcrequest_init(self, controller, "eth_call", params, uid, fut)
+        _rpcrequest_init(self, controller, "eth_call", (call_dict, rpc_block(block)), uid, fut)
 
     def __repr__(self) -> str:
         tx, block = self.params
         batch = self._batch
         batch_info = "" if batch is None else f" batch={batch}"
         if batch is None or type(batch) is not Multicall:
-            if block.startswith("0x"):
+            if isinstance(block, str) and block.startswith("0x"):
                 block = int(block, 16)
             block_info = f" block={block}"
         else:
@@ -594,7 +609,7 @@ class eth_call(RPCRequest):
                         data = await self.revert_threads.run(
                             controller.sync_w3.eth.call,
                             {"to": target, "data": self.calldata},
-                            self.block,
+                            rpc_block(self.block),
                         )
                     except ReadTimeout:
                         failures += 1
@@ -776,7 +791,7 @@ class Multicall(_Batch[RPCResponse, eth_call]):
 
     def __repr__(self) -> str:
         block = self.block
-        if block.startswith("0x"):
+        if isinstance(block, str) and block.startswith("0x"):
             block = int(block, 16)
         batch = self._batch
         batch_info = "" if batch is None else f" batch={batch}"
@@ -859,7 +874,7 @@ class Multicall(_Batch[RPCResponse, eth_call]):
     @property
     def params(self) -> JsonrpcParams:
         target = self.target
-        params = [{"to": target, "data": f"0x{self.calldata}"}, self.block]
+        params = [{"to": target, "data": f"0x{self.calldata}"}, rpc_block(self.block)]
         if self.needs_override_code and not self.controller.state_override_not_supported:
             params.append({target: {"code": self.mcall.bytecode}})
         return params  # type: ignore [return-value]
@@ -874,7 +889,7 @@ class Multicall(_Batch[RPCResponse, eth_call]):
 
     @property
     def needs_override_code(self) -> bool:
-        return self.mcall.needs_override_code_for_block(self.block)
+        return self.mcall.needs_override_code_for_block(block_height(self.block))
 
     def start(self, batch: Union["_Batch", "DankBatch"] | None = None, cleanup=True) -> None:
         batch = batch or self
@@ -1327,7 +1342,7 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
         data = self.data
         if not data:
             return []
-                
+
         endpoint = self.controller.endpoint
         try:
             post_coro = _requester.post(endpoint, data=data, loads=_codec.decode_jsonrpc_batch)
@@ -1400,7 +1415,9 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             )
         return _Batch.should_retry(self, e)
 
-    async def _spoof_response_by_id(self, response: list[RawResponse]) -> list[Coroutine[Any, Any, None]]:
+    async def _spoof_response_by_id(
+        self, response: list[RawResponse]
+    ) -> list[Coroutine[Any, Any, None]]:
         call_by_id = {str(call.uid): call for call in self}
         mcall_coros = []
         for raw in response:

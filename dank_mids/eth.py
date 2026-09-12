@@ -6,7 +6,13 @@ from async_lru import alru_cache
 from async_property import async_cached_property
 from eth_typing import Address, BlockNumber, ChecksumAddress, HexStr
 from eth_utils.toolz import concat
-from evmspec import AnyTransaction, FilterTrace, Transaction, TransactionReceipt, TransactionRLP
+from evmspec import (
+    AnyTransaction,
+    FilterTrace,
+    Transaction,
+    TransactionReceipt,
+    TransactionRLP,
+)
 from evmspec.data import TransactionHash, UnixTimestamp, _decode_hook
 from evmspec.data._main import DecodeHook
 from evmspec.structs.block import TinyBlock
@@ -20,6 +26,7 @@ from web3.eth import AsyncEth, BaseEth
 from web3.method import default_root_munger
 from web3.types import ENS, BlockIdentifier, RPCEndpoint, TxParams, Wei
 
+from dank_mids._block import StateBlockIdentifier
 from dank_mids._web3.method import (
     WEB3_MAJOR_VERSION,
     MethodNoFormat,
@@ -92,6 +99,21 @@ class DankEth(AsyncEth):
         ]
         _call = MethodNoFormat(RPC.eth_call, mungers=[BaseEth.call_munger])
 
+    async def call(
+        self,
+        transaction: TxParams,
+        block_identifier: StateBlockIdentifier | None = None,
+        state_override: CallOverride | None = None,
+        ccip_read_enabled: bool | None = None,
+    ) -> HexBytes:
+        # web3 accepts EIP-1898 at runtime but omits it from BlockIdentifier.
+        return await super().call(
+            transaction,
+            cast(BlockIdentifier, block_identifier),
+            state_override,
+            ccip_read_enabled,
+        )
+
     async def get_block_timestamp(self, block_identifier: int) -> UnixTimestamp:
         """
         Retrieves only the timestamp from a specific block.
@@ -111,7 +133,7 @@ class DankEth(AsyncEth):
             return decode_timestamped(block_bytes).timestamp
 
     async def get_balance(
-        self, account: ChecksumAddress, block_identifier: BlockNumber | None = None
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
     ):
         if isinstance(block_identifier, int):
             return await self._get_balance(account, hex(block_identifier))
@@ -119,14 +141,16 @@ class DankEth(AsyncEth):
             return await self._get_balance(account, block_identifier)
 
     async def get_transaction_count(
-        self, account: ChecksumAddress, block_identifier: BlockNumber | None = None
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
     ):
         if isinstance(block_identifier, int):
             return await self._get_transaction_count(account, hex(block_identifier))
         else:
             return await self._get_transaction_count(account, block_identifier)
 
-    async def get_code(self, account: ChecksumAddress, block_identifier: BlockNumber | None = None):
+    async def get_code(
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
+    ):
         if isinstance(block_identifier, int):
             return await self._get_code(account, hex(block_identifier))
         else:

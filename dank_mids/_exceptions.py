@@ -129,7 +129,15 @@ class ChainstackRateLimitError(RateLimitError):
         Returns:
             The number of seconds to wait before retrying.
         """
-        return self.response.error.data.try_again_in  # type: ignore [union-attr]
+        from dank_mids.types import ChainstackRateLimitContext
+
+        error = self.response.error
+        if error is None:
+            raise ValueError("rate-limit response has no error")
+        data = error.data
+        if not isinstance(data, dict) or not isinstance(data.get("try_again_in"), str):
+            raise ValueError("Chainstack rate-limit response lacks a retry duration", data)
+        return ChainstackRateLimitContext(data["try_again_in"]).try_again_in
 
 
 @final
