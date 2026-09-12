@@ -53859,7 +53859,7 @@ controller_____call___3_DankMiddlewareController_gen_traverse(dank_mids___contro
     Py_VISIT(self->___mypyc_temp__23.f0);
     Py_VISIT(self->___mypyc_temp__23.f1);
     Py_VISIT(self->___mypyc_temp__23.f2);
-    Py_VISIT(self->___mypyc_temp__2_0);
+    Py_VISIT(self->___mypyc_temp__2_1);
     return 0;
 }
 
@@ -53917,7 +53917,7 @@ controller_____call___3_DankMiddlewareController_gen_clear(dank_mids___controlle
     Py_CLEAR(self->___mypyc_temp__23.f0);
     Py_CLEAR(self->___mypyc_temp__23.f1);
     Py_CLEAR(self->___mypyc_temp__23.f2);
-    Py_CLEAR(self->___mypyc_temp__2_0);
+    Py_CLEAR(self->___mypyc_temp__2_1);
     return 0;
 }
 
@@ -53981,8 +53981,8 @@ controller_____call___3_DankMiddlewareController_gen_dealloc(dank_mids___control
         Py_CLEAR(self->___mypyc_temp__23.f0);
         Py_CLEAR(self->___mypyc_temp__23.f1);
         Py_CLEAR(self->___mypyc_temp__23.f2);
-        Py_CLEAR(self->___mypyc_temp__2_0);
-        self->___mypyc_temp__2_1 = 2;
+        self->___mypyc_temp__2_0 = 2;
+        Py_CLEAR(self->___mypyc_temp__2_1);
         return;
     }
     CPy_TRASHCAN_BEGIN(self, controller_____call___3_DankMiddlewareController_gen_dealloc)
@@ -54080,7 +54080,7 @@ PyObject *CPyDef_controller_____mypyc___3__call___3_DankMiddlewareController_gen
     self->___mypyc_temp__20 = (tuple_T3OOO) { NULL, NULL, NULL };
     self->___mypyc_temp__21 = (tuple_T3OOO) { NULL, NULL, NULL };
     self->___mypyc_temp__23 = (tuple_T3OOO) { NULL, NULL, NULL };
-    self->___mypyc_temp__2_1 = 2;
+    self->___mypyc_temp__2_0 = 2;
     return (PyObject *)self;
 }
 
@@ -58635,10 +58635,10 @@ __LL250: ;
     } else {
         CPy_INCREF(cpy_r_r101);
     }
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r101;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r101;
     cpy_r_r102 = 1;
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
@@ -58649,7 +58649,7 @@ CPyL73: ;
     if (unlikely(cpy_r_r103 == 2)) {
         PyErr_SetString(PyExc_AttributeError, "attribute 'canonical' of '__call___DankMiddlewareController_gen' undefined");
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r103;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r103;
     cpy_r_r104 = 1;
     if (unlikely(cpy_r_r103 == 2)) {
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
@@ -58872,15 +58872,15 @@ CPyL106: ;
         CPy_AddTraceback("dank_mids/controller.py", "__call__", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL467;
     }
-    cpy_r_r141 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1;
+    cpy_r_r141 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0;
     if (unlikely(cpy_r_r141 == 2)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_1' of '__call___DankMiddlewareController_gen' undefined");
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_0' of '__call___DankMiddlewareController_gen' undefined");
     }
     cpy_r_r142 = cpy_r_r141 ? Py_True : Py_False;
     cpy_r_r143 = CPyTagged_StealAsObject(cpy_r_r137);
-    cpy_r_r144 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0;
+    cpy_r_r144 = ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1;
     if (unlikely(cpy_r_r144 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_0' of '__call___DankMiddlewareController_gen' undefined");
+        PyErr_SetString(PyExc_AttributeError, "attribute '__mypyc_temp__2_1' of '__call___DankMiddlewareController_gen' undefined");
     } else {
         CPy_INCREF(cpy_r_r144);
     }
@@ -58894,10 +58894,10 @@ CPyL106: ;
         goto CPyL468;
     }
     cpy_r_r148 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r148;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r148;
     cpy_r_r149 = 1;
     CPy_DECREF(cpy_r_r143);
     if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__block != NULL) {
@@ -60936,27 +60936,27 @@ CPyL453: ;
     goto CPyL381;
 CPyL454: ;
     cpy_r_r472 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r472;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r472;
     cpy_r_r473 = 1;
     goto CPyL381;
 CPyL455: ;
     cpy_r_r474 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r474;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r474;
     cpy_r_r475 = 1;
     CPy_DecRef(cpy_r_r105);
     goto CPyL381;
 CPyL456: ;
     cpy_r_r476 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r476;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r476;
     cpy_r_r477 = 1;
     CPy_DecRef(cpy_r_r105);
     CPy_DecRef(cpy_r_r106);
@@ -60965,10 +60965,10 @@ CPyL457: ;
     goto CPyL84;
 CPyL458: ;
     cpy_r_r478 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r478;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r478;
     cpy_r_r479 = 1;
     CPy_DecRef(cpy_r_r118);
     goto CPyL381;
@@ -60981,10 +60981,10 @@ CPyL460: ;
 CPyL461: ;
     CPy_XDecRef(cpy_r_r5);
     cpy_r_r480 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r480;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r480;
     cpy_r_r481 = 1;
     goto CPyL98;
 CPyL462: ;
@@ -60994,19 +60994,19 @@ CPyL463: ;
     goto CPyL98;
 CPyL464: ;
     cpy_r_r482 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r482;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r482;
     cpy_r_r483 = 1;
     CPy_DecRef(cpy_r_r118);
     goto CPyL98;
 CPyL465: ;
     cpy_r_r484 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r484;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r484;
     cpy_r_r485 = 1;
     CPy_DecRef(cpy_r_arg);
     goto CPyL381;
@@ -61014,19 +61014,19 @@ CPyL466: ;
     goto CPyL103;
 CPyL467: ;
     cpy_r_r486 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r486;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r486;
     cpy_r_r487 = 1;
     CPyTagged_DecRef(cpy_r_r137);
     goto CPyL381;
 CPyL468: ;
     cpy_r_r488 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r488;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r488;
     cpy_r_r489 = 1;
     CPy_DecRef(cpy_r_r143);
     goto CPyL381;
@@ -61324,10 +61324,10 @@ CPyL549: ;
     CPy_XDECREF(cpy_r_r19);
     CPy_XDECREF(cpy_r_r21);
     cpy_r_r490 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r490;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r490;
     cpy_r_r491 = 1;
     goto CPyL1;
 CPyL550: ;
@@ -61343,10 +61343,10 @@ CPyL550: ;
     CPy_XDECREF(cpy_r_r19);
     CPy_XDECREF(cpy_r_r21);
     cpy_r_r492 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r492;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r492;
     cpy_r_r493 = 1;
     goto CPyL14;
 CPyL551: ;
@@ -61367,10 +61367,10 @@ CPyL552: ;
 CPyL553: ;
     CPy_XDECREF(cpy_r_r5);
     cpy_r_r494 = NULL;
-    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 != NULL) {
-        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0);
+    if (((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 != NULL) {
+        CPy_DECREF(((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1);
     }
-    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_0 = cpy_r_r494;
+    ((dank_mids___controller_____call___3_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__2_1 = cpy_r_r494;
     cpy_r_r495 = 1;
     goto CPyL430;
 CPyL554: ;
@@ -62013,23 +62013,17 @@ CPyL13: ;
 CPyL14: ;
     cpy_r_r18 = ((dank_mids___controller___DankMiddlewareControllerObject *)cpy_r_r17)->_call_uid;
     if (unlikely(cpy_r_r18 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute 'call_uid' of 'DankMiddlewareController' undefined");
-    } else {
-        CPy_INCREF_NO_IMM(cpy_r_r18);
-    }
-    CPy_DECREF_NO_IMM(cpy_r_r17);
-    if (unlikely(cpy_r_r18 == NULL)) {
-        CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL102;
+        CPy_AttributeError("dank_mids/controller.py", "make_request", "DankMiddlewareController", "call_uid", 284, CPyStatic_controller___globals);
+        goto CPyL105;
     }
 CPyL15: ;
     cpy_r_r19 = CPyDef__uid___UIDGenerator___next(cpy_r_r18);
-    CPy_DECREF_NO_IMM(cpy_r_r18);
     if (unlikely(cpy_r_r19 == CPY_INT_TAG)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL102;
+        goto CPyL105;
     }
 CPyL16: ;
+    CPy_DECREF_NO_IMM(cpy_r_r17);
     cpy_r_r20 = CPyTagged_StealAsObject(cpy_r_r19);
     cpy_r_r16 = cpy_r_r20;
 CPyL17: ;
@@ -62042,7 +62036,7 @@ CPyL17: ;
     CPy_DECREF_NO_IMM(cpy_r_r8);
     if (unlikely(cpy_r_r21 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL105;
+        goto CPyL106;
     }
 CPyL18: ;
     PyObject *cpy_r_r22[3] = {cpy_r_r9, cpy_r_r10, cpy_r_r16};
@@ -62052,7 +62046,7 @@ CPyL18: ;
     CPy_DECREF(cpy_r_r21);
     if (unlikely(cpy_r_r25 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL105;
+        goto CPyL106;
     }
     CPy_DECREF(cpy_r_r9);
     CPy_DECREF(cpy_r_r10);
@@ -62082,7 +62076,7 @@ CPyL18: ;
     cpy_r_r31 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_generator_attribute__self;
     if (unlikely(cpy_r_r31 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "self", 287, CPyStatic_controller___globals);
-        goto CPyL106;
+        goto CPyL107;
     }
     CPy_INCREF_NO_IMM(cpy_r_r31);
 CPyL23: ;
@@ -62095,13 +62089,13 @@ CPyL23: ;
     CPy_DECREF_NO_IMM(cpy_r_r31);
     if (unlikely(cpy_r_r32 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL106;
+        goto CPyL107;
     }
 CPyL24: ;
     cpy_r_r33 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_generator_attribute__request;
     if (unlikely(cpy_r_r33 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "request", 287, CPyStatic_controller___globals);
-        goto CPyL107;
+        goto CPyL108;
     }
     CPy_INCREF(cpy_r_r33);
 CPyL25: ;
@@ -62110,7 +62104,7 @@ CPyL25: ;
     cpy_r_r36 = CPyDict_GetItem(cpy_r_r34, cpy_r_r35);
     if (unlikely(cpy_r_r36 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL108;
+        goto CPyL109;
     }
     cpy_r_r37 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'data' */
     cpy_r_r38 = CPyTuple_LoadEmptyTupleConstant();
@@ -62118,7 +62112,7 @@ CPyL25: ;
     CPy_DECREF(cpy_r_r33);
     if (unlikely(cpy_r_r39 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL109;
+        goto CPyL110;
     }
     cpy_r_r40 = CPyDef__requester___HTTPRequesterThread___post(cpy_r_r30, cpy_r_r32, cpy_r_r38, cpy_r_r36, cpy_r_r39);
     CPy_DECREF(cpy_r_r32);
@@ -62152,11 +62146,11 @@ CPyL30: ;
     cpy_r_r45 = (PyObject **)&cpy_r_r1;
     cpy_r_r46 = CPyDef__requester___post_HTTPRequesterThread_gen_____mypyc_generator_helper__(cpy_r_r42, cpy_r_r43, cpy_r_r43, cpy_r_r43, cpy_r_r43, cpy_r_r45);
     CPy_DECREF_NO_IMM(cpy_r_r42);
-    if (cpy_r_r46 != NULL) goto CPyL110;
+    if (cpy_r_r46 != NULL) goto CPyL111;
     cpy_r_r47 = cpy_r_r1 != 0;
     if (unlikely(!cpy_r_r47)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", -1, CPyStatic_controller___globals);
-        goto CPyL111;
+        goto CPyL112;
     }
     cpy_r_r48 = cpy_r_r1;
     cpy_r_r49 = NULL;
@@ -62167,7 +62161,7 @@ CPyL30: ;
     cpy_r_r50 = 1;
     if (unlikely(!cpy_r_r50)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL112;
+        goto CPyL113;
     } else
         goto CPyL55;
 CPyL33: ;
@@ -62179,13 +62173,13 @@ CPyL34: ;
 CPyL35: ;
     cpy_r_r53 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r54 = cpy_r_type != cpy_r_r53;
-    if (!cpy_r_r54) goto CPyL113;
+    if (!cpy_r_r54) goto CPyL114;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL39;
     } else
-        goto CPyL114;
+        goto CPyL115;
 CPyL37: ;
     CPy_Unreachable();
 CPyL38: ;
@@ -62202,13 +62196,13 @@ CPyL39: ;
     cpy_r_r56 = 1;
     if (unlikely(!cpy_r_r56)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", -1, CPyStatic_controller___globals);
-        goto CPyL115;
+        goto CPyL116;
     }
     cpy_r_r57 = (PyObject **)&cpy_r_r3;
     cpy_r_r58 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_temp__24;
     if (unlikely(cpy_r_r58 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "__mypyc_temp__24", -1, CPyStatic_controller___globals);
-        goto CPyL115;
+        goto CPyL116;
     }
     CPy_INCREF_NO_IMM(cpy_r_r58);
 CPyL41: ;
@@ -62216,14 +62210,14 @@ CPyL41: ;
     CPy_DecRef(cpy_r_r58);
     if (unlikely(cpy_r_r59 == 2)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL115;
+        goto CPyL116;
     }
     if (cpy_r_r59) goto CPyL45;
     cpy_r_r51 = cpy_r_r3;
     cpy_r_r60 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_temp__25;
     if (unlikely(cpy_r_r60.f0 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "__mypyc_temp__25", -1, CPyStatic_controller___globals);
-        goto CPyL116;
+        goto CPyL117;
     }
     CPy_INCREF(cpy_r_r60.f0);
     CPy_INCREF(cpy_r_r60.f1);
@@ -62239,7 +62233,7 @@ CPyL45: ;
     cpy_r_r61 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_temp__25;
     if (unlikely(cpy_r_r61.f0 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "__mypyc_temp__25", -1, CPyStatic_controller___globals);
-        goto CPyL117;
+        goto CPyL118;
     }
     CPy_INCREF(cpy_r_r61.f0);
     CPy_INCREF(cpy_r_r61.f1);
@@ -62268,14 +62262,14 @@ CPyL48: ;
     if (!cpy_r_r63) {
         goto CPyL61;
     } else
-        goto CPyL118;
+        goto CPyL119;
 CPyL49: ;
     CPy_Unreachable();
 CPyL50: ;
     cpy_r_r64 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_temp__24;
     if (unlikely(cpy_r_r64 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "__mypyc_temp__24", -1, CPyStatic_controller___globals);
-        goto CPyL119;
+        goto CPyL120;
     }
     CPy_INCREF_NO_IMM(cpy_r_r64);
 CPyL51: ;
@@ -62350,7 +62344,7 @@ CPyL61: ;
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL89;
     } else
-        goto CPyL120;
+        goto CPyL121;
 CPyL67: ;
     CPy_Unreachable();
 CPyL68: ;
@@ -62384,14 +62378,14 @@ CPyL72: ;
     cpy_r_r84 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_generator_attribute__e;
     if (unlikely(cpy_r_r84 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "e", 292, CPyStatic_controller___globals);
-        goto CPyL121;
+        goto CPyL122;
     }
     CPy_INCREF(cpy_r_r84);
 CPyL73: ;
     cpy_r_r85 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_generator_attribute__method;
     if (unlikely(cpy_r_r85 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "method", 293, CPyStatic_controller___globals);
-        goto CPyL122;
+        goto CPyL123;
     }
     CPy_INCREF(cpy_r_r85);
 CPyL74: ;
@@ -62413,7 +62407,7 @@ CPyL77: ;
     cpy_r_r93 = ((dank_mids___controller___make_request_DankMiddlewareController_envObject *)cpy_r_r4)->___mypyc_generator_attribute__request;
     if (unlikely(cpy_r_r93 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "make_request", "make_request_DankMiddlewareController_env", "request", 296, CPyStatic_controller___globals);
-        goto CPyL123;
+        goto CPyL124;
     }
     CPy_INCREF(cpy_r_r93);
 CPyL78: ;
@@ -62422,34 +62416,34 @@ CPyL78: ;
     CPy_DecRef(cpy_r_r93);
     if (unlikely(cpy_r_r95 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL123;
+        goto CPyL124;
     }
     if (likely(PyBytes_Check(cpy_r_r95) || PyByteArray_Check(cpy_r_r95)))
         cpy_r_r96 = cpy_r_r95;
     else {
         CPy_TypeErrorTraceback("dank_mids/controller.py", "make_request", 296, CPyStatic_controller___globals, "bytes", cpy_r_r95);
-        goto CPyL123;
+        goto CPyL124;
     }
     cpy_r_r97 = CPyStatic_controller___globals;
     cpy_r_r98 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* '_debugging' */
     cpy_r_r99 = CPyDict_GetItem(cpy_r_r97, cpy_r_r98);
     if (unlikely(cpy_r_r99 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
     cpy_r_r100 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'failures' */
     cpy_r_r101 = CPyObject_GetAttr(cpy_r_r99, cpy_r_r100);
     CPy_DecRef(cpy_r_r99);
     if (unlikely(cpy_r_r101 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
     cpy_r_r102 = CPyStatics[DIFFCHECK_PLACEHOLDER]; /* 'record' */
     cpy_r_r103 = CPyObject_GetAttr(cpy_r_r101, cpy_r_r102);
     CPy_DecRef(cpy_r_r101);
     if (unlikely(cpy_r_r103 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL124;
+        goto CPyL125;
     }
     PyObject *cpy_r_r104[6] = {
         cpy_r_r83, cpy_r_r84, cpy_r_r89, cpy_r_r91, cpy_r_r92,
@@ -62460,9 +62454,9 @@ CPyL78: ;
     CPy_DecRef(cpy_r_r103);
     if (unlikely(cpy_r_r106 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "make_request", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL124;
-    } else
         goto CPyL125;
+    } else
+        goto CPyL126;
 CPyL84: ;
     CPy_DecRef(cpy_r_r83);
     CPy_DecRef(cpy_r_r84);
@@ -62473,7 +62467,7 @@ CPyL85: ;
     if (!0) {
         goto CPyL89;
     } else
-        goto CPyL126;
+        goto CPyL127;
 CPyL86: ;
     CPy_Unreachable();
 CPyL87: ;
@@ -62481,7 +62475,7 @@ CPyL87: ;
     if (!0) {
         goto CPyL89;
     } else
-        goto CPyL127;
+        goto CPyL128;
 CPyL88: ;
     CPy_Unreachable();
 CPyL89: ;
@@ -62508,12 +62502,12 @@ CPyL90: ;
     CPy_Unreachable();
 CPyL92: ;
     cpy_r_r109 = cpy_r_r5 == 0;
-    if (cpy_r_r109) goto CPyL128;
+    if (cpy_r_r109) goto CPyL129;
     cpy_r_r110 = cpy_r_r5 == 1;
     if (cpy_r_r110) {
         goto CPyL35;
     } else
-        goto CPyL129;
+        goto CPyL130;
 CPyL94: ;
     PyErr_SetNone(PyExc_StopIteration);
     cpy_r_r111 = 0;
@@ -62561,93 +62555,100 @@ CPyL104: ;
     goto CPyL13;
 CPyL105: ;
     CPy_DecRef(cpy_r_r4);
+    CPy_DecRef(cpy_r_r8);
+    CPy_DecRef(cpy_r_r9);
+    CPy_DecRef(cpy_r_r10);
+    CPy_DecRef(cpy_r_r17);
+    goto CPyL96;
+CPyL106: ;
+    CPy_DecRef(cpy_r_r4);
     CPy_DecRef(cpy_r_r9);
     CPy_DecRef(cpy_r_r10);
     CPy_DecRef(cpy_r_r16);
     goto CPyL96;
-CPyL106: ;
-    CPy_DecRef(cpy_r_r30);
-    goto CPyL61;
 CPyL107: ;
     CPy_DecRef(cpy_r_r30);
-    CPy_DecRef(cpy_r_r32);
     goto CPyL61;
 CPyL108: ;
     CPy_DecRef(cpy_r_r30);
     CPy_DecRef(cpy_r_r32);
-    CPy_DecRef(cpy_r_r33);
     goto CPyL61;
 CPyL109: ;
+    CPy_DecRef(cpy_r_r30);
+    CPy_DecRef(cpy_r_r32);
+    CPy_DecRef(cpy_r_r33);
+    goto CPyL61;
+CPyL110: ;
     CPy_DecRef(cpy_r_r30);
     CPy_DecRef(cpy_r_r32);
     CPy_DecRef(cpy_r_r36);
     CPy_DecRef(cpy_r_r38);
     goto CPyL61;
-CPyL110: ;
+CPyL111: ;
     CPy_XDECREF(cpy_r_r1);
     goto CPyL33;
-CPyL111: ;
+CPyL112: ;
     CPy_XDecRef(cpy_r_r1);
     goto CPyL61;
-CPyL112: ;
+CPyL113: ;
     CPy_DecRef(cpy_r_r48);
     goto CPyL61;
-CPyL113: ;
+CPyL114: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL38;
-CPyL114: ;
+CPyL115: ;
     CPy_XDECREF(cpy_r_r3);
     CPy_DECREF_NO_IMM(cpy_r_r4);
     goto CPyL37;
-CPyL115: ;
+CPyL116: ;
     CPy_XDecRef(cpy_r_r3);
     goto CPyL47;
-CPyL116: ;
+CPyL117: ;
     CPy_DecRef(cpy_r_r51);
     goto CPyL47;
-CPyL117: ;
+CPyL118: ;
     CPy_DecRef(cpy_r_r48);
     goto CPyL47;
-CPyL118: ;
+CPyL119: ;
     CPy_DecRef(cpy_r_r4);
     goto CPyL49;
-CPyL119: ;
+CPyL120: ;
     CPy_DecRef(cpy_r_arg);
     goto CPyL61;
-CPyL120: ;
+CPyL121: ;
     CPy_DecRef(cpy_r_r4);
     goto CPyL67;
-CPyL121: ;
-    CPy_DecRef(cpy_r_r83);
-    goto CPyL89;
 CPyL122: ;
     CPy_DecRef(cpy_r_r83);
-    CPy_DecRef(cpy_r_r84);
     goto CPyL89;
 CPyL123: ;
     CPy_DecRef(cpy_r_r83);
     CPy_DecRef(cpy_r_r84);
-    CPy_DecRef(cpy_r_r89);
     goto CPyL89;
 CPyL124: ;
     CPy_DecRef(cpy_r_r83);
     CPy_DecRef(cpy_r_r84);
     CPy_DecRef(cpy_r_r89);
-    CPy_DecRef(cpy_r_r96);
     goto CPyL89;
 CPyL125: ;
+    CPy_DecRef(cpy_r_r83);
+    CPy_DecRef(cpy_r_r84);
+    CPy_DecRef(cpy_r_r89);
+    CPy_DecRef(cpy_r_r96);
+    goto CPyL89;
+CPyL126: ;
     CPy_DecRef(cpy_r_r106);
     goto CPyL84;
-CPyL126: ;
-    CPy_DecRef(cpy_r_r4);
-    goto CPyL86;
 CPyL127: ;
     CPy_DecRef(cpy_r_r4);
-    goto CPyL88;
+    goto CPyL86;
 CPyL128: ;
+    CPy_DecRef(cpy_r_r4);
+    goto CPyL88;
+CPyL129: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL2;
-CPyL129: ;
+CPyL130: ;
     CPy_XDECREF(cpy_r_r3);
     CPy_DECREF_NO_IMM(cpy_r_r4);
     goto CPyL94;
@@ -64031,23 +64032,17 @@ CPyL108: ;
 CPyL109: ;
     cpy_r_r125 = ((dank_mids___controller___DankMiddlewareControllerObject *)cpy_r_r124)->_call_uid;
     if (unlikely(cpy_r_r125 == NULL)) {
-        PyErr_SetString(PyExc_AttributeError, "attribute 'call_uid' of 'DankMiddlewareController' undefined");
-    } else {
-        CPy_INCREF_NO_IMM(cpy_r_r125);
-    }
-    CPy_DECREF_NO_IMM(cpy_r_r124);
-    if (unlikely(cpy_r_r125 == NULL)) {
-        CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL241;
+        CPy_AttributeError("dank_mids/controller.py", "execute_batch", "DankMiddlewareController", "call_uid", 327, CPyStatic_controller___globals);
+        goto CPyL254;
     }
 CPyL110: ;
     cpy_r_r126 = CPyDef__uid___UIDGenerator___latest(cpy_r_r125);
-    CPy_DECREF_NO_IMM(cpy_r_r125);
     if (unlikely(cpy_r_r126 == CPY_INT_TAG)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL241;
+        goto CPyL254;
     }
 CPyL111: ;
+    CPy_DECREF_NO_IMM(cpy_r_r124);
     cpy_r_r127 = (PyObject *)CPyType_stats____StatsLogger;
     cpy_r_r128 = (CPyPtr)&((PyObject *)cpy_r_r121)->ob_type;
     cpy_r_r129 = *(PyObject * *)cpy_r_r128;
@@ -64069,19 +64064,19 @@ CPyL114: ;
         cpy_r_r135 = cpy_r_r121;
     else {
         CPy_TypeErrorTraceback("dank_mids/controller.py", "execute_batch", 327, CPyStatic_controller___globals, "dank_mids.logging.CLogger", cpy_r_r121);
-        goto CPyL254;
+        goto CPyL255;
     }
     cpy_r_r136 = CPyTagged_StealAsObject(cpy_r_r126);
     cpy_r_r137 = PyTuple_Pack(1, cpy_r_r136);
     CPy_DECREF(cpy_r_r136);
     if (unlikely(cpy_r_r137 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL255;
+        goto CPyL256;
     }
     cpy_r_r138 = PyDict_New();
     if (unlikely(cpy_r_r138 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL256;
+        goto CPyL257;
     }
     cpy_r_r139 = CPyDef_logging___CLogger___info(cpy_r_r135, cpy_r_r123, cpy_r_r137, cpy_r_r138);
     CPy_DECREF(cpy_r_r137);
@@ -64099,19 +64094,19 @@ CPyL119: ;
         cpy_r_r141 = cpy_r_r121;
     else {
         CPy_TypeErrorTraceback("dank_mids/controller.py", "execute_batch", 327, CPyStatic_controller___globals, "dank_mids._demo_mode.DummyLogger", cpy_r_r121);
-        goto CPyL254;
+        goto CPyL255;
     }
     cpy_r_r142 = CPyTagged_StealAsObject(cpy_r_r126);
     cpy_r_r143 = PyTuple_Pack(2, cpy_r_r123, cpy_r_r142);
     CPy_DECREF(cpy_r_r142);
     if (unlikely(cpy_r_r143 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL257;
+        goto CPyL258;
     }
     cpy_r_r144 = PyDict_New();
     if (unlikely(cpy_r_r144 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL258;
+        goto CPyL259;
     }
     cpy_r_r145 = CPyDef__demo_mode___DummyLogger___info(cpy_r_r143, cpy_r_r144);
     CPy_DECREF(cpy_r_r143);
@@ -64133,14 +64128,14 @@ CPyL125: ;
     cpy_r_r147 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__multicalls;
     if (unlikely(cpy_r_r147 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "multicalls", 328, CPyStatic_controller___globals);
-        goto CPyL259;
+        goto CPyL260;
     }
     CPy_INCREF(cpy_r_r147);
 CPyL126: ;
     cpy_r_r148 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__rpc_calls;
     if (unlikely(cpy_r_r148 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "rpc_calls", 328, CPyStatic_controller___globals);
-        goto CPyL260;
+        goto CPyL261;
     }
     CPy_INCREF(cpy_r_r148);
 CPyL127: ;
@@ -64219,13 +64214,13 @@ CPyL137: ;
 CPyL138: ;
     cpy_r_r162 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r163 = cpy_r_type != cpy_r_r162;
-    if (!cpy_r_r163) goto CPyL261;
+    if (!cpy_r_r163) goto CPyL262;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL142;
     } else
-        goto CPyL262;
+        goto CPyL263;
 CPyL140: ;
     CPy_Unreachable();
 CPyL141: ;
@@ -64242,13 +64237,13 @@ CPyL142: ;
     cpy_r_r165 = 1;
     if (unlikely(!cpy_r_r165)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", -1, CPyStatic_controller___globals);
-        goto CPyL263;
+        goto CPyL264;
     }
     cpy_r_r166 = (PyObject **)&cpy_r_r1;
     cpy_r_r167 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__36;
     if (unlikely(cpy_r_r167 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__36", -1, CPyStatic_controller___globals);
-        goto CPyL263;
+        goto CPyL264;
     }
     CPy_INCREF(cpy_r_r167);
 CPyL144: ;
@@ -64256,14 +64251,14 @@ CPyL144: ;
     CPy_DecRef(cpy_r_r167);
     if (unlikely(cpy_r_r168 == 2)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL263;
+        goto CPyL264;
     }
     if (cpy_r_r168) goto CPyL148;
     cpy_r_r160 = cpy_r_r1;
     cpy_r_r169 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__37;
     if (unlikely(cpy_r_r169.f0 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__37", -1, CPyStatic_controller___globals);
-        goto CPyL264;
+        goto CPyL265;
     }
     CPy_INCREF(cpy_r_r169.f0);
     CPy_INCREF(cpy_r_r169.f1);
@@ -64312,7 +64307,7 @@ CPyL153: ;
     cpy_r_r173 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__36;
     if (unlikely(cpy_r_r173 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__36", -1, CPyStatic_controller___globals);
-        goto CPyL265;
+        goto CPyL266;
     }
     CPy_INCREF(cpy_r_r173);
 CPyL154: ;
@@ -64408,13 +64403,13 @@ CPyL169: ;
     cpy_r_r193 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_generator_attribute__rpc_calls;
     if (unlikely(cpy_r_r193 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "rpc_calls", 336, CPyStatic_controller___globals);
-        goto CPyL266;
+        goto CPyL267;
     }
     CPy_INCREF(cpy_r_r193);
 CPyL171: ;
     cpy_r_r194 = CPyStatic_controller___cgather;
     if (unlikely(cpy_r_r194 == NULL)) {
-        goto CPyL267;
+        goto CPyL268;
     } else
         goto CPyL174;
 CPyL172: ;
@@ -64429,23 +64424,23 @@ CPyL174: ;
     cpy_r_r196 = PyList_New(0);
     if (unlikely(cpy_r_r196 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL268;
+        goto CPyL269;
     }
     cpy_r_r197 = CPyList_Extend(cpy_r_r196, cpy_r_r192);
     CPy_DecRef(cpy_r_r192);
     if (unlikely(cpy_r_r197 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL269;
-    } else
         goto CPyL270;
+    } else
+        goto CPyL271;
 CPyL176: ;
     cpy_r_r198 = CPyList_Extend(cpy_r_r196, cpy_r_r193);
     CPy_DecRef(cpy_r_r193);
     if (unlikely(cpy_r_r198 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL271;
-    } else
         goto CPyL272;
+    } else
+        goto CPyL273;
 CPyL177: ;
     cpy_r_r199 = PyList_AsTuple(cpy_r_r196);
     CPy_DecRef(cpy_r_r196);
@@ -64510,13 +64505,13 @@ CPyL186: ;
 CPyL187: ;
     cpy_r_r211 = (PyObject *)&_Py_NoneStruct;
     cpy_r_r212 = cpy_r_type != cpy_r_r211;
-    if (!cpy_r_r212) goto CPyL273;
+    if (!cpy_r_r212) goto CPyL274;
     CPyErr_SetObjectAndTraceback(cpy_r_type, cpy_r_value, cpy_r_traceback);
     if (unlikely(!0)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
         goto CPyL191;
     } else
-        goto CPyL274;
+        goto CPyL275;
 CPyL189: ;
     CPy_Unreachable();
 CPyL190: ;
@@ -64533,13 +64528,13 @@ CPyL191: ;
     cpy_r_r214 = 1;
     if (unlikely(!cpy_r_r214)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", -1, CPyStatic_controller___globals);
-        goto CPyL275;
+        goto CPyL276;
     }
     cpy_r_r215 = (PyObject **)&cpy_r_r3;
     cpy_r_r216 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__39;
     if (unlikely(cpy_r_r216 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__39", -1, CPyStatic_controller___globals);
-        goto CPyL275;
+        goto CPyL276;
     }
     CPy_INCREF(cpy_r_r216);
 CPyL193: ;
@@ -64547,14 +64542,14 @@ CPyL193: ;
     CPy_DecRef(cpy_r_r216);
     if (unlikely(cpy_r_r217 == 2)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL275;
+        goto CPyL276;
     }
     if (cpy_r_r217) goto CPyL197;
     cpy_r_r209 = cpy_r_r3;
     cpy_r_r218 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__40;
     if (unlikely(cpy_r_r218.f0 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__40", -1, CPyStatic_controller___globals);
-        goto CPyL276;
+        goto CPyL277;
     }
     CPy_INCREF(cpy_r_r218.f0);
     CPy_INCREF(cpy_r_r218.f1);
@@ -64603,7 +64598,7 @@ CPyL202: ;
     cpy_r_r222 = ((dank_mids___controller___execute_batch_DankMiddlewareController_genObject *)cpy_r___mypyc_self__)->___mypyc_temp__39;
     if (unlikely(cpy_r_r222 == NULL)) {
         CPy_AttributeError("dank_mids/controller.py", "execute_batch", "execute_batch_DankMiddlewareController_gen", "__mypyc_temp__39", -1, CPyStatic_controller___globals);
-        goto CPyL277;
+        goto CPyL278;
     }
     CPy_INCREF(cpy_r_r222);
 CPyL203: ;
@@ -64698,18 +64693,18 @@ CPyL221: ;
         cpy_r_r240 = cpy_r_r228;
     else {
         CPy_TypeErrorTraceback("dank_mids/controller.py", "execute_batch", 337, CPyStatic_controller___globals, "dank_mids.logging.CLogger", cpy_r_r228);
-        goto CPyL278;
+        goto CPyL279;
     }
     cpy_r_r241 = PyTuple_Pack(1, cpy_r_r231);
     CPy_DECREF_NO_IMM(cpy_r_r231);
     if (unlikely(cpy_r_r241 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL279;
+        goto CPyL280;
     }
     cpy_r_r242 = PyDict_New();
     if (unlikely(cpy_r_r242 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL280;
+        goto CPyL281;
     }
     cpy_r_r243 = CPyDef_logging___CLogger___info(cpy_r_r240, cpy_r_r230, cpy_r_r241, cpy_r_r242);
     CPy_DECREF(cpy_r_r241);
@@ -64727,18 +64722,18 @@ CPyL226: ;
         cpy_r_r245 = cpy_r_r228;
     else {
         CPy_TypeErrorTraceback("dank_mids/controller.py", "execute_batch", 337, CPyStatic_controller___globals, "dank_mids._demo_mode.DummyLogger", cpy_r_r228);
-        goto CPyL278;
+        goto CPyL279;
     }
     cpy_r_r246 = PyTuple_Pack(2, cpy_r_r230, cpy_r_r231);
     CPy_DECREF_NO_IMM(cpy_r_r231);
     if (unlikely(cpy_r_r246 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL281;
+        goto CPyL282;
     }
     cpy_r_r247 = PyDict_New();
     if (unlikely(cpy_r_r247 == NULL)) {
         CPy_AddTraceback("dank_mids/controller.py", "execute_batch", DIFFCHECK_PLACEHOLDER, CPyStatic_controller___globals);
-        goto CPyL282;
+        goto CPyL283;
     }
     cpy_r_r248 = CPyDef__demo_mode___DummyLogger___info(cpy_r_r246, cpy_r_r247);
     CPy_DECREF(cpy_r_r246);
@@ -64761,18 +64756,18 @@ CPyL235: ;
     return 0;
 CPyL236: ;
     cpy_r_r251 = cpy_r_r4 == 0;
-    if (cpy_r_r251) goto CPyL283;
+    if (cpy_r_r251) goto CPyL284;
     cpy_r_r252 = cpy_r_r4 == 1;
     if (cpy_r_r252) {
-        goto CPyL284;
-    } else
         goto CPyL285;
+    } else
+        goto CPyL286;
 CPyL238: ;
     cpy_r_r253 = cpy_r_r4 == 2;
     if (cpy_r_r253) {
         goto CPyL187;
     } else
-        goto CPyL286;
+        goto CPyL287;
 CPyL239: ;
     PyErr_SetNone(PyExc_StopIteration);
     cpy_r_r254 = 0;
@@ -64828,111 +64823,114 @@ CPyL253: ;
     CPy_DecRef(cpy_r_r112);
     goto CPyL102;
 CPyL254: ;
-    CPyTagged_DecRef(cpy_r_r126);
+    CPy_DecRef(cpy_r_r124);
     goto CPyL241;
 CPyL255: ;
-    CPy_DecRef(cpy_r_r135);
+    CPyTagged_DecRef(cpy_r_r126);
     goto CPyL241;
 CPyL256: ;
     CPy_DecRef(cpy_r_r135);
-    CPy_DecRef(cpy_r_r137);
     goto CPyL241;
 CPyL257: ;
-    CPy_DecRef(cpy_r_r141);
+    CPy_DecRef(cpy_r_r135);
+    CPy_DecRef(cpy_r_r137);
     goto CPyL241;
 CPyL258: ;
     CPy_DecRef(cpy_r_r141);
-    CPy_DecRef(cpy_r_r143);
     goto CPyL241;
 CPyL259: ;
-    CPy_DecRef(cpy_r_r146);
+    CPy_DecRef(cpy_r_r141);
+    CPy_DecRef(cpy_r_r143);
     goto CPyL241;
 CPyL260: ;
     CPy_DecRef(cpy_r_r146);
-    CPy_DecRef(cpy_r_r147);
     goto CPyL241;
 CPyL261: ;
-    CPy_XDECREF(cpy_r_r1);
-    goto CPyL141;
+    CPy_DecRef(cpy_r_r146);
+    CPy_DecRef(cpy_r_r147);
+    goto CPyL241;
 CPyL262: ;
     CPy_XDECREF(cpy_r_r1);
-    goto CPyL140;
+    goto CPyL141;
 CPyL263: ;
+    CPy_XDECREF(cpy_r_r1);
+    goto CPyL140;
+CPyL264: ;
     CPy_XDecRef(cpy_r_r1);
     goto CPyL150;
-CPyL264: ;
+CPyL265: ;
     CPy_DecRef(cpy_r_r160);
     goto CPyL150;
-CPyL265: ;
+CPyL266: ;
     CPy_DecRef(cpy_r_arg);
     goto CPyL158;
-CPyL266: ;
-    CPy_DecRef(cpy_r_r192);
-    goto CPyL211;
 CPyL267: ;
     CPy_DecRef(cpy_r_r192);
-    CPy_DecRef(cpy_r_r193);
-    goto CPyL172;
+    goto CPyL211;
 CPyL268: ;
     CPy_DecRef(cpy_r_r192);
     CPy_DecRef(cpy_r_r193);
-    goto CPyL211;
+    goto CPyL172;
 CPyL269: ;
+    CPy_DecRef(cpy_r_r192);
+    CPy_DecRef(cpy_r_r193);
+    goto CPyL211;
+CPyL270: ;
     CPy_DecRef(cpy_r_r193);
     CPy_DecRef(cpy_r_r196);
     goto CPyL211;
-CPyL270: ;
+CPyL271: ;
     CPy_DecRef(cpy_r_r197);
     goto CPyL176;
-CPyL271: ;
+CPyL272: ;
     CPy_DecRef(cpy_r_r196);
     goto CPyL211;
-CPyL272: ;
+CPyL273: ;
     CPy_DecRef(cpy_r_r198);
     goto CPyL177;
-CPyL273: ;
-    CPy_XDECREF(cpy_r_r3);
-    goto CPyL190;
 CPyL274: ;
     CPy_XDECREF(cpy_r_r3);
-    goto CPyL189;
+    goto CPyL190;
 CPyL275: ;
+    CPy_XDECREF(cpy_r_r3);
+    goto CPyL189;
+CPyL276: ;
     CPy_XDecRef(cpy_r_r3);
     goto CPyL199;
-CPyL276: ;
+CPyL277: ;
     CPy_DecRef(cpy_r_r209);
     goto CPyL199;
-CPyL277: ;
+CPyL278: ;
     CPy_DecRef(cpy_r_arg);
     goto CPyL211;
-CPyL278: ;
-    CPy_DecRef(cpy_r_r231);
-    goto CPyL241;
 CPyL279: ;
-    CPy_DecRef(cpy_r_r240);
+    CPy_DecRef(cpy_r_r231);
     goto CPyL241;
 CPyL280: ;
     CPy_DecRef(cpy_r_r240);
-    CPy_DecRef(cpy_r_r241);
     goto CPyL241;
 CPyL281: ;
-    CPy_DecRef(cpy_r_r245);
+    CPy_DecRef(cpy_r_r240);
+    CPy_DecRef(cpy_r_r241);
     goto CPyL241;
 CPyL282: ;
     CPy_DecRef(cpy_r_r245);
-    CPy_DecRef(cpy_r_r246);
     goto CPyL241;
 CPyL283: ;
+    CPy_DecRef(cpy_r_r245);
+    CPy_DecRef(cpy_r_r246);
+    goto CPyL241;
+CPyL284: ;
     CPy_XDECREF(cpy_r_r1);
     CPy_XDECREF(cpy_r_r3);
     goto CPyL1;
-CPyL284: ;
+CPyL285: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL138;
-CPyL285: ;
+CPyL286: ;
     CPy_XDECREF(cpy_r_r1);
     goto CPyL238;
-CPyL286: ;
+CPyL287: ;
     CPy_XDECREF(cpy_r_r3);
     goto CPyL239;
 }

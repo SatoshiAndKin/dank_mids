@@ -717,8 +717,8 @@ typedef struct {
     tuple_T3OOO ___mypyc_temp__21;
     PyObject *___mypyc_temp__22;
     tuple_T3OOO ___mypyc_temp__23;
-    PyObject *___mypyc_temp__2_0;
-    char ___mypyc_temp__2_1;
+    char ___mypyc_temp__2_0;
+    PyObject *___mypyc_temp__2_1;
 } dank_mids___controller_____call___3_DankMiddlewareController_genObject;
 
 typedef struct {
