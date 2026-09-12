@@ -6,23 +6,17 @@ from brownie import chain, web3
 from evmspec import Transaction1559, Transaction2930, Transaction7702
 from hexbytes import HexBytes
 from multicall import Call
+from web3 import HTTPProvider, Web3
 from web3._utils.rpc_abi import RPC
 
-from dank_mids import dank_web3, instances
+from dank_mids import dank_web3, instances, setup_dank_w3_from_sync
 
 CHAI = "0x06AF07097C9Eeb7fD685c692751D5C66dB49c215"
 
 
-def call_chai(i: int, block: int) -> Call:
-    return Call(
-        CHAI, "totalSupply()(uint)", [[f"totalSupply{i}", None]], _w3=dank_web3, block_id=block
-    )
+def call_chai(i: int, block: int, *, w3=dank_web3) -> Call:
+    return Call(CHAI, "totalSupply()(uint)", [[f"totalSupply{i}", None]], _w3=w3, block_id=block)
 
-
-height = chain.height
-num_calls = 500 if "llama" in web3.provider.endpoint_uri else 50_000
-
-BIG_WORK = (call_chai(i, height - (i // 25000)) for i in range(0, num_calls, 4))
 
 height = chain.height
 
@@ -31,8 +25,16 @@ MULTIBLOCK_WORK = (call_chai(i, height - i) for i in range(1000))
 
 @pytest.mark.asyncio_cooperative
 async def test_dank_middleware() -> None:
-    await igather(BIG_WORK)
-    controller = instances[chain.id][0]
+    # Cooperative tests share the event loop. Give this workload its own controller
+    # so the other tests' distinct-block calls cannot change its batching ratios.
+    workload_web3 = setup_dank_w3_from_sync(Web3(HTTPProvider(web3.provider.endpoint_uri)))
+    workload_height = await workload_web3.eth.block_number
+    num_calls = 500 if "llama" in web3.provider.endpoint_uri else 50_000
+    await igather(
+        call_chai(i, workload_height - (i // 25000), w3=workload_web3)
+        for i in range(0, num_calls, 4)
+    )
+    controller = next(item for item in instances[chain.id] if item.w3 is workload_web3)
     cid = controller.call_uid.latest
     mid = controller.multicall_uid.latest
     rid = controller.request_uid.latest
