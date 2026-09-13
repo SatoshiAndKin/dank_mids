@@ -463,61 +463,69 @@ class RPCRequest(_RequestBase[RPCResponse]):
         Args:
             num_previous_timeouts (optional): the number of times this request has already been attempted and timed out. Default 0.
         """
-        task = create_task(
-            coro=self.controller.make_request(self.method, self.params, request_id=self.uid),
-            name=f"RPCRequest.make_request attempt {num_previous_timeouts+1}",
-        )
+        # Exit the failed attempt before awaiting its replacement. Recursive
+        # awaits keep earlier HTTP responses and TLS buffers alive in tracebacks.
+        while True:
+            task = create_task(
+                coro=self.controller.make_request(self.method, self.params, request_id=self.uid),
+                name=f"RPCRequest.make_request attempt {num_previous_timeouts+1}",
+            )
 
-        try:
-            response = await try_for_result_quick(task)
-        except ClientResponseError as e:
-            if e.status != 408:  # request timeout
-                raise
-            log_func = timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-            log_func(
-                "`make_request` server timeout (code 408) %s times for %s, trying again...",
-                num_previous_timeouts + 1,
-                self,
-            )
-            emit_retry_event(
-                RetryEvent(
-                    operation=self.method,
-                    attempt=num_previous_timeouts + 1,
-                    error=e,
-                    component="rpc_request",
-                    metadata={"status": "408"},
+            try:
+                response = await try_for_result_quick(task)
+            except ClientResponseError as e:
+                if e.status != 408:  # request timeout
+                    raise
+                log_func = (
+                    timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
                 )
-            )
-            return await self.make_request(num_previous_timeouts + 1)
-        except TimeoutError as e:
-            log_func = timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-            log_func(
-                "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
-                TIMEOUT_SECONDS_SMALL,
-                num_previous_timeouts + 1,
-                self,
-            )
-            emit_retry_event(
-                RetryEvent(
-                    operation=self.method,
-                    attempt=num_previous_timeouts + 1,
-                    error=e,
-                    component="rpc_request",
-                    metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
+                log_func(
+                    "`make_request` server timeout (code 408) %s times for %s, trying again...",
+                    num_previous_timeouts + 1,
+                    self,
                 )
-            )
-            next_attempt_coro = self.make_request(num_previous_timeouts + 1)
-            next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
-            done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
-            first_done = done.pop()
-            response = first_done.result()
-            if first_done is not next_attempt_task:
-                # `next_attempt_task` would have already set the fut result, but `task` would not have
+                emit_retry_event(
+                    RetryEvent(
+                        operation=self.method,
+                        attempt=num_previous_timeouts + 1,
+                        error=e,
+                        component="rpc_request",
+                        metadata={"status": "408"},
+                    )
+                )
+                num_previous_timeouts += 1
+                continue
+            except TimeoutError as e:
+                log_func = (
+                    timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
+                )
+                log_func(
+                    "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
+                    TIMEOUT_SECONDS_SMALL,
+                    num_previous_timeouts + 1,
+                    self,
+                )
+                emit_retry_event(
+                    RetryEvent(
+                        operation=self.method,
+                        attempt=num_previous_timeouts + 1,
+                        error=e,
+                        component="rpc_request",
+                        metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
+                    )
+                )
+                next_attempt_coro = self.make_request(num_previous_timeouts + 1)
+                next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
+                done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
+                first_done = done.pop()
+                response = first_done.result()
+                if first_done is not next_attempt_task:
+                    # `next_attempt_task` would have already set the fut result, but `task` would not have
+                    self._fut.set_result(response)
+            else:
                 self._fut.set_result(response)
-        else:
-            self._fut.set_result(response)
 
-        return response
+            return response
 
     def create_duplicate(self) -> Union["RPCRequest", "eth_call"]:
         dupe_uid = f"{self.uid}_copy"

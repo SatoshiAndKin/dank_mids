@@ -78,3 +78,6 @@ exclude = '''
   | env
 )/
 '''
+
+[tool.validation]
+focused_tests = ["tests/unit/test_http_retry_release.py"]
