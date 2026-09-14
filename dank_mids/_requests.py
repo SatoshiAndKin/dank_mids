@@ -5,6 +5,7 @@ from asyncio import (
     as_completed,
     create_task,
     current_task,
+    gather,
     get_running_loop,
     sleep,
     wait,
@@ -406,24 +407,29 @@ class RPCRequest(_RequestBase[RPCResponse]):
     async def get_response_unbatched(self) -> RPCResponse:  # type: ignore [override]
         task = create_task(self.make_request(), name="RPCRequest.get_response_unbatched")
         try:
-            await try_for_result(task)
-        except TimeoutError as e:
-            # looks like its stuck for some reason, let's try another one
-            _log_debug(
-                "%s got stuck in `get_response_unbatched`, we're creating a new one...",
-                self,
-            )
+            try:
+                await try_for_result(task)
+            except TimeoutError as e:
+                # looks like its stuck for some reason, let's try another one
+                _log_debug(
+                    "%s got stuck in `get_response_unbatched`, we're creating a new one...",
+                    self,
+                )
 
-            # don't start counting for the timeout while we still have a queue of requests to send
-            await rate_limit_inactive(self.controller.endpoint)
+                # don't start counting for the timeout while we still have a queue of requests to send
+                await rate_limit_inactive(self.controller.endpoint)
 
-            # The the original request and the duplicate request share the same underlying future so we can just await the duplicate
-            # NOTE: Now that this has been refactored do we actually even need the duplicate task?
-            return await self.create_duplicate().get_response_unbatched()
+                # The the original request and the duplicate request share the same underlying future so we can just await the duplicate
+                # NOTE: Now that this has been refactored do we actually even need the duplicate task?
+                return await self.create_duplicate().get_response_unbatched()
 
-        response: RawResponse = await self._fut
-        decoded = response.decode(partial=True)
-        return format_with_errors(decoded, self.method, raw_mode=self.raw)
+            response: RawResponse = await self._fut
+            decoded = response.decode(partial=True)
+            return format_with_errors(decoded, self.method, raw_mode=self.raw)
+        finally:
+            if not task.done():
+                task.cancel()
+            await gather(task, return_exceptions=True)
 
     async def spoof_response(self, data: RawResponse | bytes | Exception) -> None:
         # sourcery skip: merge-duplicate-blocks
@@ -471,61 +477,76 @@ class RPCRequest(_RequestBase[RPCResponse]):
                 name=f"RPCRequest.make_request attempt {num_previous_timeouts+1}",
             )
 
+            next_attempt_task: Task[RawResponse] | None = None
             try:
-                response = await try_for_result_quick(task)
-            except ClientResponseError as e:
-                if e.status != 408:  # request timeout
-                    raise
-                log_func = (
-                    timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-                )
-                log_func(
-                    "`make_request` server timeout (code 408) %s times for %s, trying again...",
-                    num_previous_timeouts + 1,
-                    self,
-                )
-                emit_retry_event(
-                    RetryEvent(
-                        operation=self.method,
-                        attempt=num_previous_timeouts + 1,
-                        error=e,
-                        component="rpc_request",
-                        metadata={"status": "408"},
+                try:
+                    response = await try_for_result_quick(task)
+                except ClientResponseError as e:
+                    if e.status != 408:  # request timeout
+                        raise
+                    log_func = (
+                        timeout_logger_warning
+                        if num_previous_timeouts > 1
+                        else timeout_logger_debug
                     )
-                )
-                num_previous_timeouts += 1
-                continue
-            except TimeoutError as e:
-                log_func = (
-                    timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-                )
-                log_func(
-                    "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
-                    TIMEOUT_SECONDS_SMALL,
-                    num_previous_timeouts + 1,
-                    self,
-                )
-                emit_retry_event(
-                    RetryEvent(
-                        operation=self.method,
-                        attempt=num_previous_timeouts + 1,
-                        error=e,
-                        component="rpc_request",
-                        metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
+                    log_func(
+                        "`make_request` server timeout (code 408) %s times for %s, trying again...",
+                        num_previous_timeouts + 1,
+                        self,
                     )
-                )
-                next_attempt_coro = self.make_request(num_previous_timeouts + 1)
-                next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
-                done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
-                first_done = done.pop()
-                response = first_done.result()
-                if first_done is not next_attempt_task:
-                    # `next_attempt_task` would have already set the fut result, but `task` would not have
+                    emit_retry_event(
+                        RetryEvent(
+                            operation=self.method,
+                            attempt=num_previous_timeouts + 1,
+                            error=e,
+                            component="rpc_request",
+                            metadata={"status": "408"},
+                        )
+                    )
+                    num_previous_timeouts += 1
+                    continue
+                except TimeoutError as e:
+                    log_func = (
+                        timeout_logger_warning
+                        if num_previous_timeouts > 1
+                        else timeout_logger_debug
+                    )
+                    log_func(
+                        "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
+                        TIMEOUT_SECONDS_SMALL,
+                        num_previous_timeouts + 1,
+                        self,
+                    )
+                    emit_retry_event(
+                        RetryEvent(
+                            operation=self.method,
+                            attempt=num_previous_timeouts + 1,
+                            error=e,
+                            component="rpc_request",
+                            metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
+                        )
+                    )
+                    next_attempt_coro = self.make_request(num_previous_timeouts + 1)
+                    next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
+                    done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
+                    first_done = done.pop()
+                    response = first_done.result()
+                    if first_done is not next_attempt_task:
+                        # `next_attempt_task` would have already set the fut result, but `task` would not have
+                        self._fut.set_result(response)
+                else:
                     self._fut.set_result(response)
-            else:
-                self._fut.set_result(response)
 
-            return response
+                return response
+            finally:
+                # This invocation owns these attempts. A completed race or a
+                # cancelled caller must release every remaining HTTP operation.
+                attempts = (task,) if next_attempt_task is None else (task, next_attempt_task)
+                for attempt in attempts:
+                    if not attempt.done():
+                        attempt.cancel()
+                await gather(*attempts, return_exceptions=True)
+                del attempts, attempt
 
     def create_duplicate(self) -> Union["RPCRequest", "eth_call"]:
         dupe_uid = f"{self.uid}_copy"
@@ -1354,9 +1375,11 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             return []
 
         endpoint = self.controller.endpoint
+        attempts: list[Task[JSONRPCBatchResponse]] = []
         try:
             post_coro = _requester.post(endpoint, data=data, loads=_codec.decode_jsonrpc_batch)
             task = create_task(post_coro, name=f"JSONRPCBatch-{self.uid}")
+            attempts.append(task)
             response: JSONRPCBatchResponse = await wait_for(shield(task), timeout=30)
         except TimeoutError:
             timeout_logger_warning("JSONRPCBatch.post timed out (30s). Retrying.")
@@ -1365,7 +1388,8 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             if not data:
                 return []
             new_post_coro = _requester.post(endpoint, data=data, loads=_codec.decode_jsonrpc_batch)
-            for fut in as_completed([task, new_post_coro]):
+            attempts.append(create_task(new_post_coro, name=f"JSONRPCBatch-{self.uid}-retry"))
+            for fut in as_completed(attempts):
                 return await fut
         except ClientResponseError as e:
             if e.message == "Payload Too Large":
@@ -1383,6 +1407,11 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             if ENVS.DEBUG:  # type: ignore [attr-defined]
                 self._record_failure(e, self.data.decode())
             raise
+        finally:
+            for attempt in attempts:
+                if not attempt.done():
+                    attempt.cancel()
+            await gather(*attempts, return_exceptions=True)
 
         # NOTE: A successful response will be a list of `RawResponse` objects.
         #       A single `PartialResponse` implies an error.

@@ -80,4 +80,4 @@ exclude = '''
 '''
 
 [tool.validation]
-focused_tests = ["tests/unit/test_http_retry_release.py"]
+focused_tests = ["tests/unit/test_http_retry_release.py", "tests/unit/test_requester_ownership.py"]
