@@ -8,6 +8,7 @@ from eth_typing import ABIFunction, ChecksumAddress
 from faster_hexbytes.main import BytesLike
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
+from dank_mids._block import StateBlockIdentifier
 from dank_mids.brownie_patch import call
 from dank_mids.brownie_patch._abi import FunctionABI
 
@@ -55,7 +56,7 @@ class _DankMethodMixin(Generic[_EVMType]):
     async def map(
         self,
         args: Iterable[Any],
-        block_identifier: int | None = None,
+        block_identifier: StateBlockIdentifier | None = None,
         *,
         iter_args: bool = False,
         decimals: int | None = None,
@@ -105,7 +106,7 @@ class _DankMethodMixin(Generic[_EVMType]):
     async def coroutine(
         self,
         *args: Any,
-        block_identifier: int | None = None,
+        block_identifier: StateBlockIdentifier | None = None,
         decimals: int | None = None,
         override: dict[str, str] | None = None,
     ) -> _EVMType:
@@ -162,7 +163,7 @@ class _DankMethod(_DankMethodMixin):
     async def coroutine(
         self,
         *args: Any,
-        block_identifier: int | None = None,
+        block_identifier: StateBlockIdentifier | None = None,
         decimals: int | None = None,
         override: dict[str, str] | None = None,
     ) -> _EVMType:

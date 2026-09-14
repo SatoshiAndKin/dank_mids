@@ -1625,38 +1625,13 @@ test = ["hypothesis (>=4.43.0)", "mypy (==1.10.0)", "pytest (>=7.0.0)", "pytest-
 
 [[package]]
 name = "evmspec"
-version = "0.5.1"
+version = "0.5.2"
 description = "A collection of msgspec.Struct definitions for use with the Ethereum Virtual Machine"
 optional = false
-python-versions = "<3.14,>=3.10"
+python-versions = ">=3.10,<3.14"
 groups = ["main"]
-files = [
-    {file = "evmspec-0.5.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:9cb906711755e93b7208cf5bddc42d4957516dcfbf630a0fe2eaf4e3ed9ae7c6"},
-    {file = "evmspec-0.5.1-cp310-cp310-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:aef878314f9c00e323c67f23ff98312a0a3142cce8910dce24ec37f82540e4a7"},
-    {file = "evmspec-0.5.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:8ae6e7a8bbfa2713c014a09f037e6cc5bef1ff250560a49385421cfaba6d87ff"},
-    {file = "evmspec-0.5.1-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:57ffcd305c672a748949e0b7bb06f20b90caef6c30b3e61a4a79397ee294ee86"},
-    {file = "evmspec-0.5.1-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:d1e0d177f6e7f18cd30e4afe9add1b2d6f980ee358a2ece035b5235478d2358a"},
-    {file = "evmspec-0.5.1-cp310-cp310-win_amd64.whl", hash = "sha256:b8a7ce79ce9ec0f88552e48fed37fd1b3c8d4555511b415a37349c083e6c206d"},
-    {file = "evmspec-0.5.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:654a5558f3cec9782f7f3ac3bed8a6f82452439c2e189d2a179aac9fa0263d06"},
-    {file = "evmspec-0.5.1-cp311-cp311-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:8ab789e6fbb79c0224fbd562ba9b29b4da03ec9c095a3b6c110a21001dac5170"},
-    {file = "evmspec-0.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:52a64c278371d0af07878c7b073ab316abb601168f061a11d9a570c2d6e72e3f"},
-    {file = "evmspec-0.5.1-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:1e4c4e50cee331ded3526b4d9b20ea00ff4c65cbfceeffa022720b7657ce55f0"},
-    {file = "evmspec-0.5.1-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:4812cf24f6c90dfb44e39cd66d26821d9850c58c634297f5df16311a02d2367f"},
-    {file = "evmspec-0.5.1-cp311-cp311-win_amd64.whl", hash = "sha256:f03f34776f63a7c32261237a812f78491d60181b8ad80c2824d5aef6254ec290"},
-    {file = "evmspec-0.5.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:528b565f4799db71f5c0bb0e0e0e6715a6688614db473e276799af88285556e7"},
-    {file = "evmspec-0.5.1-cp312-cp312-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:d4ef3f0cbe5bb343730c3b0d92a5485ce10c719ad4e60b3313ba266dedf8b451"},
-    {file = "evmspec-0.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:1bdf6d445f46d1b3e92085ae8c0b9ef55c21224e517beeaf964d5d56119afa67"},
-    {file = "evmspec-0.5.1-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:033949a11f98e89eda70f2dce8e915a983baf53a3cdac07f7d81f6aa8fb11f39"},
-    {file = "evmspec-0.5.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:61a6067d65fb19a9e388ed9a48f50b925dc9408b0e46ed1830cb159a4a091743"},
-    {file = "evmspec-0.5.1-cp312-cp312-win_amd64.whl", hash = "sha256:e2678708755005e42c333c5eade567d53c22d747eb24780f20fc443ef78991f6"},
-    {file = "evmspec-0.5.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:2ef89afde06692927e69218d14333fec9f35eb46db976792e1537927a20f13d0"},
-    {file = "evmspec-0.5.1-cp313-cp313-manylinux1_i686.manylinux_2_28_i686.manylinux_2_5_i686.whl", hash = "sha256:cebd165ecb4167b9c9b22738e2660c1c783223a9936f9e73a5c6910296529b07"},
-    {file = "evmspec-0.5.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bd8ce624747430e36e8f300653419a11d5bd5b500487aa8b04cabadbcb4ecea8"},
-    {file = "evmspec-0.5.1-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:3f947d2a604b7f05be1f60eae66239b7f28644ea7905e7faa6e3b7113d9fd721"},
-    {file = "evmspec-0.5.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:c5cdbcce77369539b741076ba3ba74c09417b0c537657c5aa1e921b665cf7075"},
-    {file = "evmspec-0.5.1-cp313-cp313-win_amd64.whl", hash = "sha256:05ba07033f37cc2ca1f0f3a1f32e0a5478b26e79396731ed3c957fd90944e179"},
-    {file = "evmspec-0.5.1.tar.gz", hash = "sha256:10eed5ca04f34e0169a148e107839529235e2609c18a070564080b6c1af38c69"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 cachetools = ">=4.1.1,<7"
@@ -1668,6 +1643,12 @@ faster-eth-utils = ">=4,<6"
 faster-hexbytes = ">=1.3.2,<2"
 safe-pysha3 = ">=1.0.0"
 typing_extensions = ">=4.0.0"
+
+[package.source]
+type = "git"
+url = "https://github.com/SatoshiAndKin/evmspec.git"
+reference = "f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c"
+resolved_reference = "f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c"
 
 [[package]]
 name = "execnet"
@@ -4647,4 +4628,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.14"
-content-hash = "df35fca1fb6cb71d06e75851de46ea2e55fe5e8e2e8783b197e33fc4d38e79b0"
+content-hash = "5d1b786b4dc55104e5d8e95c13e083f61301bf27f2b197deec49fcdbaf3dbbb9"

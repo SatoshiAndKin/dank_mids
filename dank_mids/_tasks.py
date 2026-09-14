@@ -34,8 +34,10 @@ def create_batch_task(a: Awaitable[T], name: str) -> asyncio.Task[T]:
 
 
 def batch_done_callback(t: asyncio.Task[Any]) -> None:
-    if t._exception is not None:
-        logger.exception("exception in batch task %s", t)
+    # Completion ends registry ownership on success, failure, and cancellation.
+    BATCH_TASKS.discard(t)
+    if not t.cancelled() and t.exception() is not None:
+        logger.exception("exception in batch task %s", repr(t))
     elif t.cancelled():
         # Make the CancelledError so we can get the cancel message, if any.
         try:
@@ -44,9 +46,7 @@ def batch_done_callback(t: asyncio.Task[Any]) -> None:
             cancel_message = e.args[0] if e.args else None
 
         # Now log the exception because something is fucked up and the user needs to know.
-        logger.exception("batch task %s is cancelled???\nreason: %s", t, cancel_message)
-    else:
-        BATCH_TASKS.discard(t)
+        logger.exception("batch task %s is cancelled???\nreason: %s", repr(t), str(cancel_message))
 
 
 # Vendored from asyncio:

@@ -107,6 +107,14 @@ typedef struct tuple_T10OOOOOOOOOO {
 } tuple_T10OOOOOOOOOO;
 #endif
 
+#ifndef MYPYC_DECLARED_tuple_T2OC
+#define MYPYC_DECLARED_tuple_T2OC
+typedef struct tuple_T2OC {
+    PyObject *f0;
+    char f1;
+} tuple_T2OC;
+#endif
+
 #ifndef MYPYC_DECLARED_tuple_T2CO
 #define MYPYC_DECLARED_tuple_T2CO
 typedef struct tuple_T2CO {
@@ -583,7 +591,7 @@ typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___brownie_patch___overloaded___coroutine_gen___3_24Object;
+} dank_mids___brownie_patch___overloaded___coroutine_gen___3_25Object;
 
 typedef struct {
     PyObject_HEAD
@@ -683,26 +691,34 @@ typedef struct {
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_temp__0;
     tuple_T3OOO ___mypyc_temp__1;
+    PyObject *___mypyc_generator_attribute__tx;
+    PyObject *___mypyc_generator_attribute__block;
+    PyObject *___mypyc_generator_attribute__block_hash;
+    char ___mypyc_generator_attribute__canonical;
     PyObject *___mypyc_temp__2;
-    PyObject *___mypyc_temp__3;
-    char ___mypyc_temp__4;
+    tuple_T3OOO ___mypyc_temp__3;
+    PyObject *___mypyc_temp__4;
     PyObject *___mypyc_temp__5;
-    tuple_T3OOO ___mypyc_temp__6;
+    char ___mypyc_temp__6;
     PyObject *___mypyc_temp__7;
     tuple_T3OOO ___mypyc_temp__8;
     PyObject *___mypyc_temp__9;
-    PyObject *___mypyc_temp__10;
-    tuple_T3OOO ___mypyc_temp__11;
-    tuple_T3OOO ___mypyc_temp__12;
-    PyObject *___mypyc_temp__13;
+    tuple_T3OOO ___mypyc_temp__10;
+    PyObject *___mypyc_temp__11;
+    PyObject *___mypyc_temp__12;
+    tuple_T3OOO ___mypyc_temp__13;
     tuple_T3OOO ___mypyc_temp__14;
     PyObject *___mypyc_temp__15;
     tuple_T3OOO ___mypyc_temp__16;
     PyObject *___mypyc_temp__17;
     tuple_T3OOO ___mypyc_temp__18;
-    tuple_T3OOO ___mypyc_temp__19;
-    PyObject *___mypyc_temp__20;
+    PyObject *___mypyc_temp__19;
+    tuple_T3OOO ___mypyc_temp__20;
     tuple_T3OOO ___mypyc_temp__21;
+    PyObject *___mypyc_temp__22;
+    tuple_T3OOO ___mypyc_temp__23;
+    PyObject *___mypyc_temp__2_0;
+    char ___mypyc_temp__2_1;
 } dank_mids___controller_____call___3_DankMiddlewareController_genObject;
 
 typedef struct {
@@ -720,9 +736,9 @@ typedef struct {
     PyObject **_stop_iter_ptr;
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__request;
-    PyObject *___mypyc_temp__22;
-    tuple_T3OOO ___mypyc_temp__23;
-    tuple_T3OOO ___mypyc_temp__24;
+    PyObject *___mypyc_temp__24;
+    tuple_T3OOO ___mypyc_temp__25;
+    tuple_T3OOO ___mypyc_temp__26;
     PyObject *___mypyc_generator_attribute__e;
 } dank_mids___controller___make_request_DankMiddlewareController_envObject;
 
@@ -739,25 +755,25 @@ typedef struct {
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__multicalls;
     PyObject *___mypyc_generator_attribute__pending_eth_calls;
-    PyObject *___mypyc_temp__25;
-    char ___mypyc_temp__26;
     PyObject *___mypyc_temp__27;
-    PyObject *___mypyc_temp__28;
-    CPyTagged ___mypyc_temp__29;
-    int64_t ___mypyc_temp__30;
-    PyObject *___mypyc_temp__31;
+    char ___mypyc_temp__28;
+    PyObject *___mypyc_temp__29;
+    PyObject *___mypyc_temp__30;
+    CPyTagged ___mypyc_temp__31;
+    int64_t ___mypyc_temp__32;
+    PyObject *___mypyc_temp__33;
     PyObject *___mypyc_generator_attribute__block;
     PyObject *___mypyc_generator_attribute__call;
     PyObject *___mypyc_generator_attribute__rpc_calls;
-    tuple_T3OOO ___mypyc_temp__32;
-    tuple_T3OOO ___mypyc_temp__33;
-    PyObject *___mypyc_generator_attribute__batch;
-    PyObject *___mypyc_temp__34;
+    tuple_T3OOO ___mypyc_temp__34;
     tuple_T3OOO ___mypyc_temp__35;
-    tuple_T3OOO ___mypyc_temp__36;
-    PyObject *___mypyc_generator_attribute__e;
-    PyObject *___mypyc_temp__37;
+    PyObject *___mypyc_generator_attribute__batch;
+    PyObject *___mypyc_temp__36;
+    tuple_T3OOO ___mypyc_temp__37;
     tuple_T3OOO ___mypyc_temp__38;
+    PyObject *___mypyc_generator_attribute__e;
+    PyObject *___mypyc_temp__39;
+    tuple_T3OOO ___mypyc_temp__40;
 } dank_mids___controller___execute_batch_DankMiddlewareController_genObject;
 
 typedef struct {
@@ -769,13 +785,15 @@ typedef struct {
     double ___mypyc_generator_attribute__timeout;
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__dispatched_batches;
-    tuple_T3OOO ___mypyc_temp__39;
-    PyObject *___mypyc_temp__40;
     tuple_T3OOO ___mypyc_temp__41;
-    tuple_T3OOO ___mypyc_temp__42;
-    PyObject *___mypyc_temp__43;
-    tuple_T3OOO ___mypyc_temp__44;
+    PyObject *___mypyc_generator_attribute__tasks;
+    PyObject *___mypyc_temp__42;
+    tuple_T3OOO ___mypyc_temp__43;
+    PyObject *___mypyc_generator_attribute___;
+    PyObject *___mypyc_generator_attribute__pending;
+    PyObject *___mypyc_temp__44;
     tuple_T3OOO ___mypyc_temp__45;
+    tuple_T3OOO ___mypyc_temp__46;
 } dank_mids___controller___dispatch_pending_rpc_batch_and_wait_DankMiddlewareController_genObject;
 
 typedef struct {
@@ -842,23 +860,14 @@ typedef struct {
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__caller_future;
     PyObject *___mypyc_generator_attribute__caller_loop;
+    PyObject *___mypyc_generator_attribute__finish;
     PyObject *___mypyc_generator_attribute__check;
     PyObject *___mypyc_generator_attribute__start_check;
     PyObject *___mypyc_generator_attribute__limiter;
-    PyObject *___mypyc_temp__0;
-    char ___mypyc_temp__1;
-    PyObject *___mypyc_temp__2;
-    tuple_T3OOO ___mypyc_temp__3;
-    PyObject *___mypyc_temp__4;
     PyObject *___mypyc_generator_attribute__handle;
-    PyObject *___mypyc_temp__10;
-    tuple_T3OOO ___mypyc_temp__11;
-    tuple_T3OOO ___mypyc_temp__12;
-    tuple_T3OOO ___mypyc_temp__13;
-    PyObject *___mypyc_temp__14;
-    tuple_T3OOO ___mypyc_temp__15;
-    PyObject *___mypyc_temp__16;
-    tuple_T3OOO ___mypyc_temp__17;
+    PyObject *___mypyc_temp__3;
+    tuple_T3OOO ___mypyc_temp__4;
+    tuple_T3OOO ___mypyc_temp__5;
 } dank_mids___helpers____rate_limit___rate_limit_inactive_envObject;
 
 typedef struct {
@@ -866,6 +875,13 @@ typedef struct {
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
 } dank_mids___helpers____rate_limit___rate_limit_inactive_genObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+    PyObject *___mypyc_env__;
+} dank_mids___helpers____rate_limit___finish_rate_limit_inactive_objObject;
 
 typedef struct {
     PyObject_HEAD
@@ -878,12 +894,10 @@ typedef struct {
     PyObject *_arg;
     PyObject **_stop_iter_ptr;
     int32_t ___mypyc_next_label__;
-    PyObject *___mypyc_temp__5;
-    tuple_T3OOO ___mypyc_temp__6;
-    tuple_T3OOO ___mypyc_temp__7;
-    PyObject *___mypyc_generator_attribute__e;
-    tuple_T3OOO ___mypyc_temp__8;
-    tuple_T3OOO ___mypyc_temp__9;
+    PyObject *___mypyc_temp__0;
+    tuple_T3OOO ___mypyc_temp__1;
+    tuple_T3OOO ___mypyc_temp__2;
+    PyObject *___mypyc_generator_attribute__error;
 } dank_mids___helpers____rate_limit___check_rate_limit_inactive_envObject;
 
 typedef struct {
@@ -897,7 +911,7 @@ typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____rate_limit___check_gen___3_73Object;
+} dank_mids___helpers____rate_limit___check_gen___3_62Object;
 
 typedef struct {
     PyObject_HEAD
@@ -909,15 +923,33 @@ typedef struct {
 typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
+    PyObject *___mypyc_self__;
     PyObject *___mypyc_generator_attribute__endpoint;
+    PyObject *_type;
+    PyObject *_value;
+    PyObject *_traceback;
+    PyObject *_arg;
+    PyObject **_stop_iter_ptr;
     int32_t ___mypyc_next_label__;
-    PyObject *___mypyc_generator_attribute__existing;
-    PyObject *___mypyc_temp__18;
-    tuple_T3OOO ___mypyc_temp__19;
+    PyObject *___mypyc_generator_attribute___rate_limit_tasks;
+    PyObject *___mypyc_generator_attribute__discard;
     PyObject *___mypyc_generator_attribute__task;
-    PyObject *___mypyc_temp__20;
-    tuple_T3OOO ___mypyc_temp__21;
+    PyObject *___mypyc_temp__6;
+    tuple_T3OOO ___mypyc_temp__7;
+} dank_mids___helpers____rate_limit____rate_limit_inactive_envObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    PyObject *___mypyc_env__;
 } dank_mids___helpers____rate_limit____rate_limit_inactive_genObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+    PyObject *___mypyc_env__;
+} dank_mids___helpers____rate_limit___discard__rate_limit_inactive_objObject;
 
 typedef struct {
     PyObject_HEAD
@@ -928,14 +960,14 @@ typedef struct {
     PyObject *___mypyc_generator_attribute__waiters;
     tuple_T3FIO ___mypyc_generator_attribute__last_waiter_tuple;
     PyObject *___mypyc_generator_attribute__last_waiter;
-    PyObject *___mypyc_temp__22;
-    tuple_T3OOO ___mypyc_temp__23;
-    tuple_T3OOO ___mypyc_temp__24;
-    CPyTagged ___mypyc_temp__25;
-    CPyTagged ___mypyc_temp__26;
+    PyObject *___mypyc_temp__8;
+    tuple_T3OOO ___mypyc_temp__9;
+    tuple_T3OOO ___mypyc_temp__10;
+    CPyTagged ___mypyc_temp__11;
+    CPyTagged ___mypyc_temp__12;
     PyObject *___mypyc_generator_attribute___;
-    PyObject *___mypyc_temp__27;
-    tuple_T3OOO ___mypyc_temp__28;
+    PyObject *___mypyc_temp__13;
+    tuple_T3OOO ___mypyc_temp__14;
 } dank_mids___helpers____rate_limit_____rate_limit_inactive_genObject;
 
 typedef struct {
@@ -959,7 +991,6 @@ typedef struct {
     CPyVTableItem *vtable;
     PyObject *_loop;
     PyObject *__session;
-    PyObject *__tasks;
     PyObject *__exc;
 } dank_mids___helpers____requester___HTTPRequesterThreadObject;
 
@@ -978,12 +1009,9 @@ typedef struct {
     PyObject *_arg;
     PyObject **_stop_iter_ptr;
     int32_t ___mypyc_next_label__;
-    PyObject *___mypyc_generator_attribute__caller_future;
-    PyObject *___mypyc_generator_attribute__caller_loop;
-    PyObject *___mypyc_generator_attribute__run_and_set_result;
-    PyObject *___mypyc_generator_attribute__start_request;
-    PyObject *___mypyc_temp__3;
-    tuple_T3OOO ___mypyc_temp__4;
+    PyObject *___mypyc_generator_attribute__request;
+    PyObject *___mypyc_temp__2;
+    tuple_T3OOO ___mypyc_temp__3;
 } dank_mids___helpers____requester___post_HTTPRequesterThread_envObject;
 
 typedef struct {
@@ -1005,30 +1033,20 @@ typedef struct {
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_temp__0;
     tuple_T3OOO ___mypyc_temp__1;
-    PyObject *___mypyc_generator_attribute__result;
-    tuple_T3OOO ___mypyc_temp__2;
-    PyObject *___mypyc_generator_attribute__exc;
-} dank_mids___helpers____requester___run_and_set_result_post_HTTPRequesterThread_envObject;
+} dank_mids___helpers____requester___request_post_HTTPRequesterThread_envObject;
 
 typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     vectorcallfunc vectorcall;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___run_and_set_result_post_HTTPRequesterThread_objObject;
+} dank_mids___helpers____requester___request_post_HTTPRequesterThread_objObject;
 
 typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___run_and_set_result_gen___3_67Object;
-
-typedef struct {
-    PyObject_HEAD
-    CPyVTableItem *vtable;
-    vectorcallfunc vectorcall;
-    PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___start_request_post_HTTPRequesterThread_objObject;
+} dank_mids___helpers____requester___request_gen___3_58Object;
 
 typedef struct {
     PyObject_HEAD
@@ -1050,8 +1068,8 @@ typedef struct {
     PyObject **_stop_iter_ptr;
     int32_t ___mypyc_next_label__;
     PyObject *___mypyc_generator_attribute__session;
-    PyObject *___mypyc_temp__5;
-    tuple_T3OOO ___mypyc_temp__6;
+    PyObject *___mypyc_temp__4;
+    tuple_T3OOO ___mypyc_temp__5;
 } dank_mids___helpers____requester___close_session_shutdown_http_requester_envObject;
 
 typedef struct {
@@ -1065,7 +1083,7 @@ typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___close_session_gen___3_89Object;
+} dank_mids___helpers____requester___close_session_gen___3_70Object;
 
 typedef struct {
     PyObject_HEAD

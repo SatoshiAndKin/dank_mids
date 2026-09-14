@@ -330,12 +330,16 @@ def test_getattr_foreign_initialized_state_raises_public_exception(monkeypatch) 
     assert brownie_patch._STATE.initialized is False
 
 
-def test_compiled_import_path_normalizes_state_identity_mismatch() -> None:
+@pytest.mark.parametrize("connected", [False, True])
+def test_compiled_import_path_normalizes_state_identity_mismatch(monkeypatch, connected) -> None:
     dank_mids, brownie_patch = _import_compiled_dank_mids()
     try:
         module_file = getattr(brownie_patch, "__file__", "")
         if not module_file.endswith((".so", ".pyd")):
             pytest.skip("compiled brownie_patch extension not available for this interpreter")
+
+        network = importlib.import_module("brownie.network")
+        monkeypatch.setattr(network, "is_connected", lambda: connected)
 
         spoof_cls = type("_BrowniePatchState", (), {"__module__": "dank_mids.brownie_patch"})
         spoof = spoof_cls()
@@ -346,7 +350,16 @@ def test_compiled_import_path_normalizes_state_identity_mismatch() -> None:
 
         exc_types = importlib.import_module("dank_mids.exceptions")
 
-        with pytest.raises(exc_types.BrowniePatchNotInitializedError):
+        expected_error = (
+            exc_types.BrowniePatchNotInitializedError
+            if connected
+            else exc_types.BrownieNotConnectedError
+        )
+        with pytest.raises(expected_error):
             _ = dank_mids.dank_web3
+
+        status = brownie_patch.get_brownie_patch_status()
+        assert status.connected is connected
+        assert status.initialized is False
     finally:
         _clear_modules()

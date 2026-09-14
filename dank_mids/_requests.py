@@ -5,6 +5,7 @@ from asyncio import (
     as_completed,
     create_task,
     current_task,
+    gather,
     get_running_loop,
     sleep,
     wait,
@@ -12,8 +13,18 @@ from asyncio import (
 )
 from collections import defaultdict
 from collections.abc import Callable, Coroutine, Generator, Iterable, Iterator, Sequence
-from itertools import chain, filterfalse, groupby
-from typing import TYPE_CHECKING, Any, DefaultDict, Final, Generic, Optional, TypeVar, Union, final
+from itertools import chain, groupby
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    DefaultDict,
+    Final,
+    Generic,
+    Optional,
+    TypeVar,
+    Union,
+    final,
+)
 from weakref import ProxyType
 from weakref import proxy as weak_proxy
 
@@ -35,6 +46,7 @@ from web3.types import RPCResponse
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids import _debugging, constants, stats
+from dank_mids._block import BlockId, block_height, rpc_block
 from dank_mids._demo_mode import demo_logger
 from dank_mids._exceptions import (
     BadResponse,
@@ -57,7 +69,9 @@ from dank_mids._tasks import (
     shield,
 )
 from dank_mids.exceptions import GarbageCollectionError
-from dank_mids.helpers import DebuggableFuture, _codec, _errors as _errors_mod, batch_size, gatherish
+from dank_mids.helpers import DebuggableFuture, _codec
+from dank_mids.helpers import _errors as _errors_mod
+from dank_mids.helpers import batch_size, gatherish
 from dank_mids.helpers._codec import (
     JSONRPCBatchResponse,
     MulticallChunk,
@@ -91,7 +105,7 @@ from dank_mids.helpers.method import should_batch as should_batch_method
 from dank_mids.lock import AlertingRLock, Lock
 from dank_mids.logging import DEBUG, get_c_logger
 from dank_mids.retry_observer import RetryEvent, emit_retry_event
-from dank_mids.types import BatchId, BlockId, JsonrpcParams, PartialRequest, Request, Response
+from dank_mids.types import BatchId, JsonrpcParams, PartialRequest, Request, Response
 
 if TYPE_CHECKING:
     from dank_mids._batch import DankBatch
@@ -142,7 +156,7 @@ class _RequestEvent(a_sync.Event):
 
 class _RequestBase(Generic[_Response]):
     _fut: DebuggableFuture
-    _batch: Optional["_Batch"] = None
+    _batch: Union["_Batch", "DankBatch", None] = None
 
     __slots__ = "controller", "uid", "_fut", "__weakref__"
 
@@ -264,7 +278,9 @@ class RPCRequest(_RequestBase[RPCResponse]):
         if not fut.done() and not fut._loop.is_closed():
             # If nobody is waiting anymore, treat this as abandoned work and keep noise low.
             if not _future_has_waiters(fut):
-                _log_debug("%s was garbage collected with no waiters; treating as abandoned work", self)
+                _log_debug(
+                    "%s was garbage collected with no waiters; treating as abandoned work", self
+                )
                 return
             try:
                 fut.set_exception(
@@ -304,7 +320,7 @@ class RPCRequest(_RequestBase[RPCResponse]):
             # NOTE: We want to force the event loop to make one full _run_once call before we execute.
             await yield_to_loop()
 
-        elif current_batch._awaited is False:
+        elif isinstance(current_batch, _Batch) and current_batch._awaited is False:
             # NOTE: If current_batch is not None, that means we filled a batch. Let's await it now so we can send something to the node.
             await wait((current_batch._task, fut), return_when="FIRST_COMPLETED")
 
@@ -391,24 +407,29 @@ class RPCRequest(_RequestBase[RPCResponse]):
     async def get_response_unbatched(self) -> RPCResponse:  # type: ignore [override]
         task = create_task(self.make_request(), name="RPCRequest.get_response_unbatched")
         try:
-            await try_for_result(task)
-        except TimeoutError as e:
-            # looks like its stuck for some reason, let's try another one
-            _log_debug(
-                "%s got stuck in `get_response_unbatched`, we're creating a new one...",
-                self,
-            )
+            try:
+                await try_for_result(task)
+            except TimeoutError as e:
+                # looks like its stuck for some reason, let's try another one
+                _log_debug(
+                    "%s got stuck in `get_response_unbatched`, we're creating a new one...",
+                    self,
+                )
 
-            # don't start counting for the timeout while we still have a queue of requests to send
-            await rate_limit_inactive(self.controller.endpoint)
+                # don't start counting for the timeout while we still have a queue of requests to send
+                await rate_limit_inactive(self.controller.endpoint)
 
-            # The the original request and the duplicate request share the same underlying future so we can just await the duplicate
-            # NOTE: Now that this has been refactored do we actually even need the duplicate task?
-            return await self.create_duplicate().get_response_unbatched()
+                # The the original request and the duplicate request share the same underlying future so we can just await the duplicate
+                # NOTE: Now that this has been refactored do we actually even need the duplicate task?
+                return await self.create_duplicate().get_response_unbatched()
 
-        response: RawResponse = await self._fut
-        decoded = response.decode(partial=True)
-        return format_with_errors(decoded, self.method, raw_mode=self.raw)
+            response: RawResponse = await self._fut
+            decoded = response.decode(partial=True)
+            return format_with_errors(decoded, self.method, raw_mode=self.raw)
+        finally:
+            if not task.done():
+                task.cancel()
+            await gather(task, return_exceptions=True)
 
     async def spoof_response(self, data: RawResponse | bytes | Exception) -> None:
         # sourcery skip: merge-duplicate-blocks
@@ -448,66 +469,89 @@ class RPCRequest(_RequestBase[RPCResponse]):
         Args:
             num_previous_timeouts (optional): the number of times this request has already been attempted and timed out. Default 0.
         """
-        task = create_task(
-            coro=self.controller.make_request(self.method, self.params, request_id=self.uid),
-            name=f"RPCRequest.make_request attempt {num_previous_timeouts+1}",
-        )
+        # Exit the failed attempt before awaiting its replacement. Recursive
+        # awaits keep earlier HTTP responses and TLS buffers alive in tracebacks.
+        while True:
+            task = create_task(
+                coro=self.controller.make_request(self.method, self.params, request_id=self.uid),
+                name=f"RPCRequest.make_request attempt {num_previous_timeouts+1}",
+            )
 
-        try:
-            response = await try_for_result_quick(task)
-        except ClientResponseError as e:
-            if e.status != 408:  # request timeout
-                raise
-            log_func = timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-            log_func(
-                "`make_request` server timeout (code 408) %s times for %s, trying again...",
-                num_previous_timeouts + 1,
-                self,
-            )
-            emit_retry_event(
-                RetryEvent(
-                    operation=self.method,
-                    attempt=num_previous_timeouts + 1,
-                    error=e,
-                    component="rpc_request",
-                    metadata={"status": "408"},
-                )
-            )
-            return await self.make_request(num_previous_timeouts + 1)
-        except TimeoutError as e:
-            log_func = timeout_logger_warning if num_previous_timeouts > 1 else timeout_logger_debug
-            log_func(
-                "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
-                TIMEOUT_SECONDS_SMALL,
-                num_previous_timeouts + 1,
-                self,
-            )
-            emit_retry_event(
-                RetryEvent(
-                    operation=self.method,
-                    attempt=num_previous_timeouts + 1,
-                    error=e,
-                    component="rpc_request",
-                    metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
-                )
-            )
-            next_attempt_coro = self.make_request(num_previous_timeouts + 1)
-            next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
-            done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
-            first_done = done.pop()
-            response = first_done.result()
-            if first_done is not next_attempt_task:
-                # `next_attempt_task` would have already set the fut result, but `task` would not have
-                self._fut.set_result(response)
-        else:
-            self._fut.set_result(response)
+            next_attempt_task: Task[RawResponse] | None = None
+            try:
+                try:
+                    response = await try_for_result_quick(task)
+                except ClientResponseError as e:
+                    if e.status != 408:  # request timeout
+                        raise
+                    log_func = (
+                        timeout_logger_warning
+                        if num_previous_timeouts > 1
+                        else timeout_logger_debug
+                    )
+                    log_func(
+                        "`make_request` server timeout (code 408) %s times for %s, trying again...",
+                        num_previous_timeouts + 1,
+                        self,
+                    )
+                    emit_retry_event(
+                        RetryEvent(
+                            operation=self.method,
+                            attempt=num_previous_timeouts + 1,
+                            error=e,
+                            component="rpc_request",
+                            metadata={"status": "408"},
+                        )
+                    )
+                    num_previous_timeouts += 1
+                    continue
+                except TimeoutError as e:
+                    log_func = (
+                        timeout_logger_warning
+                        if num_previous_timeouts > 1
+                        else timeout_logger_debug
+                    )
+                    log_func(
+                        "`make_request` timed out in dank_mids (%ss) %s times for %s, trying again...",
+                        TIMEOUT_SECONDS_SMALL,
+                        num_previous_timeouts + 1,
+                        self,
+                    )
+                    emit_retry_event(
+                        RetryEvent(
+                            operation=self.method,
+                            attempt=num_previous_timeouts + 1,
+                            error=e,
+                            component="rpc_request",
+                            metadata={"timeout_seconds": str(TIMEOUT_SECONDS_SMALL)},
+                        )
+                    )
+                    next_attempt_coro = self.make_request(num_previous_timeouts + 1)
+                    next_attempt_task = create_task(next_attempt_coro, name="next attempt task")
+                    done, _ = await wait((task, next_attempt_task), return_when="FIRST_COMPLETED")
+                    first_done = done.pop()
+                    response = first_done.result()
+                    if first_done is not next_attempt_task:
+                        # `next_attempt_task` would have already set the fut result, but `task` would not have
+                        self._fut.set_result(response)
+                else:
+                    self._fut.set_result(response)
 
-        return response
+                return response
+            finally:
+                # This invocation owns these attempts. A completed race or a
+                # cancelled caller must release every remaining HTTP operation.
+                attempts = (task,) if next_attempt_task is None else (task, next_attempt_task)
+                for attempt in attempts:
+                    if not attempt.done():
+                        attempt.cancel()
+                await gather(*attempts, return_exceptions=True)
+                del attempts, attempt
 
     def create_duplicate(self) -> Union["RPCRequest", "eth_call"]:
         dupe_uid = f"{self.uid}_copy"
         if type(self) is eth_call:
-            return eth_call(self.controller, self.params, dupe_uid, self._fut)
+            return eth_call(self.controller, (self.params[0], self.block), dupe_uid, self._fut)
         method = RPCEndpoint(f"{self.method}_raw") if self.raw else self.method
         return RPCRequest(self.controller, method, self.params, dupe_uid, self._fut)
 
@@ -553,14 +597,14 @@ class eth_call(RPCRequest):
         self.block: BlockId = block
         """The block height at which the contract will be called."""
 
-        _rpcrequest_init(self, controller, "eth_call", params, uid, fut)
+        _rpcrequest_init(self, controller, "eth_call", (call_dict, rpc_block(block)), uid, fut)
 
     def __repr__(self) -> str:
         tx, block = self.params
         batch = self._batch
         batch_info = "" if batch is None else f" batch={batch}"
         if batch is None or type(batch) is not Multicall:
-            if block.startswith("0x"):
+            if isinstance(block, str) and block.startswith("0x"):
                 block = int(block, 16)
             block_info = f" block={block}"
         else:
@@ -594,7 +638,7 @@ class eth_call(RPCRequest):
                         data = await self.revert_threads.run(
                             controller.sync_w3.eth.call,
                             {"to": target, "data": self.calldata},
-                            self.block,
+                            rpc_block(self.block),
                         )
                     except ReadTimeout:
                         failures += 1
@@ -776,7 +820,7 @@ class Multicall(_Batch[RPCResponse, eth_call]):
 
     def __repr__(self) -> str:
         block = self.block
-        if block.startswith("0x"):
+        if isinstance(block, str) and block.startswith("0x"):
             block = int(block, 16)
         batch = self._batch
         batch_info = "" if batch is None else f" batch={batch}"
@@ -859,7 +903,7 @@ class Multicall(_Batch[RPCResponse, eth_call]):
     @property
     def params(self) -> JsonrpcParams:
         target = self.target
-        params = [{"to": target, "data": f"0x{self.calldata}"}, self.block]
+        params = [{"to": target, "data": f"0x{self.calldata}"}, rpc_block(self.block)]
         if self.needs_override_code and not self.controller.state_override_not_supported:
             params.append({target: {"code": self.mcall.bytecode}})
         return params  # type: ignore [return-value]
@@ -874,14 +918,16 @@ class Multicall(_Batch[RPCResponse, eth_call]):
 
     @property
     def needs_override_code(self) -> bool:
-        return self.mcall.needs_override_code_for_block(self.block)
+        return self.mcall.needs_override_code_for_block(block_height(self.block))
 
     def start(self, batch: Union["_Batch", "DankBatch"] | None = None, cleanup=True) -> None:
         batch = batch or self
         self._start_debug_daemon("Multicall debug daemon", "Multicall complete")
         with self._lock:
             for call in self.calls:
-                call._batch = self
+                # Await the enclosing dispatch. Starting this multicall separately
+                # would repeat calls already included in its JSON-RPC batch.
+                call._batch = batch
             if cleanup:
                 controller = self.controller
                 with controller.pools_closed_lock:
@@ -1327,11 +1373,13 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
         data = self.data
         if not data:
             return []
-                
+
         endpoint = self.controller.endpoint
+        attempts: list[Task[JSONRPCBatchResponse]] = []
         try:
             post_coro = _requester.post(endpoint, data=data, loads=_codec.decode_jsonrpc_batch)
             task = create_task(post_coro, name=f"JSONRPCBatch-{self.uid}")
+            attempts.append(task)
             response: JSONRPCBatchResponse = await wait_for(shield(task), timeout=30)
         except TimeoutError:
             timeout_logger_warning("JSONRPCBatch.post timed out (30s). Retrying.")
@@ -1340,7 +1388,8 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             if not data:
                 return []
             new_post_coro = _requester.post(endpoint, data=data, loads=_codec.decode_jsonrpc_batch)
-            for fut in as_completed([task, new_post_coro]):
+            attempts.append(create_task(new_post_coro, name=f"JSONRPCBatch-{self.uid}-retry"))
+            for fut in as_completed(attempts):
                 return await fut
         except ClientResponseError as e:
             if e.message == "Payload Too Large":
@@ -1358,6 +1407,11 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             if ENVS.DEBUG:  # type: ignore [attr-defined]
                 self._record_failure(e, self.data.decode())
             raise
+        finally:
+            for attempt in attempts:
+                if not attempt.done():
+                    attempt.cancel()
+            await gather(*attempts, return_exceptions=True)
 
         # NOTE: A successful response will be a list of `RawResponse` objects.
         #       A single `PartialResponse` implies an error.
@@ -1400,7 +1454,9 @@ class JSONRPCBatch(_Batch[RPCResponse, Multicall | eth_call | RPCRequest]):
             )
         return _Batch.should_retry(self, e)
 
-    async def _spoof_response_by_id(self, response: list[RawResponse]) -> list[Coroutine[Any, Any, None]]:
+    async def _spoof_response_by_id(
+        self, response: list[RawResponse]
+    ) -> list[Coroutine[Any, Any, None]]:
         call_by_id = {str(call.uid): call for call in self}
         mcall_coros = []
         for raw in response:

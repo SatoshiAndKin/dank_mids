@@ -24,10 +24,10 @@ from faster_eth_abi._grammar import Arrlist
 from faster_eth_abi.grammar import ABIType
 from hexbytes.main import BytesLike
 from multicall.constants import MULTICALL2_ADDRESSES
-from web3.types import BlockIdentifier
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids import exceptions
+from dank_mids._block import StateBlockIdentifier
 from dank_mids.helpers._helpers import DankWeb3
 from dank_mids.helpers.lru_cache import lru_cache_lite_nonull
 from dank_mids.logging import get_c_logger
@@ -137,7 +137,7 @@ def _get_coroutine_fn(w3: DankWeb3, len_inputs: int) -> Callable[..., Any]:
     async def coroutine(
         self: ContractCall,
         *args: Any,
-        block_identifier: BlockIdentifier | None = None,
+        block_identifier: StateBlockIdentifier | None = None,
         decimals: int | None = None,
         override: dict[str, str] | None = None,
         _attempt_number: int = 1,
