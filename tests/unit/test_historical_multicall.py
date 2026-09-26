@@ -1,6 +1,7 @@
 """Historical opcode errors fall back through the real native HTTP batcher."""
 
 import asyncio
+import faulthandler
 import json
 import subprocess
 import sys
@@ -8,6 +9,10 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from importlib.machinery import EXTENSION_SUFFIXES
 from pathlib import Path
 from threading import Thread
+
+if __name__ == "__main__":
+    faulthandler.enable()
+    faulthandler.dump_traceback_later(20)
 
 from eth_abi import decode, encode
 from web3 import HTTPProvider, Web3
@@ -122,9 +127,12 @@ def historical_opcode_error_falls_back_without_poisoning_modern_batches():
 def test_historical_opcode_error_falls_back_without_poisoning_modern_batches():
     # Native controller admission primitives belong to their first event loop.
     # Use a fresh process, as the installed-requester lifecycle tests do.
-    subprocess.run(
-        [sys.executable, __file__], check=True, capture_output=True, text=True, timeout=30
-    )
+    try:
+        subprocess.run(
+            [sys.executable, __file__], check=True, capture_output=True, text=True, timeout=30
+        )
+    except subprocess.TimeoutExpired as error:
+        raise AssertionError(f"Historical batch worker timed out:\n{error.stderr}") from error
 
 
 if __name__ == "__main__":
