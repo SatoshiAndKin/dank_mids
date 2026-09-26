@@ -1122,6 +1122,15 @@ class Multicall(_Batch[RPCResponse, eth_call]):
         try:
             await self.spoof_response(response)
         except Exception as e:
+            calls = self.calls.snapshot()
+            if len(calls) <= 1:
+                # A singleton cannot shrink any further. In particular, injected
+                # multicall bytecode may use opcodes unavailable at this block.
+                # Retry the original call, without the multicall or its override.
+                if calls:
+                    await calls[0].make_request()
+                self._done.set()
+                return
             if not self.should_retry(e):
                 raise
             await self.bisect_and_retry(e)
