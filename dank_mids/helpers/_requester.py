@@ -4,17 +4,12 @@ import threading
 from collections.abc import Callable
 from typing import Any, Final, final
 
-import a_sync
 from aiohttp import ClientTimeout, TCPConnector
 from aiohttp.typedefs import DEFAULT_JSON_DECODER
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids.helpers._session import DankClientSession
 from dank_mids.types import T
-
-get_running_loop: Final = asyncio.get_running_loop
-
-create_task: Final = a_sync.create_task
 
 
 @final
@@ -23,7 +18,6 @@ class HTTPRequesterThread(threading.Thread):
         super().__init__(daemon=True)
         self.loop: Final = asyncio.new_event_loop()
         self._session: DankClientSession | None = None
-        self._tasks: Final[set[asyncio.Task[None]]] = set()
         self.start()
 
     def run(self) -> None:
@@ -61,25 +55,12 @@ class HTTPRequesterThread(threading.Thread):
         if not self.is_alive():
             raise self._exc.with_traceback(self._exc.__traceback__)
 
-        caller_loop = get_running_loop()
-        caller_future: asyncio.Future[T] = caller_loop.create_future()
+        async def request() -> T:
+            # Construct and use the session on its owning thread. The standard
+            # future bridge carries cancellation and results in both directions.
+            return await self.session.post(endpoint, *args, loads=loads, **kwargs)
 
-        async def run_and_set_result() -> None:
-            try:
-                # we have to access self.session in the subthread first so we need this silly helper coro
-                result = await self.session.post(endpoint, *args, loads=loads, **kwargs)
-            except Exception as exc:
-                caller_loop.call_soon_threadsafe(caller_future.set_exception, exc)
-            else:
-                caller_loop.call_soon_threadsafe(caller_future.set_result, result)
-
-        def start_request() -> None:
-            task: asyncio.Task[None] = create_task(run_and_set_result())
-            self._tasks.add(task)
-            task.add_done_callback(self._tasks.discard)
-
-        self.loop.call_soon_threadsafe(start_request)
-        return await caller_future
+        return await asyncio.wrap_future(asyncio.run_coroutine_threadsafe(request(), self.loop))
 
 
 def shutdown_http_requester() -> None:

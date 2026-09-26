@@ -1,4 +1,4 @@
-from asyncio import CancelledError, Future, TimeoutError, get_running_loop, wait_for
+from asyncio import CancelledError, Future, get_running_loop, wait
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from functools import lru_cache
@@ -19,6 +19,13 @@ from web3.types import RPCEndpoint, RPCResponse
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids import _debugging
 from dank_mids._batch import DankBatch
+from dank_mids._block import (
+    BlockId,
+    HashBlock,
+    resolve_block_number,
+    rpc_block,
+    validate_hash_selector,
+)
 from dank_mids._demo_mode import demo_logger
 from dank_mids._exceptions import DankMidsInternalError
 from dank_mids._requests import JSONRPCBatch, Multicall, RPCRequest, eth_call
@@ -28,13 +35,17 @@ from dank_mids.exceptions import GarbageCollectionError
 from dank_mids.helpers._codec import RawResponse, decode_raw
 from dank_mids.helpers._errors import log_request_type_switch
 from dank_mids.helpers._helpers import _sync_w3_from_async, w3_version_major
-from dank_mids.helpers._multicall import MulticallContract, _get_multicall2, _get_multicall3
+from dank_mids.helpers._multicall import (
+    MulticallContract,
+    _get_multicall2,
+    _get_multicall3,
+)
 from dank_mids.helpers._rate_limit import rate_limit_inactive
 from dank_mids.helpers._requester import _requester
 from dank_mids.lock import AlertingRLock
 from dank_mids.logging import get_c_logger
 from dank_mids.semaphores import BlockSemaphore
-from dank_mids.types import BlockId, PartialRequest, Request
+from dank_mids.types import PartialRequest, Request
 
 logger: Final = get_c_logger(__name__)
 # our new logger logs the same stuff plus more
@@ -223,13 +234,23 @@ class DankMiddlewareController:
         try:
             # eth_call go thru a specialized Semaphore and other methods pass thru unblocked
             if method == "eth_call":
-                async with self.eth_call_semaphores[params[1]]:
+                tx, block = params
+                if isinstance(block, dict):
+                    if set(block) == {"blockNumber"}:
+                        block = block["blockNumber"]
+                    else:
+                        block_hash, canonical = validate_hash_selector(block)
+                        block = HashBlock(
+                            block_hash, canonical, await resolve_block_number(self, block_hash)
+                        )
+                params = tx, block
+                async with self.eth_call_semaphores[block]:
                     # create a strong ref to the call that will be held until the caller completes or is cancelled
                     logger.debug(
                         "making %s %s with params %s", self.request_type.__name__, method, params
                     )
                     if params[0]["to"] in self.no_multicall:
-                        return await RPCRequest(self, method, params)
+                        return await RPCRequest(self, method, (tx, rpc_block(block)))
                     return await eth_call(self, params)
 
             logger.debug("making %s %s with params %s", self.request_type.__name__, method, params)
@@ -404,10 +425,11 @@ class DankMiddlewareController:
         timeout: float = TIMEOUT_SECONDS_BIG,
     ) -> bool:
         """
-        Append calls to the current pending JSON-RPC batch, dispatch it, and wait with a timeout.
+        Dispatch pending calls and warn if they take longer than the timeout.
 
         Returns:
-            True if the dispatched batch completed before timeout and without errors, otherwise False.
+            True when the dispatched batches complete without errors, otherwise False.
+            The warning timeout does not cancel or duplicate an in-flight batch.
         """
         try:
             dispatched_batches = self._append_calls_and_dispatch_pending_batches(calls)
@@ -418,23 +440,18 @@ class DankMiddlewareController:
         if not dispatched_batches:
             return True
 
+        tasks = self._dispatched_batch_tasks(dispatched_batches)
         try:
-            await wait_for(cgather(*self._dispatched_batch_tasks(dispatched_batches)), timeout=timeout)
+            _, pending = await wait(tasks, timeout=timeout)
+            if pending:
+                logger.warning(
+                    "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
+                    timeout,
+                )
+            await cgather(*tasks)
             return True
         except CancelledError:
             raise
-        except TimeoutError:
-            logger.warning(
-                "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
-                timeout,
-            )
-            try:
-                await cgather(*self._dispatched_batch_tasks(dispatched_batches))
-                return True
-            except CancelledError:
-                raise
-            except Exception:
-                logger.exception("pending jsonrpc batch failed after timeout")
         except Exception:
             logger.exception("pending jsonrpc batch failed")
         return False
@@ -534,7 +551,7 @@ class DankMiddlewareController:
 
     @lru_cache(maxsize=1024)
     def _select_mcall_target_for_block(
-        self, block: BlockNumber | Literal["latest"] | HexStr
+        self, block: BlockNumber | Literal["latest"] | HexStr | HashBlock
     ) -> MulticallContract:
         """
         Select the appropriate multicall contract for a given block.
@@ -547,6 +564,8 @@ class DankMiddlewareController:
         """
         if block == "latest":
             return cast(MulticallContract, self._latest_mc)
+        if isinstance(block, HashBlock):
+            block = BlockNumber(block.number)
         mc3 = self.mc3
         if mc3 and not mc3.needs_override_code_for_block(block):
             return mc3

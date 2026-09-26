@@ -1,11 +1,12 @@
 from decimal import Decimal
-from typing import Final, Literal
+from typing import Final, Literal, cast
 
 from a_sync.primitives.locks.prio_semaphore import (
     _AbstractPrioritySemaphore,
     _PrioritySemaphoreContextManager,
 )
-from eth_typing import HexStr
+
+from dank_mids._block import HashBlock, StateBlockIdentifier
 
 _TOP_PRIORITY: Final = -1
 
@@ -56,8 +57,14 @@ class BlockSemaphore(_AbstractPrioritySemaphore):
     def __init__(self, value=1, *, name=None) -> None:
         super().__init__(_BlockSemaphoreContextManager, -1, int(value), name=name)
 
-    def __getitem__(self, block: int | HexStr | Literal["latest", None]) -> "_BlockSemaphoreContextManager":  # type: ignore [override]
-        if isinstance(block, int):
+    def __getitem__(self, block: StateBlockIdentifier | HashBlock | None) -> "_BlockSemaphoreContextManager":  # type: ignore [override]
+        if isinstance(block, HashBlock):
+            priority = block.number
+        elif isinstance(block, dict):
+            # Brownie encoding precedes header resolution. Hash-selected calls
+            # share the same admission limit and receive equal priority.
+            priority = int(block["blockNumber"], 16) if "blockNumber" in block else _TOP_PRIORITY
+        elif isinstance(block, int):
             priority = block
         elif isinstance(block, bytes):
             priority = int(block.hex(), 16)
@@ -65,7 +72,7 @@ class BlockSemaphore(_AbstractPrioritySemaphore):
             priority = int(block, 16)
         elif block not in {None, "latest"}:
             # NOTE: We do this to generate an err if an unsuitable value was provided
-            priority = block
+            raise TypeError("unsupported block identifier", block)
         else:
             priority = _TOP_PRIORITY
-        return super().__getitem__(priority)
+        return cast(_BlockSemaphoreContextManager, super().__getitem__(priority))
