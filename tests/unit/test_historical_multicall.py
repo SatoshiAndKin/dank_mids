@@ -8,6 +8,7 @@ import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from importlib.machinery import EXTENSION_SUFFIXES
 from pathlib import Path
+from socketserver import TCPServer
 from threading import Thread
 
 if __name__ == "__main__":
@@ -84,7 +85,15 @@ def historical_opcode_error_falls_back_without_poisoning_modern_batches():
             self.end_headers()
             self.wfile.write(encoded)
 
-    server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+    class LocalHTTPServer(ThreadingHTTPServer):
+        def server_bind(self):
+            # This loopback fixture needs no reverse DNS. macOS CI can block in
+            # HTTPServer.server_bind's getfqdn lookup before any RPC is sent.
+            TCPServer.server_bind(self)
+            self.server_name = "localhost"
+            self.server_port = self.server_address[1]
+
+    server = LocalHTTPServer(("127.0.0.1", 0), Handler)
     thread = Thread(target=server.serve_forever, daemon=True)
     thread.start()
 
