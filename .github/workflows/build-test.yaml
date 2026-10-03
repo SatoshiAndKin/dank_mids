@@ -82,7 +82,7 @@ jobs:
           fi
 
       - name: Commit generated C changes
-        if: env.changes_detected == 'true'
+        if: env.changes_detected == 'true' && github.actor != 'github-actions[bot]'
         shell: bash
         run: |
           git config --local user.name "github-actions[bot]"
