@@ -1006,13 +1006,20 @@ typedef struct {
 typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
-    PyObject *_loop;
-    PyObject *__session;
-    PyObject *__tasks;
-    CPyTagged __active_posts;
-    PyObject *__active_posts_lock;
-    PyObject *__exc;
-} dank_mids___helpers____requester___HTTPRequesterThreadObject;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester_____init___3_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester___run_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester___session_HTTPRequesterThread_objObject;
 
 typedef struct {
     PyObject_HEAD
@@ -1040,6 +1047,12 @@ typedef struct {
     PyObject *___mypyc_temp__7;
     tuple_T3OOO ___mypyc_temp__8;
 } dank_mids___helpers____requester___post_HTTPRequesterThread_envObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester___post_HTTPRequesterThread_objObject;
 
 typedef struct {
     PyObject_HEAD
@@ -1074,7 +1087,7 @@ typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___request_gen___3_64Object;
+} dank_mids___helpers____requester___request_gen___3_68Object;
 
 typedef struct {
     PyObject_HEAD
@@ -1082,6 +1095,30 @@ typedef struct {
     vectorcallfunc vectorcall;
     PyObject *___mypyc_env__;
 } dank_mids___helpers____requester_____mypyc_lambda__0_post_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester____schedule_active_post_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester____remove_active_post_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester____active_post_count_HTTPRequesterThread_objObject;
+
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    vectorcallfunc vectorcall;
+} dank_mids___helpers____requester____has_active_posts_HTTPRequesterThread_objObject;
 
 typedef struct {
     PyObject_HEAD
@@ -1126,7 +1163,7 @@ typedef struct {
     PyObject_HEAD
     CPyVTableItem *vtable;
     PyObject *___mypyc_env__;
-} dank_mids___helpers____requester___close_session_gen___3_108Object;
+} dank_mids___helpers____requester___close_session_gen___3_112Object;
 
 typedef struct {
     PyObject_HEAD
