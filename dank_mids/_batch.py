@@ -96,7 +96,7 @@ class DankBatch:
         for mcall in self.multicalls.values():
             mcall.start(self, cleanup=False)
         for call in self.rpc_calls:
-            call._batch = self  # type: ignore [assignment]
+            call._batch = self
         return igather(map(_create_named_task, self.coroutines)).__await__()  # type: ignore [no-any-return]
 
     @property

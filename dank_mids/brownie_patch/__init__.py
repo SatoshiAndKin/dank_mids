@@ -16,16 +16,17 @@ __all__ = list(_BROWNIE_TYPE_NAMES)
 from dank_mids.eth import DankEth
 from dank_mids.helpers._helpers import DankWeb3
 
+
 @dataclass(frozen=True)
 class BrowniePatchStatus:
     connected: bool
     initialized: bool
-    import_error: Optional[ImportError]
+    import_error: ImportError | None
 
 
 @dataclass
 class _BrowniePatchState:
-    import_error: Optional[ImportError] = None
+    import_error: ImportError | None = None
     connected: bool = False
     initialized: bool = False
 
@@ -74,6 +75,7 @@ This is initialized if Brownie is installed and connected when this module is lo
 If Brownie is not installed or not connected to an RPC, this instance will not be available.
 """
 
+
 def initialize_brownie_patch() -> BrowniePatchStatus:
     global dank_web3
     global dank_eth
@@ -101,8 +103,8 @@ def initialize_brownie_patch() -> BrowniePatchStatus:
     globals()["patch_contract"] = patch_contract
     dank_web3 = setup_dank_w3_from_sync(web3)
     dank_eth = dank_web3.eth
-    _mod_all: list[str] = globals()["__all__"]
-    _mod_all.extend(["Contract", "patch_contract", "dank_web3", "dank_eth"])
+    module_exports: list[str] = globals()["__all__"]
+    module_exports.extend(["Contract", "patch_contract", "dank_web3", "dank_eth"])
     state.initialized = True
     return state.status()
 
@@ -139,13 +141,17 @@ def _load_types() -> ModuleType:
     return _types
 
 
-def __getattr__(name: str) -> object:
+def _module_getattr(name: str) -> object:
     if name in _BROWNIE_TYPE_NAMES:
         _types = _load_types()
         value = getattr(_types, name)
         globals()[name] = value
         return value
     raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+
+
+# TODO: Remove this workaround once https://github.com/mypyc/mypyc/issues/1198 is resolved.
+__getattr__ = _module_getattr
 
 
 # If using dank_mids with brownie, and brownie is connected when this file executes, you will get a 'dank_w3' async web3 instance with Dank Middleware here.

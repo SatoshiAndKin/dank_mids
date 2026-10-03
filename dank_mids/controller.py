@@ -1,9 +1,8 @@
-from asyncio import CancelledError, Future, TimeoutError, get_running_loop, wait_for
+from asyncio import CancelledError, Future, get_running_loop, wait
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from functools import lru_cache
 from logging import getLogger
-from time import time
 from typing import Any, DefaultDict, Final, Literal, cast, final
 
 import a_sync
@@ -11,14 +10,23 @@ import eth_retry
 from cchecksum import to_checksum_address
 from eth_typing import BlockNumber, ChecksumAddress, HexStr
 from evmspec.data import ChainId
+from librt.time import time
 from multicall.constants import MULTICALL_ADDRESSES
 from multicall.multicall import NotSoBrightBatcher
+from mypy_extensions import mypyc_attr
 from web3 import Web3
 from web3.types import RPCEndpoint, RPCResponse
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids import _debugging
 from dank_mids._batch import DankBatch
+from dank_mids._block import (
+    BlockId,
+    HashBlock,
+    resolve_block_number,
+    rpc_block,
+    validate_hash_selector,
+)
 from dank_mids._demo_mode import demo_logger
 from dank_mids._exceptions import DankMidsInternalError
 from dank_mids._requests import JSONRPCBatch, Multicall, RPCRequest, eth_call
@@ -27,14 +35,14 @@ from dank_mids._uid import UIDGenerator
 from dank_mids.exceptions import GarbageCollectionError
 from dank_mids.helpers._codec import RawResponse, decode_raw
 from dank_mids.helpers._errors import log_request_type_switch
-from dank_mids.helpers._helpers import _sync_w3_from_async, w3_version_major
+from dank_mids.helpers._helpers import _sync_w3_from_async
 from dank_mids.helpers._multicall import MulticallContract, _get_multicall2, _get_multicall3
 from dank_mids.helpers._rate_limit import rate_limit_inactive
 from dank_mids.helpers._requester import _requester
 from dank_mids.lock import AlertingRLock
 from dank_mids.logging import get_c_logger
 from dank_mids.semaphores import BlockSemaphore
-from dank_mids.types import BlockId, PartialRequest, Request
+from dank_mids.types import PartialRequest, Request
 
 logger: Final = get_c_logger(__name__)
 # our new logger logs the same stuff plus more
@@ -47,6 +55,7 @@ cgather: Final = a_sync.cgather
 
 
 @final
+@mypyc_attr(acyclic=True)
 class _EarlyStartHandoff:
     """
     Keep moved multicalls alive until the already-started JSON-RPC batch finishes.
@@ -205,10 +214,10 @@ class DankMiddlewareController:
 
     async def __call__(self, method: RPCEndpoint, params: Any) -> RPCResponse:
         """
-        Asynchronous method to handle RPC calls.
+        Web3 provider-boundary request function.
 
-        This method routes different types of RPC calls to appropriate handlers,
-        including specialized handling for eth_call and other methods that may use queues.
+        Dank internals use partial response dicts, but Web3's RequestManager requires
+        complete JSON-RPC envelopes from provider request functions.
 
         Args:
             method: The RPC method to be called.
@@ -217,26 +226,65 @@ class DankMiddlewareController:
         Returns:
             The response from the RPC call.
         """
+        response, request_id = await self._dispatch_request(method, params)
+        return self._normalize_web3_response(response, request_id)
+
+    async def _request_partial(self, method: RPCEndpoint, params: Any) -> RPCResponse:
+        """
+        Internal Dank request path that preserves partial response dictionaries.
+        """
+        response, _request_id = await self._dispatch_request(method, params)
+        return response
+
+    async def _dispatch_request(
+        self, method: RPCEndpoint, params: Any
+    ) -> tuple[RPCResponse, int | str]:
+        """
+        Route one Dank request and return both the internal response and request id.
+        """
 
         await rate_limit_inactive(self.endpoint)
 
         try:
             # eth_call go thru a specialized Semaphore and other methods pass thru unblocked
             if method == "eth_call":
-                async with self.eth_call_semaphores[params[1]]:
+                tx, block = params
+                if isinstance(block, dict):
+                    if set(block) == {"blockNumber"}:
+                        block = block["blockNumber"]
+                    else:
+                        block_hash, canonical = validate_hash_selector(block)
+                        block = HashBlock(
+                            block_hash, canonical, await resolve_block_number(self, block_hash)
+                        )
+                params = tx, block
+                async with self.eth_call_semaphores[block]:
                     # create a strong ref to the call that will be held until the caller completes or is cancelled
                     logger.debug(
                         "making %s %s with params %s", self.request_type.__name__, method, params
                     )
                     if params[0]["to"] in self.no_multicall:
-                        return await RPCRequest(self, method, params)
-                    return await eth_call(self, params)
+                        request = RPCRequest(self, method, (tx, rpc_block(block)))
+                    else:
+                        request = eth_call(self, params)
+                    return await request, request.uid
 
             logger.debug("making %s %s with params %s", self.request_type.__name__, method, params)
-            return await RPCRequest(self, method, params)
+            request = RPCRequest(self, method, params)
+            return await request, request.uid
         except GarbageCollectionError:
             # this exc shouldn't be exposed to the user so let's try this again
-            return await self(method, params)
+            return await self._dispatch_request(method, params)
+
+    @staticmethod
+    def _normalize_web3_response(response: RPCResponse, request_id: int | str) -> RPCResponse:
+        if response.get("jsonrpc") == "2.0" and "id" in response:
+            return response
+        if "result" in response:
+            return {"jsonrpc": "2.0", "id": request_id, "result": response["result"]}
+        if "error" in response:
+            return {"jsonrpc": "2.0", "id": request_id, "error": response["error"]}
+        return {"jsonrpc": "2.0", "id": request_id, **response}
 
     @eth_retry.auto_retry(min_sleep_time=0, max_sleep_time=1)
     async def make_request(
@@ -260,7 +308,9 @@ class DankMiddlewareController:
             Exception: If DEBUG environment variable is set, any exception that occurs during the request is logged and re-raised.
         """
         request = self.request_type(
-            method=method, params=params, id=request_id or self.call_uid.next
+            method=method,
+            params=params,
+            id=request_id if request_id is not None else self.call_uid.next,
         )
         try:
             return await _requester.post(self.endpoint, data=request, loads=decode_raw)
@@ -404,10 +454,11 @@ class DankMiddlewareController:
         timeout: float = TIMEOUT_SECONDS_BIG,
     ) -> bool:
         """
-        Append calls to the current pending JSON-RPC batch, dispatch it, and wait with a timeout.
+        Dispatch pending calls and warn if they take longer than the timeout.
 
         Returns:
-            True if the dispatched batch completed before timeout and without errors, otherwise False.
+            True when the dispatched batches complete without errors, otherwise False.
+            The warning timeout does not cancel or duplicate an in-flight batch.
         """
         try:
             dispatched_batches = self._append_calls_and_dispatch_pending_batches(calls)
@@ -418,23 +469,18 @@ class DankMiddlewareController:
         if not dispatched_batches:
             return True
 
+        tasks = self._dispatched_batch_tasks(dispatched_batches)
         try:
-            await wait_for(cgather(*self._dispatched_batch_tasks(dispatched_batches)), timeout=timeout)
+            _, pending = await wait(tasks, timeout=timeout)
+            if pending:
+                logger.warning(
+                    "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
+                    timeout,
+                )
+            await cgather(*tasks)
             return True
         except CancelledError:
             raise
-        except TimeoutError:
-            logger.warning(
-                "pending jsonrpc batch did not complete within %ss, waiting for in-flight dispatch to finish",
-                timeout,
-            )
-            try:
-                await cgather(*self._dispatched_batch_tasks(dispatched_batches))
-                return True
-            except CancelledError:
-                raise
-            except Exception:
-                logger.exception("pending jsonrpc batch failed after timeout")
         except Exception:
             logger.exception("pending jsonrpc batch failed")
         return False
@@ -534,7 +580,7 @@ class DankMiddlewareController:
 
     @lru_cache(maxsize=1024)
     def _select_mcall_target_for_block(
-        self, block: BlockNumber | Literal["latest"] | HexStr
+        self, block: BlockNumber | Literal["latest"] | HexStr | HashBlock
     ) -> MulticallContract:
         """
         Select the appropriate multicall contract for a given block.
@@ -547,6 +593,8 @@ class DankMiddlewareController:
         """
         if block == "latest":
             return cast(MulticallContract, self._latest_mc)
+        if isinstance(block, HashBlock):
+            block = BlockNumber(block.number)
         mc3 = self.mc3
         if mc3 and not mc3.needs_override_code_for_block(block):
             return mc3
@@ -561,4 +609,4 @@ class DankMiddlewareController:
 
 @eth_retry.auto_retry(min_sleep_time=0, max_sleep_time=0)
 def _get_client_version(sync_w3: Web3) -> str:
-    return sync_w3.client_version if w3_version_major >= 6 else cast(str, sync_w3.clientVersion)  # type: ignore [attr-defined]
+    return sync_w3.client_version

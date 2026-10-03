@@ -1,5 +1,5 @@
 import re
-from collections.abc import Callable, Coroutine
+from collections.abc import Callable
 from functools import cached_property
 from time import time
 from typing import (
@@ -9,11 +9,11 @@ from typing import (
     DefaultDict,
     Final,
     Literal,
-    NewType,
     Optional,
     TypedDict,
     TypeVar,
     Union,
+    cast,
     overload,
 )
 
@@ -30,6 +30,7 @@ from msgspec.json import decode as json_decode
 from web3.types import RPCEndpoint, RPCError, RPCResponse
 
 from dank_mids import constants, stats
+from dank_mids._block import BlockId
 from dank_mids._exceptions import (
     BadResponse,
     ChainstackRateLimitError,
@@ -50,9 +51,6 @@ if TYPE_CHECKING:
 
 T = TypeVar("T")
 
-
-BlockId = NewType("BlockId", str)
-"""A type representing the identifier for a specific block in the blockchain."""
 
 BatchId = Union[int, str]
 """A type representing the identifier for a batch of operations, which can be either an integer or a string."""
@@ -88,10 +86,6 @@ class OverrideParams(TypedDict):
 JsonrpcParams = list[Union[eth_callParams, BlockId, OverrideParams]]
 """A list of parameters for JSON-RPC calls, which should be eth_callParams, BlockId, and OverrideParams, in that order."""
 
-
-# This type alias was introduced in web3 v5.28.0 but we like loose deps here so we recreate instead of import.
-AsyncMiddleware = Callable[[RPCEndpoint, Any], Coroutine[Any, Any, RPCResponse]]
-"""A type alias for asynchronous middleware functions."""
 
 _list_of_stuff = list[Union[str, None, dict, list]]
 """A type alias for a list that can contain strings, None, dictionaries, or lists."""
@@ -196,11 +190,12 @@ class Error(DictStruct, frozen=True, omit_defaults=True, repr_omit_defaults=True
     """The error message."""
 
     # evm spec
-    data: str | ChainstackRateLimitContext | None = UNSET  # type: ignore [assignment]
+    data: Any = UNSET
     """
     Additional error data, if any.
     
-    EVM specs say it should be a string, but some providers will return a dictionary here with even more context.
+    JSON-RPC error data can be any JSON value. Interpret provider-specific fields
+    only after recognizing the error, and preserve the original data for callers.
     """
 
     @overload
@@ -238,6 +233,7 @@ _RETURN_TYPES = {
     "eth_blockNumber": BlockNumber,
     "eth_accounts": list[Address],
     "eth_getBlockByNumber": Block,
+    "eth_getBlockByHash": Block,
     "eth_getTransactionCount": uint,
     "eth_getTransactionByHash": evmspec.Transaction,
     "eth_getTransactionReceipt": evmspec.FullTransactionReceipt,
@@ -256,49 +252,29 @@ _QUICKNODE_429_ERR_MSG: Final = (
     # the actual rate limit can vary but the err message always ends like this
     "/second request limit reached - reduce calls per second or upgrade your account at quicknode.com",
 )
-_UNKNOWN_FIELD_TOTAL_DIFFICULTY: Final = "Object contains unknown field `totalDifficulty`"
-_UNKNOWN_FIELD_BASE_FEE: Final = "Object contains unknown field `baseFeePerGas`"
-_UNKNOWN_FIELD_WITHDRAWALS: Final = "Object contains unknown field `withdrawals`"
-_UNKNOWN_FIELD_DIFFICULTY: Final = "Object contains unknown field `difficulty`"
 
 
-def _decode_eth_get_block_by_number_current_behavior(
-    result: Raw, *, typ: type[Any], method: RPCEndpoint
-) -> Any:
-    """
-    Decodes eth_getBlockByNumber responses using the existing compatibility branch logic.
-
-    This helper intentionally preserves current behavior and side effects.
-    """
-    try:
-        return better_decode(result, type=typ, dec_hook=_decode_hook, method=method)
-    except Exception as e:
-        if typ is not Block:
-            raise
-
-        if e.args[0] == _UNKNOWN_FIELD_TOTAL_DIFFICULTY:
-            try:
-                # NOTE should we do this??
-                # _RETURN_TYPES[method] = MinedBlock
-                return better_decode(result, type=MinedBlock, dec_hook=_decode_hook, method=method)
-            except ValidationError as e2:
-                if e2.args[0] != _UNKNOWN_FIELD_BASE_FEE:
-                    raise
-                decoded = better_decode(result, type=BaseBlock, dec_hook=_decode_hook, method=method)
-                _RETURN_TYPES[method] = BaseBlock  # all blocks on base are BaseBlocks
-                return decoded
-
-        elif e.args[0] == _UNKNOWN_FIELD_WITHDRAWALS:
-            typ = ShanghaiCapellaBlock
-
-        elif e.args[0] == _UNKNOWN_FIELD_DIFFICULTY:
-            # I've only seen this on OP stack so far, not sure what difficulty means for their chain
-            typ = BaseBlock
-
-        else:
-            raise
-
-        return better_decode(result, type=typ, dec_hook=_decode_hook, method=method)
+def _decode_block(result: Raw, *, method: RPCEndpoint) -> Any:
+    """Choose a schema from block fields, independently of JSON ordering."""
+    fields = json_decode(result, type=dict[str, Raw] | None)
+    if fields is None:
+        return None
+    if "withdrawals" in fields:
+        typ = ShanghaiCapellaBlock
+    elif fields.keys() & {
+        "baseFeePerGas",
+        "withdrawalsRoot",
+        "blobGasUsed",
+        "excessBlobGas",
+        "parentBeaconBlockRoot",
+        "requestsHash",
+    }:
+        typ = BaseBlock
+    elif "difficulty" in fields or "totalDifficulty" in fields:
+        typ = MinedBlock
+    else:
+        typ = Block
+    return better_decode(result, type=typ, dec_hook=_decode_hook, method=method)
 
 
 class PartialResponse(DictStruct, frozen=True, omit_defaults=True, repr_omit_defaults=True):
@@ -348,7 +324,7 @@ class PartialResponse(DictStruct, frozen=True, omit_defaults=True, repr_omit_def
 
     @property
     def payload_too_large(self) -> bool:
-        return any(map(self.error.message.__contains__, constants.TOO_MUCH_DATA_ERRS))
+        return any(map(cast(Error, self.error).message.__contains__, constants.TOO_MUCH_DATA_ERRS))
 
     def to_dict(self, method: RPCEndpoint | None = None) -> RPCResponse:  # type: ignore [override]
         """Returns a complete dictionary representation of this response ``Struct``."""
@@ -369,16 +345,15 @@ class PartialResponse(DictStruct, frozen=True, omit_defaults=True, repr_omit_def
                 "eth_blockNumber",
                 "eth_getCode",
                 "eth_getBlockByNumber",
+                "eth_getBlockByHash",
                 "eth_getTransactionReceipt",
                 "eth_getTransactionCount",
                 "eth_getBalance",
                 "eth_chainId",
                 "erigon_getHeaderByNumber",
             ):
-                if method == "eth_getBlockByNumber":
-                    return _decode_eth_get_block_by_number_current_behavior(
-                        self.result, typ=typ, method=method
-                    )
+                if method in ("eth_getBlockByNumber", "eth_getBlockByHash"):
+                    return _decode_block(self.result, method=method)
                 return better_decode(self.result, type=typ, dec_hook=_decode_hook, method=method)
 
             start = time()

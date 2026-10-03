@@ -1,19 +1,30 @@
-from importlib.metadata import version
+from collections.abc import Callable, Coroutine
+from typing import Any, cast
 
 from typing_extensions import Self
 from web3._utils.blocks import select_method_for_block_identifier
 from web3._utils.rpc_abi import RPC
+from web3._utils.validation import apply_error_formatters
 from web3.eth import BaseEth
+from web3.manager import NULL_RESPONSES, apply_null_result_formatters
 from web3.method import Method, TFunc, default_root_munger
-from web3.types import BlockIdentifier, RPCEndpoint
+from web3.module import (
+    AsyncLogFilter,
+    _UseExistingFilter,
+    apply_result_formatters,
+    retrieve_async_method_call_fn,
+)
+from web3.types import RPCEndpoint, RPCResponse
 
 from dank_mids._web3.formatters import (
     _get_response_formatters,
     _response_formatters,
+    get_dank_poa_result_formatter,
     get_request_formatters,
+    return_as_is,
 )
-
-WEB3_MAJOR_VERSION = int(version("web3").split(".")[0])
+from dank_mids.helpers._controllers import get_controller_for_async_w3
+from dank_mids.types import Error, PartialResponse
 
 
 class MethodNoFormat(Method[TFunc]):
@@ -79,6 +90,107 @@ class MethodNoFormat(Method[TFunc]):
         return cls(method, [default_root_munger])
 
 
+def _raise_dank_error_response(response: RPCResponse) -> None:
+    error = response["error"]
+    if isinstance(error, Error):
+        dank_error = error
+        request_context = None
+    else:
+        error_payload = dict(error)
+        request_context = error_payload.pop("dankmids_added_context", None)
+        dank_error = Error(**error_payload)
+
+    exc = PartialResponse(error=dank_error).exception
+    if request_context is not None and not hasattr(exc, "request"):
+        exc.request = request_context  # type: ignore[attr-defined]
+    raise exc
+
+
+def _extract_dank_result(
+    response: RPCResponse,
+    params: Any,
+    error_formatters: Callable[..., Any],
+    null_result_formatters: Callable[..., Any],
+) -> Any:
+    if "error" in response:
+        response = apply_error_formatters(error_formatters, response)
+        _raise_dank_error_response(response)
+
+    if response.get("result", False) in NULL_RESPONSES:
+        apply_null_result_formatters(null_result_formatters, response, params)
+    return response.get("result")
+
+
+def _middleware_allows_direct_dispatch(async_w3: Any) -> bool:
+    middleware_classes = async_w3.middleware_onion.as_tuple_of_middleware()
+    if not middleware_classes:
+        return True
+
+    from dank_mids.middleware import DankMiddleware
+    from web3.middleware import ExtraDataToPOAMiddleware
+
+    compatible_middleware = (DankMiddleware, ExtraDataToPOAMiddleware)
+    return all(middleware_class in compatible_middleware for middleware_class in middleware_classes)
+
+
+def _middleware_applies_poa_formatting(async_w3: Any) -> bool:
+    from web3.middleware import ExtraDataToPOAMiddleware
+
+    return ExtraDataToPOAMiddleware in async_w3.middleware_onion.as_tuple_of_middleware()
+
+
+def retrieve_dank_method_call_fn(
+    async_w3: Any,
+    module: Any,
+) -> Callable[
+    [Method[Callable[..., Any]]],
+    Callable[..., Coroutine[Any, Any, Any]],
+]:
+    def retrieve(method: Method[Callable[..., Any]]) -> Callable[..., Coroutine[Any, Any, Any]]:
+        web3_caller = retrieve_async_method_call_fn(async_w3, module, method)
+
+        async def caller(*args: Any, **kwargs: Any) -> Any:
+            if not isinstance(method, MethodNoFormat) or not _middleware_allows_direct_dispatch(
+                async_w3
+            ):
+                return await web3_caller(*args, **kwargs)
+
+            try:
+                (method_str, params), response_formatters = method.process_params(
+                    module, *args, **kwargs
+                )
+            except _UseExistingFilter as err:
+                return AsyncLogFilter(eth_module=module, filter_id=err.filter_id)
+
+            (
+                result_formatters,
+                error_formatters,
+                null_result_formatters,
+            ) = response_formatters
+            method_endpoint = cast(RPCEndpoint, method_str)
+            poa_result_formatter = (
+                get_dank_poa_result_formatter(method_endpoint)
+                if _middleware_applies_poa_formatting(async_w3)
+                else return_as_is
+            )
+            controller_method = (
+                cast(RPCEndpoint, f"{method_endpoint}_raw")
+                if poa_result_formatter is not return_as_is
+                else method_endpoint
+            )
+            controller = get_controller_for_async_w3(async_w3)
+            response = await controller._request_partial(controller_method, params)
+            result = _extract_dank_result(
+                response, params, error_formatters, null_result_formatters
+            )
+            result = poa_result_formatter(result)
+            return apply_result_formatters(result_formatters, result)
+
+        return caller
+
+    return retrieve
+
+
 def bypass_chainid_formatter(eth: type[BaseEth]) -> None:
     """Bypasses the formatter for the eth_chainId method.
 
@@ -126,11 +238,7 @@ def bypass_transaction_receipt_formatter(eth: type[BaseEth]) -> None:
     Args:
         eth: The Ethereum base class instance whose method is to be modified.
     """
-    method = MethodNoFormat.default(RPC.eth_getTransactionReceipt)
-    if WEB3_MAJOR_VERSION >= 6:
-        eth._transaction_receipt = method
-    else:
-        eth._get_transaction_receipt = method
+    eth._transaction_receipt = MethodNoFormat.default(RPC.eth_getTransactionReceipt)
 
 
 def bypass_transaction_formatter(eth: type[BaseEth]) -> None:
@@ -152,23 +260,12 @@ _block_selectors = dict(
 def bypass_block_formatters(eth: type[BaseEth]) -> None:
     """Bypasses the formatter for block-related methods such as eth_getBlockByNumber.
 
-    Adjusts the mungers definition based on the major version of the web3 library.
-
     Args:
         eth: The Ethereum base class instance whose methods are to be modified.
     """
-    if WEB3_MAJOR_VERSION >= 6:
-        get_block_munger = eth.get_block_munger
-    else:
-
-        def get_block_munger(
-            self, block_identifier: BlockIdentifier, full_transactions: bool = False
-        ) -> tuple[BlockIdentifier, bool]:
-            return (block_identifier, full_transactions)
-
     eth._get_block = MethodNoFormat(
         method_choice_depends_on_args=select_method_for_block_identifier(**_block_selectors),
-        mungers=[get_block_munger],
+        mungers=[eth.get_block_munger],
     )
 
 

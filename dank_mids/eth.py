@@ -6,7 +6,13 @@ from async_lru import alru_cache
 from async_property import async_cached_property
 from eth_typing import Address, BlockNumber, ChecksumAddress, HexStr
 from eth_utils.toolz import concat
-from evmspec import AnyTransaction, FilterTrace, Transaction, TransactionReceipt, TransactionRLP
+from evmspec import (
+    AnyTransaction,
+    FilterTrace,
+    Transaction,
+    TransactionReceipt,
+    TransactionRLP,
+)
 from evmspec.data import TransactionHash, UnixTimestamp, _decode_hook
 from evmspec.data._main import DecodeHook
 from evmspec.structs.block import TinyBlock
@@ -16,29 +22,18 @@ from faster_hexbytes import HexBytes
 from msgspec import Raw, Struct, ValidationError, json
 from web3._utils.blocks import select_method_for_block_identifier
 from web3._utils.rpc_abi import RPC
-from web3.eth import AsyncEth, BaseEth
+from web3.eth import AsyncEth
 from web3.method import default_root_munger
-from web3.types import ENS, BlockIdentifier, RPCEndpoint, TxParams, Wei
+from web3.types import ENS, BlockIdentifier, RPCEndpoint, StateOverride, TxParams
 
+from dank_mids._block import StateBlockIdentifier
 from dank_mids._web3.method import (
-    WEB3_MAJOR_VERSION,
     MethodNoFormat,
     _block_selectors,
     bypass_formatters,
+    retrieve_dank_method_call_fn,
 )
 from dank_mids.types import Error, T
-
-
-# These 2 type defs are in recent, but not all, web3.py versions
-class CallOverrideParams(TypedDict, total=False):
-    balance: Wei | None
-    nonce: int | None
-    code: bytes | HexStr | None
-    state: dict[HexStr, HexStr] | None
-    stateDiff: dict[HexStr, HexStr] | None
-
-
-CallOverride = dict[ChecksumAddress, CallOverrideParams]
 
 
 class TraceFilterParams(TypedDict, total=False):  # type: ignore [call-arg]
@@ -53,6 +48,10 @@ class TraceFilterParams(TypedDict, total=False):  # type: ignore [call-arg]
 class DankEth(AsyncEth):
     _block_cache_ttl = 0.1
 
+    def __init__(self, w3) -> None:
+        super().__init__(w3)
+        self.retrieve_caller_fn = retrieve_dank_method_call_fn(w3, self)
+
     # eth_chainId
 
     @async_cached_property
@@ -61,12 +60,7 @@ class DankEth(AsyncEth):
 
     _chain_id: MethodNoFormat[Callable[[], Awaitable[int]]]
 
-    try:
-        _chain_id = MethodNoFormat(RPC.eth_chainId, is_property=True)
-    except TypeError as e:  # NOTE: older web3.py versions cant use `is_property` kwarg
-        if str(e) != "__init__() got an unexpected keyword argument 'is_property'":
-            raise
-        _chain_id = MethodNoFormat(RPC.eth_chainId, mungers=None)
+    _chain_id = MethodNoFormat(RPC.eth_chainId, is_property=True)
 
     # eth_blockNumber
 
@@ -80,17 +74,22 @@ class DankEth(AsyncEth):
 
     _get_block_number: MethodNoFormat[Callable[[], Awaitable[BlockNumber]]]
 
-    try:
-        _get_block_number = MethodNoFormat(RPC.eth_blockNumber, is_property=True)
-    except TypeError as e:  # NOTE: older web3.py versions cant use `is_property` kwarg
-        if str(e) != "__init__() got an unexpected keyword argument 'is_property'":
-            raise
-        _get_block_number = MethodNoFormat(RPC.eth_blockNumber, mungers=None)
+    _get_block_number = MethodNoFormat(RPC.eth_blockNumber, is_property=True)
 
-        _call: MethodNoFormat[
-            Callable[[TxParams, BlockIdentifier | None, CallOverride | None], Awaitable[HexBytes]]
-        ]
-        _call = MethodNoFormat(RPC.eth_call, mungers=[BaseEth.call_munger])
+    async def call(
+        self,
+        transaction: TxParams,
+        block_identifier: StateBlockIdentifier | None = None,
+        state_override: StateOverride | None = None,
+        ccip_read_enabled: bool | None = None,
+    ) -> HexBytes:
+        # web3 accepts EIP-1898 at runtime but omits it from BlockIdentifier.
+        return await super().call(
+            transaction,
+            cast(BlockIdentifier, block_identifier),
+            state_override,
+            ccip_read_enabled,
+        )
 
     async def get_block_timestamp(self, block_identifier: int) -> UnixTimestamp:
         """
@@ -111,7 +110,7 @@ class DankEth(AsyncEth):
             return decode_timestamped(block_bytes).timestamp
 
     async def get_balance(
-        self, account: ChecksumAddress, block_identifier: BlockNumber | None = None
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
     ):
         if isinstance(block_identifier, int):
             return await self._get_balance(account, hex(block_identifier))
@@ -119,14 +118,16 @@ class DankEth(AsyncEth):
             return await self._get_balance(account, block_identifier)
 
     async def get_transaction_count(
-        self, account: ChecksumAddress, block_identifier: BlockNumber | None = None
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
     ):
         if isinstance(block_identifier, int):
             return await self._get_transaction_count(account, hex(block_identifier))
         else:
             return await self._get_transaction_count(account, block_identifier)
 
-    async def get_code(self, account: ChecksumAddress, block_identifier: BlockNumber | None = None):
+    async def get_code(
+        self, account: ChecksumAddress, block_identifier: StateBlockIdentifier | None = None
+    ):
         if isinstance(block_identifier, int):
             return await self._get_code(account, hex(block_identifier))
         else:
@@ -341,10 +342,7 @@ class DankEth(AsyncEth):
         )
 
     meth = MethodNoFormat.default(RPC.eth_getTransactionReceipt)  # type: ignore [arg-type, var-annotated]
-    if WEB3_MAJOR_VERSION >= 6:
-        _transaction_receipt = meth
-    else:
-        _get_transaction_receipt = meth
+    _transaction_receipt = meth
 
     _get_transaction_receipt_raw = MethodNoFormat.default(
         cast(RPCEndpoint, f"{RPC.eth_getTransactionReceipt}_raw")

@@ -5,6 +5,7 @@ from typing import Any
 from brownie import Contract
 from brownie.network.contract import ContractCall, ContractTx, OverloadedMethod
 
+from dank_mids._block import StateBlockIdentifier
 from dank_mids.brownie_patch.call import _get_coroutine_fn, _skip_proc_pool
 from dank_mids.helpers._helpers import DankWeb3
 
@@ -24,7 +25,7 @@ def _patch_overloaded_method(call: OverloadedMethod, w3: DankWeb3) -> None:
     async def coroutine(
         self: Contract,
         *args: Any,
-        block_identifier: int | str | bytes | None = None,
+        block_identifier: StateBlockIdentifier | None = None,
         decimals: int | None = None,
         override: dict[str, str] | None = None,
     ) -> Any:
