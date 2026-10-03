@@ -23,6 +23,20 @@ draining are expected. Generated artifacts come from upstream/CI, not local buil
 The evmspec transaction repair remains pinned at
 `f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c`.
 
+## Native checksum ownership
+
+Pin cchecksum to `fff7e1fe87f4679ec96de1cebb1cdd8f5e94be44`. Published
+0.4.4 and 0.4.5 return a dangling pointer from their private address-normalization
+helper. A single scalar checksum fails under `PYTHONMALLOC=debug`; bulk strings
+share the same path. The repair returns owned bytes, preserving public checksums,
+validation and ordering. Its regression compares native scalar/bulk results with
+eth-utils under concurrent calls and forced collection. All 22 upstream cases
+pass under the debug allocator after a fresh extension build. SDK unit/import
+matrices now also enable that allocator to make invalid lifetimes observable.
+The fork identifies this backport as 0.4.4+ownedbuffer1, preserving upstream
+ABI dependencies that require cchecksum 0.4.4. The 0.4.4 and 0.4.5 runtime
+sources match; the fork retains the current build compiler and packaging.
+
 ## Build and verification changes
 
 All mypy flags and targets live in `pyproject.toml`. The existing upstream mypyc

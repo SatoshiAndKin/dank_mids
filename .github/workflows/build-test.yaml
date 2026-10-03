@@ -179,6 +179,7 @@ jobs:
       - name: Run unit tests
         env:
           PYTHONFAULTHANDLER: 1
+          PYTHONMALLOC: debug
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
           TYPEDENVS_SHUTUP: 1
         run: uv run --no-sync python -m pytest
@@ -224,6 +225,7 @@ jobs:
         env:
           DANK_MIDS_COMPILED_IMPORT_LOCATION: source-tree
           PYTHONFAULTHANDLER: 1
+          PYTHONMALLOC: debug
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
           TYPEDENVS_SHUTUP: 1
         run: uv run --no-sync python -m pytest
