@@ -9,7 +9,7 @@ and the pinned aiolimiter submodule (`441d80fca626e1eab5bad63c19a32167a915cb19`)
 
 | Source | Required behavior | Regression tests |
 | --- | --- | --- |
-| `_block.py`, `controller.py`, `semaphores.py`, `eth.py` | Retain hash and canonical selectors through header lookup, admission, batch grouping and direct RPC; validate the returned header hash; retain upstream response IDs. | `test_block_identity.py`, `test_hash_rpc.py` |
+| `_block.py`, `controller.py`, `semaphores.py`, `eth.py` | Retain hash and canonical selectors through header lookup, admission, batch grouping and direct RPC; validate the returned header hash; propagate header RPC errors with their original details; retain upstream response IDs. | `test_block_identity.py`, `test_hash_rpc.py`, `test_hash_header_errors.py` |
 | `brownie_patch/{_method,call,overloaded,types}.py` | Pass selectors unchanged through direct, overloaded and mapped Brownie calls. | `test_brownie_hash_selector.py` |
 | `types.py` | Select historical/modern block schemas per response independently of key order; decode by hash; preserve arbitrary error data. | `test_block_decoding.py`, `test_rpc_error_data.py` |
 | `_batch.py`, `_requests.py` | Enclosing batches own embedded multicalls; failed singleton multicalls terminate through the original direct request, including embedded JSON responses; historical multicalls retain state identity. | `test_gc_batch_contract.py`, `test_multicall_singleton.py`, `test_historical_multicall.py` |
@@ -134,3 +134,21 @@ catalog snapshot and does not establish empty-cache startup performance.
 Two evmspec trace-enum failures also reproduce on the original compiled schema
 revision; the fresh macOS and Linux ARM64 builds both pass the other 365 cases.
 No migration PR has been merged or deployed. Original draft branches are retained.
+
+## Header lookup error propagation
+
+Before checking for a missing hash-selected block, route error responses through
+the existing SDK error handler. Callers retain the original error code, message,
+arbitrary data (including omitted data) and header-request context. A genuine null
+header still raises `BlockNotFound`. Errors remain uncached; the next lookup may
+recover, and successful immutable header metadata is then reused.
+
+The controlled HTTP regressions exercise the actual compiled controller, both
+canonical-selector settings, null/string/list/object/omitted error data, repeated
+failures, recovery and unchanged hash-bound calls. The original implementation
+reproduces the reported `BlockNotFound` defect. A fresh macOS ARM64 Python 3.12
+build passes the complete configured suite: 384 passed, 3 skipped, including
+compiled import audits. The separate full unit source profile passes 345 cases
+with 4 skips and covers all three added executable lines (100%). Configured mypy
+passes all 60 source files. Git dependency metadata and release publishing
+configuration are unchanged by this repair.

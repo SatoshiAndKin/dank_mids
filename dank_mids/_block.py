@@ -53,8 +53,11 @@ def validate_hash_selector(block: dict[str, object]) -> tuple[str, bool]:
 async def resolve_block_number(controller: "DankMiddlewareController", block_hash: str) -> int:
     """Share immutable header metadata while preserving hash identity for calls."""
     from dank_mids._requests import RPCRequest
+    from dank_mids._web3.method import _raise_dank_error_response
 
     response = await RPCRequest(controller, RPCEndpoint("eth_getBlockByHash"), (block_hash, False))
+    if "error" in response:
+        _raise_dank_error_response(response)
     header = response.get("result")
     if header is None:
         raise BlockNotFound(block_hash)
