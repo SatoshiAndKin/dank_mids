@@ -62,20 +62,21 @@ and rejects missing or wrong-ABI modules and shared runtimes.
 ## Local validation
 
 Fresh compiled builds and complete unit/import-audit runs passed on macOS ARM64
-Python 3.10, 3.11, 3.12 and 3.13. The final 3.12 run passed 372 tests (3 skipped).
-Linux ARM64 Python 3.12 also passed 372 tests (3 skipped). All 37 declared native
+Python 3.10, 3.11, 3.12 and 3.13. The final 3.12 and 3.13 runs passed 373 tests each (3 skipped),
+and 3.10 passed 375 (1 skipped), with `PYTHONMALLOC=debug`.
+Linux ARM64 Python 3.12 also passed 373 tests (3 skipped) under the debug allocator. All 37 declared native
 modules and the middleware removal contract are checked by the import audit.
 A fresh macOS 3.12 wheel passed the ABI checker and all 38 installed-wheel import
 audits. The 3.10 native run terminates normally with Python fault handling enabled;
 the previous segmentation fault does not recur with upstream's native caller walk.
 
 The separate Python 3.12 source coverage profile runs the complete `tests/unit`
-suite: 333 passed, 4 skipped. It measures retained changes without treating source
-execution as native-runtime evidence. Against upstream, 263 of 264 added/changed
-executable lines in runtime/build helpers were covered (99.62%, ignoring purely
-formatting changes). The sole uncovered line imports tomli on Python 3.10 in an
-unchanged, relocated upstream helper; the new config-loading statements and all
-runtime edits are covered. Whole-package coverage is approximately 69%, and is
+suite: 334 passed, 4 skipped. It measures retained changes without treating source
+execution as native-runtime evidence. Against upstream, 220 of 222 added/changed executable lines in runtime/build helpers were
+covered (99.10%, using `git diff --ignore-all-space` against upstream).
+The two uncovered lines are the existing Python 3.10 caller formatting statement
+and the relocated tomli import; both belong to Python 3.10 compatibility paths.
+The new requester-layout import and decorator are covered. Whole-package coverage is approximately 69%, and is
 not a claim of 90% whole-package coverage.
 
 Reproduce source coverage in a copy without generated binaries using
@@ -85,7 +86,8 @@ Native checks run separately after a fresh build with
 `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONFAULTHANDLER=1 python -m pytest`.
 
 Hosted Linux/macOS/Windows Python 3.10–3.13 builds, complete unit suites and
-compiled import audits passed all 37 jobs, including generated-C verification.
+compiled import audits passed all 37 jobs with the debug allocator enabled,
+including generated-C verification.
 The 12-cell mypy matrix, lint and source distribution checks also passed.
 
 Linux ARM64 archive integration passed all 33 tests against the native pricing
