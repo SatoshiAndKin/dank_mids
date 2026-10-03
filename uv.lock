@@ -837,7 +837,7 @@ requires-dist = [
     { name = "cchecksum", git = "https://github.com/SatoshiAndKin/cchecksum.git?rev=fff7e1fe87f4679ec96de1cebb1cdd8f5e94be44" },
     { name = "eth-retry", specifier = ">=0.3.6,<1" },
     { name = "eth-typing", specifier = ">=4.2.0" },
-    { name = "evmspec", git = "https://github.com/SatoshiAndKin/evmspec.git?rev=f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c" },
+    { name = "evmspec", git = "https://github.com/SatoshiAndKin/evmspec.git?rev=31c8540a14228ca49c77c19d565a6aaee3d0079f" },
     { name = "ez-a-sync", specifier = ">=0.34.0,<0.35" },
     { name = "faster-eth-abi", specifier = ">=5.2.12" },
     { name = "faster-eth-utils", specifier = ">=5.3.11" },
@@ -1257,7 +1257,7 @@ wheels = [
 [[package]]
 name = "evmspec"
 version = "0.5.2"
-source = { git = "https://github.com/SatoshiAndKin/evmspec.git?rev=f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c#f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c" }
+source = { git = "https://github.com/SatoshiAndKin/evmspec.git?rev=31c8540a14228ca49c77c19d565a6aaee3d0079f#31c8540a14228ca49c77c19d565a6aaee3d0079f" }
 dependencies = [
     { name = "cachetools" },
     { name = "cchecksum" },
