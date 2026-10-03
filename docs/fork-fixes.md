@@ -73,5 +73,16 @@ zero-based IDs as counts. Its original density assertions remain intact:
 exercise default batching capacity, exact IDs, execution counts, selectors and
 cancellation with both small and 200-call groups.
 
-Downstream full native pricing and server acceptance remain required before
-this sync is ready. Deployment is a separate operation.
+Downstream's immutable Linux ARM64 server image passed all 333 server tests and
+Ethereum/Base health, historical price, batch, exact-amount and spot-cache checks.
+Base's first cold amount request reached the existing 300-second deadline during
+catalog loading and passed after loading; the deadline remains unchanged.
+Full native pricing acceptance remains required. After the original provider's
+monthly capacity was exhausted, an independent archive run completed 2,310 passing
+cases and 17 skips with one batch/individual fOUSG price discrepancy. Three full
+token-list replays at the failed block and all ten concurrent historical
+batch/individual tests passed unchanged. A complete repeat captures price-path
+traces with unchanged assertions and retry limits. It uses a separate populated
+catalog snapshot, encrypted loopback archive access, eight concurrent cases and a
+1,000-call multicall limit; it does not prove empty-cache startup performance.
+Deployment is a separate operation.
