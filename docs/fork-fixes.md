@@ -23,6 +23,16 @@ draining are expected. Generated artifacts come from upstream/CI, not local buil
 The evmspec transaction repair remains pinned at
 `f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c`.
 
+## Requester thread lifetime
+
+Requester methods stay compiled, while `HTTPRequesterThread` keeps the Python
+object layout of its `threading.Thread` base. The native class destructor did not
+clear inherited weak references; debug-allocator imports/teardown crashed on
+Python 3.12–3.13, and stopped instances left invalid weak references. The regression
+creates, stops and collects multiple threads and checks their weak references in
+a fresh debug-allocator process. Existing startup, cancellation and bounded
+shutdown tests retain their assertions.
+
 ## Native checksum ownership
 
 Pin cchecksum to `fff7e1fe87f4679ec96de1cebb1cdd8f5e94be44`. Published

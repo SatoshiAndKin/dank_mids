@@ -7,6 +7,7 @@ from typing import Any, Final, final
 
 from aiohttp import ClientTimeout, TCPConnector
 from aiohttp.typedefs import DEFAULT_JSON_DECODER
+from mypy_extensions import mypyc_attr
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids.helpers._session import DankClientSession
@@ -15,6 +16,9 @@ from dank_mids.types import T
 SHUTDOWN_TIMEOUT: Final = 5.0
 
 
+# Thread owns inherited weak references and managed attributes. Keep its Python
+# object layout while compiling methods so native teardown releases both safely.
+@mypyc_attr(native_class=False)
 @final
 class HTTPRequesterThread(threading.Thread):
     def __init__(self) -> None:
