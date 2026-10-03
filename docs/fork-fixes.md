@@ -21,7 +21,8 @@ and the pinned aiolimiter submodule (`441d80fca626e1eab5bad63c19a32167a915cb19`)
 Weakly owned calls remain weakly owned. Empty batches/posts after collection or
 draining are expected. Generated artifacts come from upstream/CI, not local builds.
 The evmspec transaction repair remains pinned at
-`f0df0d9d8e4e7a7000580054ce2c0b6b6193a14c`.
+`31c8540a14228ca49c77c19d565a6aaee3d0079f`, which retains the timestamp
+schema and repairs isolated native build dependencies.
 
 ## Requester thread lifetime
 
@@ -54,7 +55,9 @@ error suppressions moved there unchanged. Incremental mypy checking is disabled:
 typed-envs generates type names that cannot safely survive the mypy cache.
 Pytest targets/flags live in repository configuration; CI invokes plain pytest.
 Native artifact caching includes source, ABI, platform and build inputs.
-Every workflow has a path filter. Archive tests use an explicitly configured
+Every workflow has a path filter. Generated-C commits run once per human
+change; bot-triggered follow-up runs do not recursively commit compiler output
+and cancel their own platform matrix. Archive tests use an explicitly configured
 operator network instead of duplicating secret-dependent hosted matrices.
 The wheel checker derives the required native suffix from each wheel's own tags
 and rejects missing or wrong-ABI modules and shared runtimes.
@@ -99,16 +102,35 @@ zero-based IDs as counts. Its original density assertions remain intact:
 exercise default batching capacity, exact IDs, execution counts, selectors and
 cancellation with both small and 200-call groups.
 
-Downstream's immutable Linux ARM64 server image passed all 333 server tests and
-Ethereum/Base health, historical price, batch, exact-amount and spot-cache checks.
-Base's first cold amount request reached the existing 300-second deadline during
-catalog loading and passed after loading; the deadline remains unchanged.
-Full native pricing acceptance remains required. After the original provider's
-monthly capacity was exhausted, an independent archive run completed 2,310 passing
-cases and 17 skips with one batch/individual fOUSG price discrepancy. Three full
-token-list replays at the failed block and all ten concurrent historical
-batch/individual tests passed unchanged. A complete repeat captures price-path
-traces with unchanged assertions and retry limits. It uses a separate populated
-catalog snapshot, encrypted loopback archive access, eight concurrent cases and a
-1,000-call multicall limit; it does not prove empty-cache startup performance.
-Deployment is a separate operation.
+## Downstream acceptance
+
+The tested immutable SDK dependency is
+`90baeae436f4d359538b11988c13a86004e2e087`. Its runtime matches the fully tested
+`fa4b454fb8d33c2f412709da4daca522cd4f7e47`; the intervening change pins the
+reproducible evmspec build. Subsequent commits contain generated C and the CI
+recursion guard, without changing runtime source.
+
+Pricing revision `8c8387ec15f4f8a119214df5971f10b79cfb6962` retains current
+fork master `cb4a12376b807b1b9f27d9963f0c457edf02fda7`, Web3 v7 middleware,
+owned HTTP attempts, and native dependency repairs. Its complete freshly compiled
+Linux ARM64 suite passed 2,664 tests with 17 skips under the debug allocator.
+It also repairs a reproducible Pony query-translator race and prevents simulated
+IronBank interest accrual from changing subsequent oracle reads in a multicall.
+Separate Python source coverage covers all 40 changed runtime statements (100%).
+Brownie's existing native bytecode-memory and explorer-timeout regressions passed
+all 77 cases. The SDK archive suite passed all 33 cases against the same archive.
+
+The final immutable Linux ARM64 server image passed 346 tests and four subtests,
+strict mypy, Ruff, formatting, deptry and the lock check. All eight Ethereum HTTP
+scenarios passed: health, historical USDC/WETH, cached reads, ordered duplicate
+batches, single/mixed amounts, and preservation of the spot cache after amount
+quotes. Independent native calls preserved raw amounts 1,000,001 and 2,000,001
+and the canonical hash of Ethereum block 18,000,000.
+
+Final Base acceptance is explicitly deferred at the user's request after the
+original archive provider exhausted its quota. Earlier Base observations are not
+acceptance of this final dependency image. Archive validation uses a populated
+catalog snapshot and does not establish empty-cache startup performance.
+Two evmspec trace-enum failures also reproduce on the original compiled schema
+revision; the fresh macOS and Linux ARM64 builds both pass the other 365 cases.
+No migration PR has been merged or deployed. Original draft branches are retained.
