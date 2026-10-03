@@ -1,8 +1,12 @@
+import asyncio
+import os
+import subprocess
 import sys
+from pathlib import Path
 
 import pytest
 from a_sync import igather
-from brownie import chain, web3
+from brownie import chain
 from evmspec import Transaction1559, Transaction2930, Transaction7702
 from hexbytes import HexBytes
 from multicall import Call
@@ -13,46 +17,29 @@ from dank_mids import dank_web3, instances
 CHAI = "0x06AF07097C9Eeb7fD685c692751D5C66dB49c215"
 
 
-def call_chai(i: int, block: int) -> Call:
-    return Call(
-        CHAI, "totalSupply()(uint)", [[f"totalSupply{i}", None]], _w3=dank_web3, block_id=block
-    )
+def call_chai(i: int, block: int, w3=dank_web3) -> Call:
+    return Call(CHAI, "totalSupply()(uint)", [[f"totalSupply{i}", None]], _w3=w3, block_id=block)
 
 
 height = chain.height
-num_calls = 500 if "llama" in web3.provider.endpoint_uri else 50_000
-
-BIG_WORK = (call_chai(i, height - (i // 25000)) for i in range(0, num_calls, 4))
-
-height = chain.height
-
 MULTIBLOCK_WORK = (call_chai(i, height - i) for i in range(1000))
 
 
 @pytest.mark.asyncio_cooperative
 async def test_middleware_controller_processes_calls() -> None:
-    await igather(BIG_WORK)
-    controller = instances[chain.id][0]
-    cid = controller.call_uid.latest
-    mid = controller.multicall_uid.latest
-    rid = controller.request_uid.latest
-    assert cid, "The DankMiddlewareController did not process any calls."
-    if sys.version_info < (3, 10):
-        # Not sure why this assert fails above 3.10
-        assert mid, "The DankMiddlewareController did not process any batches."
-    assert rid, "The DankMiddlewareController did not process any requests."
-    print(f"calls:                  {cid}")
-    print(f"multicalls:             {mid}")
-    print(f"requests:               {rid}")
-    print(f"calls per multicall:    {cid/mid}")
-    print(f"calls per request:      {cid/rid}")
-    print(f"multicalls per request: {mid/rid}")
-    # General "tests" that verify batching performance
-    assert mid < cid / 30, f"Batched {cid} calls into {mid} multicalls. Performance underwhelming."
-    assert rid < cid / 150, f"Batched {cid} calls into {rid} requests. Performance underwhelming."
-    assert (
-        mid / rid > 1
-    ), f"Batched {mid} multicalls into {rid} requests. Performance underwhelming."
+    await asyncio.to_thread(
+        subprocess.run,
+        [sys.executable, str(Path(__file__).with_name("_batching_workload.py"))],
+        check=True,
+        text=True,
+        timeout=120,
+        # Admit both groups together; bound live HTTP payloads below provider limits.
+        env={
+            **os.environ,
+            "MULTICALL_CALL_SEMAPHORE": "50000",
+            "DANKMIDS_MAX_MULTICALL_SIZE": "1000",
+        },
+    )
 
 
 @pytest.mark.asyncio_cooperative

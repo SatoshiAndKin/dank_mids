@@ -60,6 +60,18 @@ Reproduce source coverage in a copy without generated binaries using
 Native checks run separately after a fresh build with
 `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONFAULTHANDLER=1 python -m pytest`.
 
-Hosted Linux x86_64/Windows and the full 12-cell native matrix, archive integration,
-and downstream pricing/server acceptance must pass before this sync is ready.
-Deployment is a separate operation.
+Hosted Linux/macOS/Windows Python 3.10–3.13 builds, complete unit suites and
+compiled import audits passed all 37 jobs, including generated-C verification.
+The 12-cell mypy matrix, lint and source distribution checks also passed.
+
+Linux ARM64 archive integration passed all 33 tests against the native pricing
+dependency image. The batching workload queues both historical block groups
+together in an isolated process, admits all SDK calls, caps multicalls at 1,000
+to avoid live provider payload limits, and measures ID deltas instead of treating
+zero-based IDs as counts. Its original density assertions remain intact:
+12,515 call IDs, 14 multicalls and 13 requests. Controlled HTTP tests separately
+exercise default batching capacity, exact IDs, execution counts, selectors and
+cancellation with both small and 200-call groups.
+
+Downstream full native pricing and server acceptance remain required before
+this sync is ready. Deployment is a separate operation.

@@ -23,9 +23,11 @@ def test_native_batcher_preserves_hashes_and_canonical_requirement():
     assert_test_runtime(controller)
     header = json.loads((Path(__file__).parents[1] / "data/mainnet-25957689.json").read_text())
     received = []
+    posts = []
     call_received = Event()
     release_response = Event()
     cancel_first = False
+    calls_per_group = 4
 
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
@@ -33,6 +35,7 @@ def test_native_batcher_preserves_hashes_and_canonical_requirement():
 
         def do_POST(self):
             body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+            posts.append(body)
 
             def respond(request):
                 received.append(request)
@@ -100,12 +103,19 @@ def test_native_batcher_preserves_hashes_and_canonical_requirement():
             {"blockHash": h, "requireCanonical": canonical}
             for h, canonical in ((HASH, True), (OTHER, True), (HASH, False))
         ]
+        if calls_per_group == 200:
+            from dank_mids._block import resolve_block_number
+            from dank_mids.helpers._controllers import get_controller_for_async_w3
+
+            owner = get_controller_for_async_w3(w3)
+            await asyncio.gather(*(resolve_block_number(owner, h) for h in (HASH, OTHER)))
+        posts.clear()
         callers = [
             asyncio.create_task(w3.eth.call({"to": TOKEN, "data": "0x12345678"}, block))
             for block in blocks
-            for _ in range(4)
+            for _ in range(calls_per_group)
         ]
-        expected = [111] * 4 + [222] * 4 + [111] * 4
+        expected = [111] * calls_per_group + [222] * calls_per_group + [111] * calls_per_group
         try:
             if cancel_first:
                 assert await asyncio.to_thread(call_received.wait, 5)
@@ -143,19 +153,35 @@ def test_native_batcher_preserves_hashes_and_canonical_requirement():
             len(
                 decode(["bool", "(address,bytes)[]"], bytes.fromhex(r["params"][0]["data"][10:]))[1]
             )
-            == 4
+            == calls_per_group
             for r in multicalls
         )
 
+        if calls_per_group == 200:
+            multicall_posts = [
+                body
+                for body in posts
+                if any(
+                    row["method"] == "eth_call"
+                    and row["params"][0]["data"].startswith("0x399542e9")
+                    for row in (body if isinstance(body, list) else [body])
+                )
+            ]
+            cid = calls_per_group * len(blocks)
+            assert len(multicalls) < cid / 30
+            assert len(multicall_posts) < cid / 150
+            assert len(multicalls) / len(multicall_posts) > 1
+
     async def run():
-        nonlocal cancel_first
+        nonlocal cancel_first, calls_per_group
         # The native execution lock belongs to one caller event loop. Exercise
         # both independent controllers on that loop, as the application does.
-        for cancel_first in (False, True):
-            received.clear()
-            call_received.clear()
-            release_response.clear()
-            await check()
+        for calls_per_group in (4, 200):
+            for cancel_first in (False, True):
+                received.clear()
+                call_received.clear()
+                release_response.clear()
+                await check()
 
     try:
         asyncio.run(run())
