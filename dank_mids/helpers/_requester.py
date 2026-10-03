@@ -2,9 +2,9 @@ import asyncio
 import atexit
 import threading
 from collections.abc import Callable
+from concurrent.futures import TimeoutError
 from typing import Any, Final, final
 
-import a_sync
 from aiohttp import ClientTimeout, TCPConnector
 from aiohttp.typedefs import DEFAULT_JSON_DECODER
 
@@ -12,9 +12,7 @@ from dank_mids import ENVIRONMENT_VARIABLES as ENVS
 from dank_mids.helpers._session import DankClientSession
 from dank_mids.types import T
 
-get_running_loop: Final = asyncio.get_running_loop
-
-create_task: Final = a_sync.create_task
+SHUTDOWN_TIMEOUT: Final = 5.0
 
 
 @final
@@ -24,6 +22,8 @@ class HTTPRequesterThread(threading.Thread):
         self.loop: Final = asyncio.new_event_loop()
         self._session: DankClientSession | None = None
         self._tasks: Final[set[asyncio.Task[None]]] = set()
+        self._active_posts = 0
+        self._active_posts_lock: Final = threading.Lock()
         self.start()
 
     def run(self) -> None:
@@ -61,40 +61,75 @@ class HTTPRequesterThread(threading.Thread):
         if not self.is_alive():
             raise self._exc.with_traceback(self._exc.__traceback__)
 
-        caller_loop = get_running_loop()
-        caller_future: asyncio.Future[T] = caller_loop.create_future()
+        async def request() -> T:
+            return await self.session.post(endpoint, *args, loads=loads, **kwargs)
 
-        async def run_and_set_result() -> None:
+        with self._active_posts_lock:
+            self._active_posts += 1
+            coro = request()
             try:
-                # we have to access self.session in the subthread first so we need this silly helper coro
-                result = await self.session.post(endpoint, *args, loads=loads, **kwargs)
-            except Exception as exc:
-                caller_loop.call_soon_threadsafe(caller_future.set_exception, exc)
-            else:
-                caller_loop.call_soon_threadsafe(caller_future.set_result, result)
+                operation = asyncio.run_coroutine_threadsafe(coro, self.loop)
+            except Exception:
+                coro.close()
+                self._active_posts -= 1
+                raise
+        operation.add_done_callback(lambda _future: self._remove_active_post())
+        return await asyncio.wrap_future(operation)
 
-        def start_request() -> None:
-            task: asyncio.Task[None] = create_task(run_and_set_result())
-            self._tasks.add(task)
-            task.add_done_callback(self._tasks.discard)
+    def _schedule_active_post(self, callback: Callable[[], None]) -> None:
+        with self._active_posts_lock:
+            self._active_posts += 1
+            try:
+                self.loop.call_soon_threadsafe(callback)
+            except Exception:
+                self._active_posts -= 1
+                raise
 
-        self.loop.call_soon_threadsafe(start_request)
-        return await caller_future
+    def _remove_active_post(self) -> None:
+        with self._active_posts_lock:
+            self._active_posts -= 1
+
+    def _active_post_count(self) -> int:
+        with self._active_posts_lock:
+            return self._active_posts
+
+    def _has_active_posts(self) -> bool:
+        return self._active_post_count() > 0
 
 
-def shutdown_http_requester() -> None:
-    if not _requester.is_alive():
+def shutdown_http_requester(timeout: float = SHUTDOWN_TIMEOUT) -> None:
+    requester = _requester
+    loop = requester.loop
+    if loop.is_closed():
         return
 
+    has_active_posts = requester._has_active_posts()
+
     async def close_session() -> None:
-        if session := _requester._session:
+        if has_active_posts:
+            await asyncio.sleep(0)
+        if session := requester._session:
             await session.close()
 
-    # Keep the loop running until it transfers the coroutine result to the
-    # concurrent future. Stopping inside the coroutine prevents that transfer.
-    asyncio.run_coroutine_threadsafe(close_session(), _requester.loop).result()
-    _requester.loop.call_soon_threadsafe(_requester.loop.stop)
-    _requester.join()
+    if requester.is_alive():
+        try:
+            if requester._session is not None or has_active_posts:
+                future = asyncio.run_coroutine_threadsafe(close_session(), loop)
+                future.result(timeout=timeout)
+        except (RuntimeError, TimeoutError):
+            pass
+        try:
+            loop.call_soon_threadsafe(loop.stop)
+        except RuntimeError:
+            return
+    else:
+        try:
+            loop.stop()
+        except RuntimeError:
+            return
+
+    if requester.is_alive() and threading.current_thread() is not requester:
+        requester.join(timeout=timeout)
 
 
 _requester = HTTPRequesterThread()

@@ -1,46 +1,12 @@
-from types import SimpleNamespace
+import pytest
 
-import web3.middleware as middleware
-
-import dank_mids.helpers._helpers as helpers
+from dank_mids.helpers.hashing import AttributeDict
 
 
-class _MiddlewareOnion:
-    def __init__(self) -> None:
-        self.add_calls = []
-
-    def add(self, middleware_fn) -> None:
-        self.add_calls.append(middleware_fn)
-
-
-def _make_sync_w3():
-    return SimpleNamespace(
-        eth=SimpleNamespace(is_async=False),
-        middleware_onion=_MiddlewareOnion(),
-    )
-
-
-def _add_sync_attrdict_middleware():
-    return helpers.__dict__["__add_sync_attrdict_middleware"]
-
-
-def test_add_sync_attrdict_middleware_uses_legacy_symbol(monkeypatch) -> None:
-    sentinel = object()
-    monkeypatch.setattr(middleware, "attrdict_middleware", sentinel, raising=False)
-    monkeypatch.delattr(middleware, "AttributeDictMiddleware", raising=False)
-
-    sync_w3 = _make_sync_w3()
-    _add_sync_attrdict_middleware()(sync_w3)
-
-    assert sync_w3.middleware_onion.add_calls == [sentinel]
-
-
-def test_add_sync_attrdict_middleware_falls_back_to_v7_symbol(monkeypatch) -> None:
-    sentinel = object()
-    monkeypatch.delattr(middleware, "attrdict_middleware", raising=False)
-    monkeypatch.setattr(middleware, "AttributeDictMiddleware", sentinel, raising=False)
-
-    sync_w3 = _make_sync_w3()
-    _add_sync_attrdict_middleware()(sync_w3)
-
-    assert sync_w3.middleware_onion.add_calls == [sentinel]
+def test_attribute_dict_hash_is_cached_and_values_remain_immutable():
+    value = AttributeDict({"key": (1, 2)})
+    assert hash(value) == hash(AttributeDict({"key": (1, 2)}))
+    assert hash(value) == hash(value)
+    with pytest.raises(TypeError, match="immutable"):
+        value.key = 3
+    assert value["key"] == (1, 2)

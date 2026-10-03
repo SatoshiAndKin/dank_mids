@@ -1,10 +1,13 @@
+from __future__ import annotations
+
 import asyncio
-from collections.abc import Awaitable
+from collections.abc import Awaitable, Callable
 from typing import Any, Final
 
 import a_sync
 
 from dank_mids import ENVIRONMENT_VARIABLES as ENVS
+from dank_mids.helpers.future import DebuggableFuture
 from dank_mids.logging import get_c_logger
 from dank_mids.types import T
 
@@ -34,8 +37,10 @@ def create_batch_task(a: Awaitable[T], name: str) -> asyncio.Task[T]:
 
 
 def batch_done_callback(t: asyncio.Task[Any]) -> None:
-    if t._exception is not None:
-        logger.exception("exception in batch task %s", t)
+    # Completion ends registry ownership on success, failure, and cancellation.
+    BATCH_TASKS.discard(t)
+    if not t.cancelled() and t.exception() is not None:
+        logger.exception("exception in batch task %s", repr(t))
     elif t.cancelled():
         # Make the CancelledError so we can get the cancel message, if any.
         try:
@@ -44,15 +49,13 @@ def batch_done_callback(t: asyncio.Task[Any]) -> None:
             cancel_message = e.args[0] if e.args else None
 
         # Now log the exception because something is fucked up and the user needs to know.
-        logger.exception("batch task %s is cancelled???\nreason: %s", t, cancel_message)
-    else:
-        BATCH_TASKS.discard(t)
+        logger.exception("batch task %s is cancelled???\nreason: %s", repr(t), str(cancel_message))
 
 
 # Vendored from asyncio:
 
 
-def shield(arg: Awaitable[T] | asyncio.Future[T]) -> asyncio.Future[T]:
+def shield(arg: asyncio.Future[T] | Awaitable[T]) -> asyncio.Future[T]:
     """Wait for a future, shielding it from cancellation.
 
     The statement
@@ -92,6 +95,7 @@ def shield(arg: Awaitable[T] | asyncio.Future[T]) -> asyncio.Future[T]:
         return inner
     loop = _get_loop(inner)
     outer: asyncio.Future[T] = loop.create_future()
+    remove_external_waiter: Callable[[], None] | None = None
 
     def _inner_done_callback(inner: asyncio.Future[T]) -> None:
         if outer.cancelled():
@@ -110,8 +114,16 @@ def shield(arg: Awaitable[T] | asyncio.Future[T]) -> asyncio.Future[T]:
                 outer.set_result(inner.result())
 
     def _outer_done_callback(outer: asyncio.Future[T]) -> None:
+        nonlocal remove_external_waiter
+        if remove_external_waiter is not None:
+            remove_external_waiter()
+            remove_external_waiter = None
         if not inner.done():
             inner.remove_done_callback(_inner_done_callback)
+
+    if isinstance(inner, DebuggableFuture):
+        inner._add_external_waiter()
+        remove_external_waiter = inner._remove_external_waiter
 
     inner.add_done_callback(_inner_done_callback)
     outer.add_done_callback(_outer_done_callback)

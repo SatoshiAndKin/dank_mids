@@ -4,71 +4,71 @@
 from __future__ import annotations
 
 import pathlib
-import shlex
 import sys
-import sysconfig
 import zipfile
+from glob import glob
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-MAKEFILE = ROOT / "Makefile"
+sys.path.insert(0, str(ROOT))
+from scripts.ci.mypyc_targets import (  # noqa: E402
+    MYPYC_RUNTIME_MODULE,
+    expand_mypyc_targets,
+    extension_suffix,
+)
+
+NATIVE_SUFFIXES = (".so", ".pyd")
 
 
-def load_mypyc_targets() -> list[str]:
-    marker = "MYPYC_STRICT_DUNDER_TYPING=1 mypyc"
-    lines = MAKEFILE.read_text().splitlines()
-    cmd_lines: list[str] = []
-    in_cmd = False
-    for line in lines:
-        if marker in line:
-            in_cmd = True
-            cmd_lines.append(line)
+def resolve_wheels(patterns: list[str]) -> list[pathlib.Path]:
+    wheels: list[pathlib.Path] = []
+    for pattern in patterns:
+        matches = sorted(glob(pattern))
+        if matches:
+            wheels.extend(pathlib.Path(path) for path in matches if pathlib.Path(path).is_file())
             continue
-        if in_cmd:
-            if not line.startswith(("\t", " ")):
-                break
-            cmd_lines.append(line)
-            if not line.strip():
-                break
-    if not cmd_lines:
-        raise SystemExit("Could not find mypyc command in Makefile")
-    joined = " ".join(part.strip().rstrip("\\") for part in cmd_lines)
-    after = joined.split(marker, 1)[1].strip()
-    if not after:
-        raise SystemExit("Mypyc command has no targets")
-    tokens = shlex.split(after)
-    targets: set[str] = set()
-    for tok in tokens:
-        if tok.startswith("-"):
+        path = pathlib.Path(pattern)
+        if path.is_file():
+            wheels.append(path)
             continue
-        norm = tok.replace("\\", "/")
-        path = ROOT / norm
-        if norm.endswith(".py"):
-            if not path.is_file():
-                raise SystemExit(f"Mypyc target not found: {norm}")
-            targets.add(norm)
-            continue
-        if path.is_dir():
-            py_files = sorted(p for p in path.rglob("*.py") if p.is_file())
-            if not py_files:
-                raise SystemExit(f"Mypyc directory target has no .py files: {norm}")
-            for py_file in py_files:
-                targets.add(py_file.relative_to(ROOT).as_posix())
-            continue
-        raise SystemExit(f"Unsupported mypyc target: {norm}")
-    return sorted(targets)
+        print(f"FAIL: no wheels matched {pattern!r}")
+    return wheels
+
+
+def wheel_extension_suffix(wheel_path: pathlib.Path) -> str:
+    # Release runners inspect wheels for several Python ABIs in one process.
+    # Derive the suffix from the wheel tag, rather than the runner interpreter.
+    parts = wheel_path.stem.rsplit("-", 3)
+    if len(parts) != 4:
+        return extension_suffix()  # Synthetic archives used by unit tests.
+    _distribution, interpreter, abi, platform = parts
+    if interpreter != abi or not interpreter.startswith("cp"):
+        raise ValueError(f"unsupported native wheel ABI: {wheel_path.name}")
+    version = interpreter[2:]
+    if platform.startswith("macosx_"):
+        return f".cpython-{version}-darwin.so"
+    if platform.startswith("win_"):
+        return f".{interpreter}-{platform}.pyd"
+    if "linux" in platform:
+        for arch in ("x86_64", "aarch64", "i686", "armv7l"):
+            if platform.endswith(arch):
+                return f".cpython-{version}-{arch}-linux-gnu.so"
+    raise ValueError(f"unsupported native wheel platform: {wheel_path.name}")
 
 
 def check_wheel(wheel_path: pathlib.Path, targets: list[str]) -> list[str]:
     failures: list[str] = []
-    suffix = sysconfig.get_config_var("EXT_SUFFIX")
+    suffix = wheel_extension_suffix(wheel_path)
     with zipfile.ZipFile(wheel_path) as zf:
         names = set(zf.namelist())
+    if not any("/" not in name and name == MYPYC_RUNTIME_MODULE + suffix for name in names):
+        failures.append(
+            f"{wheel_path.name}: missing top-level {MYPYC_RUNTIME_MODULE} runtime artifact"
+        )
     for py_path in targets:
         ext_prefix = py_path[:-3]  # strip .py
-        if ext_prefix + suffix not in names:
+        has_compiled = any(name == ext_prefix + suffix for name in names)
+        if not has_compiled:
             failures.append(f"{wheel_path.name}: missing compiled artifact for {py_path}")
-    if not any("/" not in name and name.endswith("__mypyc" + suffix) for name in names):
-        failures.append(f"{wheel_path.name}: missing native mypyc group for {suffix}")
     return failures
 
 
@@ -76,10 +76,13 @@ def main(argv: list[str]) -> int:
     if len(argv) < 2:
         print("usage: check_mypyc_wheel.py dist/*.whl")
         return 2
-    targets = load_mypyc_targets()
+    targets = expand_mypyc_targets(ROOT)
     failures: list[str] = []
-    for wheel in argv[1:]:
-        failures.extend(check_wheel(pathlib.Path(wheel), targets))
+    wheels = resolve_wheels(argv[1:])
+    if not wheels:
+        return 1
+    for wheel in wheels:
+        failures.extend(check_wheel(wheel, targets))
     if failures:
         for failure in failures:
             print(f"FAIL: {failure}")
