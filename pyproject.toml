@@ -18,7 +18,7 @@ dependencies = [
     "cchecksum @ git+https://github.com/SatoshiAndKin/cchecksum.git@fff7e1fe87f4679ec96de1cebb1cdd8f5e94be44",
     "eth-retry>=0.3.6,<1",
     "eth-typing>=4.2.0",
-    "evmspec @ git+https://github.com/SatoshiAndKin/evmspec.git@8737ead8924746f3d37877da11772fab4194d91a",
+    "evmspec @ git+https://github.com/SatoshiAndKin/evmspec.git@ffd7e2cc096bbfa79dd15d0f0ee0c65f0382c303",
     "ez-a-sync>=0.34.0,<0.35",
     "faster-eth-abi>=5.2.12",
     "faster-eth-utils>=5.3.11",

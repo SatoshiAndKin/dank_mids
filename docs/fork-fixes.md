@@ -21,7 +21,7 @@ and the pinned aiolimiter submodule (`441d80fca626e1eab5bad63c19a32167a915cb19`)
 Weakly owned calls remain weakly owned. Empty batches/posts after collection or
 draining are expected. Generated artifacts come from upstream/CI, not local builds.
 The evmspec transaction repair remains pinned at
-`8737ead8924746f3d37877da11772fab4194d91a`. It retains transaction timestamp
+`ffd7e2cc096bbfa79dd15d0f0ee0c65f0382c303`. It retains transaction timestamp
 schemas and isolated native build repairs, uses canonical RPC string trace enums,
 and decodes block reward traces without invented transaction fields.
 
