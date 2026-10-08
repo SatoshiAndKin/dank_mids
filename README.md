@@ -140,3 +140,10 @@ see `docs/retry_observer.rst`.
 ### Notes
 
 You can also set `DANK_MIDS_DEMO_MODE=True` to see a visual representation of the batching in real time on your console.
+
+### Build documentation
+
+Run `uv sync --locked --only-group docs --no-install-project --python 3.12`,
+then `make docs`. The build parses source files and writes `docs/_build/html`.
+It does not require an RPC endpoint or runtime package installation. CI keeps
+the HTML as a downloadable artifact.
