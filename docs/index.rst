@@ -11,7 +11,7 @@ Welcome to dank_mids's documentation!
    :caption: Contents:
 
    retry_observer
-   source/modules.rst
+   autoapi/index
 
 Indices and tables
 ==================

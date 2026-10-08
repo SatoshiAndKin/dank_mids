@@ -21,8 +21,9 @@ and the pinned aiolimiter submodule (`441d80fca626e1eab5bad63c19a32167a915cb19`)
 Weakly owned calls remain weakly owned. Empty batches/posts after collection or
 draining are expected. Generated artifacts come from upstream/CI, not local builds.
 The evmspec transaction repair remains pinned at
-`31c8540a14228ca49c77c19d565a6aaee3d0079f`, which retains the timestamp
-schema and repairs isolated native build dependencies.
+`8737ead8924746f3d37877da11772fab4194d91a`. It retains transaction timestamp
+schemas and isolated native build repairs, uses canonical RPC string trace enums,
+and decodes block reward traces without invented transaction fields.
 
 ## Requester thread lifetime
 
@@ -133,7 +134,9 @@ acceptance of this final dependency image. Archive validation uses a populated
 catalog snapshot and does not establish empty-cache startup performance.
 Two evmspec trace-enum failures also reproduce on the original compiled schema
 revision; the fresh macOS and Linux ARM64 builds both pass the other 365 cases.
-No migration PR has been merged or deployed. Original draft branches are retained.
+Those results describe the earlier migration validation. The SDK sync and header
+repair merged in PR #10; pricing and server dependency upgrades also merged.
+Original draft branches remain retained until replacement validation passes.
 
 ## Header lookup error propagation
 
@@ -152,3 +155,20 @@ compiled import audits. The separate full unit source profile passes 345 cases
 with 4 skips and covers all three added executable lines (100%). Configured mypy
 passes all 60 source files. Git dependency metadata and release publishing
 configuration are unchanged by this repair.
+
+## Static documentation and trace schema refresh
+
+Sphinx AutoAPI parses SDK source files. Documentation builds install only pinned
+documentation dependencies and require no Brownie runtime, network connection,
+RPC endpoint, or secret. CI uploads the HTML artifact and does not publish Pages.
+Generated HTML stays outside Git; written guides remain in `docs/`.
+
+The refreshed native schema accepts call types `call`, `delegatecall`, and
+`staticcall`, and reward types `block` and `uncle`. It rejects numeric enum values.
+Transaction traces still require transaction identity; block rewards require
+block identity and their actual author/value/reward-type fields.
+
+A fresh macOS ARM64 Python 3.12 SDK build with this schema passes all 384 tests
+with three skips under the debug allocator. Its installed wheel passes ABI and
+external-origin import audits. The configured type check passes all 60 files.
+Hosted platform matrix results belong to the PR checks.

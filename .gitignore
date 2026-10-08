@@ -24,3 +24,9 @@ build/setup.py
 *.so
 dank_mids/**/*.pyd
 dank_mids/**/*.so
+
+/docs/_build/
+
+/docs/autoapi/
+
+/.venv/

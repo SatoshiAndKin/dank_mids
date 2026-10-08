@@ -7,10 +7,8 @@ mypy:
 	uv run --only-group mypy mypy
 
 docs:
-	rm -r ./docs/source -f
-	rm -r ./docs/_templates -f
-	rm -r ./docs/_build -f
-	uv run --group docs sphinx-apidoc -o ./docs/source ./dank_mids
+	.venv/bin/sphinx-build -b html docs docs/_build/html
+
 
 benchmark:
 	uv run brownie run examples/benchmark
