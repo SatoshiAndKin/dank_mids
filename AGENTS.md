@@ -1,33 +1,28 @@
-# Agent Requirements
+# Repository instructions
 
-All agents must follow these rules:
+- Use Conventional Commits titles and messages. In PR descriptions, state the change
+  and relevant validation.
+- Use the repository's formatter, linter, dependency locks, and configured test runner.
+  Keep mypy configuration in `pyproject.toml` and pytest settings in its owning config;
+  workflows and hooks invoke those configured checks.
+- When code is compiled with mypyc, run tests against the compiled extensions and report
+  how that runtime was confirmed.
 
-dank-mids is always compiled. PyPI wheels are compiled, setup compiles the project, and tests/CI must validate compiled extensions. Do not invent or reason from an interpreted `.py` runtime path; tracked `.py` files are mypyc source inputs.
+## Compiled runtime and validation
 
-1) Sandbox runs may block Unix socketpair wakeups; rerun asyncio/threaded failures outside the sandbox before declaring repo, mypyc, or Python regressions.
-2) Fully test your changes before submitting a PR (run the full suite or all relevant tests): `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest <files>`
-3) PR titles must be descriptive and follow Conventional Commits-style prefixes:
-   - Common: `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, `test:`, `perf:`
-   - Support titles: `fix(docs):`, `fix(benchmarks):`, `fix(cicd):`
-4) Commit messages must follow the same Conventional Commits-style prefixes and include a short functional description plus a user-facing value proposition.
-5) PR descriptions must include Summary, Rationale, and Details sections.
-6) Run relevant Python tests for changes (pytest/unittest or the repo's configured runner).
-7) All new or edited code must have 90%+ coverage in tests/unit full suite.
-8) Follow formatting/linting configured in pyproject.toml, setup.cfg, tox.ini, or ruff.toml.
-9) Update dependency lockfiles when adding or removing Python dependencies.
-10) If the repo uses mypyc, verify tests run against compiled extensions (not interpreted Python) and note how you confirmed.
-11) Do not monkeypatch anything in dank-mids, at all. Patch external edges ONLY.
-12) Do not mix test repair with production bug fixes; split test-only and code-fix PRs.
-13) Use yield fixtures for shared mutable test state cleanup.
-14) Maximize the use of caching in GitHub workflow files to minimize run duration.
-15) Use one of `paths` or `paths-ignore` in every workflow file to make sure workflows only run when required.
-16) All mypy configuration (flags, overrides, per-module ignores, and file targets) should go in pyproject.toml. Do not split config across CLI args, mypy.ini, setup.cfg, or workflow steps.
-17) Centralize pytest settings (flags, markers, ignore patterns, and targets) in pyproject.toml, pytest.ini, setup.cfg, or tox.ini; workflows/hooks should call pytest without inline args.
-18) If the branch you're assigned to work on is from a remote (ie origin/master or upstream/awesome-feature) you must ensure you fetch and pull from the remote before you begin your work.
+- Treat tracked `.py` files as mypyc inputs. Wheels, setup, and tests use compiled
+  extensions; do not substitute an interpreted runtime.
+- Run relevant tests with `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest <files>` after
+  building extensions. New or edited code needs at least 90% coverage in `tests/unit`.
+- If sandboxed asyncio/threaded checks fail on Unix socketpair wakeups, rerun them
+  with host access before diagnosing a runtime regression.
+- Patch external edges only; do not monkeypatch dank-mids internals. Use yield fixtures
+  to clean shared mutable state. Keep test-only repair and production fixes in separate PRs.
 
-## Repo Behavior Notes
-- `WeakList` uses weakrefs on purpose to avoid keeping abandoned calls alive; empty batches or empty JSON-RPC posts can happen when all queued calls are GC'd or drained, and that is expected. Don't "fix" this by switching to strong refs unless we explicitly change the design.
-- Generated C/H artifacts (`build/**/*.c`, `build/**/*.h`) are versioned for mypyc diff review; keep binary extensions (`.pyd`, `.so`) out of PRs.
-- `dank_mids/_vendor/aiolimiter` is a pinned submodule; update its pointer only when explicitly requested.
+## Preserved behavior and artifacts
 
-Reference: https://www.conventionalcommits.org/en/v1.0.0/
+- `WeakList` deliberately uses weakrefs. Empty batches/posts after calls are collected
+  or drained are valid; do not retain calls with strong refs without a design change.
+- Keep generated `build/**/*.c` and `build/**/*.h` changes for mypyc review. Exclude
+  binary `.so`/`.pyd` extensions from PRs.
+- Update the `dank_mids/_vendor/aiolimiter` submodule only when explicitly requested.
