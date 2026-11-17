@@ -580,18 +580,18 @@ class DankMiddlewareController:
 
     @lru_cache(maxsize=1024)
     def _select_mcall_target_for_block(
-        self, block: BlockNumber | Literal["latest"] | HexStr | HashBlock
+        self, block: BlockNumber | Literal["latest", "pending"] | HexStr | HashBlock
     ) -> MulticallContract:
         """
         Select the appropriate multicall contract for a given block.
 
         Args:
-            block: The block number or 'latest'.
+            block: The block number or tag ('latest' or 'pending').
 
         Returns:
             The selected multicall contract.
         """
-        if block == "latest":
+        if block == "latest" or block == "pending":
             return cast(MulticallContract, self._latest_mc)
         if isinstance(block, HashBlock):
             block = BlockNumber(block.number)
