@@ -15,6 +15,10 @@ on:
       - ".github/workflows/release.yaml"
   workflow_dispatch:
 
+concurrency:
+  group: pr-ci-release.yaml-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
