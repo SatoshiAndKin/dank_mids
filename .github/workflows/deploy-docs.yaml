@@ -1,37 +1,28 @@
 name: Build Documentation
-
-on:
-  push:
-    branches: [master]
-    paths:
-      [
-        "docs/**",
-        "dank_mids/**/*.py",
-        "Makefile",
-        "pyproject.toml",
-        "uv.lock",
-        ".github/workflows/deploy-docs.yaml",
-      ]
-  pull_request:
-    branches: [master]
-    paths:
-      [
-        "docs/**",
-        "dank_mids/**/*.py",
-        "Makefile",
-        "pyproject.toml",
-        "uv.lock",
-        ".github/workflows/deploy-docs.yaml",
-      ]
-
 permissions:
   contents: read
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
+  ci_changes:
+    name: Select validation paths
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      run_validation: ${{ steps.paths.outputs.run_validation }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - id: paths
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CI_INCLUDE_PATHS: '["docs/**","dank_mids/**/*.py","Makefile","pyproject.toml","uv.lock",".github/workflows/deploy-docs.yaml"]'
+          CI_IGNORE_PATHS: "[]"
+        run: python3 .github/scripts/ci_changes.py
   build:
     runs-on: ubuntu-latest
     steps:
@@ -39,7 +30,6 @@ jobs:
         with:
           persist-credentials: false
           submodules: recursive
-
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
@@ -56,3 +46,43 @@ jobs:
         with:
           name: documentation
           path: docs/_build/html
+    needs:
+      - ci_changes
+    if: ${{ needs.ci_changes.outputs.run_validation == 'true' }}
+  ci_gate:
+    name: CI (deploy-docs.yaml)
+    if: ${{ !cancelled() }}
+    needs:
+      - ci_changes
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify validation contract
+        env:
+          CI_GATE_NEEDS: ${{ toJSON(needs) }}
+          CI_EXPECTED_JOBS: '["build"]'
+        run:
+          "python3 -m unittest discover -s .github/scripts -p test_ci_contract.py
+
+          python3 .github/scripts/ci_gate.py"
+"on":
+  push:
+    branches:
+      - master
+    paths:
+      - docs/**
+      - dank_mids/**/*.py
+      - Makefile
+      - pyproject.toml
+      - uv.lock
+      - .github/workflows/deploy-docs.yaml
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "**"

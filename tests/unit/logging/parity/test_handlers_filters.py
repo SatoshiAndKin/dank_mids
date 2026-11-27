@@ -187,12 +187,20 @@ def test_call_handlers_matches_stdlib_parent_propagation(
     stdlib_child.callHandlers(stdlib_record)
 
     assert _handler_messages(c_local) == _handler_messages(stdlib_local) == ["hello world"]
-    assert _handler_messages(c_parent_handler) == _handler_messages(stdlib_parent_handler) == [
-        "hello world",
-    ]
-    assert _handler_messages(c_grandparent_handler) == _handler_messages(
-        stdlib_grandparent_handler,
-    ) == []
+    assert (
+        _handler_messages(c_parent_handler)
+        == _handler_messages(stdlib_parent_handler)
+        == [
+            "hello world",
+        ]
+    )
+    assert (
+        _handler_messages(c_grandparent_handler)
+        == _handler_messages(
+            stdlib_grandparent_handler,
+        )
+        == []
+    )
 
 
 def test_add_remove_filter_and_filter_result_match_stdlib(

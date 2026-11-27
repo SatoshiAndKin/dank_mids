@@ -7,7 +7,7 @@ import pytest
 from dank_mids.helpers._requester import HTTPRequesterThread
 from dank_mids.helpers._session import DankClientSession
 
-from ._helpers import InlineLoop, wait_for_requester_state
+from ._helpers import wait_for_requester_state
 
 
 def test_post_runs_session_request_on_requester_loop(

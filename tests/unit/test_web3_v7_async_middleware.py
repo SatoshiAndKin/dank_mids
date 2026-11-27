@@ -17,15 +17,16 @@ from web3.types import RPCEndpoint, RPCResponse
 import dank_mids
 import dank_mids.helpers._controllers as controller_cache_module
 import dank_mids.helpers._helpers as helpers
-from dank_mids.helpers import _requester as requester_module
 import dank_mids.middleware as middleware  # Keep source/compiled imports identical.
+from dank_mids.helpers import _requester as requester_module
+from tests.unit._jsonrpc import AsyncProvider as JsonRpcAsyncProvider
 from tests.unit._jsonrpc import (
-    AsyncProvider as JsonRpcAsyncProvider,
     JsonRpcServer,
-    jsonrpc_server,
+)
+from tests.unit._jsonrpc import jsonrpc_server as jsonrpc_server  # noqa: F401
+from tests.unit._jsonrpc import (
     server_endpoint,
 )
-
 
 CLIENT_VERSION = "reth/v1.10.2-8e3b5e6/x86_64-unknown-linux-gnu"
 
@@ -89,13 +90,9 @@ def _jsonrpc_async_w3(jsonrpc_server: JsonRpcServer) -> AsyncWeb3:
     return async_w3
 
 
-def _last_payload_for_method(
-    jsonrpc_server: JsonRpcServer, method: RPCEndpoint
-) -> dict[str, Any]:
+def _last_payload_for_method(jsonrpc_server: JsonRpcServer, method: RPCEndpoint) -> dict[str, Any]:
     return next(
-        payload
-        for payload in reversed(jsonrpc_server.payloads)
-        if payload["method"] == method
+        payload for payload in reversed(jsonrpc_server.payloads) if payload["method"] == method
     )
 
 
@@ -138,9 +135,7 @@ def test_web3_v7_middleware_class_composes_with_async_onion() -> None:
         # This is setup_dank_w3's runtime path: unnamed Web3 v7 class injection.
         async_w3.middleware_onion.inject(middleware.DankMiddleware, layer=0)
 
-        assert async_w3.middleware_onion.as_tuple_of_middleware() == (
-            middleware.DankMiddleware,
-        )
+        assert async_w3.middleware_onion.as_tuple_of_middleware() == (middleware.DankMiddleware,)
         assert controller_cache_module._controllers == {}
     finally:
         controller_cache_module._controllers.clear()
@@ -161,9 +156,7 @@ def test_web3_v7_setup_dank_w3_injects_class_with_real_async_onion(monkeypatch) 
         controller_cache_module._controllers.clear()
         assert helpers.setup_dank_w3(async_w3) is async_w3
 
-        assert async_w3.middleware_onion.as_tuple_of_middleware() == (
-            middleware.DankMiddleware,
-        )
+        assert async_w3.middleware_onion.as_tuple_of_middleware() == (middleware.DankMiddleware,)
         assert async_w3.eth is dank_eth
         assert controller_cache_module._controllers == {}
     finally:
@@ -304,9 +297,7 @@ def test_web3_boundary_normalizes_success_response_envelope(
     async def run() -> None:
         jsonrpc_server.results[RPC.web3_clientVersion] = CLIENT_VERSION
         async_w3 = _jsonrpc_async_w3(jsonrpc_server)
-        request_func = await async_w3.provider.request_func(
-            async_w3, async_w3.middleware_onion
-        )
+        request_func = await async_w3.provider.request_func(async_w3, async_w3.middleware_onion)
 
         response = await request_func(RPC.web3_clientVersion, [])
         payload = _last_payload_for_method(jsonrpc_server, RPC.web3_clientVersion)
@@ -329,9 +320,7 @@ def test_web3_boundary_normalizes_error_response_envelope(
         error = {"code": -32000, "message": "weird node error"}
         jsonrpc_server.errors[RPC.eth_blockNumber] = error
         async_w3 = _jsonrpc_async_w3(jsonrpc_server)
-        request_func = await async_w3.provider.request_func(
-            async_w3, async_w3.middleware_onion
-        )
+        request_func = await async_w3.provider.request_func(async_w3, async_w3.middleware_onion)
 
         response = await request_func(RPC.eth_blockNumber, [])
         payload = _last_payload_for_method(jsonrpc_server, RPC.eth_blockNumber)
@@ -356,9 +345,7 @@ def test_controller_make_request_preserves_zero_request_id(
 ) -> None:
     async def run() -> None:
         async_w3 = _jsonrpc_async_w3(jsonrpc_server)
-        request_func = await async_w3.provider.request_func(
-            async_w3, async_w3.middleware_onion
-        )
+        request_func = await async_w3.provider.request_func(async_w3, async_w3.middleware_onion)
         controller = request_func
 
         await controller.make_request(RPC.eth_blockNumber, [], request_id=0)
@@ -382,13 +369,9 @@ def test_web3_v7_poa_middleware_formats_async_block_response() -> None:
             }
         )
         async_w3.middleware_onion.add(ExtraDataToPOAMiddleware)
-        request_func = await async_w3.provider.request_func(
-            async_w3, async_w3.middleware_onion
-        )
+        request_func = await async_w3.provider.request_func(async_w3, async_w3.middleware_onion)
 
-        response = await request_func(
-            RPCEndpoint("eth_getBlockByNumber"), ["latest", False]
-        )
+        response = await request_func(RPCEndpoint("eth_getBlockByNumber"), ["latest", False])
 
         assert "extraData" not in response["result"]
         assert response["result"]["proofOfAuthorityData"] == HexBytes("0x1234")

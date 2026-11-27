@@ -1,0 +1,25 @@
+name: Validate formatting
+description: Check the configured Python and document formatters without changing PR branches.
+inputs:
+  python-version:
+    required: true
+    description: Python interpreter used by the formatters.
+  pyupgrade-target-version:
+    required: true
+    description: Minimum supported syntax, such as py39.
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v6
+      with:
+        python-version: ${{ inputs.python-version }}
+        cache: pip
+        cache-dependency-path: .github/actions/validate-format/requirements.txt
+    - name: Install formatter versions
+      shell: bash
+      run: python -m pip install -r "${{ github.action_path }}/requirements.txt"
+    - name: Verify formatted source
+      shell: bash
+      env:
+        PYUPGRADE_TARGET: ${{ inputs.pyupgrade-target-version }}
+      run: python "${{ github.action_path }}/format.py"

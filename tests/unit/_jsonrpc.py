@@ -5,6 +5,7 @@ import threading
 from collections.abc import Iterator
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
+from uuid import uuid4
 
 import pytest
 from web3._utils.rpc_abi import RPC
@@ -36,6 +37,7 @@ class AsyncProvider(AsyncBaseProvider):
 
 
 class JsonRpcServer(ThreadingHTTPServer):
+    request_path: str
     calls: list[tuple[str, Any]]
     errors: dict[str, dict[str, Any]]
     payloads: list[dict[str, Any]]
@@ -77,12 +79,15 @@ class _JsonRpcHandler(BaseHTTPRequestHandler):
 
 
 def server_endpoint(server: JsonRpcServer) -> str:
-    return f"http://127.0.0.1:{server.server_port}"
+    return f"http://127.0.0.1:{server.server_port}{server.request_path}"
 
 
 @pytest.fixture
 def jsonrpc_server() -> Iterator[JsonRpcServer]:
     server = JsonRpcServer(("127.0.0.1", 0), _JsonRpcHandler)
+    # A released OS port can be reused by another test. Keep the endpoint key
+    # unique so its rate limiter cannot refer to an earlier, closed event loop.
+    server.request_path = "/" + uuid4().hex
     server.calls = []
     server.errors = {}
     server.payloads = []

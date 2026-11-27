@@ -1,0 +1,4 @@
+pyupgrade==3.21.2
+isort==8.0.1
+black==26.5.1
+autoflake==2.3.3

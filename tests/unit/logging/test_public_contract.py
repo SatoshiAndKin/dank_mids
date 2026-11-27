@@ -3,7 +3,6 @@ from __future__ import annotations
 import importlib.machinery
 import logging
 import os
-from collections.abc import Callable
 
 from dank_mids import logging as dank_logging
 from dank_mids.logging import CLogger, get_c_logger, use_c_logger_class

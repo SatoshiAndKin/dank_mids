@@ -10,7 +10,8 @@ from web3.exceptions import BlockNotFound
 
 from dank_mids import controller, setup_dank_w3_from_sync
 from dank_mids._exceptions import BadResponse
-from tests.unit._jsonrpc import jsonrpc_server, server_endpoint
+from tests.unit._jsonrpc import jsonrpc_server as jsonrpc_server  # noqa: F401
+from tests.unit._jsonrpc import server_endpoint
 from tests.unit._runtime import assert_test_runtime
 
 HASH = "0x" + "ab" * 32
