@@ -1,8 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": [
-    "custom.regex"
-  ],
+  "enabledManagers": ["custom.regex"],
   "dependencyDashboard": {
     "enabled": false
   },
@@ -14,9 +12,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^upstream-release\\.txt$/"
-      ],
+      "managerFilePatterns": ["/^upstream-release\\.txt$/"],
       "matchStrings": [
         "(?:^|\\r?\\n)(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)(?:\\r?\\n|$)"
       ],

@@ -30,9 +30,7 @@ class CIContractTests(unittest.TestCase):
         self.assertFalse(needs_validation([{"filename": "docs/a.md"}], [], ["docs/**"]))
         self.assertTrue(needs_validation([{"filename": "src/a.rs"}], [], ["docs/**"]))
         self.assertFalse(
-            needs_validation(
-                [{"filename": "src/private/a.py"}], ["**/*.py", "!src/private/**"], []
-            )
+            needs_validation([{"filename": "src/private/a.py"}], ["**/*.py", "!src/private/**"], [])
         )
         self.assertTrue(
             needs_validation(
@@ -54,9 +52,7 @@ class CIContractTests(unittest.TestCase):
             calls.append(request.full_url)
             return io.StringIO(json.dumps(pages.pop(0)))
 
-        result = changed_files(
-            "https://api.github.com", "owner/repo", 2, 101, "token", opener
-        )
+        result = changed_files("https://api.github.com", "owner/repo", 2, 101, "token", opener)
         self.assertEqual(len(result), 101)
         self.assertTrue(calls[1].endswith("page=2"))
 

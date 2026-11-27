@@ -19,6 +19,7 @@ _DANK_MIDDLEWARE_REMOVAL_MESSAGE: Final = (
     "`setup_dank_w3(async_w3)` / `setup_dank_w3_from_sync(sync_w3)`."
 )
 
+
 # TODO: Remove native_class=False once https://github.com/mypyc/mypyc/issues/1200 is fixed.
 @mypyc_attr(native_class=False)
 class DankMiddleware(Web3Middleware):
@@ -42,9 +43,7 @@ class DankMiddleware(Web3Middleware):
     async def async_wrap_make_request(self, make_request: AsyncMakeRequestFn) -> AsyncMakeRequestFn:
         async_w3 = self._w3
         if async_w3 is None:
-            raise RuntimeError(
-                "DankMiddleware(None) is only valid for Web3 middleware naming"
-            )
+            raise RuntimeError("DankMiddleware(None) is only valid for Web3 middleware naming")
         return get_controller_for_async_w3(async_w3)
 
 

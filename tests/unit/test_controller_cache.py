@@ -9,8 +9,9 @@ from web3 import AsyncWeb3
 
 import dank_mids.helpers._controllers as controller_cache_module
 import dank_mids.middleware as middleware
-from tests.unit._jsonrpc import AsyncProvider, JsonRpcServer, jsonrpc_server, server_endpoint
-
+from tests.unit._jsonrpc import AsyncProvider, JsonRpcServer
+from tests.unit._jsonrpc import jsonrpc_server as jsonrpc_server  # noqa: F401
+from tests.unit._jsonrpc import server_endpoint
 
 ControllerCache: TypeAlias = dict[tuple[AsyncWeb3, threading.Thread], Any]
 
@@ -76,9 +77,9 @@ def test_controller_cache_keeps_web3_thread_pairs_distinct(
         def run_in_thread() -> None:
             async def thread_run() -> None:
                 try:
-                    result = await middleware.DankMiddleware(
-                        async_w3
-                    ).async_wrap_make_request(async_w3.provider.make_request)
+                    result = await middleware.DankMiddleware(async_w3).async_wrap_make_request(
+                        async_w3.provider.make_request
+                    )
                 except BaseException as exc:
                     result_queue.put((None, threading.current_thread(), exc))
                 else:
@@ -98,9 +99,7 @@ def test_controller_cache_keeps_web3_thread_pairs_distinct(
         assert thread_result is not first
         assert controller_cache == {
             (async_w3, threading.current_thread()): _controller_for_request_func(first),
-            (other_async_w3, threading.current_thread()): _controller_for_request_func(
-                other_web3
-            ),
+            (other_async_w3, threading.current_thread()): _controller_for_request_func(other_web3),
             (async_w3, observed_thread): _controller_for_request_func(thread_result),
         }
 
@@ -122,9 +121,9 @@ def test_web3_v7_middleware_class_reuses_controller_for_web3_thread_pair(
         second = await middleware.DankMiddleware(async_w3).async_wrap_make_request(
             async_w3.provider.make_request
         )
-        other_web3 = await middleware.DankMiddleware(
-            other_async_w3
-        ).async_wrap_make_request(other_async_w3.provider.make_request)
+        other_web3 = await middleware.DankMiddleware(other_async_w3).async_wrap_make_request(
+            other_async_w3.provider.make_request
+        )
 
         result_queue: Queue[tuple[Any, threading.Thread, BaseException | None]]
         result_queue = Queue()
@@ -132,9 +131,9 @@ def test_web3_v7_middleware_class_reuses_controller_for_web3_thread_pair(
         def run_in_thread() -> None:
             async def thread_run() -> None:
                 try:
-                    result = await middleware.DankMiddleware(
-                        async_w3
-                    ).async_wrap_make_request(async_w3.provider.make_request)
+                    result = await middleware.DankMiddleware(async_w3).async_wrap_make_request(
+                        async_w3.provider.make_request
+                    )
                 except BaseException as exc:
                     result_queue.put((None, threading.current_thread(), exc))
                 else:

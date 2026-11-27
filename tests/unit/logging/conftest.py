@@ -221,7 +221,9 @@ def _caller_pair(
 ) -> tuple[CallerInfo, CallerInfo]:
     pair = _new_logger_pair()
     # Keep both calls on one physical line so exact line-number parity is meaningful.
+    # fmt: off
     c_caller = _middle_find_caller(pair.c_logger, stacklevel, stack_info=stack_info); stdlib_caller = _middle_find_caller(pair.stdlib_logger, stacklevel, stack_info=stack_info)  # noqa: E702
+    # fmt: on
     return c_caller, stdlib_caller
 
 
@@ -239,7 +241,9 @@ def _emit_pair(
     **kwargs: Any,
 ) -> None:
     # Keep both calls on one physical line so exact emitted record parity includes lineno.
+    # fmt: off
     getattr(pair.c_logger, method_name)(*args, **kwargs); getattr(pair.stdlib_logger, method_name)(*args, **kwargs)  # noqa: E702
+    # fmt: on
 
 
 def _fake_compiled_logging_path() -> str:
@@ -252,11 +256,8 @@ def _find_caller_through_internal_logging_frame(
 ) -> CallerInfo:
     namespace = {"logger": logger}
     code = compile(
-        "def compiled_logging_wrapper():\n"
-        "    return logger.findCaller()\n",
-        _fake_compiled_logging_path()
-        if isinstance(logger, CLogger)
-        else logging._srcfile,
+        "def compiled_logging_wrapper():\n" "    return logger.findCaller()\n",
+        _fake_compiled_logging_path() if isinstance(logger, CLogger) else logging._srcfile,
         "exec",
     )
     exec(code, namespace)
@@ -267,7 +268,9 @@ def _compiled_frame_caller_pair() -> tuple[CallerInfo, CallerInfo]:
     c_logger = get_c_logger(f"{LOGGER_NAME_PREFIX}.compiled_frame")
     stdlib_logger = logging.Logger(f"{LOGGER_NAME_PREFIX}.stdlib_compiled_frame")
     # Keep both calls on one physical line so exact line-number parity is meaningful.
+    # fmt: off
     c_caller = _find_caller_through_internal_logging_frame(c_logger); stdlib_caller = _find_caller_through_internal_logging_frame(stdlib_logger)  # noqa: E702
+    # fmt: on
     return c_caller, stdlib_caller
 
 

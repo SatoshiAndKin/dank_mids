@@ -126,8 +126,9 @@ def _middleware_allows_direct_dispatch(async_w3: Any) -> bool:
     if not middleware_classes:
         return True
 
-    from dank_mids.middleware import DankMiddleware
     from web3.middleware import ExtraDataToPOAMiddleware
+
+    from dank_mids.middleware import DankMiddleware
 
     compatible_middleware = (DankMiddleware, ExtraDataToPOAMiddleware)
     return all(middleware_class in compatible_middleware for middleware_class in middleware_classes)

@@ -6,13 +6,12 @@ from dataclasses import dataclass
 from types import SimpleNamespace
 from typing import Any, ClassVar
 
+import pytest
 from eth_abi import encode
 from hexbytes import HexBytes
-import pytest
 from web3 import AsyncWeb3
 from web3._utils.error_formatters_utils import OFFCHAIN_LOOKUP_FUNC_SELECTOR
 from web3._utils.rpc_abi import RPC
-from web3.eth import AsyncEth
 from web3.exceptions import OffchainLookup
 from web3.method import Method
 from web3.middleware import ExtraDataToPOAMiddleware
@@ -25,17 +24,18 @@ import dank_mids._web3.method as method_module
 import dank_mids.controller as controller_module
 import dank_mids.helpers._controllers as controller_cache_module
 import dank_mids.helpers._helpers as helpers
-from dank_mids._exceptions import ExecutionReverted
-from dank_mids.helpers import _requester as requester_module
 import dank_mids.middleware as middleware
+from dank_mids._exceptions import ExecutionReverted
 from dank_mids.eth import DankEth
+from dank_mids.helpers import _requester as requester_module
 from tests.unit._jsonrpc import (
     AsyncProvider,
     JsonRpcServer,
-    jsonrpc_server,
+)
+from tests.unit._jsonrpc import jsonrpc_server as jsonrpc_server  # noqa: F401
+from tests.unit._jsonrpc import (
     server_endpoint,
 )
-
 
 ACCOUNT = "0x0000000000000000000000000000000000000001"
 OTHER_ACCOUNT = "0x0000000000000000000000000000000000000002"
@@ -178,9 +178,7 @@ def _install_inert_controller_init(monkeypatch: pytest.MonkeyPatch) -> None:
         bytecode="0x00",
         needs_override_code_for_block=lambda _block: False,
     )
-    monkeypatch.setattr(
-        controller_module, "_sync_w3_from_async", lambda _async_w3: fake_sync_w3
-    )
+    monkeypatch.setattr(controller_module, "_sync_w3_from_async", lambda _async_w3: fake_sync_w3)
     monkeypatch.setattr(controller_module, "_get_client_version", lambda _sync_w3: "pytest/test")
     monkeypatch.setattr(controller_module, "_get_multicall2", lambda _chainid: fake_multicall)
     monkeypatch.setattr(controller_module, "_get_multicall3", lambda _chainid: None)
@@ -286,9 +284,7 @@ def test_setup_dank_w3_still_injects_middleware_for_route_only_compat(
         helpers.dank_w3s.clear()
         assert helpers.setup_dank_w3(async_w3) is async_w3
 
-        assert async_w3.middleware_onion.as_tuple_of_middleware() == (
-            middleware.DankMiddleware,
-        )
+        assert async_w3.middleware_onion.as_tuple_of_middleware() == (middleware.DankMiddleware,)
         assert isinstance(async_w3.eth, DankEth)
     finally:
         helpers.dank_w3s.clear()
@@ -399,15 +395,13 @@ def test_dank_eth_direct_dispatch_allows_dank_middleware_only(
         async_w3, eth = _new_dank_eth(server_endpoint(jsonrpc_server))
         async_w3.middleware_onion.add(middleware.DankMiddleware)
         _forbid_web3_manager(monkeypatch, async_w3)
-        middleware_request_func = await middleware.DankMiddleware(
-            async_w3
-        ).async_wrap_make_request(async_w3.provider.make_request)
+        middleware_request_func = await middleware.DankMiddleware(async_w3).async_wrap_make_request(
+            async_w3.provider.make_request
+        )
 
         assert async_w3.middleware_onion.as_tuple_of_middleware() == (middleware.DankMiddleware,)
         assert await eth.get_block_number() == 123
-        assert controller_cache == {
-            (async_w3, threading.current_thread()): middleware_request_func
-        }
+        assert controller_cache == {(async_w3, threading.current_thread()): middleware_request_func}
 
     asyncio.run(run())
 

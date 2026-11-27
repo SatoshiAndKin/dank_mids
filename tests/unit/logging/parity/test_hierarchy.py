@@ -51,8 +51,7 @@ def test_get_children_matches_stdlib_immediate_children_on_py312_plus(
         "sibling",
     }
     assert {
-        child.name.removeprefix(f"{stdlib_parent.name}.")
-        for child in stdlib_parent.getChildren()
+        child.name.removeprefix(f"{stdlib_parent.name}.") for child in stdlib_parent.getChildren()
     } == {"leaf", "sibling"}
     assert c_grandchild not in c_parent.getChildren()
     assert stdlib_grandchild not in stdlib_parent.getChildren()

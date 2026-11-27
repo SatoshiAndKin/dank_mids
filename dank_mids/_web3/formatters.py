@@ -125,8 +125,10 @@ def _get_response_formatters(method: RPCEndpoint) -> ResponseFormatters:
     formatters = _response_formatters[method] = (
         return_as_is,
         ERROR_FORMATTERS.get(method, return_as_is),
-        return_as_is
-        if method in _DANK_NULL_AS_RESULT_METHODS
-        else NULL_RESULT_FORMATTERS.get(method, return_as_is),
+        (
+            return_as_is
+            if method in _DANK_NULL_AS_RESULT_METHODS
+            else NULL_RESULT_FORMATTERS.get(method, return_as_is)
+        ),
     )
     return formatters
